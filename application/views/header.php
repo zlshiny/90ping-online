@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>互联网只能家装</title>
+<title>互联网智能家装</title>
 <link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
@@ -23,7 +23,7 @@ window.onscroll = function(){
 			<a href="###" id="logo"></a>
 			<ul id="nav">
 				<li><a href="###" class="nav1">主页</a></li>
-				<li><a href="###" class="nav2">85后超级爆款</a></li>
+				<li><a href="###" class="nav2">超级Home1.0</a></li>
 				<li><a href="###" class="nav3">贷款</a></li>
 				<li><a href="###" class="nav4">社区</a></li>
 				<li><a href="###" class="nav5">登录注册</a></li>

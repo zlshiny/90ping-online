@@ -8,7 +8,7 @@ body,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
 body{
 	background-color:#fff;
 	font-size:12px;
-	font-family: :"Microsoft YaHei";
+	font-family:"Microsoft YaHei";
 }
 .clearfix{
 	clear:both;
