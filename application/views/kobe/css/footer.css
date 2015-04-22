@@ -1,0 +1,107 @@
+.footer_wrapper {
+    width: 100%;
+    background-color: #2c3e50;
+}
+.footer_info {
+    width: 1240px;
+    height: 220px;
+    padding-top: 50px;
+    margin: 0px auto;
+    font-family: "microsoft yahei";
+}
+.footer_1st_col {
+    float: left;
+    width:216px;
+}
+.footer_2st_col {
+    float: left;
+    width: 156px;
+    margin-left: 80px;
+}
+.footer_3st_col {
+    float: left;
+    width: 100px;
+    margin-left: 96px;
+}
+.footer_4st_col {
+    float: left;
+    width: 100px;
+    margin-left: 114px;
+}
+.footer_5st_col {
+    float: left;
+    width: 225px;
+    margin-left: 100px;
+}
+.footer_des {
+    color: #fff;
+    margin-top: 30px;
+    font-size: 12px;
+}
+.footer_title {
+    color: #1dd2af;
+    font-size: 16px;
+}
+.footer_list {
+    color: #fff;
+    font-size: 10px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+.footer_list li span {
+    color: #1dd2af;
+}
+
+
+.footer_shares {
+    border-top: 1px solid #394c5f;
+    padding-top: 15px;
+}
+.footer_shares_icons {
+    width: 215px;
+    margin: 0px auto;
+}
+.footer_shares_icons li {
+    float: left;
+    margin-left: 25px;
+}
+.footer_shares_icons li:first-child {
+    margin-left: 0px;
+}
+.footer_shares > p {
+    width: 1240px;
+    margin: 22px auto 30px;
+    font-size: 13px;
+    text-align: center;
+    color: #9dafc0;
+}
+
+.toTop {
+    display: block;
+    margin: 0px auto;
+    width: 86px;
+    height: 50px;
+    background: url("../img/top.png") center center no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

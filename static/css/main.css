@@ -1,0 +1,341 @@
+body,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
+	margin:0;
+	padding:0;
+	border:0;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	background-color:#fff;
+	font-size:12px;
+	font-family: :"Microsoft YaHei";
+}
+.clearfix{
+	clear:both;
+}
+.bgc{
+	background-color:#1dd2af;
+	padding:10px 30px;
+	display:inline;	
+	position:relative;
+	behavior:url(/static/css/PIE.htc);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.bgcl{
+	background-color:#1dd2af;
+	padding:20px 60px;
+	display:inline;	
+	position:relative;
+	behavior:url(/static/css/PIE.htc);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color:#fff;
+}
+.ft45{
+	font-size:45px;
+}
+.ft18{
+	font-size:18px;
+}
+.ft72{
+	font-size:72px;
+}
+.ft36{
+	font-size:36px;
+}
+.ft50{
+	font-size:50px;
+}
+.ft30{
+	font-size:30px;
+}
+.p20{
+	padding:20px 0px;
+}
+.p50{
+	padding:50px 0px;
+}
+
+.wrap{
+	width:1100px;
+	left:50%;
+	margin-left:-550px;
+	position:relative;
+}
+.i_wrap{
+	width:1180px;
+	left:50%;
+	margin-left:-590px;
+	position:relative;	
+}
+.b_wrap{
+	width:1300px;
+	left:50%;
+	margin-left:-650px;
+	position:relative;		
+}
+.ma{
+	margin:0px auto;
+}
+
+#header{
+	height:130px;
+}
+#logo{
+	background:url(/static/image/logo.png) no-repeat;
+	display:block;
+	width:307px;
+	height:57px;
+	float:left;
+	margin-top:50px;
+}
+#nav{
+	float:left;
+	margin-top:25px;
+	margin-left:170px;
+}
+#nav li{
+	float:left;
+}
+#nav li a{
+	color:#606060;
+	display:block;
+	width:155px;
+	padding-top:60px;
+	font-size:18px;
+	font-weight: bolder;
+	text-align: center;
+}
+#nav .nav1{
+	background:url(/static/image/homegrey.png) no-repeat center 0px;
+}
+#nav .nav1:hover{
+	background:url(/static/image/homegreen.png) no-repeat center 0px;
+	color:#1dd2af;
+}
+#nav .nav2{
+	background:url(/static/image/super1.0grey.png) no-repeat center 0px;
+}
+#nav .nav2:hover{
+	background:url(/static/image/super1.0green.png) no-repeat center 0px;
+	color:#1dd2af;
+}
+#nav .nav3{
+	background:url(/static/image/daikuangrey.png) no-repeat center 0px;
+}
+#nav .nav3:hover{
+	background:url(/static/image/daikuangreen.png) no-repeat center 0px;
+	color:#1dd2af;
+}
+#nav .nav4{
+	background:url(/static/image/communitygrey.png) no-repeat center 0px;
+}
+#nav .nav4:hover{
+	background:url(/static/image/communitygreen.png) no-repeat center 0px;
+	color:#1dd2af;
+}
+
+#i_mid{
+	padding:160px 0px;
+}
+#i_main{
+	padding:150px 0px;
+}
+#i_main .msg{
+	float:left;
+	height:190px;
+	width:590px;
+}
+#i_main .msg p{
+	float:left;
+	color:#1dd2af;
+	font-size:14px;
+	margin-left:20px;
+	font-weight: bolder;
+	margin-top:10px;
+}
+#i_main .msg img{
+	float:left;
+}
+#i_main .msg .m_content{
+	background:url(/static/image/wrap.png) no-repeat;
+	float:left;
+	width:355px;
+	height:145px;
+	margin-top:5px;
+	margin-left:20px;
+	font-size:15px;
+	color:#4d4d4d;
+	padding:10px;
+}
+.i_banner_1{
+	background:url(/static/image/banner/1.jpg) no-repeat center;
+	width:100%;
+	height:472px;
+	text-align: center;
+	color:#fff;
+	padding-top:330px;
+	font-weight: bolder;
+	position:relative;
+}
+.i_banner_1 a{
+	display:block;
+	background:url(/static/image/btn_r.png) no-repeat;
+	width:333px;
+	height:96px;
+	position:absolute;
+	right:10px;
+	top:-8px;
+}
+.i_banner_2{
+	background:url(/static/image/banner/2.jpg) no-repeat center;
+	width:100%;
+	height:482px;
+	text-align: center;
+	color:#fff;
+	padding-top:30px;
+	font-weight: bolder;	
+}
+.i_banner_3{
+	background:url(/static/image/banner/3.jpg) no-repeat center;
+	width:100%;
+	height:565px;
+	text-align: center;
+	color:#fff;
+	padding-top:205px;
+	font-weight: bolder;	
+}
+
+#footer{
+	height:420px;
+	width:100%;
+	background-color:#2c3e50;
+	padding-top:50px;
+	position:relative;
+}
+#footer .f_block{
+	width:215px;
+	float:left;
+}
+#footer .f_block ul li{
+	color:#fff;
+	padding:10px 0px;
+}
+#footer .f_block ul li a{
+	color:#fff;
+}
+#footer .f_block ul li span{
+	color:#1dd2af;
+}
+#footer .f_block ul{
+	clear:both;
+}
+#footer .f_block p{
+	color:#fff;
+	font-size:14px;
+	padding-top:10px;
+	width:180px;
+}
+#footer h5{
+	color:#1dd2af;
+	font-size:25px;
+	float:left;
+	margin-bottom:20px;
+}
+#footer .copy{
+	color:#9dafc0;
+	font-size:14px;
+	text-align: center;
+}
+#footer .icons{
+	height:80px;
+	padding:10px 0px;
+	width:230px;
+	position:relative;
+	left:50%;
+	margin-left:-110px;
+	top:10px;
+}
+#footer .icons a{
+	display:block;
+	float:left;
+	width:54px;
+	height:54px;
+	margin-left:20px;
+}
+#footer .icons .icon1{
+	background:url(/static/image/wechat_white.png) no-repeat;
+	background-size:54px 54px;
+}
+#footer .icons .icon1:hover{
+	background:url(/static/image/wechat_green.png) no-repeat;
+	background-size:54px 54px;	
+}
+#footer .icons .icon2{
+	background:url(/static/image/qq_white.png) no-repeat;
+	background-size:54px 54px;
+}
+#footer .icons .icon2:hover{
+	background:url(/static/image/qq_green.png) no-repeat;
+	background-size:54px 54px;	
+}
+#footer .icons .icon3{
+	background:url(/static/image/wechat_moment_white.png) no-repeat;
+	background-size:54px 54px;
+}
+#footer .icons .icon3:hover{
+	background:url(/static/image/wechat_moment_green.png) no-repeat;
+	background-size:54px 54px;	
+}
+
+.line{
+	clear:both;
+	float:left;
+	margin-top:20px;
+	width:100%;
+	height:1px;
+	border-top:1px solid #394c5f;
+}
+#i_mid a{
+	display:block;
+	width:325px;
+	padding-top:300px;
+	color:#626262;
+	font-size:36px;
+	font-weight: bolder;
+	float:left;
+	text-align: center;
+}
+#i_mid .i_mid1{
+	background:url(/static/image/img3.png) no-repeat center top;
+}
+#i_mid .i_mid1:hover{
+	background:url(/static/image/mid_hover.png) no-repeat center top;
+} 
+#i_mid .i_mid2{
+	background:url(/static/image/img3.png) no-repeat center top;
+}
+#i_mid .i_mid2:hover{
+	background:url(/static/image/mid_hover.png) no-repeat center top;
+} 
+#i_mid .i_mid3{
+	background:url(/static/image/img3.png) no-repeat center top;
+}
+#i_mid .i_mid3:hover{
+	background:url(/static/image/mid_hover.png) no-repeat center top;
+} 
+#i_mid .i_mid4{
+	background:url(/static/image/img3.png) no-repeat center top;
+}
+#i_mid .i_mid4:hover{
+	background:url(/static/image/mid_hover.png) no-repeat center top;
+} 
+
+#topcontrol{
+	position:absolute;
+	left:50%;
+	margin-left:-43px;
+	bottom:0px;
+	cursor: pointer;
+}

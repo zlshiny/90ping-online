@@ -1,0 +1,95 @@
+.login_body_wrapper {
+    /* : add background pic */
+}
+.login_content {
+    width: 1240px;
+    margin: 110px auto 0px;
+    padding-bottom: 105px;
+}
+.login_box {
+    width: 500px;
+    font-family: "microsoft yahei";
+    background-color: #fff;
+    padding-bottom: 35px;
+    border: 1px solid #1dd2af;
+    border-radius: 5px;
+}
+.login_box header {
+    padding-left: 70px;
+    height: 85px;
+    background-color: #1dd2af;
+    color: #fff;
+    font-size: 24px;
+    line-height: 85px;
+}
+
+.login_form {
+    width:360px;
+    margin: 20px auto 0px;
+}
+.login_title {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #717171;
+}
+.login_input {
+    width: 350px;
+    height: 37px;
+    padding-left: 10px;
+    line-height: 37px;
+    margin-top: 10px;
+    border: 1px solid #717171;
+    border-radius: 5px;
+}
+.login_box_btn-loginIn {
+    width:355px;
+    height: 50px;
+    margin: 35px auto 0px;
+    text-align: center;
+    background-color: #1dd2af;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login_bottom {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.login_box_btn-register {
+    float: left;
+    color:#1dd2af;
+}
+.login_box_btn-register a {
+    color:#1dd2af;
+}
+.login_box_btn-forget {
+    float: right;
+    color: #717171;
+}
+.login_box_btn-forget a {
+    color: #717171;
+}
+.login_box_btn-register a:hover,
+.login_box_btn-forget a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
