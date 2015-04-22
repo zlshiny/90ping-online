@@ -22,11 +22,11 @@ window.onscroll = function(){
 		<div class="wrap">
 			<a href="###" id="logo"></a>
 			<ul id="nav">
-				<li><a href="###" class="nav1">主页</a></li>
+				<li><a href="/" class="nav1">主页</a></li>
 				<li><a href="###" class="nav2">超级Home1.0</a></li>
 				<li><a href="###" class="nav3">贷款</a></li>
-				<li><a href="###" class="nav4">社区</a></li>
-				<li><a href="###" class="nav5">登录注册</a></li>
+				<li><a href="http://91haizibang.com" target="_blank" class="nav4">社区</a></li>
+				<li><a href="/user/login" class="nav5">登录注册</a></li>
 			</ul>
 		</div>
 	</div>

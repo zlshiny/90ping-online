@@ -1,21 +1,12 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Login Page</title>
-    <link rel="stylesheet" href="css/common.css"/>
-    <link rel="stylesheet" href="css/header.css"/>
-    <link rel="stylesheet" href="css/footer.css"/>
-    <link rel="stylesheet" href="css/login.css"/>
-    <script src="<?=JS_PATH . 'jquery.min.js';?>"></script>
-    <script src="<?=JS_PATH . 'login.js';?>"></script>
-</head>
+<!--<link rel="stylesheet" href="login_common.css"/>-->
+<!--<link rel="stylesheet" href="header.css"/>-->
+<!--<link rel="stylesheet" href="footer.css"/>-->
+<link rel="stylesheet" href="<?=CSS_PATH . 'login.css';?>"/>
+<script src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 
-<body class="com_page">
-    <!--header-->
-    <header id="header" class="header_wrapper"></header>
-    <!--login body content-->
-    <div class="login_body_wrapper">
+<?php
+	include('header.php');
+?>
         <div class="login_content">
             <div class="login_box">
                 <header>登录</header>
@@ -33,9 +24,8 @@
                 </form>
             </div>
         </div>
-    </div>
+<?php
+	include('footer.php');
+?>
 
-    <!--footer-->
-    <footer class="footer_wrapper" id="footer"></footer>
-</body>
-</html>
+<!--</body>-->
