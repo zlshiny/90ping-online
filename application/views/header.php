@@ -7,16 +7,26 @@
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
 </head>
-
+<script type="text/javascript">
+window.onscroll = function(){
+	if(document.body.scrollTop > 130){
+		$('.i_banner_1').find('a').addClass('fix_p')
+	}else{
+		$('.i_banner_1').find('a').removeClass('fix_p')
+	}
+}
+	
+</script>
 <body>
 	<div id="header">
 		<div class="wrap">
 			<a href="###" id="logo"></a>
 			<ul id="nav">
 				<li><a href="###" class="nav1">主页</a></li>
-				<li><a href="###" class="nav2">超级Home1.0</a></li>
+				<li><a href="###" class="nav2">85后超级爆款</a></li>
 				<li><a href="###" class="nav3">贷款</a></li>
 				<li><a href="###" class="nav4">社区</a></li>
+				<li><a href="###" class="nav5">登录注册</a></li>
 			</ul>
 		</div>
 	</div>
