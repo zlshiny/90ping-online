@@ -18,7 +18,7 @@ body{
 	padding:10px 30px;
 	display:inline;	
 	position:relative;
-	behavior:url(/static/css/PIE.htc);
+	behavior:url(./css/PIE.htc);
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 }
@@ -27,7 +27,7 @@ body{
 	padding:20px 60px;
 	display:inline;	
 	position:relative;
-	behavior:url(/static/css/PIE.htc);
+	behavior:url(./css/PIE.htc);
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	color:#fff;
@@ -50,11 +50,17 @@ body{
 .ft30{
 	font-size:30px;
 }
+.ft48{
+	font-size:48px;
+}
 .p20{
 	padding:20px 0px;
 }
 .p50{
 	padding:50px 0px;
+}
+.lh30{
+	line-height:35px;
 }
 
 .wrap{
@@ -83,7 +89,7 @@ body{
 	height:130px;
 }
 #logo{
-	background:url(/static/image/logo.png) no-repeat;
+	background:url(../img/logo.png) no-repeat;
 	display:block;
 	width:307px;
 	height:57px;
@@ -93,7 +99,7 @@ body{
 #nav{
 	float:left;
 	margin-top:25px;
-	margin-left:170px;
+	margin-left:135px;
 }
 #nav li{
 	float:left;
@@ -101,38 +107,45 @@ body{
 #nav li a{
 	color:#606060;
 	display:block;
-	width:155px;
+	width:130px;
 	padding-top:60px;
 	font-size:18px;
 	font-weight: bolder;
 	text-align: center;
 }
 #nav .nav1{
-	background:url(/static/image/homegrey.png) no-repeat center 0px;
+	background:url(../img/homegrey.png) no-repeat center 0px;
 }
 #nav .nav1:hover{
-	background:url(/static/image/homegreen.png) no-repeat center 0px;
+	background:url(../img/homegreen.png) no-repeat center 0px;
 	color:#1dd2af;
 }
 #nav .nav2{
-	background:url(/static/image/super1.0grey.png) no-repeat center 0px;
+	background:url(../img/super1.0grey.png) no-repeat center 0px;
 }
 #nav .nav2:hover{
-	background:url(/static/image/super1.0green.png) no-repeat center 0px;
+	background:url(../img/super1.0green.png) no-repeat center 0px;
 	color:#1dd2af;
 }
 #nav .nav3{
-	background:url(/static/image/daikuangrey.png) no-repeat center 0px;
+	background:url(../img/daikuangrey.png) no-repeat center 0px;
 }
 #nav .nav3:hover{
-	background:url(/static/image/daikuangreen.png) no-repeat center 0px;
+	background:url(../img/daikuangreen.png) no-repeat center 0px;
 	color:#1dd2af;
 }
 #nav .nav4{
-	background:url(/static/image/communitygrey.png) no-repeat center 0px;
+	background:url(../img/communitygrey.png) no-repeat center 0px;
 }
 #nav .nav4:hover{
-	background:url(/static/image/communitygreen.png) no-repeat center 0px;
+	background:url(../img/communitygreen.png) no-repeat center 0px;
+	color:#1dd2af;
+}
+#nav .nav5{
+	background:url(../img/logingrey.png) no-repeat center 0px;
+}
+#nav .nav5:hover{
+	background:url(../img/logingreen.png) no-repeat center 0px;
 	color:#1dd2af;
 }
 
@@ -159,7 +172,7 @@ body{
 	float:left;
 }
 #i_main .msg .m_content{
-	background:url(/static/image/wrap.png) no-repeat;
+	background:url(../img/wrap.png) no-repeat;
 	float:left;
 	width:355px;
 	height:145px;
@@ -170,7 +183,7 @@ body{
 	padding:10px;
 }
 .i_banner_1{
-	background:url(/static/image/banner/1.jpg) no-repeat center;
+	background:url(../img/banner/1.jpg) no-repeat center;
 	width:100%;
 	height:472px;
 	text-align: center;
@@ -181,7 +194,7 @@ body{
 }
 .i_banner_1 a{
 	display:block;
-	background:url(/static/image/btn_r.png) no-repeat;
+	background:url(../img/btn_r.png) no-repeat;
 	width:333px;
 	height:96px;
 	position:absolute;
@@ -189,7 +202,7 @@ body{
 	top:-8px;
 }
 .i_banner_2{
-	background:url(/static/image/banner/2.jpg) no-repeat center;
+	background:url(../img/banner/2.jpg) no-repeat center;
 	width:100%;
 	height:482px;
 	text-align: center;
@@ -198,7 +211,7 @@ body{
 	font-weight: bolder;	
 }
 .i_banner_3{
-	background:url(/static/image/banner/3.jpg) no-repeat center;
+	background:url(../img/banner/3.jpg) no-repeat center;
 	width:100%;
 	height:565px;
 	text-align: center;
@@ -265,27 +278,27 @@ body{
 	margin-left:20px;
 }
 #footer .icons .icon1{
-	background:url(/static/image/wechat_white.png) no-repeat;
+	background:url(../img/wechat_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon1:hover{
-	background:url(/static/image/wechat_green.png) no-repeat;
+	background:url(../img/wechat_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 #footer .icons .icon2{
-	background:url(/static/image/qq_white.png) no-repeat;
+	background:url(../img/qq_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon2:hover{
-	background:url(/static/image/qq_green.png) no-repeat;
+	background:url(../img/qq_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 #footer .icons .icon3{
-	background:url(/static/image/wechat_moment_white.png) no-repeat;
+	background:url(../img/wechat_moment_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon3:hover{
-	background:url(/static/image/wechat_moment_green.png) no-repeat;
+	background:url(../img/wechat_moment_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 
@@ -308,28 +321,28 @@ body{
 	text-align: center;
 }
 #i_mid .i_mid1{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(../img/img3.png) no-repeat center top;
 }
 #i_mid .i_mid1:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(../img/mid_hover.png) no-repeat center top;
 } 
 #i_mid .i_mid2{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(../img/img3.png) no-repeat center top;
 }
 #i_mid .i_mid2:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(../img/mid_hover.png) no-repeat center top;
 } 
 #i_mid .i_mid3{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(../img/img3.png) no-repeat center top;
 }
 #i_mid .i_mid3:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(../img/mid_hover.png) no-repeat center top;
 } 
 #i_mid .i_mid4{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(../img/img3.png) no-repeat center top;
 }
 #i_mid .i_mid4:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(../img/mid_hover.png) no-repeat center top;
 } 
 
 #topcontrol{
@@ -338,4 +351,9 @@ body{
 	margin-left:-43px;
 	bottom:0px;
 	cursor: pointer;
+}
+.fix_p{
+	position:fixed!important;
+	top:-8px!important;
+	z-index:100;
 }
