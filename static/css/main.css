@@ -110,7 +110,6 @@ body{
 	width:130px;
 	padding-top:60px;
 	font-size:18px;
-	font-weight: bolder;
 	text-align: center;
 }
 #nav .nav1{
@@ -165,7 +164,6 @@ body{
 	color:#1dd2af;
 	font-size:14px;
 	margin-left:20px;
-	font-weight: bolder;
 	margin-top:10px;
 }
 #i_main .msg img{
@@ -189,7 +187,7 @@ body{
 	text-align: center;
 	color:#fff;
 	padding-top:330px;
-	font-weight: bolder;
+
 	position:relative;
 }
 .i_banner_1 a{
@@ -207,8 +205,7 @@ body{
 	height:482px;
 	text-align: center;
 	color:#fff;
-	padding-top:30px;
-	font-weight: bolder;	
+	padding-top:30px;	
 }
 .i_banner_3{
 	background:url(/static/image/banner/3.jpg) no-repeat center;
@@ -217,7 +214,6 @@ body{
 	text-align: center;
 	color:#fff;
 	padding-top:205px;
-	font-weight: bolder;	
 }
 
 #footer{
@@ -255,6 +251,7 @@ body{
 	font-size:25px;
 	float:left;
 	margin-bottom:20px;
+	font-weight: normal;
 }
 #footer .copy{
 	color:#9dafc0;
@@ -316,7 +313,7 @@ body{
 	padding-top:300px;
 	color:#626262;
 	font-size:36px;
-	font-weight: bolder;
+
 	float:left;
 	text-align: center;
 }
