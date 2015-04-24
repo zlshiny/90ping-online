@@ -1,47 +1,39 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+    include('header.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>订单列表-90平方智能家装</title>
-
-    <style type="text/css">
-        .regist{
-            height:400px;
-            width:1000px;
-        }
-
-        .regist span{
-            margin-left:10px;
-        }
-    </style>
-</head>
-<body>
-<div class="body">
-    <div>
-        <span><?php if(check_login()):?>已登录<?php else:?>未登录<?php endif;?></span>
-    </div>
-    <div class="regist">
-        <ul>
+<div class="orderlist_wrap">
+    <div class="order_title">我的订单</div>
+    <table cellpadding="0" border="0" cellspacing="0">
+        <thead>
+            <tr>
+                <td width="260px">订单编号</td>
+                <td width="170px">电话</td>
+                <td width="170px">产品</td>
+                <td width="170px">定金</td>
+                <td width="170px">状态</td>
+                <td width="170px">操作</td>
+            </tr>
+        </thead>
+        <tbody>
             <?php if(!empty($list)):?>
-                <?php foreach($list as $v):?>
-                <li>
-                    <div>
-                        <span><?=$v['serial_number'];?></span>
-                        <span><?=$v['phone'];?></span>
-                        <span><?=$v['product_name'];?></span>
-                        <span><?=$v['init_deposit'];?></span>
-                        <span><?=$v['status_name'];?></span>
-                        <span><a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>"><?=$v['action_name'];?></a></span>
-                        <?php if($v['status'] > 0):?><span><a href="/order/detail/<?=$v['order_id'];?>">查看</a></span><?php endif;?>
-                    </div>
-                </li>
-                <?php endforeach;?>
+            <?php foreach($list as $v):?>
+            <tr>
+                <td><?=$v['serial_number'];?></td>
+                <td><?=$v['phone'];?></td>
+                <td><?=$v['product_name'];?></td>
+                <td><?=$v['init_deposit'];?></td>
+                <td><?=$v['status_name'];?></td>
+                <td>
+                    <a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
+                        <?=$v['action_name'];?>
+                    </a>
+                    <?php if($v['status'] > 0):?><a href="/order/detail/<?=$v['order_id'];?>">查看</a><?php endif;?>
+                </td>
+            </tr>
+            <?php endforeach;?>
             <?php endif;?>
-        </ul>
-    </div>
+        </tbody>
+    </table>
     <div style="display:none;">
         <form action="" method="post" id="fir_order">
             <input type="hidden" name="order_id" id="fir_order_id" value=""/>
@@ -49,15 +41,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </form>
     </div>
 </div>
-<script type="application/javascript" src="<?=JS_PATH . 'jquery-1.11.2.min.js';?>"></script>
 <script type="application/javascript">
 $(document).ready(function(){
     $(".action_order").click(function(){
         var status = $(this).attr('value');
         if(status == 1){
-            $("#fir_order").attr("action", "/order/load_appointhird");
+            $("#fir_order").attr("action", "/pay");
         }else if(status == 0){
-            $("#fir_order").attr("action", "/order/load_appointsec");
+            $("#fir_order").attr("action", "/order/improve");
         }else{
             return false;
         }
@@ -68,5 +59,6 @@ $(document).ready(function(){
     });
 });
 </script>
-</body>
-</html>
+<?php
+    include('footer.php');
+?>

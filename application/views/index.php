@@ -2,7 +2,7 @@
 	include('header.php');
 ?>
 <div class="i_banner_1">
-	<a href="###"></a>
+	<a href="/order" target="_blank"></a>
 		<p class="bgc ft45 ma">史上第一个专注于85后</p>
 		<p class="ft72 p20">互联网智能家装探索者</p>
 		<p class="ft18 lh30">相比于低价，我们更追求品质和逼格，我们更关心健康环保<br/>
@@ -45,7 +45,7 @@
 	<p class="ft72">V1.0产品内测    仅甄选30位天使用户</p>
 	<p class="ft30 p50">25万软硬装全包方案，家具窗帘和 配饰都含<br/>
 一个完整的家，仅售15万</p>
-	<a href="###" class="bgcl ft48">成为天使用户</a>
+	<a href="/order" target="_blank" class="bgcl ft48">成为天使用户</a>
 </div>
 <?php
 	include('footer.php');

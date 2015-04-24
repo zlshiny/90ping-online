@@ -1,72 +1,51 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>预约-90平方智能家装</title>
-
-    <style type="text/css">
-        .regist{
-            height:400px;
-            width:1000px;
-        }
-
-        .phone{
-            margin-left:10px; 
-        }
-    </style>
-</head>
-<body>
-<div class="body">
-    <div>
-        <span><?php if(check_login()):?>已登录<?php else:?>未登录<?php endif;?></span>
-    </div>
-    <div class="regist">
-        <form class="form" action="javascript:void(0);" method="post">
-            <div class="phone-box">
-                <span>手机号：</span>
-                <input type="text" name="phone" class="phone" placeholder="请输入手机号"  value=""/>
-            </div>
-            <div class="check-box">
-                <span>验证码：</span>
-                <input type="text" name="check" class="check" placeholder="输入手机验证码"  value=""/>
-                <input type="button" name="fetch_verify" class="fetch_verify" value="获取验证码"/>
-            </div>
-            <div class="submit-buttion">
-                <input type="submit" name="button" class="button" value="预约"/>
-            </div>
-        </form>
+    include('header.php');
+?>
+<div id="choose_banner">
+    <div class="choose_bg"></div>
+    <div class="choose_wrap appoint">
+        <h1>你只需做个决定</h1>
+        <img src="<?=IMAGE_PATH . 'msg.png';?>"/>
+        <input type="text" class="app_phone" name="phone" value="请输入手机号" onfocus="if(this.value == '请输入手机号'){this.value = ''}" onblur="if(this.value == ''){this.value='请输入手机号'}"/>
+        <input type="text" class="app_code" name="code" onfocus="if(this.value == '请输入验证码'){this.value = ''}" onblur="if(this.value == ''){this.value = '请输入验证码'}" value="请输入验证码"/>
+        <div class="yzm">获取验证码</div>
+        <div class="app_sub">成为天使客服</div>
     </div>
     <div style="display:none;">
-        <form action="/order/load_appointsec" method="post" id="sec_order">
+        <form action="/order/improve" method="post" id="sec_order">
             <input type="hidden" name="order_id" id="sec_order_id" value=""/>
             <input type="hidden" name="user_id" id="sec_user_id" value=""/>
         </form>
     </div>
 </div>
-<script type="application/javascript" src="<?=JS_PATH . 'jquery-1.11.2.min.js';?>"></script>
-<script type="application/javascript">
-$(document).ready(function(){
-    $(".form").submit(function(e){
-        var phone = $(".phone").val();
-        var verify_number = $(".check").val();
+
+<script type="text/javascript">
+    var s = 30;
+    var get_code = true;
+    $('.app_sub').live('click',function(){
+        var phone = $(".app_phone").val();
+        var verify_number = $(".app_code").val();
+
+        if(!input_check(phone , verify_number)){
+            return false;
+        }
 
         $.post('/order/appointment',
                 {phone : phone, phone_verify_number: verify_number},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
-                        alert(data.msg);
                         if(data.code == 0){
                             if(data.order_id > 0 && data.user_id > 0){
                                 $("#sec_order_id").val(data.order_id);  
                                 $("#sec_user_id").val(data.user_id);  
                                 $("#sec_order").submit();
                             }else{
+                                alert(data.msg);
                                 return false;
                             }
                         }else{
+                            alert(data.msg);
                             return false;
                         }
                     }else{
@@ -76,21 +55,57 @@ $(document).ready(function(){
                 });
     });
 
-    $(".fetch_verify").click(function(){
-        var number = $(".phone").val();
-        if(number == undefined || !number) return false;
-        $.post('/user/phone_verify',
-                {phone: number},
-                function(data, status){
-                    if(status == "success"){
-                        data = eval('(' + data + ')');
-                        alert(data.code +":" + data.msg);
-                    }else{
-                        alert('4');
-                    }
+
+    $('.yzm').live('click',function(){
+        if(get_code){
+            var num = $(".app_phone").val();
+            var reg = /^1[34578]\d{9}$/;
+            if(!reg.test(num)){
+                alert('请输入正确的手机号');
+                return false;
+            }
+
+            code_time();
+            $.post('/user/phone_verify',
+                {phone: num}, function(data, status){
+                        if(status == "success"){
+                            data = eval('(' + data + ')');
+                            if(data.code != 0){
+                                alert(data.msg);
+                            }
+                        }else{
+                            alert('获取失败,请30秒后重新获取');
+                        }
                 });
-    });
-});
+        }
+    })
+
+    var code_time = function(that){
+        get_code = false;
+        if(s < 0){
+            $('.yzm').html('重新获取');
+            get_code = true;
+            s=30;
+            return false;
+        }
+        $('.yzm').html('还剩'+s+'秒');
+        s--;
+        setTimeout("code_time()",1000);
+        
+    }
+    var input_check = function(p,c){
+        var reg = /^1[34578]\d{9}$/;
+        if(!reg.test(p)){
+            alert('请输入正确的手机号');
+            return false;
+        }else if(c.length !== 4){
+            alert('请输入正确的验证码');
+            return false;
+        }else{
+            return true;
+        }
+    }
 </script>
-</body>
-</html>
+<?php
+    include('footer.php');
+?>

@@ -3,8 +3,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Controller {
 
+    //加载预约第一步(验证手机)
     public function index(){
         $this->load->view('appoint.php');
+    }
+
+    //加载预约第二步(完善订单信息)
+    public function improve(){
+        $order_id = $this->input->post('order_id');
+        $user_id = $this->input->post('user_id');
+        if(!$order_id || $order_id < 0 || !$user_id || $user_id < 0){
+            exit("订单不存在"); 
+        }
+
+        $data['order_id'] = $order_id;
+        $data['user_id'] = $user_id;
+        $this->load->view('choose.php', $data);
     }
 
     public function detail($order_id){
@@ -28,8 +42,12 @@ class Order extends CI_Controller {
 
     public function myorder(){
         if(!$user_id = check_login()){
-            $this->load->view('login.php');
-        }else{
+            $user_id = 12;
+        }
+
+        //if(!$user_id = check_login()){
+        //    $this->load->view('login.php');
+        //}else{
             $data = array();
             $data['user_id'] = $user_id;
             $data['list'] = array();
@@ -39,33 +57,10 @@ class Order extends CI_Controller {
             }
 
             $this->load->view('order_list', $data);
-        }
+        //}
     }
 
-    /*预约第三步,加载支付界面*/
-    public function payment(){
-        if(!$order_id = $this->input->post('order_id')){
-            exit(json_encode(array(
-                            'code' => -1,
-                            'msg' => '缺少订单ID',
-                            )
-                        ));
-        }
-
-        if(!$user_id = $this->input->post('user_id')){
-            exit(json_encode(array(
-                            'code' => -2,
-                            'msg' => '缺少USERID',
-                            )
-                        ));
-        }
-
-        $data['order_id'] = $order_id;
-        $data['user_id'] = $user_id;
-        $this->load->view('order_third.php', $data);
-    }
-
-    /*预约第二步,完善预约信息*/
+    /*执行预约第二步,完善预约信息*/
     public function appointsec(){
         if((!$order_id = $this->input->post('order_id')) || $order_id < 0){
             exit(json_encode(array(
@@ -83,7 +78,8 @@ class Order extends CI_Controller {
                         ));
         }
 
-        if((!$age = $this->input->post('age')) || ($age != 1 && $age != 2)){
+        $age = $this->input->post('age');
+        if(!isset($_POST['age']) || ($age != 0 && $age != 1)){
             exit(json_encode(array(
                             'code' => -3,
                             'msg' => '非法年龄',
@@ -146,51 +142,7 @@ class Order extends CI_Controller {
         }
     }
 
-    public function load_appointhird(){
-        if(!$order_id = $this->input->post('order_id')){
-            exit(json_encode(array(
-                            'code' => -1,
-                            'msg' => '缺少订单ID',
-                            )
-                        ));
-        }
-
-        if(!$user_id = $this->input->post('user_id')){
-            exit(json_encode(array(
-                            'code' => -2,
-                            'msg' => '缺少USERID',
-                            )
-                        ));
-        }
-
-        $data['order_id'] = $order_id;
-        $data['user_id'] = $user_id;
-        $this->load->view('order_third.php', $data);
-    }
-
-    public function load_appointsec(){
-        if(!$order_id = $this->input->post('order_id')){
-            exit(json_encode(array(
-                            'code' => -1,
-                            'msg' => '缺少订单ID',
-                            )
-                        ));
-        }
-
-        if(!$user_id = $this->input->post('user_id')){
-            exit(json_encode(array(
-                            'code' => -2,
-                            'msg' => '缺少USERID',
-                            )
-                        ));
-        }
-
-        $data['order_id'] = $order_id;
-        $data['user_id'] = $user_id;
-        $this->load->view('order_sec.php', $data);
-    }
-
-    /*手机预约第一步*/
+    /*执行预约第一步*/
     public function appointment(){
         if(!$phone = $this->input->post('phone')){
             exit(json_encode(array(

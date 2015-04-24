@@ -3,22 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-
     public function login(){
         if(check_login()){
             $this->load->view('logout.php');
@@ -28,6 +12,14 @@ class User extends CI_Controller {
     }
 
     public function sign_in(){
+        if(check_login()){
+            exit(json_encode(array(
+                            'code' => -1,
+                            'msg' => '已登录',
+                            )
+                        ));
+        }
+
         if(!$phone = $this->input->post('phone')){
             exit(json_encode(array(
                             'code' => -1,
@@ -124,7 +116,7 @@ class User extends CI_Controller {
                             )
                         ));
         }
-        
+
         $code = generate_code(4);
         $this->load->helper('sp');
         if(!$ret = spSingleMt($code, $phone)){
@@ -135,6 +127,7 @@ class User extends CI_Controller {
                         ));
         }
 
+        unset($_SESSION['phone_verify_number']);
         $expired = $this->config->item('phone_verify_expired');
         $this->load->library('session');
         $this->session->set_tempdata('phone_verify_number', $code, $expired);

@@ -24,9 +24,9 @@ window.onscroll = function(){
 			<ul id="nav">
 				<li><a href="/" class="nav1">主页</a></li>
 				<li><a href="###" class="nav2">超级Home1.0</a></li>
-				<li><a href="###" class="nav3">贷款</a></li>
+				<li><a href="/loan" class="nav3">贷款</a></li>
 				<li><a href="http://91haizibang.com" target="_blank" class="nav4">社区</a></li>
-				<li><a href="/user/login" class="nav5">登录注册</a></li>
+				<li><?php if(get_cookie(LOGIN_COOKIE_KEY)):?><a href="/order/myorder" class="nav5">个人中心<?php else:?><a href="/user/login" class="nav5">登录注册<?php endif;?></a></li>
 			</ul>
 		</div>
 	</div>
