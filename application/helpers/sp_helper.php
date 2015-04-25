@@ -5,7 +5,7 @@ function spSingleMt($code, $phone) {
 
     //预定义参数，参数说明见文档
     $spid = SP_ID;
-    $spsc = "00";//区分不同业务,比如主站注册是00,H5注册是01之类
+    $spsc = "01";//区分不同业务, 00:孩子帮  01:90平方科技
     $sppassword = SP_PASSWD;
     $sa = "10";
     $da = "86{$phone}";
