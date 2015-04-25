@@ -42,12 +42,8 @@ class Order extends CI_Controller {
 
     public function myorder(){
         if(!$user_id = check_login()){
-            $user_id = 12;
-        }
-
-        //if(!$user_id = check_login()){
-        //    $this->load->view('login.php');
-        //}else{
+            $this->load->view('login.php');
+        }else{
             $data = array();
             $data['user_id'] = $user_id;
             $data['list'] = array();
@@ -57,7 +53,7 @@ class Order extends CI_Controller {
             }
 
             $this->load->view('order_list', $data);
-        //}
+        }
     }
 
     /*执行预约第二步,完善预约信息*/

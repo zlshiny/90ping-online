@@ -11,10 +11,9 @@
         </div>
         <div class="detail_content">
             <h1>房屋信息</h1>
-            <p>姓名：</p>
             <p>电话：<?=$order['phone'];?></p>
             <p>所在地区：<?=$order['location'];?></p>
-            <p>户型/面积：</p>
+            <p>户型/面积：<?=$order['acreage'];?></p>
             <div class="clearfix"></div>
         </div>
         <div class="detail_content">

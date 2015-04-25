@@ -127,9 +127,9 @@ class User extends CI_Controller {
                         ));
         }
 
+        $this->load->library('session');
         unset($_SESSION['phone_verify_number']);
         $expired = $this->config->item('phone_verify_expired');
-        $this->load->library('session');
         $this->session->set_tempdata('phone_verify_number', $code, $expired);
 
         exit(json_encode(array(
@@ -237,7 +237,7 @@ class User extends CI_Controller {
             if($user_id == -10){
                 exit(json_encode(array(
                                 'code' => -9,
-                                'msg' => '用户已存在',
+                                'msg' => '用户已存在, 您可以直接登录',
                                 )
                             ));
             }else if($user_id == -3){

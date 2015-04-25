@@ -16,8 +16,8 @@
                <button>立即登录</button>
             </form>
             <div class="login_other">
-                <a href="###" class="other1">马上注册</a>
-                <a href="###" class="other2">忘记密码</a>
+                <a href="/user/signup" class="other1">马上注册</a>
+                <!--<a href="###" class="other2">忘记密码</a>-->
             </div>
         </div>
     </div>
