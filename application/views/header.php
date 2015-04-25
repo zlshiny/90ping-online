@@ -20,7 +20,7 @@ window.onscroll = function(){
 <body>
 	<div id="header">
 		<div class="wrap">
-			<a href="###" id="logo"></a>
+			<a href="/" id="logo"></a>
 			<ul id="nav">
 				<li><a href="/" class="nav1">主页</a></li>
 				<li><a href="/product" class="nav2">超级Home1.0</a></li>
