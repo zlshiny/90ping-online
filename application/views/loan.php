@@ -38,34 +38,47 @@
     <span>手机</span>
     <input type="text" value="" name="phone"/>
     <span>性别</span>
-    <div class="loan_select">
-        <div class="loan_hover">先生</div>
-        <div>女士</div>
+    <div class="loan_select loan_gender">
+        <div class="loan_hover" title="1">先生</div>
+        <div title="2">女士</div>
     </div>
     <span>工作单位性质</span>
-    <div class="loan_select">
-        <div class="loan_hover">国有企业</div>
-        <div>事业单位</div>
-        <div>私营企业</div>
+    <div class="loan_select loan_org">
+        <div class="loan_hover" title="1">国有企业</div>
+        <div title="2">事业单位</div>
+        <div title="3">私营企业</div>
     </div>
     <span>月收入(请输入数字)</span>
     <input type="text" value="" name="income"/>
     <span>期望贷款金额</span>
-    <input type="text" value=""/>
+    <input type="text" value="" name="expect"/>
     <span>房屋地址</span>
-    <input type="text" value=""/>
+    <input type="text" value="" name="location"/>
     <span>房屋面积(请输入数字)</span>
     <input type="text" value="" name="acreage"/>
     <div class="loan_sub">提交</div>
     <div class="clearfix loan_p"></div>
+
+    <div style="display:none">
+        <input type="hidden" value="1" id="sub_gender"/>
+        <input type="hidden" value="1" id="sub_org"/>
+    </div>
 </div>
 <script type="text/javascript">
-    $('.loan_select').find('div').live('click',function(){
+    $('.loan_org').find('div').live('click',function(){
         $(this).parent().find('div').removeClass('loan_hover');
         $(this).addClass('loan_hover');
+        $("#sub_org").val($(this).attr('title'));
     });
+
+    $('.loan_gender').find('div').live('click',function(){
+        $(this).parent().find('div').removeClass('loan_hover');
+        $(this).addClass('loan_hover');
+        $("#sub_gender").val($(this).attr('title'));
+    });
+
     $('.loan_sub').live('click',function(){
-        var reg = /^[0-9]*$/ , type = true;
+        var reg = /^[0-9]*\.*[0-9]*$/ , type = true;
         $('.loan_wrap input').each(function(){
             $(this).removeClass('loan_error');
            
@@ -88,8 +101,43 @@
                 type = true;
             }
         })
+
+        var phone = $('input[name="phone"]').val();
+        var name = $('input[name="user_name"]').val();
+        var income = $('input[name="income"]').val();
+        var expect = $('input[name="expect"]').val();
+        var locat = $('input[name="location"]').val();
+        var acreage = $('input[name="acreage"]').val();
+        var gender = $("#sub_gender").val();
+        var org = $("#sub_org").val();
+
+        if(gender != 1 && gender != 2){
+            alert('性别非法');
+            return fasle;
+        }
+
+        if(org != 1 && org != 2 && org != 3){
+            alert('工作单位非法');
+            return false;
+        }
+
         if(type){
-            $.post('##',{},function(){
+            $.post('/loan/apply',
+                {phone: phone, name: name, income: income, expect: expect, location: locat, acreage: acreage, gender: gender, org: org},
+                function(data, status){
+                        if(status == "success"){
+                            data = eval('(' + data + ')');
+                            if(data.code != 0){
+                                alert(data.msg);
+                                return false;
+                            }else{
+                                alert('申请成功, 请您耐心等候客服与您联系');
+                                window.location.href = "/";
+                            }
+                        }else{
+                            alert('服务器繁忙');
+                            return false;
+                        }
             
             })
         }

@@ -12,7 +12,7 @@
                <p class="login_f">账号</p>
                <input type="text" name="phone" onfocus="if(this.value == '请输入手机号'){this.value=''}" onblur="if(this.value == ''){this.value='请输入手机号'}" value="请输入手机号"/>
                <p>密码</p>
-               <input type="text" onfocus="if(this.value == '请输入密码'){this.value=''}" onblur="if(this.value == ''){this.value='请输入密码'}" name="passwd" value="请输入密码"/>
+               <input type="password" placeholder="请输入密码"  name="passwd" value=""/>
                <button>立即登录</button>
             </form>
             <div class="login_other">

@@ -33,6 +33,12 @@ class User_Model extends CI_Model{
         }
     }
 
+    public function update_user($user_id, $arr){
+        if(!$user_id || $user_id <= 0 || !$arr) return false;
+        $this->master_db->where('user_id', $user_id);
+        return $this->master_db->update('user', $arr);
+    }
+
     public function update_user_agerange($user_id, $age){
         if(!$user_id || $user_id < 0 || ($age != 2 && $age != 1)) return false;
         $arr = array('age_range' => $age);

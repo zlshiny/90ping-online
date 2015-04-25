@@ -8,6 +8,24 @@ class Order_Model extends CI_Model{
         $this->master_db = $this->load->database('master', TRUE);
     }
 
+    public function get_order_list($user_id){
+        if(!$user_id || $user_id <= 0) return array();
+        $this->master_db->select('*');
+        $this->master_db->from('orders');
+        $this->master_db->where('user_id', $user_id);
+        if($query = $this->master_db->get()){
+            $ret = array();
+
+            foreach($query->result_array() as $row){
+                $ret[] = $row;
+            }
+
+            return $ret;
+        }
+
+        return array();
+    }
+
     public function get_order_detail($order_id){
         if(!$order_id || $order_id < 0) return array();
         $ret = array();

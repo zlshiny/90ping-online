@@ -17,11 +17,11 @@
                <p>密码
                 <span class="regist_msg pwd_msg">密码长度不能小于6位</span>
                </p>
-               <input type="text" onfocus="if(this.value == '请输入密码'){this.value=''}" onblur="if(this.value == ''){this.value='请输入密码'}" name="passwd" value="请输入密码"/>
+               <input type="password" placeholder="请输入密码" name="passwd" value=""/>
                <p>确认密码
                 <span class="regist_msg rpwd_msg">两次密码内容不一致</span>
                </p>
-               <input type="text" name="repasswd" value="请再次输入密码" onfocus="if(this.value == '请再次输入密码'){this.value = ''}" onblur="if(this.value == ''){this.value='请再次输入密码'}"/>
+               <input type="password" placeholder="请再次输入密码" name="repasswd" value="" "/>
                <p>验证码
                 <span class="regist_msg code_msg">验证码输入错误</span>
                </p>

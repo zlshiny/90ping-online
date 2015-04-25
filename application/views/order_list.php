@@ -2,6 +2,7 @@
     include('header.php');
 ?>
 <div class="orderlist_wrap">
+    <a href="/user/logout" class="login_out">退出登录</a>
     <div class="order_title">我的订单</div>
     <table cellpadding="0" border="0" cellspacing="0">
         <thead>

@@ -48,3 +48,16 @@ CREATE TABLE `product`(
     `name` varchar(64) NOT NULL DEFAULT '',
     `price` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '价格'
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `loan`(
+    `id` int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    `user_id` int UNSIGNED NOT NULL DEFAULT 0,
+    `status` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '状态',
+    `organization` tinyint NOT NULL DEFAULT 0 COMMENT '工作单位性质,1:国企,2:事业单位,3:私营企业',
+    `income` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '月收入',
+    `expect_amount` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '期望贷款金额',
+    `real_amount` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '实际贷款金额',
+    `location` varchar(128) NOT NULL DEFAULT '' COMMENT '房屋地址',
+    `acreage` decimal(5,2) NOT NULL DEFAULT 0.0 COMMENT '房屋面积',
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8;

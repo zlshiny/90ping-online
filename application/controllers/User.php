@@ -86,6 +86,8 @@ class User extends CI_Controller {
     public function logout(){
         if($val = get_cookie(LOGIN_COOKIE_KEY)){
             delete_cookie(LOGIN_COOKIE_KEY);
+        }
+        /*    exit();
             exit(json_encode(array(
                             'code' => 0,
                             'msg' => 'success',
@@ -97,7 +99,10 @@ class User extends CI_Controller {
                             'msg' => 'not logged in',
                             )
                         ));
-        }
+        }*/
+
+        header('Location: ' . BASE_URL);
+        exit();
     }
 
     public function phone_verify(){

@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 define('BASE_HOST', '91haizibang');
-define('BASE_URL', 'http://' . BASE_HOST . '.com');
+define('BASE_URL', 'http://' . BASE_HOST . '.com:8084');
 define('PASSWD_CONS', '90PINGHULIANWANGZHINENGJIAZHUANG');
 
 define('SP_ID', '6281');
