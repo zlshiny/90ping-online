@@ -1,0 +1,16 @@
+<?php
+    include('header.php');
+?>
+<div class="regist_wrap">
+    <div class="regist_title">
+        注册
+        <span>已有账号，<a href="###">登录</a></span>
+    </div>
+    <div class="regist_content">
+        <p>手机号码></p>
+        <input type="text" value="请输入手机号" onclick=""/>
+    </div>
+</div>
+<?php
+    include('footer.php');
+?>

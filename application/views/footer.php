@@ -25,10 +25,10 @@ hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
 		<div class="f_block">
 			<h5>联系我们</h5>
 			<ul>
-				<li><span>地址：</span>北京市朝阳区乐成国际时代中心</li>
-				<li><span>E-mail: </span>moin@90pingfang.com</li>
-				<li><span>QQ：</span>6348569430</li>
-				<li><span>电话：</span>010-747484859</li>
+				<li><span>地址：</span>北京市朝阳区双井时代国际嘉园</li>
+				<li><span>E-mail: </span>zhaojw@90pingfang.com</li>
+				<li><span>QQ：</span>32556601</li>
+				<!--<li><span>电话：</span>010-747484859</li>-->
 			</ul>
 		</div>
 	</div>
