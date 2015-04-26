@@ -35,6 +35,7 @@ define('USER_STATUS_FIR', 0);//只用手机号预约过,未使用密码注册
 define('USER_STATUS_SEC', 1);//完善了密码信息
 
 define('INIT_DEPOSIT', 1);
+define('TOTAL_PRICE', 156000);
 
 define('ALIPAY_ID', '2088911439730551');
 define('ALIPAY_EMAIL', 'zhaojiangwei@90pingfang.com');

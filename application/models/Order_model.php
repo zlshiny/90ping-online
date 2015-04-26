@@ -46,7 +46,9 @@ class Order_Model extends CI_Model{
                 $ret['status'] = $row['status'];
                 $ret['house_id'] = $row['house_id'];
                 $ret['acreage'] = $row['acreage'];
-                $ret['location'] = trim($row['province'] . ' ' . $row['city'] . ' ' . $row['district'] . ' ' . $row['area']);
+                //$ret['location'] = trim($row['province'] . ' ' . $row['city'] . ' ' . $row['district'] . ' ' . $row['area']);
+                $ret['location'] = trim($row['area']);
+                if(!$ret['location']) $ret['location'] = '北京';
             }
 
             return $ret;

@@ -5,8 +5,8 @@
    <div class="order_title">订单详情</div>
     <div class="detail_wrap">
         <div class="detail_title">
-            <div class="detail_type1 detail_type1_hover">预定购买</div>
-            <div class="detail_type2">在线支付</div>
+            <div class="detail_type1">预定购买</div>
+            <div class="detail_type2 detail_type2_hover">在线支付</div>
             <div class="detail_type3">线下交易</div>
         </div>
         <div class="detail_content">
@@ -29,8 +29,8 @@
                 <tbody>
                     <tr>
                         <td><?=$order['product_name'];?></td>
-                        <td>123</td>
-                        <td><span>123</span></td>
+                        <td><?=TOTAL_PRICE;?></td>
+                        <td><span><?=$order['init_deposit'];?></span></td>
                     </tr>
                 </tbody>
 

@@ -33,6 +33,7 @@ class Order extends CI_Controller {
             if($order = $this->order->get_order_detail($order_id)){
                 $data['order'] = $order;
                 $data['user_id'] = $user_id;
+                $data['order'] = $order;
                 $this->load->view('order_detail', $data);
             }else{
                 exit("订单不存在");
