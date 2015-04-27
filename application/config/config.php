@@ -17,8 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['port'] = '8084';
-$config['base_url'] = BASE_URL . ':' . $config['port'] . '/';
+$config['base_url'] = BASE_URL . '/';
 
 /*
 |--------------------------------------------------------------------------
