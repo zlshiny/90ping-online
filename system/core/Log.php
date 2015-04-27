@@ -173,7 +173,7 @@ class CI_Log {
 			return FALSE;
 		}
 
-		$filepath = $this->_log_path.'log-'.date('Y-m-d').'.'.$this->_file_ext;
+		$filepath = $this->_log_path.'log-'.@date('Y-m-d').'.'.$this->_file_ext;
 		$message = '';
 
 		if ( ! file_exists($filepath))
@@ -196,12 +196,12 @@ class CI_Log {
 		{
 			$microtime_full = microtime(TRUE);
 			$microtime_short = sprintf("%06d", ($microtime_full - floor($microtime_full)) * 1000000);
-			$date = new DateTime(date('Y-m-d H:i:s.'.$microtime_short, $microtime_full));
+			$date = new DateTime(@date('Y-m-d H:i:s.'.$microtime_short, $microtime_full));
 			$date = $date->format($this->_date_fmt);
 		}
 		else
 		{
-			$date = date($this->_date_fmt);
+			$date = @date($this->_date_fmt);
 		}
 
 		$message .= $level.' - '.$date.' --> '.$msg."\n";

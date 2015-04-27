@@ -125,12 +125,15 @@ class User extends CI_Controller {
         $code = generate_code(4);
         $this->load->helper('sp');
         if(!$ret = spSingleMt($code, $phone)){
+            log_message('error', 'generate code fail, code[' . $code . ']');
             exit(json_encode(array(
                             'code' => -2,
                             'msg' => '发送验证码错误',
                             )
                         ));
         }
+
+        log_message('error', 'generate code succ[' . $code . ']');
 
         $this->load->library('session');
         unset($_SESSION['phone_verify_number']);
