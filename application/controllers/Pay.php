@@ -25,6 +25,38 @@ class Pay extends CI_Controller {
         $this->load->view('pay.php', $data);
     }
 
+    public function success(){
+        if((!$order_id = $this->input->post('order_id')) || $order_id < 0){
+            /*exit(json_encode(array(
+                            'code' => -1,
+                            'msg' => '缺少订单ID',
+                            )
+                        ));*/
+            exit('缺少订单ID');
+        }
+
+        if((!$user_id = $this->input->post('user_id')) || $user_id < 0){
+            /*exit(json_encode(array(
+                            'code' => -2,
+                            'msg' => '缺少用户ID',
+                            )
+                        ));*/
+            exit('缺少用户ID');
+        }
+
+        if((!$serial_number = $this->input->post('serial_number')) || $serial_number < 0){
+            /*exit(json_encode(array(
+                            'code' => -3,
+                            'msg' => '缺少订单序列号',
+                            )
+                        ));*/
+            exit('缺少订单序列号');
+        }
+
+        $data['serial_number'] = $serial_number;
+        $this->load->view('pay_ret.php', $data);
+    }
+
     public function wechat(){
         $this->load->view('pay_wechat.php');
     }

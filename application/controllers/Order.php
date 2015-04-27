@@ -12,12 +12,15 @@ class Order extends CI_Controller {
     public function improve(){
         $order_id = $this->input->post('order_id');
         $user_id = $this->input->post('user_id');
-        if(!$order_id || $order_id < 0 || !$user_id || $user_id < 0){
+        $serial_number = $this->input->post('serial_number');
+        if(!$order_id || $order_id < 0 || !$user_id || $user_id < 0 || $serial_number <= 0){
             exit("订单不存在"); 
         }
 
         $data['order_id'] = $order_id;
         $data['user_id'] = $user_id;
+        $data['cur_mon'] = @date('n');
+        $data['serial_number'] = $serial_number;
         $this->load->view('choose.php', $data);
     }
 
@@ -84,6 +87,15 @@ class Order extends CI_Controller {
                         ));
         }
 
+        $serial_number = $this->input->post('serial_number');
+        if(!isset($_POST['serial_number']) || $serial_number <= 0){
+            exit(json_encode(array(
+                            'code' => -3,
+                            'msg' => '非法序列号',
+                            )
+                        ));
+        }
+
         $decor_date = $this->input->post('decor_date');
         $cur_month = @date('n');
         if(!$decor_date || intval($decor_date) < $cur_month || intval($decor_date) > 12){
@@ -93,7 +105,6 @@ class Order extends CI_Controller {
                             )
                         ));
         }
-
         $decor_date = intval($decor_date);
 
         if((!$acreage = $this->input->post('acreage')) || $acreage < 0 || $acreage > MAX_ACREAGE){
@@ -113,6 +124,7 @@ class Order extends CI_Controller {
                             'code' => 0,
                             'user_id' => $user_id,
                             'order_id' => $order_id,
+                            'serial_number' => $serial_number,
                             'msg' => '提交成功',
                             )
                         ));
@@ -120,13 +132,13 @@ class Order extends CI_Controller {
             if($ret == -3){
                 exit(json_encode(array(
                                 'code' => -6,
-                                'msg' => '已完善过信息,跳转到支付页面',
+                                'msg' => '已完善过信息',
                                 )
                             ));
             }else if($ret == -4){
                 exit(json_encode(array(
                                 'code' => -7,
-                                'msg' => '已完成支付,跳到订单页面',
+                                'msg' => '已完成支付',
                                 )
                             ));
             }else{
@@ -191,6 +203,7 @@ class Order extends CI_Controller {
                             'code' => 0,
                             'order_id' => $ret['order_id'],
                             'user_id' => $ret['user_id'],
+                            'serial_number' => $ret['serial_number'],
                             'msg' => '预约成功',
                             )
                         ));

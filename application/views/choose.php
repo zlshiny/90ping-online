@@ -9,6 +9,9 @@
     })
 
     $('.part2 span').live('click',function(){
+        if($(this).hasClass('colgrey')){
+            return false;
+        }
         $('.part2 span').removeClass('span_hover');
         $(this).addClass('span_hover');
         $(".decor_date").val($(this).attr('title'));
@@ -19,6 +22,7 @@
         var order_id = $(".order_id").val();
         var user_id = $(".user_id").val();
         var age = $(".age").val();
+        var serial_number = $(".serial_number").val();
         var decor_date = $(".decor_date").val();
 
         if(order_id <= 0 || user_id <= 0){
@@ -36,13 +40,21 @@
             return false;
         }
 
+        if(serial_number <= 0){
+            alert('订单序列号不合法');
+            return false;
+        }
+
         $.post('/order/appointsec',
-                {order_id: order_id, user_id: user_id, age: age, acreage: acreage, decor_date: decor_date},
+                {order_id: order_id, user_id: user_id, age: age, acreage: acreage, decor_date: decor_date, serial_number: serial_number},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
                         if(data.code == 0){
-                            if(data.order_id > 0 && data.user_id > 0){
+                            if(data.order_id > 0 && data.user_id > 0 && data.serial_number.length > 0){
+                                $(".order_id").val(data.order_id);
+                                $(".user_id").val(data.user_id);
+                                $(".serial_number").val(data.serial_number);
                                 $("#sec_order").submit();
                             }else{
                                 return false;
@@ -60,20 +72,20 @@
 </script>
 <div id="choose_banner">
     <div class="choose_bg"></div>
-    <div class="choose_wrap">
+    <div class="choose_wrap" style="top:105px;">
         <h1>你只需要做个决定</h1>
-        <p>年龄</p>
+        <p style="margin-top:0px;">年龄</p>
         <div class="part1 clearfix">
-            <span class="span_hover" title="1">85后</span>
-            <span title="0">85前</span>
+            <span title="1">85后</span>
+            <span class="span_hover" title="0">85前</span>
         </div>
-        <p>装修时间</p>
+        <p style="margin-top:20px;">装修时间</p>
         <div class="part2 clearfix">
-            <span class="span_hover" title="1">1月</span>
-            <span title="2">2月</span>
-            <span title="3">3月</span>
-            <span title="4">4月</span>
-            <span title="5">5月</span>
+            <span class="colgrey" title="1">1月</span>
+            <span title="2" class="colgrey">2月</span>
+            <span title="3" class="colgrey">3月</span>
+            <span title="4" class="colgrey">4月</span>
+            <span title="5" class="span_hover">5月</span>
             <span title="6">6月</span>
             <span title="7">7月</span>
             <span title="8">8月</span>
@@ -83,15 +95,23 @@
             <span title="12">12月</span>
         </div>
         <input class="c_input" onfocus="if(this.value == '请输入房本面积'){this.value=''}" onblur="if(this.value == ''){this.value='请输入房本面积'}" type="text" value="请输入房本面积"/>
-        <div class="sub_btn bgc">支付1元预约金</div>
+        <!--<div class="sub_btn bgc">支付1元预约金</div>-->
+        <div class="sub_btn bgc">提交预约</div>
     </div>
     <div style="display:none">
-        <input type="hidden" class="age" value=""/>
+        <input type="hidden" class="age" value="0"/>
         <input type="hidden" class="acreage" value=""/>
-        <input type="hidden" class="decor_date" value=""/>
-        <form action="/pay" method="post" id="sec_order">
+        <input type="hidden" class="decor_date" value="<?=$cur_mon;?>"/>
+        <!--<form action="/pay" method="post" id="sec_order">
+            <input type="hidden" name="order_id" class="order_id" value=""/>
+            <input type="hidden" name="user_id" class="user_id" value=""/>
+            <input type="hidden" name="serial_number" class="serial_number" value=""/>
+        </form>
+        -->
+        <form action="/pay/success" method="post" id="sec_order">
             <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
             <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
+            <input type="hidden" name="serial_number" class="serial_number" value="<?=$serial_number;?>"/>
         </form>
     </div>
 </div>

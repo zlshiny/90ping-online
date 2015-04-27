@@ -12,6 +12,7 @@
                 <td width="170px">产品</td>
                 <td width="170px">定金</td>
                 <td width="170px">状态</td>
+                <td width="170px">时间</td>
                 <td width="170px">操作</td>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td><?=$v['product_name'];?></td>
                 <td><?=$v['init_deposit'];?></td>
                 <td><?=$v['status_name'];?></td>
+                <td><?=$v['create_time'];?></td>
                 <td>
                     <a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
                         <?=$v['action_name'];?>

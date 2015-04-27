@@ -6,6 +6,16 @@
 <link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
+<script type="text/javascript" src="<?=JS_PATH . 'respond.js';?>"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+ var hm = document.createElement("script");
+ hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+ var s = document.getElementsByTagName("script")[0]; 
+ s.parentNode.insertBefore(hm, s);
+ })();
+</script>
 </head>
 <script type="text/javascript">
 window.onscroll = function(){
@@ -25,7 +35,7 @@ window.onscroll = function(){
 				<li><a href="/" class="nav1">主页</a></li>
 				<li><a href="/product" class="nav2">超级Home1.0</a></li>
 				<li><a href="/loan" class="nav3">家装贷款</a></li>
-				<li><a href="http://91haizibang.com" target="_blank" class="nav4">社区</a></li>
+				<li><a href="http://bbs.91haizibang.com" target="_blank" class="nav4">社区</a></li>
 				<li><?php if(get_cookie(LOGIN_COOKIE_KEY)):?><a href="/order/myorder" class="nav5">个人中心<?php else:?><a href="/user/login" class="nav5">登录/注册<?php endif;?></a></li>
 			</ul>
 		</div>

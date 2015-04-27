@@ -5,7 +5,7 @@
     <div class="choose_bg"></div>
     <div class="choose_wrap appoint">
         <h1>你只需做个决定</h1>
-        <img src="<?=IMAGE_PATH . 'msg.png';?>"/>
+        <img src="<?=IMAGE_PATH . '/banner_small/msg_back.png';?>"/>
         <input type="text" class="app_phone" name="phone" value="请输入手机号" onfocus="if(this.value == '请输入手机号'){this.value = ''}" onblur="if(this.value == ''){this.value='请输入手机号'}"/>
         <input type="text" class="app_code" name="code" onfocus="if(this.value == '请输入验证码'){this.value = ''}" onblur="if(this.value == ''){this.value = '请输入验证码'}" value="请输入验证码"/>
         <div class="yzm">获取验证码</div>
@@ -15,6 +15,7 @@
         <form action="/order/improve" method="post" id="sec_order">
             <input type="hidden" name="order_id" id="sec_order_id" value=""/>
             <input type="hidden" name="user_id" id="sec_user_id" value=""/>
+            <input type="hidden" name="serial_number" id="sec_serial_number" value=""/>
         </form>
     </div>
 </div>
@@ -39,6 +40,7 @@
                             if(data.order_id > 0 && data.user_id > 0){
                                 $("#sec_order_id").val(data.order_id);  
                                 $("#sec_user_id").val(data.user_id);  
+                                $("#sec_serial_number").val(data.serial_number);  
                                 $("#sec_order").submit();
                             }else{
                                 alert(data.msg);

@@ -7,6 +7,10 @@ class Loan extends CI_Controller{
         $this->load->view('loan.php');
     }
 
+    public function success(){
+        $this->load->view('loan_ret.php');
+    }
+
     public function apply(){
         if(!$phone = $this->input->post('phone')){
             exit(json_encode(array(
@@ -98,7 +102,7 @@ class Loan extends CI_Controller{
             if($ret == -3 || $ret == -4){
                 exit(json_encode(array(
                                 'code' => -10,
-                                'msg' => '请您先预约',
+                                'msg' => '您需要先去超级Home1.0预约才能申请贷款',
                                 )
                             ));
             }else if($ret == -5){

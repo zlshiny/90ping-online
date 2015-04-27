@@ -78,6 +78,7 @@ class Order_Model extends CI_Model{
                 $v['status'] = $row['status'];
                 $v['status_name'] = $this->config->item($v['status'], 'order_status');
                 $v['action_name'] = $this->config->item($v['status'], 'order_action');
+                $v['create_time'] = $row['create_time'];
 
                 $ret[] = $v;
             }
@@ -145,12 +146,12 @@ class Order_Model extends CI_Model{
         if($user = $this->user->get_user($phone)){
             $order['user_id'] = $user->user_id;
             $order_id = $this->insert_order($order);
-            return array('order_id' => $order_id, 'user_id' => $user->user_id);
+            return array('order_id' => $order_id, 'user_id' => $user->user_id, 'serial_number' => $order_no);
         }else{
             if($user_id = $this->user->insert_user($phone)){
                 $order['user_id'] = $user_id;
                 $order_id = $this->insert_order($order);
-                return array('order_id' => $order_id, 'user_id' => $user_id);
+                return array('order_id' => $order_id, 'user_id' => $user_id, 'serial_number' => $order_no);
             }else{
                 return array();
             }

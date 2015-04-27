@@ -102,6 +102,8 @@
             }
         })
 
+        if(!type) return false;
+
         var phone = $('input[name="phone"]').val();
         var name = $('input[name="user_name"]').val();
         var income = $('input[name="income"]').val();
@@ -131,8 +133,7 @@
                                 alert(data.msg);
                                 return false;
                             }else{
-                                alert('申请成功, 请您耐心等候客服与您联系');
-                                window.location.href = "/";
+                                window.location.href = "/loan/success";
                             }
                         }else{
                             alert('服务器繁忙');
