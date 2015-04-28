@@ -27,9 +27,9 @@
                 <td><?=$v['status_name'];?></td>
                 <td><?=$v['create_time'];?></td>
                 <td>
-                    <a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
+                    <!--<a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
                         <?=$v['action_name'];?>
-                    </a>
+                    </a>-->
                     <?php if($v['status'] > 0):?><a href="/order/detail/<?=$v['order_id'];?>">查看</a><?php endif;?>
                 </td>
             </tr>

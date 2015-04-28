@@ -11,9 +11,19 @@ define('SP_HOST', 'esms.etonenet.com');
 define('SP_PORT', '80');
 define('SP_CONTENT_PRE', '您的验证码:');
 
-define('JS_PATH', '/static/js/');
-define('CSS_PATH', '/static/css/');
-define('IMAGE_PATH', '/static/image/');
+define('STATIC_PATH', '/static/');
+define('JS_PATH', STATIC_PATH . 'js/');
+define('CSS_PATH', STATIC_PATH . 'css/');
+define('IMAGE_PATH', STATIC_PATH . 'image/');
+
+//wechat config
+define('WECHAT_TOKEN', 'kobe8tracy');//微信token
+define('WECHAT_AESKEY', 'Y7Kr9DQl28wKixTBlnTxK4rrXkxjoQJ4YKwK76d1CI8');//密钥
+
+
+//wechat test config
+define('WECHAT_APPID', 'wxc501347c0242c244');
+define('WECHAT_APPSECRET', 'd7f73a30dce6887399c6582b13db242a');
 
 //最大面积
 define('MAX_ACREAGE', 200);

@@ -65,6 +65,9 @@
  * Different environments will require different levels of error reporting.
  * By default development will show errors but testing and live will hide them.
  */
+
+ini_set('date.timezone','Asia/Shanghai');
+
 switch (ENVIRONMENT)
 {
 	case 'development':
@@ -231,6 +234,8 @@ switch (ENVIRONMENT)
 
     // Path to log
     define('LOGPATH', FCPATH . 'log/');
+
+    define('STATIC_DOC_PATH', FCPATH . 'static/doc/');
 
 	// Name of the "system folder"
 	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));

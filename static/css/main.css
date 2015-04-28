@@ -106,6 +106,16 @@ body{
 }
 #nav li{
 	float:left;
+    position:relative;
+}
+#nav li span{
+    display:block;
+    position:Absolute;
+    width:38px;
+    height:23px;
+    background:url(/static/image/icon/yy.png) no-repeat;
+    right:-5px;
+    top:0px;
 }
 #nav li a{
 	color:#606060;
@@ -220,6 +230,7 @@ body{
 }
 
 #footer{
+    clear:both;
 	height:420px;
 	width:100%;
 	background-color:#2c3e50;
@@ -278,27 +289,27 @@ body{
 	margin-left:20px;
 }
 #footer .icons .icon1{
-	background:url(/static/image/wechat_white.png) no-repeat;
+	background:url(/static/image/icon/wechat_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon1:hover{
-	background:url(/static/image/wechat_green.png) no-repeat;
+	background:url(/static/image/icon/wechat_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 #footer .icons .icon2{
-	background:url(/static/image/qq_white.png) no-repeat;
+	background:url(/static/image/icon/qq_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon2:hover{
-	background:url(/static/image/qq_green.png) no-repeat;
+	background:url(/static/image/icon/qq_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 #footer .icons .icon3{
-	background:url(/static/image/wechat_moment_white.png) no-repeat;
+	background:url(/static/image/icon/moment_white.png) no-repeat;
 	background-size:54px 54px;
 }
 #footer .icons .icon3:hover{
-	background:url(/static/image/wechat_moment_green.png) no-repeat;
+	background:url(/static/image/icon/moment_green.png) no-repeat;
 	background-size:54px 54px;	
 }
 
@@ -956,11 +967,6 @@ body{
     margin-top:35px;
 }
 
-.product_banner{
-    background:url(/static/image/banner/p_banner.jpg) no-repeat center;
-    width:100%;
-    height:818px;
-}
 .product_banner1{
     background:url(/static/image/banner/5.jpg) no-repeat center;
     width:100%;
@@ -973,9 +979,9 @@ body{
     clear:both;
 }
 .product_wrap{
-    width:1150px;
+    width:1000px;
     left:50%;
-    margin-left:-575px;
+    margin-left:-500px;
     position:relative;
     
 }
@@ -990,7 +996,7 @@ body{
     color:#fff;
     height:95px;
     cursor:pointer;
-    margin-left:60px;
+    margin-right:50px;
     line-height:100px;
     width:125px;
     border-bottom:5px solid #2c3e50;
@@ -1004,26 +1010,52 @@ body{
 }
 .product_change_main{
     width:100%;
-    height:852px;
+    height:625px;
     position:relative;
     overflow:hidden;
 }
-.product_change_main div{
+.product_change_main .product_img{
     position:absolute;
     left:0px;
     top:0px;
-    width:100%;
-    height:852px;
+    width:1000px;
+    left:50%;
+    margin-left:-500px;
+    height:625px;
+}
+.product_pp{
+    width:1000px;
+    left:50%;
+    margin-left:-500px;
+    background:url(/static/image/lb/pp.png) no-repeat center;
+    height:606px;
+    position:relative;
+    margin-top:80px;
+    float:left;
 }
 .product_img1{
-
-    background:url(/static/image/banner/6.jpg) no-repeat center;
+    background:url(/static/image/lb/1.jpg) no-repeat center;
+}
+.product_img2{
+    background:url(/static/image/lb/2.jpg) no-repeat center;
+}
+.product_img3{
+    background:url(/static/image/lb/3.jpg) no-repeat center;
+}
+.product_img4{
+    background:url(/static/image/lb/4.jpg) no-repeat center;
+}
+.product_img5{
+    background:url(/static/image/lb/5.jpg) no-repeat center;
+}
+.product_img6{
+    background:url(/static/image/lb/6.jpg) no-repeat center;
 }
 .dn{
     display:none;
 }
 .product_wrap h1{
-    padding:100px 0px;
+    padding:60px 0px;
     color:#1dd2af;
     font-size:60px;
     width:100%;
@@ -1109,15 +1141,15 @@ body{
 .product_step{
     width:100%;
     float:left;
-    margin-top:80px;
-    height:700px;
+    height:600px;
     background-color:#2c3e50;
+    clear:both;
 }
 .product_step .product_step_block{
     width:157px;
     floaT:left;
     margin-right:30px;
-    margin-left:7px;
+    margin-left:53px;
 }
 .product_step .product_step_block p{
     width:157px;
@@ -1157,7 +1189,7 @@ body{
     width:100%;
 }
 .loan_result_wrap{
-    background:url(/static/image/banner_small/angel.jpg) no-repeat;
+    background:url(/static/image/icon/sqcg.jpg) no-repeat;
     height:560px;
     min-width:1300px;
     width:100%;
@@ -1259,6 +1291,7 @@ body{
         height:560px!important;
     }
 
+
     .loan_banner{
         background:url(/static/image/banner_small/daikuan.jpg) no-repeat center!important;
         height:560px!important;
@@ -1281,6 +1314,97 @@ body{
         top:30px;
     }
 }
+    .product_banner{
+        background:url(/static/image/lb/p_b4.jpg) no-repeat center!important;
+        height:560px!important;
+    }
+    .product_banner a{
+        height:50px;
+        text-align:center;
+        line-height:50px;
+        left:50%;
+        margin-left:-82px;
+        position:relative;
+        top:420px;
+        color:#fff;
+        font-size:24px;
+        display:block;
+        background-color:#f28c1e;
+        width:165px;
+    }
+    .product_banner p{
+        text-align:center;
+        position:relative;
+        width:100%;
+        top:430px;
+        color:#383838;
+        font-size:18px;
+    }
+    .product_pm{
+        background:url(/static/image/lb/p_b3.jpg) no-repeat;
+        width:1000px;
+        height:1202px;
+        left:50%;
+        position:relative;
+        margin-left:-500px;
+        margin-top:80px;
+    }
+    .product_banner p span{
+        color:#f28c1e;
+        margin:0px 10px;
+    }
+    .product_wrap .p_main_l{
+        float:left;
+        height:170px;
+        width:475px;
+    }
+    .product_wrap .p_main_r{
+        float:left;
+        height:170px;
+        width:525px;
+    }
+    .product_wrap .p_main_l span{
+        float:left;
+        color:#1dd2af;
+        display:block;
+        height:170px;
+    }
+    .product_wrap .p_main_r span{
+        float:left;
+        color:#1dd2af;
+        display:block;
+        height:170px;
+    }
+    .product_wrap .p_main_l p{
+        float:left;
+        color:#424242;
+        font-size:16px;
+        line-height:30px;
+        margin-left:20px;
+        width:290px;
+        margin-top:10px;
+    }
+    .product_wrap .p_main_r p{
+        float:left;
+        color:#424242;
+        font-size:16px;
+        line-height:30px;
+        margin-left:20px;
+        width:305px;
+        margin-top:10px;
+    }
+    .p_msg_wrap{
+        width:100%;
+        background-color:#eeeeee;
+        padding:60px 0px;
+        clear:both;
+    }
+    .p_msg_wrap p{
+        width:1000px;
+        font-size:18px;
+        color:#424242;
+        line-height:30px;
+    }
     #choose_banner{
         background:url(/static/image/banner_small/angel.jpg) center;
         height:560px;
@@ -1299,4 +1423,134 @@ body{
     .appoint img{
         margin-top:0px;
         margin-bottom:20px;
+    }
+    .p_block_wrap{
+        height:210px;
+    }
+    .p_block_wrap div{
+        float:left;
+        width:250px;
+    }
+    .p_block_wrap b{
+        font-weight:normal;
+        color:#20bea1;
+        font-size:18px;
+        float:left;
+    }
+    .p_block_wrap span{
+        clear:both;
+        font-size:18px;
+        color:#424242;
+        display:block;
+        float:left;
+        margin-top:10px;
+        width:230px;
+        line-height:28px;
+    }
+    .p_d1{
+        padding:20px 60px;
+        font-size:24px;
+        color:#fff;
+        background-color:#1dd2af;
+        position:relative;
+        left:50%;
+        behavior:url(/static/css/PIE.htc);
+        border-radius:5px;
+        float:left;
+        margin:70px 0px 60px -420px;
+    }
+    .p_d2{
+        padding:20px 60px;
+        font-size:24px;
+        color:#fff;
+        background-color:#1dd2af;
+        position:relative;
+        behavior:url(/static/css/PIE.htc);
+        left:50%;
+        border-radius:5px;
+        float:left;
+        margin:70px 0px 60px 90px;
+    }
+    .pp_icon{
+        width:7px;
+        height:7px;
+        position:absolute;
+        background-color:#1dd2af;
+        cursor:pointer;
+    }
+
+    .ppp1{
+        left:40px;
+        top:510px;
+    }
+    .ppp2{
+        left:230px;
+        top:410px;
+    }
+    .ppp3{
+        left:305px;
+        top:345px;
+    }
+    .ppp4{
+        left:330px;
+        top:125px;
+    }
+    .ppp5{
+        left:525px;
+        top:455px;
+    }
+    .ppp6{
+        left:545px;
+        top:370px;
+    }
+    .ppp7{
+        left:740px;
+        top:210px;
+    }
+    .ppp8{
+        left:780px;
+        top:170px;
+    }
+    .ppp9{
+        left:805px;
+        top:320px;
+    }
+    .ppp10{
+        left:790px;
+        top:615px;
+    }
+    .ppp11{
+        left:945px;
+        top:20px;
+    }
+
+
+
+
+
+
+
+
+    .p_s_w{
+        position:relative;
+    }
+    .pp_img{
+        position:absolute;
+        z-index:10;
+        display:none;
+        cursor:pointer;
+    }
+    .ppi4{
+        background:url(/static/image/tag/8.png) no-repeat;
+        width:449px;
+        height:572px;
+        left:320px;
+        top:70px;
+    }
+    .ppi10{
+        background:url(/static/image/tag/1.png) no-repeat;
+        width:449px;
+        height:580px;
+        left:350px;
+        top:50px;
     }
