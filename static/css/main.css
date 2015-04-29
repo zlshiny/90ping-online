@@ -1528,6 +1528,10 @@ body{
         left:945px;
         top:20px;
     }
+    .ppp91{
+        left:845px;
+        top:50px;
+    }
     .ppp12{
         left:245px;
         top:550px;
@@ -1682,6 +1686,14 @@ body{
         left:548px;
         top:50px;
     }
+
+    .ppi7{
+        background:url(/static/image/tag/91.jpg) no-repeat;
+        width:449px;
+        height:580px;
+        left:325px;
+        top:110px;
+    }
     .ppi8{
         background:url(/static/image/tag/16.png) no-repeat;
         width:449px;
@@ -1695,6 +1707,21 @@ body{
         height:580px;
         left:350px;
         top:50px;
+    }
+    .ppi9{
+        background:url(/static/image/tag/91.jpg) no-repeat;
+        width:449px;
+        height:580px;
+        left:385px;
+        top:250px;
+    }
+
+    .ppi11{
+        background:url(/static/image/tag/34.jpg) no-repeat;
+        width:449px;
+        height:580px;
+        left:575px;
+        top:20px;
     }
     .ppi13{
         background:url(/static/image/tag/8.png) no-repeat;
