@@ -3,8 +3,8 @@
 ?>
 <div class="i_banner_1">
 <!--	<a href="/order" target="_blank"></a>-->
-		<p class="bgc ft45 ma">史上第一个专注80后</p>
-		<p class="ft72 p20">互联网智能家装单品</p>
+		<p class="bgc ft45 ma">史上第一个专注于80后</p>
+		<p class="ft72 p20">互联网智能家装探索者</p>
 		<p class="ft18 lh30">相比于低价，我们更追求品质和逼格，我们更关心健康环保<br/>
 不仅是房子，更是小伙伴们的社交场所<Br/>
 真正极致的体验：一键支付，拎包入住

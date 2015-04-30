@@ -298,14 +298,14 @@ $('.pp_img').live('mouseout',function(){
         </div>
 </div>
 <div class="product_pm"></div>
-<a href="/product/config_detail/1" target="_blank" class="p_d1">点击下载硬装主材单</a>
-<a href="/product/config_detail/2" target="_blank" class="p_d2">点击下载软装主材单</a>
+<a href="/product/config_detail/1" target="_blank" class="p_d1">查看硬装主材单</a>
+<a href="/product/config_detail/2" target="_blank" class="p_d2">查看软装主材单</a>
 <div class="product_pp"></div>
 <div class="product_wrap">
     <h1>软装品质</h1>
 </div>
 
-<div class="product_part"></div>
+<div class="product_soft"></div>
 
 <div class="product_wrap">
     <h1>合作品牌</h1>
