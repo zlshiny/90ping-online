@@ -2,7 +2,7 @@
 	<div class="wrap">
 		<div class="f_block">
 			<img src="<?=IMAGE_PATH . 'mini_logo.png';?>">
-			<p>史上第一个专注与80后的互联网智能家装</p>
+			<p>史上第一个专注于80后的互联网智能家装</p>
 		</div>
 		<div class="f_block">
 			<img src="<?=IMAGE_PATH . 'ewm.jpg';?>">

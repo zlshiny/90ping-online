@@ -389,11 +389,11 @@ $('.pp_img').live('mouseout',function(){
     <div class="p_main_l">
         <span style="font-size:200px;line-height:170px;">0</span>
         <span style="font-size:48px;line-height:85px;">增<br/>项</span>
-        <p>一口价，合同签订后保证无增项；<br/>
-        水电改造不限延米数；<br/>
-        原结构不变，室内门不限樘数；<br/>
-        橱柜不限延米数；<br/>
-        客厅、餐厅石膏板造型吊顶不限平米数；<br/>
+        <p>一口价，合同签订后保证无增项<br/>
+        水电改造不限延米数<br/>
+        原结构不变，室内门不限樘数<br/>
+        橱柜不限延米数<br/>
+        客厅、餐厅石膏板造型吊顶不限平米数<br/>
         </p>
     </div>
     <div class="p_main_r">
