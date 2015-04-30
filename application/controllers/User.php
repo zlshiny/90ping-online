@@ -64,7 +64,7 @@ class User extends CI_Controller {
             }else if($user->status == USER_STATUS_FIR){
                 exit(json_encode(array(
                                 'code' => -5,
-                                'msg' => '需要设置密码',
+                                'msg' => '你已经预约过，只需要用预约手机号注册即可查看订单',
                                 )
                             ));
             }else{

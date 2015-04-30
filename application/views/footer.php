@@ -2,8 +2,7 @@
 	<div class="wrap">
 		<div class="f_block">
 			<img src="<?=IMAGE_PATH . 'mini_logo.png';?>">
-			<p>Duis autem vel eum iriure dolor in 
-hendrerit in vulputate velit esse molestie consequat, vel illum dolore.</p>
+			<p>史上第一个专注与80后的互联网智能家装</p>
 		</div>
 		<div class="f_block">
 			<img src="<?=IMAGE_PATH . 'ewm.jpg';?>">

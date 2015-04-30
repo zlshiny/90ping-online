@@ -44,9 +44,10 @@
 	<div class="clearfix"></div>
 </div>
 <div class="i_banner_3">
-	<p class="ft72">V1.0产品内测    仅甄选10位天使用户</p>
-	<p class="ft30 p50">15万6千软硬装全包方案，家具窗帘和 配饰都含<br/>
-一个完整的家，仅售15万6千</p>
+	<p class="ft72">超级Home1.0内测   仅10位天使用户</p>
+	<p class="ft30 p50">90平米户型  一口价  15.6万<br/><br/>
+        换回30万整套智能家装解决方案，配好顶级家具软装和高端厨卫，拎包入住
+    </p>
 	<a href="/order" target="_blank" class="bgcl ft48">成为天使用户</a>
 </div>
 <?php
