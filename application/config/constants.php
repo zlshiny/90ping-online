@@ -20,6 +20,10 @@ define('IMAGE_PATH', STATIC_PATH . 'image/');
 define('WECHAT_TOKEN', 'kobe8tracy');//微信token
 define('WECHAT_AESKEY', 'Y7Kr9DQl28wKixTBlnTxK4rrXkxjoQJ4YKwK76d1CI8');//密钥
 
+//订单来源
+define('ORDER_SOURCE_WEB', 0);
+define('ORDER_SOURCE_WECHAT', 1);
+
 
 //wechat test config
 define('WECHAT_APPID', 'wxc501347c0242c244');

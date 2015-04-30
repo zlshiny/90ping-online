@@ -38,6 +38,7 @@ CREATE TABLE `orders`(
     `serial_number` char(32) NOT NULL DEFAULT '' COMMENT '订单号',
     `deposit` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '订金',
     `status` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单状态',
+    `source` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单来源, 0:网站, 1:微信',
     `decor_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '装修时间',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;

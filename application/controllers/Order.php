@@ -177,6 +177,12 @@ class Order extends CI_Controller {
                         ));
         }
 
+        $source = ORDER_SOURCE_WEB;
+        if(isset($_POST['source'])){
+            $source = $this->input->post('source');
+        }
+
+
         $this->load->library('session');
         if(!isset($_SESSION['phone_verify_number'])){
             exit(json_encode(array(
@@ -198,7 +204,7 @@ class Order extends CI_Controller {
         $this->load->model("user_model", 'user');
         $this->load->model('order_model', 'order');
         $product_id = 1;
-        if($ret = $this->order->appointment($phone, $product_id)){
+        if($ret = $this->order->appointment($phone, $product_id, $source)){
             exit(json_encode(array(
                             'code' => 0,
                             'order_id' => $ret['order_id'],

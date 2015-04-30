@@ -137,12 +137,12 @@ class Order_Model extends CI_Model{
         }
     }
 
-    public function appointment($phone, $product_id){
+    public function appointment($phone, $product_id, $source = ORDER_SOURCE_WEB){
         if(!$phone || !$product_id) return array();
         if(!check_phone($phone)) return array();
 
         $order_no = build_order_no();
-        $order = array('product_id' => $product_id, 'serial_number' => $order_no, 'status' => ORDER_STATUS_FIRST);
+        $order = array('product_id' => $product_id, 'serial_number' => $order_no, 'status' => ORDER_STATUS_FIRST, 'source' => $source);
         if($user = $this->user->get_user($phone)){
             $order['user_id'] = $user->user_id;
             $order_id = $this->insert_order($order);
