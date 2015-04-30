@@ -27,9 +27,11 @@
                 <td><?=$v['status_name'];?></td>
                 <td><?=$v['create_time'];?></td>
                 <td>
-                    <!--<a href="#" class="action_order" id="action_order" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
+                    <?php if($v['status'] == 0):?>
+                    <a href="#" class="action_order" id="action_order" serial-number="<?=$v['serial_number'];?>" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
                         <?=$v['action_name'];?>
-                    </a>-->
+                    </a>
+                    <?php endif;?>
                     <?php if($v['status'] > 0):?><a href="/order/detail/<?=$v['order_id'];?>">查看</a><?php endif;?>
                 </td>
             </tr>
@@ -41,6 +43,7 @@
         <form action="" method="post" id="fir_order">
             <input type="hidden" name="order_id" id="fir_order_id" value=""/>
             <input type="hidden" name="user_id" id="fir_user_id" value=""/>
+            <input type="hidden" name="serial_number" id="fir_serial_number" value=""/>
         </form>
     </div>
 </div>
@@ -58,6 +61,7 @@ $(document).ready(function(){
 
         $("#fir_order_id").attr("value", $(this).attr("order-id"));
         $("#fir_user_id").attr("value", $(this).attr("user-id"));
+        $("#fir_serial_number").attr("value", $(this).attr("serial-number"));
         $("#fir_order").submit();
     });
 });

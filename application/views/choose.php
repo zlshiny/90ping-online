@@ -76,8 +76,8 @@
         <h1>你只需要做个决定</h1>
         <p style="margin-top:0px;">年龄</p>
         <div class="part1 clearfix">
-            <span title="1">85后</span>
-            <span class="span_hover" title="0">85前</span>
+            <span title="1">80后</span>
+            <span class="span_hover" title="0">80前</span>
         </div>
         <p style="margin-top:20px;">装修时间</p>
         <div class="part2 clearfix">

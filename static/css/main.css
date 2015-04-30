@@ -79,7 +79,7 @@ body{
 .b_wrap{
 	width:1300px;
 	left:50%;
-	margin-left:-650px;
+	margin-left:-610px;
 	position:relative;		
 }
 .ma{
@@ -162,7 +162,7 @@ body{
 }
 
 #i_mid{
-	padding:160px 0px;
+	padding:150px 0px 130px;
 }
 #i_main{
 	padding:150px 0px;
@@ -189,6 +189,7 @@ body{
 	height:145px;
 	margin-top:5px;
 	margin-left:20px;
+    line-height: 30px;
 	font-size:15px;
 	color:#4d4d4d;
 	padding:10px;
@@ -323,37 +324,37 @@ body{
 }
 #i_mid a{
 	display:block;
-	width:325px;
-	padding-top:300px;
+	width:305px;
+	padding-top:250px;
 	color:#626262;
-	font-size:36px;
+	font-size:30px;
 
 	float:left;
 	text-align: center;
 }
 #i_mid .i_mid1{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(/static/image/cycle1.png) no-repeat center top;
 }
 #i_mid .i_mid1:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(/static/image/cycle_hover1.png) no-repeat center top;
 } 
 #i_mid .i_mid2{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(/static/image/cycle4.png) no-repeat center top;
 }
 #i_mid .i_mid2:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(/static/image/cycle_hover2.png) no-repeat center top;
 } 
 #i_mid .i_mid3{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(/static/image/cycle3.png) no-repeat center top;
 }
 #i_mid .i_mid3:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(/static/image/cycle_hover3.png) no-repeat center top;
 } 
 #i_mid .i_mid4{
-	background:url(/static/image/img3.png) no-repeat center top;
+	background:url(/static/image/cycle2.png) no-repeat center top;
 }
 #i_mid .i_mid4:hover{
-	background:url(/static/image/mid_hover.png) no-repeat center top;
+	background:url(/static/image/cycle_hover4.png) no-repeat center top;
 } 
 
 #topcontrol{
@@ -996,9 +997,9 @@ body{
     color:#fff;
     height:95px;
     cursor:pointer;
-    margin-right:50px;
+    margin-right:40px;
     line-height:100px;
-    width:125px;
+    width:105px;
     border-bottom:5px solid #2c3e50;
     text-align:center;
 }
@@ -1026,11 +1027,11 @@ body{
 .product_pp{
     width:1000px;
     left:50%;
-    margin-left:-500px;
+    margin-left:-920px;
     background:url(/static/image/lb/pp.png) no-repeat center;
     height:606px;
     position:relative;
-    margin-top:80px;
+    margin-top:250px;
     float:left;
 }
 .product_img1{
@@ -1050,6 +1051,9 @@ body{
 }
 .product_img6{
     background:url(/static/image/lb/6.jpg) no-repeat center;
+}
+.product_img7{
+    background:url(/static/image/lb/9.jpg) no-repeat center;
 }
 .dn{
     display:none;
@@ -1323,7 +1327,7 @@ body{
         text-align:center;
         line-height:50px;
         left:50%;
-        margin-left:-82px;
+        margin-left:-80px;
         position:relative;
         top:420px;
         color:#fff;
@@ -1381,7 +1385,7 @@ body{
         font-size:16px;
         line-height:30px;
         margin-left:20px;
-        width:290px;
+        width:280px;
         margin-top:10px;
     }
     .product_wrap .p_main_r p{
@@ -1629,6 +1633,27 @@ body{
         top:600px;
     }
 
+    .ppp36{
+        left:100px;
+        top:40px;
+    }
+    .ppp37{
+        left:530px;
+        top:40px;
+    }
+    .ppp38{
+        left:430px;
+        top:460px;
+    }
+    .ppp39{
+        left:835px;
+        top:75px;
+    }
+    .ppp40{
+        left:580px;
+        top:355px;
+    }
+
 
 
 
@@ -1705,8 +1730,8 @@ body{
         background:url(/static/image/tag/1.png) no-repeat;
         width:449px;
         height:580px;
-        left:350px;
-        top:50px;
+        left:380px;
+        top:60px;
     }
     .ppi9{
         background:url(/static/image/tag/91.jpg) no-repeat;
@@ -1879,6 +1904,46 @@ body{
     }
     .ppi35{
         background:url(/static/image/tag/29.png) no-repeat;
+        width:449px;
+        height:545px;
+        top:100px;
+        left:540px;
+    }
+
+    .ppi36{
+        background:url(/static/image/tag/35.png) no-repeat;
+        width:449px;
+        height:545px;
+        top:100px;
+        left:540px;
+    }
+
+    .ppi37{
+        background:url(/static/image/tag/35.png) no-repeat;
+        width:449px;
+        height:545px;
+        top:100px;
+        left:540px;
+    }
+
+    .ppi38{
+        background:url(/static/image/tag/35.png) no-repeat;
+        width:449px;
+        height:545px;
+        top:100px;
+        left:535px;
+    }
+
+    .ppi39{
+        background:url(/static/image/tag/35.png) no-repeat;
+        width:449px;
+        height:545px;
+        top:100px;
+        left:540px;
+    }
+
+    .ppi40{
+        background:url(/static/image/tag/35.png) no-repeat;
         width:449px;
         height:545px;
         top:100px;

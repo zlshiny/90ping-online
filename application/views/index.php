@@ -16,7 +16,7 @@
 	<a class="i_mid1" href="###">极致体验</a>
 	<a class="i_mid2" href="###">高端品质</a>
 	<a class="i_mid3" href="###">80后专属</a>
-	<a class="i_mid4" href="###">智能的家</a>
+	<a class="i_mid4" href="###">智能家庭</a>
 	<div class="clearfix"></div>
 	</div>
 </div>
@@ -31,12 +31,13 @@
 		<div class="msg">
 			<img src="<?=IMAGE_PATH . 'i_msg1.png';?>">
 			<p>我们拒绝70后，不做大户型</p>
-			<div class="m_content">一群80后年轻设计师，不屑妥协于世俗的眼光，走遍世界去探寻艺术的真谛，期待用艺术关怀80后年轻的奋斗者。我们不需要所有人都认可和欣赏我们的产品，因为我们只与知己者共舞！</div>
+			<div class="m_content">Less is more 。我们不做大户型，坚持只做90㎡的房子。我们不做任何浮夸的设计，摒弃欧式繁复的线条，讲究功能及实用，选用环保的材料，注重使用者的体验，期待用艺术关怀80后的奋斗者。</div>
 		</div>
 		<div class="msg" >
 			<img src="<?=IMAGE_PATH . 'i_msg2.png';?>" style="margin-left:15px;">
 			<p>只为80后，造一个有逼格的家</p>
-			<div class="m_content">艺术，没有定义，只有颠覆！时尚，没有妥协，只有彻底!80后的世界从来与众不同，对家居生活及情调有较高追求，时尚但不随众。不跟随，有自己的态度，才是逼格。
+			<div class="m_content">
+            Not for everyone ，我们坚持用梦想为80后筑家。超级home品牌秉承简约舒适的设计理念，思考和规划80后的家庭生活环境和实用需求，选用欧洲高品质现代家具，让80后感受到生活的美好。
             </div>
 		</div>
 	</div>

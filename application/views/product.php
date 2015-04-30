@@ -31,6 +31,7 @@ $('.pp_img').live('mouseout',function(){
             <li>厨房</li>
             <li>主卧</li>
             <li>次卧</li>
+            <li>书房</li>
             <li style="margin-right:0px;">卫生间</li>
         </ul>
     </div>
@@ -229,6 +230,38 @@ $('.pp_img').live('mouseout',function(){
                 <div class="pp_img ppi30"></div>
             </div>
         </div>
+        <div class="product_img product_img7 dn">
+            <div class="p_s_w">
+                <div class="pp_icon ppp36">
+                    <div></div>
+                </div>
+                <div class="pp_img ppi36"></div>
+            </div>
+            <div class="p_s_w">
+                <div class="pp_icon ppp37">
+                    <div></div>
+                </div>
+                <div class="pp_img ppi37"></div>
+            </div>
+            <div class="p_s_w">
+                <div class="pp_icon ppp38">
+                    <div></div>
+                </div>
+                <div class="pp_img ppi38"></div>
+            </div>
+            <div class="p_s_w">
+                <div class="pp_icon ppp39">
+                    <div></div>
+                </div>
+                <div class="pp_img ppi39"></div>
+            </div>
+            <div class="p_s_w">
+                <div class="pp_icon ppp40">
+                    <div></div>
+                </div>
+                <div class="pp_img ppi40"></div>
+            </div>
+        </div>
         <div class="product_img product_img6 dn">
             <div class="p_s_w">
                 <div class="pp_icon ppp31">
@@ -264,13 +297,15 @@ $('.pp_img').live('mouseout',function(){
                  
         </div>
 </div>
+<div class="product_pm"></div>
+<a href="/download/hard" class="p_d1">点击下载硬装主材单</a>
+<a href="/download/soft" class="p_d2">点击下载软装主材单</a>
 <div class="product_pp"></div>
 <div class="product_wrap">
     <h1>合作品牌</h1>
 </div>
 
 <div class="product_part"></div>
-<div class="product_pm"></div>
 <!--
 <div class="product_wrap">
     <h1>智能家居 一切随心</h1>
@@ -343,8 +378,6 @@ $('.pp_img').live('mouseout',function(){
     </div>
 </div>
 -->
-<a href="/download/hard" class="p_d1">点击下载硬装主材单</a>
-<a href="/download/soft" class="p_d2">点击下载软装主材单</a>
 <div class="product_wrap">
     <h1>零增项 十不限，无陷阱消费</h1>
     <div class="p_main_l">
@@ -373,7 +406,7 @@ $('.pp_img').live('mouseout',function(){
     <div class="product_wrap">
         <p>1.房屋面积范围 80m2≤面积<100m2 ；</p>
         <p>2.房屋面积取房屋室内地面装修净面积的1.25倍与房产证产权面积两者的最大值。房屋面积±5m2恕不另行计费，其它面积另行商议；</p>
-        <p>3.90m2一口价整体家装148888.00元；</p>
+        <p>3.90m2一口价整体家装15万6；</p>
         <p>4.标准套餐包含一主卧、一次卧（或书房）、一厨、一卫、一餐厅、一阳台、60电点位；</p>
         <p>5.标准配置之外，每增加一个卫生间，费用增加1.69万，每增加一个卧室（或书房）
     硬装免费，软装费用增加1.19万（可选项），每增加一个阳台，费用增加1000元；</p>
@@ -390,7 +423,7 @@ $('.pp_img').live('mouseout',function(){
         <!--<p>1.在线预约，支付预约金1元；</p>-->
         <p>1.在线预约；</p>
         <p>2.装修方案确认，签订装修合同后支付合同金额的60%；</p>
-        <p>3.装修完成后，软装进场前支付合同进的的40%；</p>
+        <p>3.装修完成后，软装进场前支付合同金额的的40%；</p>
     </div>
 </div>
 <div class="product_wrap">
@@ -400,6 +433,9 @@ $('.pp_img').live('mouseout',function(){
     <div class="product_wrap p_block_wrap">
         <div>
             <b>1.施工标准保障</b>
+            <span>
+                30项重点控制节点，80道工序，300项执行标准严格控制，保障施工质量和施工工艺。
+            </span>
         </div>
         <div>
             <b>2.设计团队保障</b>
@@ -422,19 +458,19 @@ $('.pp_img').live('mouseout',function(){
         <h1>预约流程</h1>
         <div class="product_step_block">
             <img src="<?=IMAGE_PATH .'banner/icon/1.png';?>"/>
-            <p>网站注册<br/>填写基本信息<br/>支付一元预约金(不退)</p>
+            <p>在线预约<br/>手机号一键预约</p>
         </div>
         <div class="product_step_block">
             <img src="<?=IMAGE_PATH .'banner/icon/2.png';?>"/>
-            <p>网站注册<br/>填写基本信息<br/>支付一元预约金(不退)</p>
+            <p>设计师沟通<br/>确定装修方案</p>
         </div>
         <div class="product_step_block">
             <img src="<?=IMAGE_PATH .'banner/icon/3.png';?>"/>
-            <p>网站注册<br/>填写基本信息<br/>支付一元预约金(不退)</p>
+            <p>支付定金<br/>支付装修定金</p>
         </div>
         <div class="product_step_block">
             <img src="<?=IMAGE_PATH .'banner/icon/4.png';?>"/>
-            <p>网站注册<br/>填写基本信息<br/>支付一元预约金(不退)</p>
+            <p>线下交付<br/>交付最终结果</p>
         </div>
 <!--
         <div class="product_step_block">
