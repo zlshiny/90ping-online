@@ -434,7 +434,8 @@ $('.pp_img').live('mouseout',function(){
 <div class="product_wrap">
     <h1>服务保障</h1>
 </div>
-<div class="p_msg_wrap">
+<div class="service_ensure"></div>
+<!--<div class="p_msg_wrap">
     <div class="product_wrap p_block_wrap">
         <div>
             <b>1.最优秀的设计团队</b>
@@ -459,7 +460,7 @@ $('.pp_img').live('mouseout',function(){
             <span>免费甲醛检测，整装2年，隐蔽工程5年，完善的售后客服体系，24小时内上门服务</span>
         </div>
     </div>
-</div>
+</div>-->
 <div class="product_step"v>
     <div class="product_wrap">
         <h1>预约流程</h1>
