@@ -8,4 +8,16 @@ class Product extends CI_Controller {
         $this->load->view('wechat.php', $data);
     }
 
+    public function kobe(){
+        $this->load->view('kobe.php');
+    }
+
+    public function lebron(){
+        $this->load->view('lebron.php');
+    }
+
+    public function test(){
+        $this->load->view('test.php');
+    }
+
 }

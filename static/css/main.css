@@ -1679,11 +1679,11 @@ body{
     }
 
     .ppi7{
-        background:url(/static/image/tag/91.jpg) no-repeat;
+        background:url(/static/image/tag/91.png) no-repeat;
         width:449px;
         height:580px;
-        left:325px;
-        top:110px;
+        left:320px;
+        top:0px;
     }
     .ppi8{
         background:url(/static/image/tag/16.png) no-repeat;
@@ -1700,11 +1700,11 @@ body{
         top:60px;
     }
     .ppi9{
-        background:url(/static/image/tag/91.jpg) no-repeat;
+        background:url(/static/image/tag/91.png) no-repeat;
         width:449px;
         height:580px;
         left:385px;
-        top:250px;
+        top:10px;
     }
 
     .ppi11{

@@ -16,20 +16,10 @@ var _hmt = _hmt || [];
  })();
 </script>
 </head>
-<script type="text/javascript">
-window.onscroll = function(){
-	if(document.body.scrollTop > 130){
-		$('.i_banner_1').find('a').addClass('fix_p')
-	}else{
-		$('.i_banner_1').find('a').removeClass('fix_p')
-	}
-}
-	
-</script>
 <style type="text/css">
     body {
         margin:0px;
-        background-color:#eeeeee;
+        background-color:#ffffff;
     }
     img {
         width:100%; 
@@ -49,6 +39,7 @@ window.onscroll = function(){
 .app_code{
     width:53%;
     margin-top:10px;
+    border:1px solid;
 }
 
 .app_phone{
@@ -64,6 +55,7 @@ window.onscroll = function(){
     outline:none;
     height:40px;
     color:#939393;
+    background-color:#eeeeee;
     font-size:18px;
     position:relative;
     border-radius:5px;
@@ -97,32 +89,53 @@ window.onscroll = function(){
 </style>
 </head>
 <body>
-    <!--<div class="img" style="position:fixed">
-        <img src="<?=IMAGE_PATH . "wechat/menu.jpg";?>"/>
-        <div style="padding-top:15px;text-align:center;margin-top:10px;height:50px;">
-	        <a href="#appoint" style="text-decoration:none;" target="_blank" class="bgcl ft48 app_sub">预约</a>
-        </div>
-    </div>
-    -->
     <div class="img menu_img">
         <img style="height:50px;width:auto;" src="/static/image/wechat/menu.jpg">
         <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px">
             <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" target="_blank" class="bgcl ft48">预约</a >
         </div>
     </div>
-    <div class="img" style="height:50px;">
+    <div class="img" style="background-color:#eeeeee;">
+        <img src="<?=IMAGE_PATH . "wechat/h5/2.jpg";?>"/>
     </div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/header.jpg";?>"/>
-    </div>
-    <div style="padding-top:15px;text-align:center;">
+    <div style="padding-top:20px;margin-top:0px;text-align:center;height:80px;background-color:#eeeeee;">
 	    <a href="#appoint" style="text-decoration:none;" target="_blank" class="bgcl ft48">立即预约</a>
     </div>
     <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/top.jpg";?>"/>
+        <img src="<?=IMAGE_PATH . "wechat/h5/4.jpg";?>"/>
     </div>
     <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/ciwo.jpg";?>"/>
+        <img src="<?=IMAGE_PATH . "wechat/h5/5.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/6.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/7.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/8.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/9.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/10.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/11.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/12.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/13.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/14.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/15.jpg";?>"/>
     </div>
     <div class="appoint" id="appoint">
     <div style="margin-left:5%;">
@@ -137,7 +150,7 @@ window.onscroll = function(){
     </div>
     </div>
     <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/footer.jpg";?>"/>
+        <img src="<?=IMAGE_PATH . "wechat/h5/16.jpg";?>"/>
     </div>
 </body>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>

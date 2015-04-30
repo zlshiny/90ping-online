@@ -1,0 +1,69 @@
+body {
+    margin:0px;
+    background-color:#eeeeee;
+}
+
+img {
+    width:100%; 
+}
+
+.bgcl{
+	background-color:#1dd2af;
+	padding:10px 80px;
+	display:inline;	
+	position:relative;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	color:#fff;
+}
+
+.ft48{
+	font-size:22px;
+}
+.app_code{
+    width:53%;
+    margin-top:10px;
+}
+
+.app_phone{
+    width:90%;
+    margin-top:40px;
+}
+
+.appoint input{
+    text-indent:10px;
+    line-height:25px;
+    margin-left:0px;
+    border:none;
+    outline:none;
+    height:40px;
+    color:#939393;
+    font-size:18px;
+    position:relative;
+    border-radius:5px;
+    behavior:url(/static/css/PIE.htc);
+}
+.yzm{
+    display:inline-block;
+    width:35%;
+    height:48px;
+    margin-left:2%;
+    background-color:#9cd4c9;
+    color:#fff;
+    font-size:18px;
+    margin-top:10px;
+    cursor:pointer;
+    border-radius:5px;
+    text-align:center;
+    line-height:48px;
+}
+
+.menu_img {
+    position:fixed;
+    width:100%;
+    height:50px;
+    /*background-image:url('/static/image/wechat/menu.jpg');*/
+    background-color:#333333;
+    text-align:center;
+    line-height:50px;
+}

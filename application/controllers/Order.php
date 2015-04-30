@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Order extends CI_Controller {
 
+    public function test(){
+        $this->load->view('test.php');
+    }
+
     //加载预约第一步(验证手机)
     public function index(){
         $this->load->view('appoint.php');
