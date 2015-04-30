@@ -8,4 +8,9 @@ class Product extends CI_Controller {
         $this->load->view('product.php', $data);
     }
 
+    public function config_detail($type = 1){
+        $data['type'] = $type;
+        $this->load->view('config_detail.php', $data);
+    }
+
 }

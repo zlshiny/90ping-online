@@ -298,8 +298,8 @@ $('.pp_img').live('mouseout',function(){
         </div>
 </div>
 <div class="product_pm"></div>
-<a href="/download/hard" class="p_d1">点击下载硬装主材单</a>
-<a href="/download/soft" class="p_d2">点击下载软装主材单</a>
+<a href="/product/config_detail/1" target="_blank" class="p_d1">点击下载硬装主材单</a>
+<a href="/product/config_detail/2" target="_blank" class="p_d2">点击下载软装主材单</a>
 <div class="product_pp"></div>
 <div class="product_wrap">
     <h1>软装品质</h1>
@@ -437,24 +437,26 @@ $('.pp_img').live('mouseout',function(){
 <div class="p_msg_wrap">
     <div class="product_wrap p_block_wrap">
         <div>
-            <b>1.施工标准保障</b>
+            <b>1.最优秀的设计团队</b>
             <span>
-            30项重点节点控制，80道工序，300项执行标准严格控制，保障施工质量和施工工艺
+            一群85后的家装设计师，拒绝平庸痛恨繁琐，研究了68个新潮白领的生活习惯，做出了史上第一个全套家装产品超级Home1.0
             </span>
         </div>
         <div>
-            <b>2.设计团队保障</b>
-            <span>2位空间设计师，2位软装设计师，
-            1位建筑设计师，调研数百位85后业主，经过45天创作研发、精心雕琢，为80后打造有性格、有品位的的专属整体家装单品！</span>
+            <b>2.最专业的施工队伍</b>
+            <span>
+                30项重点节点控制，80道工序，300项执行标准严格控制，保障施工质量和施工工艺
+            </span>
         </div>
         <div>
-            <b>3.过程监控保障</b>
-            <span>互联网全程直播监控，
-        影像直播，实时互动</span>
+            <b>3.最全面的过程服务</b>
+            <span>
+                互联网全程直播监控，影像直播，实时互动
+            </span>
         </div>
         <div>
-            <b>4.售后服务保障</b>
-            <span>整装2年质保</span>
+            <b>4.最贴心的售后保障</b>
+            <span>免费甲醛检测，整装2年，隐蔽工程5年，完善的售后客服体系，24小时内上门服务</span>
         </div>
     </div>
 </div>
