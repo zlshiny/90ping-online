@@ -1,10 +1,31 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>史上最省心的互联网家装单品—超级Home1.0，软硬装全包，专为80后奋斗者</title>
-<script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="keywords" content="90平方，装修，互联网装修，智能家装，家装，互联网家装，方太"/>
+<meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
+<title>最省心互联网家装产品疯狂预约，专为80后，软硬全包一口价</title>
+<script>
+var _hmt = _hmt || [];
+(function() {
+ var hm = document.createElement("script");
+ hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+ var s = document.getElementsByTagName("script")[0]; 
+ s.parentNode.insertBefore(hm, s);
+ })();
+</script>
+</head>
+<script type="text/javascript">
+window.onscroll = function(){
+	if(document.body.scrollTop > 130){
+		$('.i_banner_1').find('a').addClass('fix_p')
+	}else{
+		$('.i_banner_1').find('a').removeClass('fix_p')
+	}
+}
+	
+</script>
 <style type="text/css">
     body {
         margin:0px;
@@ -119,6 +140,7 @@
         <img src="<?=IMAGE_PATH . "wechat/footer.jpg";?>"/>
     </div>
 </body>
+<script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript">
     var s = 30;
     var get_code = true;
