@@ -44,11 +44,15 @@
 	<div class="clearfix"></div>
 </div>
 <div class="i_banner_3">
+    <!--
 	<p class="ft72">超级Home1.0内测   仅10位天使用户</p>
 	<p class="ft30 p50">90平米户型  一口价  15.6万<br/><br/>
         换回30万整套智能家装解决方案，配好顶级家具软装和高端厨卫，拎包入住
     </p>
+    -->
+    <div class="kobe">
 	<a href="/order" target="_blank" class="bgcl ft48">成为天使用户</a>
+    </div>
 </div>
 <?php
 	include('footer.php');
