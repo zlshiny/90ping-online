@@ -9,6 +9,7 @@
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'respond.js';?>"></script>
+<script type="text/javascript" src="<?=JS_PATH . 'jquery.flexslider-2.2.0.min.js';?>"></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
