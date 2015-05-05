@@ -1,15 +1,21 @@
 <?php
 	include('header.php');
 ?>
-<div class="i_banner_1">
+<div class="flexslider">
 <!--	<a href="/order" target="_blank"></a>-->
-		<p class="bgc ft45 ma">史上第一个专注于80后</p>
-		<p class="ft72 p20">互联网智能家装探索者</p>
-		<p class="ft18 lh30">相比于低价，我们更追求品质和逼格，我们更关心健康环保<br/>
-不仅是房子，更是小伙伴们的社交场所<Br/>
-真正极致的体验：一键支付，拎包入住
-</p>
-	
+        <ul class="slides">
+			<li class="i_banner_1">
+				<p class="bgc ft45 ma">史上第一个专注于85后</p>
+				<p class="ft72 p20">互联网智能家装探索者</p>
+				<p class="ft18 lh30">相比于低价，我们更追求品质和逼格，我们更关心健康环保<br/>
+				不仅是房子，更是小伙伴们的社交场所<Br/>
+				真正极致的体验：一键支付，拎包入住</p>
+			</li>
+			<li class="i_banner_1_new">
+				
+			</li>
+		</ul>
+
 </div>
 <div id="i_mid">
 	<div class="b_wrap">
@@ -54,6 +60,16 @@
 	<a href="/order" target="_blank" class="bgcl ft48">成为天使用户</a>
     </div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".flexslider").flexslider({
+					directionNav: true,
+					pauseOnAction: true,
+					animation: "slide",  
+					slideshowSpeed: 4000
+		});
+	});
+</script>
 <?php
 	include('footer.php');
 ?>
