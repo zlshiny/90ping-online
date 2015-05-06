@@ -95,6 +95,13 @@ var _hmt = _hmt || [];
             <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" class="bgcl ft48">预约</a >
         </div>
     </div>
+    <div style="height:49px;"></div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/00.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/01.jpg";?>"/>
+    </div>
     <div class="img" style="background-color:#eeeeee;">
         <img src="<?=IMAGE_PATH . "wechat/h5/2.jpg";?>"/>
     </div>
@@ -129,10 +136,19 @@ var _hmt = _hmt || [];
         <img src="<?=IMAGE_PATH . "wechat/h5/12.jpg";?>"/>
     </div>
     <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/04.jpg";?>"/>
+    </div>
+    <div class="img" style="margin-top:45px;">
         <img src="<?=IMAGE_PATH . "wechat/h5/13.jpg";?>"/>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/14.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/02.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/03.jpg";?>"/>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/15.jpg";?>"/>
@@ -148,9 +164,6 @@ var _hmt = _hmt || [];
     <div style="padding-top:15px;text-align:center;margin-top:10px;height:50px;">
 	    <a href="#" style="text-decoration:none;" target="_blank" class="bgcl ft48 app_sub">提交</a>
     </div>
-    </div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/16.jpg";?>"/>
     </div>
 </body>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>

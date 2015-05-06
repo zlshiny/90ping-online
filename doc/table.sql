@@ -8,6 +8,7 @@ CREATE TABLE `user`(
     `passwd` varchar(60) NOT NULL DEFAULT '' COMMENT 'passwd',
     `gender` tinyint NOT NULL DEFAULT 0,
     `status` tinyint NOT NULL DEFAULT 0 COMMENT '0:预约(没设密码)，1:信息已补充完整',
+    `age` tinyint NOT NULL DEFAULT 0,
     `age_range` tinyint NOT NULL DEFAULT 0 COMMENT '0:85前,1:85后',
     `encrypt_cookie` char(20) NOT NULL DEFAULT '' COMMENT 'cookie加密串',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间'
