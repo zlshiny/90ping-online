@@ -68,6 +68,7 @@
 					animation: "slide",  
 					slideshowSpeed: 4000
 		});
+		$(".flex-control-nav li a").text("");
 	});
 </script>
 <?php
