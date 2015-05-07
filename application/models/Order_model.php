@@ -158,5 +158,49 @@ class Order_Model extends CI_Model{
         }
     }
 
+    public function appointment_wechat($name, $phone, $gender, $age, $acreage, $location,
+                                       $decor_time, $product_id, $source){
+        if(!check_phone($phone)) return array();
+
+        $order_no = build_order_no();
+        $order = array('product_id' => $product_id, 'serial_number' => $order_no,
+            'status' => ORDER_STATUS_SEC, 'source' => $source, 'decor_time' => $decor_time);
+        $house = array('acreage' => $acreage, 'area' => $location);
+        $user = array('phone' => $phone, 'name' => $name, 'gender' => $gender, 'age' => $age);
+
+        $order_id = 0;
+        $user_id = 0;
+        if($user = $this->user->get_user($phone)){
+            $order['user_id'] = $user->user_id;
+            $order_id = $this->insert_order($order);
+            $user_id = $user->user_id;
+
+            $this->user->update_user($user->user_id, $user);
+
+            $house['order_id'] = $order_id;
+            $house['user_id'] = $user->user_id;
+        }else{
+            if(!$user_id = $this->user->insert_user_arr($user)) return array();
+            $order['user_id'] = $user_id;
+            $order_id = $this->insert_order($order);
+
+            $house['user_id'] = $user_id;
+            $house['order_id'] = $order_id;
+        }
+
+        $house_id = $this->house->insert_house_arr($house);
+        $this->update_house_id($order_id, $house_id);
+
+        return array('order_id' => $order_id, 'user_id' => $user_id, 'serial_number' => $order_no);
+    }
+
+    public function update_house_id($order_id, $house_id){
+        if($order_id <= 0 || $house_id <= 0) return false;
+
+        $arr = array('house_id' => $house_id);
+        $this->master_db->where('id', $order_id);
+        return $this->master_db->update('orders', $arr);
+    }
+
 
 }

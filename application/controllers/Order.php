@@ -155,6 +155,129 @@ class Order extends CI_Controller {
         }
     }
 
+    /*h5预约*/
+    public function appoint_wechat(){
+        if(!$phone = $this->input->post('phone')){
+            exit(json_encode(array(
+                    'code' => -1,
+                    'msg' => '缺少手机号码',
+                )
+            ));
+        }
+
+        if(!$pverify_number = $this->input->post('phone_verify_number')){
+            exit(json_encode(array(
+                    'code' => -2,
+                    'msg' => '缺少验证码',
+                )
+            ));
+        }
+
+        if(!check_phone($phone)){
+            exit(json_encode(array(
+                    'code' => -3,
+                    'msg' => '手机号码不合法',
+                )
+            ));
+        }
+
+        $source = ORDER_SOURCE_WEB;
+        if(isset($_POST['source'])){
+            $source = $this->input->post('source');
+        }
+
+        if(!$name = $this->input->post('name')){
+            exit(json_encode(array(
+                    'code' => -11,
+                    'msg' => '姓名不合法',
+                )
+            ));
+        }
+
+        if(!$gender = $this->input->post('gender') || $gender != GENDER_MAN || $gender != GENDER_WOMEN){
+            exit(json_encode(array(
+                    'code' => -12,
+                    'msg' => '性别不合法',
+                )
+            ));
+        }
+
+        if(!$year = $this->input->post('year') || $year > 2010 || $year < 1960){
+            exit(json_encode(array(
+                    'code' => -13,
+                    'msg' => '年龄不合法',
+                )
+            ));
+        }
+        $age = intval(date('Y')) - $year;
+
+        if(!$acreage = $this->input->post('acreage') || $acreage < MIN_ACREAGE || $acreage > MAX_ACREAGE){
+            exit(json_encode(array(
+                    'code' => -14,
+                    'msg' => '面积不合法',
+                )
+            ));
+        }
+
+        if(!$location = $this->input->post('location')){
+            exit(json_encode(array(
+                    'code' => -15,
+                    'msg' => '地址不合法',
+                )
+            ));
+        }
+
+        if(!$decor_time = $this->input->post('decor_time') || intval($decor_time) <= 0 || intval($decor_time) > 12){
+            exit(json_encode(array(
+                    'code' => -16,
+                    'msg' => '装修时间不合法',
+                )
+            ));
+        }
+        $decor_time = date('Y') . '-' . $decor_time . '-' . date('d') . ' ' . date('H:i:s');
+
+
+        $this->load->library('session');
+        if(!isset($_SESSION['phone_verify_number'])){
+            exit(json_encode(array(
+                    'code' => -4,
+                    'msg' => '验证码已过期',
+                )
+            ));
+        }
+
+        if($pverify_number != $_SESSION['phone_verify_number']){
+            exit(json_encode(array(
+                    'code' => -5,
+                    'msg' => '验证码不正确',
+                )
+            ));
+        }
+
+        unset($_SESSION['phone_verify_number']);
+        $this->load->model("user_model", 'user');
+        $this->load->model('order_model', 'order');
+        $product_id = 1;
+
+        if($ret = $this->order->appointment_wechat($name, $phone, $gender, $age, $acreage, $location,
+            $decor_time, $product_id, $source)){
+            exit(json_encode(array(
+                    'code' => 0,
+                    'order_id' => $ret['order_id'],
+                    'user_id' => $ret['user_id'],
+                    'serial_number' => $ret['serial_number'],
+                    'msg' => '预约成功',
+                )
+            ));
+        }else{
+            exit(json_encode(array(
+                    'code' => -6,
+                    'msg' => '预约失败',
+                )
+            ));
+        }
+    }
+
     /*执行预约第一步*/
     public function appointment(){
         if(!$phone = $this->input->post('phone')){

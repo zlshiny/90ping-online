@@ -132,4 +132,13 @@ class User_Model extends CI_Model{
         }
     }
 
+    public function insert_user_arr($user){
+        if(empty($user)) return -1;
+        if($this->master_db->insert('user', $user)){
+            return $this->master_db->insert_id();
+        }else{
+            return -1;
+        }
+    }
+
 }

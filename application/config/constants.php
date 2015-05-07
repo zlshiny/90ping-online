@@ -31,6 +31,7 @@ define('WECHAT_APPSECRET', 'd7f73a30dce6887399c6582b13db242a');
 
 //最大面积
 define('MAX_ACREAGE', 200);
+define('MIN_ACREAGE', 40);
 
 define('LOGIN_COOKIE_KEY', 'zjw');
 define('LOGIN_EXPIRED_DEFAULT', 86400);
@@ -47,6 +48,8 @@ define('AGE_85_AFTER', 1);
 //用户注册阶段
 define('USER_STATUS_FIR', 0);//只用手机号预约过,未使用密码注册
 define('USER_STATUS_SEC', 1);//完善了密码信息
+define('GENDER_MAN', 1);
+define('GENDER_WOMEN', 2);
 
 define('INIT_DEPOSIT', 1);
 define('TOTAL_PRICE', 156000);

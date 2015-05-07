@@ -18,4 +18,13 @@ class House_Model extends CI_Model{
         }
     }
 
+    public function insert_house_arr($house){
+        if(empty($house)) return -1;
+        if($this->master_db->insert('house', $house)){
+            return $this->master_db->insert_id();
+        }else{
+            return -1;
+        }
+    }
+
 }
