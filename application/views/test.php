@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <meta name="keywords" content="90平方，装修，互联网装修，智能家装，家装，互联网家装，方太"/>
 <meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
-<title>最省心互联网家装产品疯狂预约，专为80后，软硬全包一口价</title>
+<title>80后互联网家装产品—超级Home上线遭疯抢，传统装修方式，该翻篇了</title>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -92,14 +92,21 @@ var _hmt = _hmt || [];
     <div class="img menu_img">
         <img style="height:50px;width:auto;" src="/static/image/wechat/menu.jpg">
         <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px">
-            <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" target="_blank" class="bgcl ft48">预约</a >
+            <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" class="bgcl ft48">预约</a >
         </div>
+    </div>
+    <div style="height:49px;"></div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/00.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/01.jpg";?>"/>
     </div>
     <div class="img" style="background-color:#eeeeee;">
         <img src="<?=IMAGE_PATH . "wechat/h5/2.jpg";?>"/>
     </div>
     <div style="padding-top:20px;margin-top:0px;text-align:center;height:80px;background-color:#eeeeee;">
-	    <a href="#appoint" style="text-decoration:none;" target="_blank" class="bgcl ft48">立即预约</a>
+	    <a href="#appoint" style="text-decoration:none;" class="bgcl ft48">立即预约</a>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/4.jpg";?>"/>
@@ -129,10 +136,19 @@ var _hmt = _hmt || [];
         <img src="<?=IMAGE_PATH . "wechat/h5/12.jpg";?>"/>
     </div>
     <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/04.jpg";?>"/>
+    </div>
+    <div class="img" style="margin-top:45px;">
         <img src="<?=IMAGE_PATH . "wechat/h5/13.jpg";?>"/>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/14.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/02.jpg";?>"/>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/03.jpg";?>"/>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/15.jpg";?>"/>
@@ -148,9 +164,6 @@ var _hmt = _hmt || [];
     <div style="padding-top:15px;text-align:center;margin-top:10px;height:50px;">
 	    <a href="#" style="text-decoration:none;" target="_blank" class="bgcl ft48 app_sub">提交</a>
     </div>
-    </div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/16.jpg";?>"/>
     </div>
 </body>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
