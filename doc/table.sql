@@ -26,7 +26,7 @@ CREATE TABLE `house`(
     `province` tinyint NOT NULL DEFAULT 0,
     `city` smallint NOT NULL DEFAULT 0,
     `district` tinyint NOT NULL DEFAULT 0,
-    `area` varchar(128) NOT NULL DEFAULT '' COMMENT '具体位置',
+    `area` varchar(256) NOT NULL DEFAULT '' COMMENT '具体位置',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '录入时间'
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
