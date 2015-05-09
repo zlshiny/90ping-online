@@ -143,29 +143,29 @@ margin-left:5px;
     </div>
     <div class="appoint" id="appoint">
 	<p class="p_phone">
-		<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span><input type="number"/>
+		<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span><input type="number"/>
 	</p>
 	<p class="p_phone">
-		<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span><input type="text"/>
+		<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span><input type="text"/>
 	</p>
 	<p class="p_phone">
-		<span>出生年份</span><input type="date"/>
+		<span>出生年份：</span><input type="date"/>
 	</p>
 	<p class="p_phone">
-		<span>房屋面积</span><input type="text" value="默认单位：㎡"/>
+		<span>房屋面积：</span><input type="text" placeholder="默认单位：㎡" value=""/>
 	</p>
 	<p class="p_phone">
-		<span>新房地址</span><input type="text"/>
+		<span>新房地址：</span><input type="text"/>
 	</p>
 	<p class="p_phone">
-		<span>装修时间</span><input type="date"/>
+		<span>装修时间：</span><input type="date"/>
 	</p>
 	<p class="p_phone">
-		<span>手&nbsp;&nbsp;机&nbsp;&nbsp;号</span><input type="text"/>
+		<span>手机号码：</span><input type="text"/>
 	</p>
     <div >
 		<p>
-			<span style="margin-left:5px;">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+			<span style="margin-left:5px;">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</span>
 			<input style="width:33%;margin-left:0px;" type="text" class="app_code" name="code"/>
 			<input style="width:33%;margin-left:3px;" style class="yzm" value="获取验证码"/>
 		</p>
