@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <meta name="keywords" content="90平方，装修，互联网装修，智能家装，家装，互联网家装，方太"/>
 <meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
-<title>80后互联网家装产品—超级Home上线遭疯抢，传统装修方式，该翻篇了</title>
+<title>最省心互联网家装产品疯狂预约，专为80后，软硬全包一口价</title>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -48,9 +48,11 @@ var _hmt = _hmt || [];
 }
 
 .appoint input{
+	padding-left:3px;
+	width:70%;
     text-indent:10px;
     line-height:25px;
-    margin-left:0px;
+    margin-left:5px;
     border:none;
     outline:none;
     height:40px;
@@ -61,22 +63,22 @@ var _hmt = _hmt || [];
     border-radius:5px;
     behavior:url(/static/css/PIE.htc);
 }
-.yzm{
+.appoint .yzm{
     display:inline-block;
     width:35%;
-    height:48px;
+    height:40px;
     margin-left:2%;
     background-color:#9cd4c9;
     color:#fff;
     font-size:18px;
-    margin-top:10px;
     cursor:pointer;
     border-radius:5px;
     text-align:center;
-    line-height:48px;
+    line-height:40px;
 }
 
 .menu_img {
+	z-index:90;
     position:fixed;
     width:100%;
     height:50px;
@@ -85,28 +87,23 @@ var _hmt = _hmt || [];
     text-align:center;
     line-height:50px;
 }
-
+.p_phone{width:100%;
+margin-left:5px;
+}
 </style>
 </head>
 <body>
     <div class="img menu_img">
         <img style="height:50px;width:auto;" src="/static/image/wechat/menu.jpg">
-        <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px">
-            <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" class="bgcl ft48">预约</a >
+        <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px;z-index:90;">
+            <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" target="_blank" class="bgcl ft48">预约</a >
         </div>
-    </div>
-    <div style="height:49px;"></div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/00.jpg";?>"/>
-    </div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/01.jpg";?>"/>
     </div>
     <div class="img" style="background-color:#eeeeee;">
         <img src="<?=IMAGE_PATH . "wechat/h5/2.jpg";?>"/>
     </div>
     <div style="padding-top:20px;margin-top:0px;text-align:center;height:80px;background-color:#eeeeee;">
-	    <a href="#appoint" style="text-decoration:none;" class="bgcl ft48">立即预约</a>
+	    <a href="#appoint" style="text-decoration:none;" target="_blank" class="bgcl ft48">立即预约</a>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/4.jpg";?>"/>
@@ -136,34 +133,49 @@ var _hmt = _hmt || [];
         <img src="<?=IMAGE_PATH . "wechat/h5/12.jpg";?>"/>
     </div>
     <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/04.jpg";?>"/>
-    </div>
-    <div class="img" style="margin-top:45px;">
         <img src="<?=IMAGE_PATH . "wechat/h5/13.jpg";?>"/>
     </div>
     <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/14.jpg";?>"/>
     </div>
     <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/02.jpg";?>"/>
-    </div>
-    <div class="img">
-        <img src="<?=IMAGE_PATH . "wechat/h5/03.jpg";?>"/>
-    </div>
-    <div class="img">
         <img src="<?=IMAGE_PATH . "wechat/h5/15.jpg";?>"/>
     </div>
     <div class="appoint" id="appoint">
-    <div style="margin-left:5%;">
-        <input type="text" class="app_phone" name="phone" value="请输入手机号" onfocus="if(this.value == '请输入手机号'){this.value = ''}" onblur="if(this.value == ''){this.value='请输入手机号'}"/>
-   </div>
-    <div style="margin-left:5%;">
-       <input type="text" class="app_code" name="code" onfocus="if(this.value == '请输入验证码'){this.value = ''}" onblur="if(this.value == ''){this.value = '请输入验证码'}" value="请输入验证码"/>
-        <div class="yzm">获取验证码</div>
+	<p class="p_phone">
+		<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span><input type="number"/>
+	</p>
+	<p class="p_phone">
+		<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span><input type="text"/>
+	</p>
+	<p class="p_phone">
+		<span>出生年份</span><input type="date"/>
+	</p>
+	<p class="p_phone">
+		<span>房屋面积</span><input type="text" value="默认单位：㎡"/>
+	</p>
+	<p class="p_phone">
+		<span>新房地址</span><input type="text"/>
+	</p>
+	<p class="p_phone">
+		<span>装修时间</span><input type="date"/>
+	</p>
+	<p class="p_phone">
+		<span>手&nbsp;&nbsp;机&nbsp;&nbsp;号</span><input type="text"/>
+	</p>
+    <div >
+		<p>
+			<span style="margin-left:5px;">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+			<input style="width:33%;margin-left:0px;" type="text" class="app_code" name="code"/>
+			<input style="width:33%;margin-left:3px;" style class="yzm" value="获取验证码"/>
+		</p>
    </div>
     <div style="padding-top:15px;text-align:center;margin-top:10px;height:50px;">
 	    <a href="#" style="text-decoration:none;" target="_blank" class="bgcl ft48 app_sub">提交</a>
     </div>
+    </div>
+    <div class="img">
+        <img src="<?=IMAGE_PATH . "wechat/h5/16.jpg";?>"/>
     </div>
 </body>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
