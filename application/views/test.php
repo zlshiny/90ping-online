@@ -90,6 +90,19 @@ var _hmt = _hmt || [];
 .p_phone{width:100%;
 margin-left:5px;
 }
+.appoint .gender_btn{
+	width:25%;
+	text-align:center;
+	color:#fff;
+	background-color:#9cd4c9;
+}
+<!--
+.appoint .gender_btn:hover{
+	width:25%;
+	text-align:center;
+	color:#fff;
+	background-color:#1dd2af;
+}-->
 </style>
 </head>
 <body>
@@ -143,29 +156,31 @@ margin-left:5px;
     </div>
     <div class="appoint" id="appoint">
 	<p class="p_phone">
-		<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span><input type="number"/>
+		<span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span><input type="text"/>
 	</p>
 	<p class="p_phone">
-		<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</span><input type="text"/>
+		<span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span>
+		<input class="gender_btn" id="nan"  type="button" value="男"/>
+		<input class="gender_btn" id="nv" type="button" value="女"/>
 	</p>
 	<p class="p_phone">
-		<span>出生年份：</span><input type="date"/>
+		<span>出生年份</span><input type="date"/>
 	</p>
 	<p class="p_phone">
-		<span>房屋面积：</span><input type="text" placeholder="默认单位：㎡" value=""/>
+		<span>房屋面积</span><input type="text" value="默认单位：㎡"/>
 	</p>
 	<p class="p_phone">
-		<span>新房地址：</span><input type="text"/>
+		<span>新房地址</span><input type="text"/>
 	</p>
 	<p class="p_phone">
-		<span>装修时间：</span><input type="date"/>
+		<span>装修时间</span><input type="date"/>
 	</p>
 	<p class="p_phone">
-		<span>手机号码：</span><input type="text"/>
+		<span>手&nbsp;&nbsp;机&nbsp;&nbsp;号</span><input type="text"/>
 	</p>
     <div >
 		<p>
-			<span style="margin-left:5px;">验&nbsp;&nbsp;证&nbsp;&nbsp;码：</span>
+			<span style="margin-left:5px;">验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
 			<input style="width:33%;margin-left:0px;" type="text" class="app_code" name="code"/>
 			<input style="width:33%;margin-left:3px;" style class="yzm" value="获取验证码"/>
 		</p>
@@ -180,6 +195,17 @@ margin-left:5px;
 </body>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript">
+
+	
+	/*实现性别选择button样式的改变*/
+	$("#nan").click(function(){
+		$(".gender_btn").css("background-color","#9cd4c9");
+		$(this).css("background-color","#1dd2af");
+	});
+	$("#nv").click(function(){
+		$(".gender_btn").css("background-color","#9cd4c9");
+		$(this).css("background-color","#1dd2af");
+	});
     var s = 30;
     var get_code = true;
     $('.app_sub').live('click',function(){
@@ -264,5 +290,6 @@ margin-left:5px;
             return true;
         }
     }
+	
 </script>
 </html>
