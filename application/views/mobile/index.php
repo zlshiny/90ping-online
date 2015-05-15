@@ -18,7 +18,8 @@
 		$(function(){		  
 		  var pagesheight = $('.pages').height();
 		  var gwidth = $('.content').width();
-		  var gheight = pagesheight - 44;
+		  //var gheight = pagesheight - 44;
+		  var gheight = pagesheight;
 		  $('.content').height(gheight);
 
 		  $('#slide-image').bxSlider({
@@ -35,9 +36,11 @@
 </head>
 <body >
 <div class="pages">
+    <!--
 	<header class="banner">
 		<img src="/static/image/mobile/banner.png">
 	</header>
+    -->
 
 	<div class="content">
 		<ul id="slide-image">

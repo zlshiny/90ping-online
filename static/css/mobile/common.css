@@ -203,6 +203,10 @@ a.super{
   overflow: hidden;
 }
 
+header.banner {
+    height:55px;
+}
+
 header.banner img{
   width: 100%;
 }
