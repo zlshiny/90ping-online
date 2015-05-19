@@ -20,13 +20,14 @@
 
 			var bwidth = $(window).width();
 		  	var bheight = $(window).height();
+		  	var sheight = bheight - 60;
 			$('section').width(bwidth);
-			$('section').height(bheight);	  			
-			var gheight = bheight - 60 -55;
+			$('section').height(sheight);				
+			var gheight = bheight -55;
 			var pageHeight = bheight - 60;
 			$('#view1 .content').height(gheight);
-			$('#view2 .pages').height(pageHeight);
-
+			$('#view2 .pages').height(bheight);
+			$('#view3 .pages').height(pageHeight);
 			$('#super-home-9080').height(parseInt(pageHeight*0.6));
 		  	$('#super-home-last').height(parseInt(pageHeight*0.4));
 
@@ -40,12 +41,16 @@
 			});
 
 			$('#image-list img').on('touchstart',function(){
-	    		var id = $(this).attr('id');
-	    		$(this).attr('src','image/'+id+'h.png')
+	    		var id = $(this).attr('class');
+	    		// $(this).hide();
+	    		$('#'+id).hide();
+	    		$('#'+id+id).show();
 	    	})
 	    	.on('touchend ',function(){
-	    		var id = $(this).attr('id');
-	    		$(this).attr('src','image/'+id+'.png')
+	    		var id = $(this).attr('class');
+	    		// $(this).hide();
+	    		$('#'+id+id).hide();
+	    		$('#'+id).show();
 	    	})
 
 	    	$('#body').fullpage();
@@ -74,15 +79,7 @@
 		</div>
 	</div>
 
-	<!-- 尾部start -->
-	<footer>
-	    <a href="#" class="icon home active" >主页</a>
-	    <a href="#" class="icon loan" >贷款</a>
-	    <a href="#" class="icon super" >超级Home1.0</a>
-	    <a href="#" class="icon bbs" >社区</a>
-	    <a href="#" class="icon user"  >登录</a>
-	</footer>
-	<!-- 尾部end -->
+	
 </section>
 
 <section id="view2" class="section">
@@ -90,19 +87,23 @@
 		<div class="content">
 			<ul id="image-list">
 				<li>
-					<img id="1" src="/static/image/mobile/1.png">
+					<img id="1" class="1" src="/static/image/mobile/1.png">
+					<img id="11" class="1" src="/static/image/mobile/1h.png" style="display:none;">
 					<p class=""><a href="">极致体验</a></p>
 				</li>
 				<li>
-					<img id="2" src="/static/image/mobile/2.png">
+					<img id="2" class="2" src="/static/image/mobile/2.png">
+					<img id="22" class="2" src="/static/image/mobile/2h.png" style="display:none;">
 					<p><a href="">高端品质</a></p>
 				</li>
 				<li>
-					<img id="3" src="/static/image/mobile/3.png">
+					<img id="3" class="3" src="/static/image/mobile/3.png">
+					<img id="33" class="3" src="/static/image/mobile/3h.png" style="display:none;">
 					<p><a href="">80后专属</a></p>
 				</li>
 				<li>
-					<img id="4" src="/static/image/mobile/4.png">
+					<img id="4" class="4" src="/static/image/mobile/4.png">
+					<img id="44" class="4" src="/static/image/mobile/4h.png" style="display:none;">
 					<p><a href="">智能的家</a></p>
 				</li>
 			</ul>
@@ -112,15 +113,7 @@
 		</div>
 	</div>
 
-	<!-- 尾部start -->
-	<footer>
-	    <a href="#" class="icon home active" >主页</a>
-	    <a href="#" class="icon loan" >贷款</a>
-	    <a href="#" class="icon super" >超级Home1.0</a>
-	    <a href="#" class="icon bbs" >社区</a>
-	    <a href="#" class="icon user"  >登录</a>
-	</footer>
-	<!-- 尾部end -->
+	
 </section>
 
 <section id="view3" class="section">
@@ -128,25 +121,27 @@
 		<div class="content">
 			<ul id="super-home">
 				<li id="super-home-9080">
-					<a href="#"><img src="/static/image/mobile/9080.jpg"></a>				
+					<a href="#"><img src="/static/image/mobile/9080.jpg"></a>			
 				</li>
 				<li id="super-home-last">
-					<a href="#"><img src="/static/image/mobile/last.jpg"></a>
+					<a href="#"><img src="/static/image/mobile/last-button.png"></a>
 				</li>
 			</ul>
 		</div>
 	</div>
 
-	<!-- 尾部start -->
-	<footer>
-	    <a href="#" class="icon home active" >主页</a>
-	    <a href="#" class="icon loan" >贷款</a>
-	    <a href="#" class="icon super" >超级Home1.0</a>
-	    <a href="#" class="icon bbs" >社区</a>
-	    <a href="#" class="icon user"  >登录</a>
-	</footer>
-	<!-- 尾部end -->
+	
 </section>
+
 </div>
+<!-- 尾部start -->
+<footer>
+    <a href="#" class="icon home active" >主页</a>
+    <a href="#" class="icon loan" >贷款</a>
+    <a href="#" class="icon super" >超级Home1.0</a>
+    <a href="#" class="icon bbs" >社区</a>
+    <a href="#" class="icon user"  >登录</a>
+</footer>
+<!-- 尾部end -->
 </body>
 </html>

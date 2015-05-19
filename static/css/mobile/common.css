@@ -72,7 +72,8 @@ footer {
   display: block;
   left: 0;
   right: 0;
-  position: relative;
+  bottom: 0;
+  position: absolute;
   padding: 0 3px;
   display: -webkit-box;
   display: -moz-box;
@@ -256,10 +257,15 @@ header.banner img{
 }
 #super-home-9080 img{
   max-width: 100%;
-  height: 100%;
+}
+#super-home-last{  
+  background: url(/static/image/mobile/last.jpg) no-repeat center center;
+  background-size: 100%;
+  text-align: center;
 }
 #super-home-last img{
-  width: 100%;
+  width: 35%;
+  margin-top: 32%;
 }
 
 
