@@ -21,7 +21,7 @@ include('header.php');
         <div class="individ_real_content">
             <div class="individ_left">
                 <div class="individ_left_top">
-
+                    <span class="individ_left_top_font">标准配置</span>
                 </div>
                 <div class="individ_left_mid">
                     <div class="individ_left_mid_left">
@@ -177,7 +177,7 @@ include('header.php');
             </div>
             <div class="individ_order_math">
                 <span>当前订单总价：</span>
-                <input type="text" value="156000" class="individ_real_acreage"/>
+                <input type="text" value="156000" class="individ_real_math"/>
                 <span style="font-size:25px;margin-left:10px;">元</span>
             </div>
         </div>

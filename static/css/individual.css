@@ -43,6 +43,14 @@ div{
 .individ_left .individ_left_top{
     height: 85px;
     width:100%;
+    text-align: center;
+}
+
+.individ_left .individ_left_top_font{
+    font-size:22px;
+    color:#7d7d7d;
+    padding-top:27px;
+    display:block;
 }
 
 .individ_left .individ_left_mid{
@@ -172,12 +180,11 @@ div{
 
 .individ_right{
     float:left;
-    opacity:0.3;
     width:324px;
     height: 475px;
-    filter:Alpha(opacity=70);
-    opacity:0.7;
-    background: #e2e1de;
+    filter:alpha(opacity=70);
+    /*background: #e2e1de no-repeat scroll 0 0 !important;*/
+    background: rgba(226, 225, 222, 0.7) none repeat scroll 0 0 !important;
 }
 
 .individ_right .individ_right_top{
@@ -196,13 +203,16 @@ div{
 }
 
 .individ_right .individ_personal{
-    background: url("/static/image/individual/personal.jpg") no-repeat;
+    background: url("/static/image/individual/personal.png") no-repeat;
     color: #9c9c9c;
     font-size: 22px;
     height:60px;
     display: block;
     padding-top: 21px;
-    margin-left:70px;
+    padding-right: 25px;
+    background-position-y: 10px;
+    background-position-x: 30px;
+    margin-left:50px;
 }
 
 .individ_right_mid ul li{
@@ -248,6 +258,8 @@ div{
 .individ_right_mid .individ_right_list_color{
     background: url("/static/image/individual/color_selector.jpg") no-repeat;
     padding-left:5px;
+    /*color: #fff;*/
+    /*background: url("/static/image/individual/color_selected.jpg") no-repeat;*/
 }
 
 .individ_page .individ_content .individ_real_content .individ_right .individ_right_bottom .individ_select_item{
@@ -263,6 +275,8 @@ div{
     float:left;
     margin-bottom:10px;
     background: #ffffff;
+    behavior:url(/static/css/PIE.htc);
+    position:relative;
 }
 
 .individ_select_item span:first-child{
@@ -286,8 +300,8 @@ div{
     bottom:0px;
     position:fixed;
     z-index: 1;
-    filter:Alpha(opacity=77);
-    opacity:0.77;
+    opacity:0.87;
+    filter:alpha(opacity=87);
 }
 
 .individ_order_content{
@@ -304,6 +318,17 @@ div{
     font-size: 24px;
     color:#797979;
     text-align: center;
+    behavior:url(/static/css/PIE.htc);
+}
+
+.individ_real_math{
+    border-radius:5px;
+    height:42px;
+    width:235px;
+    font-size: 24px;
+    color:#797979;
+    text-align: center;
+    behavior:url(/static/css/PIE.htc);
 }
 
 .individ_order_math{
