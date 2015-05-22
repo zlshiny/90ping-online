@@ -255,95 +255,84 @@ include('header.php');
                             <span class="individ_right_list individ_right_list_2">2800</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="2800"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="2800"
+                                      data-color="蓝色" data-name="吊顶"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">沙发</span>
                             <span class="individ_right_list individ_right_list_2">1500</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="1500"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="1500"
+                                      data-color="红色" data-name="沙发"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">床垫</span>
                             <span class="individ_right_list individ_right_list_2">3200</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
+                                      data-color="蓝色" data-name="床垫"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">门</span>
                             <span class="individ_right_list individ_right_list_2">400</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
+                                      data-color="红色" data-name="门"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">床垫</span>
                             <span class="individ_right_list individ_right_list_2">3200</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
+                                      data-color="蓝色" data-name="床垫"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">门</span>
                             <span class="individ_right_list individ_right_list_2">400</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
+                                      data-color="蓝色" data-name="门"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">床垫</span>
                             <span class="individ_right_list individ_right_list_2">3200</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
+                                    data-color="蓝色" data-name="床垫"></span>
+                            </a>
                         </li>
                         <li>
                             <span class="individ_right_list individ_right_list_1">门</span>
                             <span class="individ_right_list individ_right_list_2">400</span>
                             <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
                             <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);"><span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"></span></a>
+                            <a href="javascript:void(0);">
+                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
+                                      data-color="蓝色" data-name="门"></span>
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="individ_right_bottom">
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
-                    <div class="individ_select_item">
-                        <span>吊顶</span>
-                        <span>白色</span>
-                        <span class="individ_delete"></span>
-                    </div>
                 </div>
             </div>
         </div>
