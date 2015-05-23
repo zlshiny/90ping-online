@@ -37,7 +37,7 @@ include('header.php');
                     <div class="individ_left_mid_right individ_left_mid_right_1">
                         <ul class="individ_config_list">
                             <li>科勒卫浴1<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
                             <li>TATA木门<span class="individ_config_list_1">3</span></li>
                             <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
                             <li>大自然地板<span class="individ_config_list_1">1</span></li>
