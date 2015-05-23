@@ -36,114 +36,101 @@ include('header.php');
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_1">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴1<span class="individ_config_list_1">2</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">12</span></li>
                             <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>大自然踢脚线<span class="individ_config_list_2">不限</span></li>
+                            <li>超级Home筒灯<span class="individ_config_list_1">12</span></li>
+                            <li>多乐士乳胶漆<span class="individ_config_list_2">不限</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>欧雅壁纸<span class="individ_config_list_2">不限</span></li>
+                            <li>石膏板圈顶<span class="individ_config_list_2">不限</span></li>
+                            <li>超级Home灯带<span class="individ_config_list_1">12</span></li>
+                            <li>石英石窗台板<span class="individ_config_list_2">不限</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_2">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴2<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">10</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>多乐士乳胶漆<span class="individ_config_list_2">不限</span></li>
+                            <li>TATA木门<span class="individ_config_list_1">1</span></li>
+                            <li>欧雅壁纸<span class="individ_config_list_2">不限</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>大自然踢脚线<span class="individ_config_list_2">不限</span></li>
+                            <li>石英石窗台板<span class="individ_config_list_2">不限</span></li>
+                            <li>石膏线<span class="individ_config_list_2">不限</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_3">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴3<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>多乐士乳胶漆<span class="individ_config_list_2">不限</span></li>
+                            <li>欧雅壁纸<span class="individ_config_list_2">不限</span></li>
+                            <li>TATA木门<span class="individ_config_list_1">1</span></li>
+                            <li>大自然踢脚线<span class="individ_config_list_2">不限</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>石英石窗台板<span class="individ_config_list_2">不限</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">8</span></li>
+                            <li>石膏线<span class="individ_config_list_2">不限</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_4">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴4<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>马可波罗墙地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>科勒水龙头<span class="individ_config_list_1">1</span></li>
+                            <li>科勒五级旋风马桶<span class="individ_config_list_1">1</span></li>
+                            <li>TATA木门<span class="individ_config_list_1">1</span></li>
+                            <li>科勒脸盆<span class="individ_config_list_1">1</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>科勒花洒<span class="individ_config_list_1">1</span></li>
+                            <li>方太浴室柜<span class="individ_config_list_1">1</span></li>
+                            <li>友邦吊顶<span class="individ_config_list_2">不限</span></li>
+                            <li>西门子USB插口开关<span class="individ_config_list_1">5</span></li>
+                            <li>潜水艇地漏<span class="individ_config_list_1">1</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_5">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴5<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>大自然踢脚线<span class="individ_config_list_2">不限</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">4</span></li>
+                            <li>石膏板圈顶<span class="individ_config_list_2">不限</span></li>
+                            <li>超级Home筒灯<span class="individ_config_list_1">8</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>超级Home灯带<span class="individ_config_list_1">9米</span></li>
+                            <li>多乐士乳胶漆<span class="individ_config_list_2">不限</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_6">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴6<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>友邦吊顶<span class="individ_config_list_2">不限</span></li>
+                            <li>科勒水龙头<span class="individ_config_list_1">1</span></li>
+                            <li>方太油烟机<span class="individ_config_list_1">1</span></li>
+                            <li>方太燃气灶<span class="individ_config_list_1">1</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>TATA木门<span class="individ_config_list_1">1</span></li>
+                            <li>方太整体橱柜<span class="individ_config_list_2">不限</span></li>
+                            <li>科勒水槽<span class="individ_config_list_1">1</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">11</span></li>
+                            <li>潜水艇地漏<span class="individ_config_list_1">1</span></li>
                         </ul>
                     </div>
                     <div class="individ_left_mid_right individ_left_mid_right_7">
                         <ul class="individ_config_list">
-                            <li>科勒卫浴7<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>马可波罗地砖<span class="individ_config_list_2">不限</span></li>
+                            <li>西门子开关插座<span class="individ_config_list_1">2</span></li>
+                            <li>大自然踢脚线<span class="individ_config_list_2">不限</span></li>
                         </ul>
                         <ul class="individ_config_list individ_config_list_right">
-                            <li>科勒卫浴<span class="individ_config_list_1">2</span></li>
-                            <li>马可波罗地砖<span class="individ_config_list_1">3</span></li>
-                            <li>TATA木门<span class="individ_config_list_1">3</span></li>
-                            <li>多乐士油漆<span class="individ_config_list_1">5</span></li>
-                            <li>大自然地板<span class="individ_config_list_1">1</span></li>
+                            <li>窗台板<span class="individ_config_list_2">不限</span></li>
+                            <li>多乐士乳胶漆<span class="individ_config_list_2">不限</span></li>
                         </ul>
                     </div>
                 </div>
