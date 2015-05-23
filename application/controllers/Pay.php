@@ -53,7 +53,17 @@ class Pay extends CI_Controller {
             exit('缺少订单序列号');
         }
 
+        if((!$price = $this->input->post('price')) || $price < 0){
+            /*exit(json_encode(array(
+                            'code' => -3,
+                            'msg' => '缺少订单序列号',
+                            )
+                        ));*/
+            exit('订单价格错误');
+        }
+
         $data['serial_number'] = $serial_number;
+        $data['price'] = $price;
         $this->load->view('pay_ret.php', $data);
     }
 

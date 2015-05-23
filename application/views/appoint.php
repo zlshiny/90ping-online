@@ -9,7 +9,7 @@
         <input type="text" class="app_phone" name="phone" value="请输入手机号" onfocus="if(this.value == '请输入手机号'){this.value = ''}" onblur="if(this.value == ''){this.value='请输入手机号'}"/>
         <input type="text" class="app_code" name="code" onfocus="if(this.value == '请输入验证码'){this.value = ''}" onblur="if(this.value == ''){this.value = '请输入验证码'}" value="请输入验证码"/>
         <div class="yzm">获取验证码</div>
-        <div class="app_sub">成为天使用户</div>
+        <div class="app_sub">预约</div>
     </div>
     <div style="display:none;">
         <form action="/order/improve" method="post" id="sec_order">

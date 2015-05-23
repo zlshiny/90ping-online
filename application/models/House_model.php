@@ -27,4 +27,11 @@ class House_Model extends CI_Model{
         }
     }
 
+    public function update_house($house_id, $arr){
+        if($house_id <= 0 || empty($arr)) return false;
+
+        $this->master_db->where('id', $house_id);
+        return $this->master_db->update('house', $arr);
+    }
+
 }

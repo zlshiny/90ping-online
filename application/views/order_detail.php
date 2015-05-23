@@ -22,14 +22,14 @@
                 <thead>
                     <tr>
                         <td width="340px;">产品名称</td>
-                        <td width="340px;">单价</td>
+                        <td width="340px;">总价</td>
                         <td>定金</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td><?=$order['product_name'];?></td>
-                        <td><?=TOTAL_PRICE;?></td>
+                        <td><?=$order['price'];?>元</td>
                         <td><span><?=$order['init_deposit'];?></span></td>
                     </tr>
                 </tbody>

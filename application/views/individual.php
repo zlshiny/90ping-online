@@ -3,6 +3,13 @@ include('header.php');
 ?>
 
 <link href="/static/css/individual.css" rel="stylesheet" type="text/css" />
+<div>
+    <input type="hidden" id="min_acreage" value="<?=MIN_ACREAGE;?>"/>
+    <input type="hidden" id="max_acreage" value="<?=MAX_ACREAGE;?>"/>
+    <input type="hidden" id="order_id" value="<?=$order_id;?>"/>
+    <input type="hidden" id="user_id" value="<?=$user_id;?>"/>
+    <input type="hidden" id="serial_number" value="<?=$serial_number;?>"/>
+</div>
 <div class="individ_page">
     <div class="individ_nag">
         <div class="individ_wrap">
@@ -250,86 +257,27 @@ include('header.php');
                 </div>
                 <div class="individ_right_mid">
                     <ul>
+                        <?php foreach($list as $v):?>
                         <li>
-                            <span class="individ_right_list individ_right_list_1">吊顶</span>
-                            <span class="individ_right_list individ_right_list_2">2800</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="2800"
-                                      data-color="蓝色" data-name="吊顶"></span>
-                            </a>
+                            <span class="individ_right_list individ_right_list_1"><?=$v['name'];?></span>
+                            <span class="individ_right_list individ_right_list_2"><?=$v['price'];?></span>
+
+                            <?php if (!empty($v['color'])): ?>
+                                <?php for($i = 0; $i < count($v['color']) && $i < 2; $i ++):?>
+                                    <span class="individ_right_list individ_right_list_color
+                                    <?php if($i == 0):?>individ_right_list_color_2<?php else:?>individ_right_list_color_1<?php endif;?>"><?=$v['color'][$i];?></span>
+                                <?php endfor;?>
+                                <?php if (count($v['color']) == 1): ?>
+                                    <span class="individ_right_list individ_right_list_color"></span>
+                                <?php endif;?>
+                            <?php else:?>
+                                <span class="individ_right_list individ_right_list_color"></span>
+                                <span class="individ_right_list individ_right_list_color"></span>
+                            <?php endif;?>
+                                <span title="点击添加" class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="<?=$v['price'];?>"
+                                      data-color="<?php if(!empty($v['color'])):?><?=$v['color'][0];?><?php endif;?>" data-id="<?=$v['id'];?>" data-name="<?=$v['name'];?>"></span>
                         </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">沙发</span>
-                            <span class="individ_right_list individ_right_list_2">1500</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="1500"
-                                      data-color="红色" data-name="沙发"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">床垫</span>
-                            <span class="individ_right_list individ_right_list_2">3200</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
-                                      data-color="蓝色" data-name="床垫"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">门</span>
-                            <span class="individ_right_list individ_right_list_2">400</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
-                                      data-color="红色" data-name="门"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">床垫</span>
-                            <span class="individ_right_list individ_right_list_2">3200</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
-                                      data-color="蓝色" data-name="床垫"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">门</span>
-                            <span class="individ_right_list individ_right_list_2">400</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
-                                      data-color="蓝色" data-name="门"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">床垫</span>
-                            <span class="individ_right_list individ_right_list_2">3200</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="3200"
-                                    data-color="蓝色" data-name="床垫"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="individ_right_list individ_right_list_1">门</span>
-                            <span class="individ_right_list individ_right_list_2">400</span>
-                            <span class="individ_right_list individ_right_list_3 individ_right_list_color">红色</span>
-                            <span class="individ_right_list individ_right_list_4 individ_right_list_color">蓝色</span>
-                            <a href="javascript:void(0);">
-                                <span class="individ_right_list individ_right_list_5 individ_right_list_price" data-price="400"
-                                      data-color="蓝色" data-name="门"></span>
-                            </a>
-                        </li>
+                        <?php endforeach;?>
                     </ul>
                 </div>
                 <div class="individ_right_bottom">
@@ -341,17 +289,24 @@ include('header.php');
         <div class="individ_order_content">
             <div class="individ_acreage">
                 <span>请输入面积：</span>
-                <input type="text" value="90" class="individ_real_acreage"/>
+                <input type="text" value="<?=$acreage;?>" data-ovalue="<?=$acreage;?>" name="acreage" class="individ_real_acreage" required="required"/>
                 <span style="font-size:25px;margin-left:10px;">m<sup>2</sup></span>
             </div>
             <div class="individ_order_math">
-                <span>当前订单总价：</span>
-                <input type="text" value="156000" class="individ_real_math"/>
+                <span>订单总价：</span>
+                <input type="text" value="<?php echo BASE_PRICE + ($acreage - BASE_ACREAGE) * PRICE_PER_ACR;?>" name="price" class="individ_real_math" required="required"/>
                 <span style="font-size:25px;margin-left:10px;">元</span>
             </div>
+            <div class="individ_order_button">提交</div>
         </div>
     </div>
 </div>
+<form action="/pay/success" method="post" id="sec_order">
+    <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
+    <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
+    <input type="hidden" name="price" class="price" value="0"/>
+    <input type="hidden" name="serial_number" class="serial_number" value="<?=$serial_number;?>"/>
+</form>
 
 <link rel="stylesheet" href="/static/css/jquery.mCustomScrollbar.min.css">
 <script type="text/javascript" src="/static/js/individual.js"></script>

@@ -8,7 +8,7 @@ CREATE TABLE `user`(
     `passwd` varchar(60) NOT NULL DEFAULT '' COMMENT 'passwd',
     `gender` tinyint NOT NULL DEFAULT 0,
     `status` tinyint NOT NULL DEFAULT 0 COMMENT '0:预约(没设密码)，1:信息已补充完整',
-    `age` tinyint NOT NULL DEFAULT 0,
+    `age` tinyint NOT NULL DEFAULT 0 COMMENT '0:未定, 1:80后, 2:80前',
     `age_range` tinyint NOT NULL DEFAULT 0 COMMENT '0:85前,1:85后',
     `encrypt_cookie` char(20) NOT NULL DEFAULT '' COMMENT 'cookie加密串',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间'
@@ -43,7 +43,17 @@ CREATE TABLE `orders`(
     `is_deal` tinyint NOT NULL DEFAULT 0 COMMENT '是否已沟通',
     `deal_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '处理时间',
     `decor_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '装修时间',
-    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间'
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `price` int NOT NULL DEFAULT 0 COMMENT '订单价格',
+    `personal_config` varchar(256) NOT NULL DEFAULT '',
+    `is_personal` tinyint NOT NULL DEFAULT 0 COMMENT '是否个性化, 0:no 1:yes'
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `orders_personal`(
+    `id` int UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    `order_id` int unsigned NOT NULL default 0,
+    `personal_config_id` tinyint NOT NULL DEFAULT 0,
+    `color` VARCHAR(16) NOT NULL DEFAULT ''
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 /*产品表*/
@@ -65,3 +75,13 @@ CREATE TABLE `loan`(
     `acreage` decimal(5,2) NOT NULL DEFAULT 0.0 COMMENT '房屋面积',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `personal_config`(
+    `id` TINYINT PRIMARY KEY AUTO_INCREMENT,
+    `name` varchar(32) NOT NULL DEFAULT '' COMMENT '配置名',
+    `color_list` varchar(64) NOT NULL DEFAULT '' COMMENT '可选颜色,"|"分割,',
+    `price` int NOT NULL DEFAULT 0 COMMENT 'price'
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+insert into `personal_config`(`name`, `color_list`, `price`) values('吊顶', '红色|蓝色', 3200), ('沙发', '灰色', 8900),
+    ('床垫', '', 840),('门', '红色|绿色', 5400),('卫生间', '', 12000);
+

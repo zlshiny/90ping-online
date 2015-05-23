@@ -31,7 +31,7 @@ class Order_Model extends CI_Model{
         $ret = array();
 
         $sql = "select user.user_id as user_id, user.phone as phone, orders.product_id as product_id, orders.deposit as deposit, 
-                orders.status as status, house.id as house_id, house.province as province, house.city as city, house.district as district,
+                orders.status as status, orders.price as price, house.id as house_id, house.province as province, house.city as city, house.district as district,
                 house.area as area, house.acreage as acreage 
                 from orders inner join user on orders.user_id = user.user_id inner join house on orders.house_id = house.id where orders.id = ?";
         if($query = $this->master_db->query($sql, array($order_id))){
@@ -49,6 +49,7 @@ class Order_Model extends CI_Model{
                 //$ret['location'] = trim($row['province'] . ' ' . $row['city'] . ' ' . $row['district'] . ' ' . $row['area']);
                 $ret['location'] = trim($row['area']);
                 if(!$ret['location']) $ret['location'] = '北京';
+                $ret['price'] = $row['price'];
             }
 
             return $ret;
@@ -89,6 +90,30 @@ class Order_Model extends CI_Model{
         return array();
     }
 
+    //预约第三步，个性化选择
+    public function appoint_personal($order_id, $price, $config, $acreage){
+        if(!$order_id || $order_id <= 0 || $price <= 0 || $acreage < MIN_ACREAGE || $acreage > MAX_ACREAGE) return -1;
+
+        $order = $this->get_order($order_id);
+        if(!$order) return -2;
+
+        $arr = array('price' => $price, 'personal_config' => $config, 'is_personal' => 1);
+        $this->update_order_arr($order_id, $arr);
+
+        $house_id = $order->house_id;
+        $this->house->update_house($house_id, array('acreage' => $acreage));
+
+        return 0;
+    }
+
+    public function update_order_arr($order_id, $arr){
+        if($order_id <= 0 || empty($arr)) return false;
+
+        $this->master_db->where('id', $order_id);
+        return $this->master_db->update('orders', $arr);
+    }
+
+    //预约第二步，完善房屋信息与装修时间
     public function appointsec($order){
         if(empty($order)) return -1; 
         if(!$db_order = $this->get_order($order['order_id'])) return -2;
@@ -98,18 +123,18 @@ class Order_Model extends CI_Model{
 
         $this->user->update_user_agerange($order['user_id'], $order['age']);
         if(($house_id = $this->house->insert_house($order['order_id'], $order['user_id'], $order['acreage'])) > 0){
-            $this->update_order($order['order_id'], $order['decor_date'], $order['status'], $house_id);
+            $this->update_order($order['order_id'], $order['decor_date'], $order['status'], $house_id, $order['price']);
         }
 
         return 0;
     }
 
-    public function update_order($order_id, $decor_date, $status, $house_id){
+    public function update_order($order_id, $decor_date, $status, $house_id, $price = 0){
         $cur_month = @date('n');
         if(!$order_id || $order_id < 0 || $status < 0 || $house_id <= 0 || !$decor_date || intval($decor_date) < $cur_month || intval($decor_date) > 12) return false;
         if($decor_date < 10) $decor_date = '0' . $decor_date;
         $final_date = @date('Y') . '-' . $decor_date . '-01 00:00:00';
-        $arr = array('decor_time' => $final_date, 'status' => $status, 'house_id' => $house_id);
+        $arr = array('decor_time' => $final_date, 'status' => $status, 'house_id' => $house_id, 'price' => $price);
         $this->master_db->where('id', $order_id);
         return $this->master_db->update('orders', $arr);
     }
@@ -137,6 +162,7 @@ class Order_Model extends CI_Model{
         }
     }
 
+    //预约第一步，填写手机号
     public function appointment($phone, $product_id, $source = ORDER_SOURCE_WEB){
         if(!$phone || !$product_id) return array();
         if(!check_phone($phone)) return array();
@@ -158,6 +184,7 @@ class Order_Model extends CI_Model{
         }
     }
 
+    //微信预约
     public function appointment_wechat($name, $phone, $gender, $age, $acreage, $location,
                                        $decor_time, $product_id, $source){
         if(!check_phone($phone)) return array();
@@ -202,5 +229,23 @@ class Order_Model extends CI_Model{
         return $this->master_db->update('orders', $arr);
     }
 
+    public function get_personal_config(){
+        $ret = array();
+
+        $this->master_db->select('*');
+        $this->master_db->from('personal_config');
+        if($query = $this->master_db->get()){
+            foreach($query->result_array() as $row){
+                $tmp = array();
+                $tmp['name'] = $row['name'];
+                $tmp['price'] = $row['price'];
+                $tmp['color'] = explode('|', $row['color_list']);
+                $tmp['id'] = $row['id'];
+                $ret[] = $tmp;
+            }
+        }
+
+        return $ret;
+    }
 
 }

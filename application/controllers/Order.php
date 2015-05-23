@@ -83,7 +83,7 @@ class Order extends CI_Controller {
         }
 
         $age = $this->input->post('age');
-        if(!isset($_POST['age']) || ($age != 0 && $age != 1)){
+        if(!isset($_POST['age']) || ($age != 2 && $age != 1)){
             exit(json_encode(array(
                             'code' => -3,
                             'msg' => '非法年龄',
@@ -111,7 +111,7 @@ class Order extends CI_Controller {
         }
         $decor_date = intval($decor_date);
 
-        if((!$acreage = $this->input->post('acreage')) || $acreage < 0 || $acreage > MAX_ACREAGE){
+        if((!$acreage = $this->input->post('acreage')) || $acreage < MIN_ACREAGE || $acreage > MAX_ACREAGE){
             exit(json_encode(array(
                             'code' => -5,
                             'msg' => '面积非法',
@@ -119,7 +119,10 @@ class Order extends CI_Controller {
                         ));
         }
 
-        $order = array('order_id' => $order_id, 'user_id' => $user_id, 'age' => $age, 'decor_date' => $decor_date, 'acreage' => $acreage, 'status' => ORDER_STATUS_SEC);
+        $price = BASE_PRICE + ($acreage - BASE_ACREAGE) * PRICE_PER_ACR;
+
+        $order = array('order_id' => $order_id, 'user_id' => $user_id, 'age' => $age, 'decor_date' => $decor_date,
+            'acreage' => $acreage, 'status' => ORDER_STATUS_SEC, 'price' => $price);
         $this->load->model('order_model', 'order');
         $this->load->model('user_model', 'user');
         $this->load->model('house_model', 'house');
@@ -129,6 +132,7 @@ class Order extends CI_Controller {
                             'user_id' => $user_id,
                             'order_id' => $order_id,
                             'serial_number' => $serial_number,
+                            'price' => $price,
                             'msg' => '提交成功',
                             )
                         ));

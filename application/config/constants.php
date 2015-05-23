@@ -33,6 +33,10 @@ define('WECHAT_APPSECRET', 'd7f73a30dce6887399c6582b13db242a');
 define('MAX_ACREAGE', 200);
 define('MIN_ACREAGE', 40);
 
+define('BASE_PRICE', 156000);
+define('BASE_ACREAGE', 90);
+define('PRICE_PER_ACR', 899);
+
 define('LOGIN_COOKIE_KEY', 'zjw');
 define('LOGIN_EXPIRED_DEFAULT', 86400);
 
