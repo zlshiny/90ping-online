@@ -57,7 +57,7 @@
     </p>
     -->
     <div class="kobe">
-	<a href="/order" target="_blank" class="bgcl ft48">成为天使用户</a>
+	<a href="/order" target="_blank" class="bgcl ft48">立即预约</a>
     </div>
 </div>
 <script type="text/javascript">
