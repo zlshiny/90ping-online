@@ -289,12 +289,12 @@ div{
     border: 1px solid;
     border-radius:25px;
     margin-left:5px;
-    line-height:38px;
+    line-height:40px;
     text-indent:15px;
     font-size:18px;
     color:#797979;
     /*width:150px;*/
-    height:40px;
+    height:42px;
     float:left;
     margin-bottom:10px;
     background: #ffffff;
@@ -359,7 +359,7 @@ div{
 
 .individ_order_math{
     float: left;
-    margin-left: 135px;
+    margin-left: 125px;
 }
 
 .individ_acreage{
