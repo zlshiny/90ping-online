@@ -200,7 +200,7 @@ div{
     height: 475px;
     filter:alpha(opacity=70);
     /*background: #e2e1de no-repeat scroll 0 0 !important;*/
-    background: rgba(226, 225, 222, 0.7) none repeat scroll 0 0 !important;
+    background: rgba(227, 226, 225, 0.7) none repeat scroll 0 0 !important;
 }
 
 .individ_right .individ_right_top{
@@ -220,12 +220,12 @@ div{
 
 .individ_right .individ_personal{
     background: url("/static/image/individual/personal.png") no-repeat;
-    color: #9c9c9c;
+    color: #7d7d7d;
     font-size: 22px;
     height:60px;
     display: block;
-    padding-top: 21px;
-    padding-right: 25px;
+    padding-top: 25px;
+    padding-right: 15px;
     background-position-y: 10px;
     background-position-x: 30px;
     margin-left:50px;
@@ -247,12 +247,14 @@ div{
 }
 
 .individ_right_mid .individ_right_list_1{
-    width: 60px;
+    width: 180px;
+    height: 32px;
     margin-left: 0;
 }
 
 .individ_right_mid .individ_right_list_2{
-    width: 60px;
+    width: 50px;
+    height: 32px;
 }
 
 .individ_right_mid .individ_right_list_5{
@@ -261,6 +263,7 @@ div{
     background: url("/static/image/individual/plus.png") no-repeat;
     margin-right: 5px;
     cursor: pointer;
+    float: right;
 }
 
 .individ_right_mid ul{

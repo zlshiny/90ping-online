@@ -125,7 +125,7 @@
         </div>
     </div>
     <div style="display:none">
-        <input type="hidden" class="age" value="0"/>
+        <input type="hidden" class="age" value="2"/>
         <input type="hidden" class="acreage" value=""/>
         <input type="hidden" class="decor_date" value="<?=$cur_mon;?>"/>
         <!--<form action="/pay" method="post" id="sec_order">
