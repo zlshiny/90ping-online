@@ -24,7 +24,7 @@ $(document).ready(function(){
         var text = '<div class="individ_select_item" data-id="' + id + '" data-color="' + color + '">\
         <span>' + name + '</span>\
         <span>' + color + '</span>\
-        <a href="javascript:void(0);" class="individ_delete" data-price="' + price + '"></a>\
+        <span class="individ_delete" data-price="' + price + '"></span>\
         </div>';
 
         $(".individ_right_bottom").append(text);

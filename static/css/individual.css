@@ -303,7 +303,8 @@ div{
 }
 
 .individ_select_item span:first-child{
-    padding-right:8px;
+    /*padding-right:24px;*/
+    float: left;
 }
 
 .individ_right_bottom{
@@ -312,11 +313,13 @@ div{
 
 .individ_right_bottom .individ_delete{
     background: url("/static/image/individual/delete.png") no-repeat;
-    padding-right:37px;
-    padding-top:27px;
-    margin-left: 15px;
-    margin-top: 5px;
+    padding-right:10px;
+    margin-left: 10px;
+    margin-top: 7px !important;
     float: right;
+    cursor: pointer;
+    height: 28px;
+    width:28px;
 }
 
 .individ_order{
@@ -371,7 +374,7 @@ div{
     width: 100px;
     height: 42px;
     float: right;
-    margin-right: 80px;
+    margin-right: 70px;
     background-color: #f28c1e;
     color: #fff;
     font-size: 20px;
