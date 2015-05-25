@@ -19,7 +19,11 @@ class Home extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index(){
-        $this->load->view('index.php');
+		if(check_device()){
+			$this->load->view('mobile/index.php');
+		}else{
+			$this->load->view('index.php');
+		}
 	}
 
 }
