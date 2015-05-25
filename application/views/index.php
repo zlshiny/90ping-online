@@ -11,9 +11,9 @@
 				不仅是房子，更是小伙伴们的社交场所<Br/>
 				真正极致的体验：一键支付，拎包入住</p>
 			</li>
-			<li class="i_banner_1_new">
+			<!--<li class="i_banner_1_new">
 				
-			</li>
+			</li>-->
 		</ul>
 
 </div>
