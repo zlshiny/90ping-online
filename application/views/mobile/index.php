@@ -72,9 +72,9 @@
 				<li>
 					<a href="#"><img src="/static/image/mobile/1.jpg"></a>
 				</li>
-				<li>
+				<!--<li>
 					<a href="#"><img src="/static/image/mobile/2.jpg"></a>
-				</li>
+				</li>-->
 			</ul>
 		</div>
 	</div>
@@ -121,7 +121,7 @@
 		<div class="content">
 			<ul id="super-home">
 				<li id="super-home-9080">
-					<a href="#"><img src="/static/image/mobile/9080.jpg"></a>			
+					<a href="#"><img src="/static/image/mobile/8090.png"></a>
 				</li>
 				<li id="super-home-last">
 					<a href="#"><img src="/static/image/mobile/last-button.png"></a>
