@@ -20,16 +20,20 @@
 
 			var bwidth = $(window).width();
 		  	var bheight = $(window).height();
-		  	var sheight = bheight - 60;
+		  	//var sheight = bheight - 60;
+		  	var sheight = bheight;
 			$('section').width(bwidth);
 			$('section').height(sheight);				
-			var gheight = bheight -55;
-			var pageHeight = bheight - 60;
+			//var gheight = bheight -55;
+			//var gheight = bheight - 60;
+			var gheight = bheight;
+			//var pageHeight = bheight - 60;
+			var pageHeight = bheight;
 			$('#view1 .content').height(gheight);
 			$('#view2 .pages').height(bheight);
 			$('#view3 .pages').height(pageHeight);
-			$('#super-home-9080').height(parseInt(pageHeight*0.6));
-		  	$('#super-home-last').height(parseInt(pageHeight*0.4));
+			$('#super-home-9080').height(parseInt(pageHeight*0.58));
+		  	$('#super-home-last').height(parseInt(pageHeight*0.42));
 
 			$('#slide-image').bxSlider({
 			    //mode:'vertical', //默认的是水平
@@ -62,9 +66,11 @@
 <section id="view1" class="section">
 	<div class="pages">
 	    <!---->
+        <!--
 		<header class="banner">
 			<img src="/static/image/mobile/banner.png">
 		</header>
+        -->
 	    
 
 		<div class="content">

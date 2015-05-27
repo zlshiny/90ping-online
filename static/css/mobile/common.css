@@ -222,7 +222,8 @@ header.banner img{
 }
 
 #image-list{
-  padding-top: 15px;
+  /*padding-top: 15px;*/
+  padding-top: 5px;
   overflow: hidden;
 }
 #image-list li{
@@ -265,7 +266,8 @@ header.banner img{
 }
 #super-home-last img{
   width: 35%;
-  margin-top: 32%;
+  /*margin-top: 32%;*/
+  margin-top: 35%;
 }
 
 
