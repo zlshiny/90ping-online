@@ -9,32 +9,39 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common.css" />
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/mobile/common.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.fullPage.min.js"></script>
     <script type="text/javascript">
 		$(function(){
+
 			var bwidth = $(window).width();
 		  	var bheight = $(window).height();
-		  	var sheight = bheight - 60;
+		  	//var sheight = bheight - 60;
+		  	var sheight = bheight;
 			$('section').width(bwidth);
 			$('section').height(sheight);				
-			var gheight = bheight -55;
-			var pageHeight = bheight - 60;
+			//var gheight = bheight -55;
+			//var gheight = bheight - 60;
+			var gheight = bheight;
+			//var pageHeight = bheight - 60;
+			var pageHeight = bheight;
 			$('#view1 .content').height(gheight);
 			$('#view2 .pages').height(bheight);
 			$('#view3 .pages').height(pageHeight);
-			$('#super-home-9080').height(parseInt(pageHeight*0.6));
-		  	$('#super-home-last').height(parseInt(pageHeight*0.4));
+			$('#super-home-9080').height(parseInt(pageHeight*0.58));
+		  	$('#super-home-last').height(parseInt(pageHeight*0.42));
 
 			/*$('#slide-image').bxSlider({
 			    //mode:'vertical', //默认的是水平
 			    displaySlideQty:2,//显示li的个数
-			    moveSlideQty: 1,//移动li的个数  
+			    moveSlideQty: 1,//移动li的个数
 			    captions: true,//自动控制
 			    auto: false,
+                pager: false,
 			    controls: false//隐藏左右按钮
 			});*/
 
@@ -50,6 +57,8 @@
 	    		$('#'+id+id).hide();
 	    		$('#'+id).show();
 	    	})
+
+	    	$('#body').fullpage();
 		}); 
     </script>    
 </head>
@@ -70,11 +79,9 @@
 				<li>
 					<a href="#"><img src="/static/image/mobile/1.jpg"></a>
 				</li>
-                <!--
-				<li>
+				<!--<li>
 					<a href="#"><img src="/static/image/mobile/2.jpg"></a>
-				</li>
-                -->
+				</li>-->
 			</ul>
 		</div>
 	</div>
@@ -121,10 +128,12 @@
 		<div class="content">
 			<ul id="super-home">
 				<li id="super-home-9080">
-					<a href="#"><img src="/static/image/mobile/8090.png"></a>				
+					<a href="#"><img src="/static/image/mobile/8090.png"></a>
 				</li>
 				<li id="super-home-last">
-					<!--<a href="#"><img src="/static/image/mobile/last-button.png"></a>-->
+                    <!--
+					<a href="#"><img src="/static/image/mobile/last-button.png"></a>
+                    -->
 				</li>
 			</ul>
 		</div>
@@ -136,10 +145,10 @@
 </div>
 <!-- 尾部start -->
 <footer>
-    <a href="#" class="icon home active" >主页</a>
-    <a href="#" class="icon loan" >贷款</a>
-    <a href="#" class="icon super" >超级Home1.0</a>
-    <a href="#" class="icon bbs" >社区</a>
+    <a href="/mobile/home" class="icon home active" >主页</a>
+    <!--<a href="#" class="icon loan" >贷款</a>-->
+    <a href="/wechat/product" class="icon super" >超级Home1.0</a>
+    <a href="http://wsq.discuz.qq.com/?siteid=264518165&source=wap&c=index&a=index" class="icon bbs" >社区</a>
     <a href="#" class="icon user"  >登录</a>
 </footer>
 <!-- 尾部end -->
