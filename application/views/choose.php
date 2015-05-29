@@ -17,7 +17,7 @@
         $(".decor_date").val($(this).attr('title'));
     })
 
-    $('.choose_submit').live('click',function(){
+    $('.bgc_direct').live('click',function(){
         var acreage = parseInt($('.c_input').val());
         var order_id = $(".order_id").val();
         var user_id = $(".user_id").val();
@@ -120,8 +120,8 @@
         <input class="c_input"  placeholder="请输入房本面积" type="text" value=""/>
         <!--<div class="sub_btn bgc">支付1元预约金</div>-->
         <div style="clear: both;">
-            <div class="sub_btn_no_clear bgc choose_submit" data-type="1">我要个性化</div>
-            <div class="sub_btn_no_clear bgc_direct choose_submit" data-type="2">直接预约</div>
+            <!--<div class="sub_btn_no_clear bgc choose_submit" data-type="1">我要个性化</div>-->
+            <div class="sub_btn_no_clear bgc_direct" data-type="2">直接预约</div>
         </div>
     </div>
     <div style="display:none">

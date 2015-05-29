@@ -27,7 +27,7 @@ body{
 .bgc_direct{
 	background-color:#f28c1e;
 	padding:10px 30px;
-	margin-left:25px;
+	/*margin-left:25px;*/
 	position:relative;
 	float:left;
 	behavior:url(/static/css/PIE.htc);
