@@ -35,14 +35,15 @@
 			$('#super-home-9080').height(parseInt(pageHeight*0.58));
 		  	$('#super-home-last').height(parseInt(pageHeight*0.42));
 
-			$('#slide-image').bxSlider({
+			/*$('#slide-image').bxSlider({
 			    //mode:'vertical', //默认的是水平
 			    displaySlideQty:2,//显示li的个数
-			    moveSlideQty: 1,//移动li的个数  
+			    moveSlideQty: 1,//移动li的个数
 			    captions: true,//自动控制
 			    auto: false,
+                pager: false,
 			    controls: false//隐藏左右按钮
-			});
+			});*/
 
 			$('#image-list img').on('touchstart',function(){
 	    		var id = $(this).attr('class');
@@ -130,7 +131,9 @@
 					<a href="#"><img src="/static/image/mobile/8090.png"></a>
 				</li>
 				<li id="super-home-last">
+                    <!--
 					<a href="#"><img src="/static/image/mobile/last-button.png"></a>
+                    -->
 				</li>
 			</ul>
 		</div>

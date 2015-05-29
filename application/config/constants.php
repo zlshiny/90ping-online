@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-define('BASE_HOST', '91haizibang');
+define('BASE_HOST', '90pingfang');
 define('BASE_URL', 'http://' . BASE_HOST . '.com');
 define('PASSWD_CONS', '90PINGHULIANWANGZHINENGJIAZHUANG');
 
