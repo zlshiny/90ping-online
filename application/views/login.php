@@ -5,7 +5,8 @@
 <div id="login">
     <div class="login_bg"></div>
     <div class="login_wrap">
-        <div class="login_title">登录</div>
+        <div class="login_title">登录
+            <a href="/user/signup" class="other1">马上注册</a></div>
         <div class="login_content">
             <!--<form action="/user/sign_in" name="login" method="post" onsubmit="return login_check()">-->
             <form action="javascript:void(0);" class="form" name="login" method="post">
@@ -15,10 +16,10 @@
                <input type="password" placeholder="请输入密码"  name="passwd" value=""/>
                <button>立即登录</button>
             </form>
-            <div class="login_other">
-                <a href="/user/signup" class="other1">马上注册</a>
-                <!--<a href="###" class="other2">忘记密码</a>-->
-            </div>
+<!--            <div class="login_other">-->
+<!--                <a href="/user/signup" class="other1">马上注册</a>-->
+<!--                <a href="###" class="other2">忘记密码</a>-->
+<!--            </div>-->
         </div>
     </div>
 </div>
