@@ -150,41 +150,41 @@ footer .active {
   right: -6px;
 }
 .icon.home:before {
-  content: url(../image/home_grey.png);
+  content: url(/static/image/mobile/home_grey.png);
 }
 .icon.home.active:before {
-  content: url(../image/home_green.png);
+  content: url(/static/image/mobile/home_green.png);
 }
 .icon.loan:before {
-  content: url(../image/daikuan_grey.png);
+  content: url(/static/image/mobile/daikuan_grey.png);
 }
 .icon.loan.active:before {
-  content: url(../image/daikuan_green.png);
+  content: url(/static/image/mobile/daikuan_green.png);
 }
 .icon.super:before {
-  content: url(../image/super_grey.png);
+  content: url(/static/image/mobile/super_grey.png);
 }
 .icon.super.active:before {
-  content: url(../image/super_green.png);
+  content: url(/static/image/mobile/super_green.png);
 }
 .icon.bbs:before {
-  content: url(../image/chat_grey.png);
+  content: url(/static/image/mobile/chat_grey.png);
 }
 .icon.bbs.active:before {
-  content: url(../image/chat_green.png);
+  content: url(/static/image/mobile/chat_green.png);
 }
 .icon.user:before {
-  content: url(../image/login_grey.png);
+  content: url(/static/image/mobile/login_grey.png);
 }
 .icon.user.active:before {
-  content: url(../image/login_green.png);
+  content: url(/static/image/mobile/login_green.png);
 }
 a.home, a.loan, a.bbs, a.user{
   width: 18%;
 }
 a.super{
   width: 28%;
-  background: url(../image/hot.png) no-repeat center 6px;
+  background: url(/static/image/mobile/hot.png) no-repeat center 6px;
 }
 
 .pages {
@@ -259,7 +259,7 @@ header.banner img{
   max-width: 100%;
 }
 #super-home-last{  
-  background: url(../image/last.jpg) no-repeat center center;
+  background: url(/static/image/mobile/last.png) no-repeat center center;
   background-size: 100%;
   text-align: center;
 }

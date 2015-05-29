@@ -9,39 +9,39 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common2.css" />
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/mobile/common.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.fullPage.min.js"></script>
     <script type="text/javascript">
 		$(function(){
-
 			var bwidth = $(window).width();
 		  	var bheight = $(window).height();
 		  	//var sheight = bheight - 60;
 		  	var sheight = bheight;
 			$('section').width(bwidth);
-			$('section').height(sheight);				
+			//$('section').height(sheight);				
 			//var gheight = bheight -55;
-			//var gheight = bheight - 60;
 			var gheight = bheight;
 			//var pageHeight = bheight - 60;
 			var pageHeight = bheight;
-			$('#view1 .content').height(gheight);
-			$('#view2 .pages').height(bheight);
-			$('#view3 .pages').height(pageHeight);
-			$('#super-home-9080').height(parseInt(pageHeight*0.58));
-		  	$('#super-home-last').height(parseInt(pageHeight*0.42));
+			//$('#view1 .content').height(gheight);
+            $('#view1').height(bheight - 60);
+            $("#view2").height(bheight + 60);
+            $("#view3").height(bheight + 60);
+			//$('#view2 .pages').height(bheight);
+			//$('#view3 .pages').height(pageHeight);
+            $("#image-list li").height(bheight * 0.32);
+			$('#super-home-9080').height(parseInt(pageHeight*0.57));
+		  	$('#super-home-last').height(parseInt(pageHeight*0.43));
 
 			/*$('#slide-image').bxSlider({
 			    //mode:'vertical', //默认的是水平
 			    displaySlideQty:2,//显示li的个数
-			    moveSlideQty: 1,//移动li的个数
+			    moveSlideQty: 1,//移动li的个数  
 			    captions: true,//自动控制
 			    auto: false,
-                pager: false,
 			    controls: false//隐藏左右按钮
 			});*/
 
@@ -57,8 +57,6 @@
 	    		$('#'+id+id).hide();
 	    		$('#'+id).show();
 	    	})
-
-	    	$('#body').fullpage();
 		}); 
     </script>    
 </head>
@@ -79,9 +77,11 @@
 				<li>
 					<a href="#"><img src="/static/image/mobile/1.jpg"></a>
 				</li>
-				<!--<li>
+                <!--
+				<li>
 					<a href="#"><img src="/static/image/mobile/2.jpg"></a>
-				</li>-->
+				</li>
+                -->
 			</ul>
 		</div>
 	</div>
@@ -131,18 +131,15 @@
 					<a href="#"><img src="/static/image/mobile/8090.png"></a>
 				</li>
 				<li id="super-home-last">
-                    <!--
-					<a href="#"><img src="/static/image/mobile/last-button.png"></a>
-                    -->
+					<!--<a href="#"><img src="/static/image/mobile/last-button.png"></a>-->
 				</li>
 			</ul>
 		</div>
 	</div>
-
-	
 </section>
 
 </div>
+
 <!-- 尾部start -->
 <footer>
     <a href="/mobile/home" class="icon home active" >主页</a>
@@ -152,5 +149,6 @@
     <a href="#" class="icon user"  >登录</a>
 </footer>
 <!-- 尾部end -->
+
 </body>
 </html>

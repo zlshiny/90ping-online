@@ -9,7 +9,7 @@ class Product extends CI_Controller {
     }
 
     public function kobe(){
-        $this->load->view('kobe.php');
+        $this->load->view('mobile/index2.php');
     }
 
     public function lebron(){
