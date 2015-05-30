@@ -7,7 +7,11 @@ class User extends CI_Controller {
         if(check_login()){
             $this->load->view('logout.php');
         }else{
-            $this->load->view('login.php');
+            if(check_device()){
+                $this->load->view('mobile/login.php');
+            }else{
+                $this->load->view('login.php');
+            }
         }
     }
 
