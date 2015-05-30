@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <script type="text/javascript" src="/static/js/mobile/zepto.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
 
 <title>登录</title>
 </head>
@@ -25,7 +26,7 @@
     header{
     	height:120vx;
     	width:100%;
-    	background-image:<@nav.jpg>;
+    	background-image:<@banner.png>;
     }
     section{
     	width:580vx;
@@ -100,7 +101,7 @@
                     case '=':
                         return eval(exp);
                     case '@':
-                        return 'url(/static/images/mobile/' + exp + ')';
+                        return 'url(/static/image/mobile/' + exp + ')';
                 }
             }).replace(/\b(\d+)vx\b/g,function (str, val) {
                 return vw / 640 * val + "px";
@@ -111,19 +112,51 @@
             $(window).trigger("resize");
         }, 1000)
     }).trigger("resize");
+
+
+    $("button").live('click', function(){
+        var phone = $('input[name="phone"]').val();
+        var passwd = $('input[name="passwd"]').val();
+        var reg = /^1[3|4|5|8|7]\d{9}$/;
+        if(!reg.test(phone)){
+            alert('请输入正确的手机号');
+            return false;
+        }else if(passwd.length < 6){
+            alert('请输入大于6位的密码');
+            return false;
+        }
+
+        $.post('/user/sign_in',
+                {phone : phone, passwd : passwd},
+                function(data, status){
+                    if(status == "success"){
+                        data = eval('(' + data + ')');
+                        if(data.code == 0){
+                            window.location.href = "/index.php";
+                        }else{
+                            alert(data.msg);
+                            return false;
+                        }
+                    }else{
+                        alert("通信错误");
+                        return false;
+                    }
+                });
+    });
+
 </script>
 <body>
 	<header></header>
 	<section>
 		<h1>登录</h1>
 		<div>
-			<h2>账号</h2>
-			<input type="text" placeholder="请输入手机号" value=""/>
-			<h2>密码</h2>
-			<input type="text" placeholder="请输入密码" value=""/>
-			<button>立即登录</button>
-			<a href="##">马上注册</a>
-			<a href="###">忘记密码</a>
+			    <h2>账号</h2>
+			    <input type="text" name="phone" placeholder="请输入手机号" value=""/>
+			    <h2>密码</h2>
+			    <input type="text" name="passwd" placeholder="请输入密码" value=""/>
+			    <button>立即登录</button>
+			    <a href="##">马上注册</a>
+			    <!--<a href="###">忘记密码</a>-->
 		</div>
 	</section>
 </body>
