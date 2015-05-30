@@ -76,7 +76,7 @@
     	float:left;
     	margin-right:20vx;
     }
-    section div>span{
+    section div .regist_code_msg{
     	display:block;
     	width:145vx;
     	height:60vx;
@@ -88,7 +88,7 @@
     	font-size:12px;
     	line-height:60vx;
     }
-    section button{
+    section .submit{
     	width:440vx;
     	height:60vx;
     	background-color:#1dd2af;
@@ -139,7 +139,7 @@
     var get_code = true;
     var s = 30;
     var reg = /^1[3|4|5|7|8]\d{9}$/;    
-    $("button").live('click', function(){
+    $(".submit").live('click', function(){
         var phone = $('input[name="phone"]').val();
         var passwd = $('input[name="passwd"]').val();
         var rpasswd = $('input[name="repasswd"]').val();
@@ -196,7 +196,7 @@
         setTimeout(function(){code_time()},1000);
     };
 
-    $('span').live('click',function(){
+    $('.regist_code_msg').live('click',function(){
         var phone = $('input[name="phone"]').val();
         if(get_code){
             if(!reg.test(phone)){
@@ -234,8 +234,8 @@
 			<input type="password" name="repasswd" placeholder="请输入密码" value=""/>
 			<h2>验证码</h2>
 			<input type="text" name="code" value=""/>
-			<span class="regist_code_msg">获取验证码</span>
-			<button>同意协议并注册</button>
+			<button class="regist_code_msg">获取验证码</button>
+			<button class="submit">同意协议并注册</button>
 		</div>
 	</section>
 </body>
