@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <script type="text/javascript" src="/static/js/mobile/zepto.js"></script>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
 
 <title>注册</title>
 </head>
@@ -31,7 +32,7 @@
     	position:relative;
     	left:50%;
     	margin-left:-290vx;
-    	top:150vx;
+    	top:80vx;
     	min-height:600vx;
     	border:1px solid #1dd2af;
     	border-radius:5px;
@@ -54,7 +55,7 @@
     }
     section div{
     	width:440vx;
-    	padding:60vx 70vx; 	
+    	padding:60vx 70vx;
     }
     section div>h2{
     	color:#717171;
@@ -133,6 +134,92 @@
             $(window).trigger("resize");
         }, 1000)
     }).trigger("resize");
+
+    var g = $('.regist_msg');
+    var get_code = true;
+    var s = 30;
+    var reg = /^1[3|4|5|7|8]\d{9}$/;    
+    $("button").live('click', function(){
+        var phone = $('input[name="phone"]').val();
+        var passwd = $('input[name="passwd"]').val();
+        var rpasswd = $('input[name="repasswd"]').val();
+        var code = $('input[name="code"]').val();
+
+        if(!reg.test(phone)){
+            g.hide();
+            alert('手机号码错误');
+            return false;
+        }else if(passwd.length < 6){
+            g.hide();
+            alert('密码不能小于6位');
+            return false;
+        }else if(rpasswd !== passwd){
+            g.hide();
+            alert('两次密码不一致');
+            return false;
+        }else if(code.length !== 4){
+            g.hide();
+            alert('验证码错误');
+            return false;
+        }
+        g.hide();
+
+        $.post('/user/regist',
+                {phone : phone, passwd : passwd, spasswd : rpasswd, verify_number : code},
+                function(data, status){
+                    if(status == "success"){
+                        data = eval('(' + data + ')');
+                        if(data.code == 0){
+                            window.location.href="/";
+                        }else{
+                            alert(data.msg);
+                            return false;
+                        }
+                    }else{
+                        alert("通信错误");
+                        return false;
+                    }
+                });
+
+    });
+
+    var code_time = function(){
+        get_code = false;
+        if(s < 0){
+            $('.regist_code_msg').html('重新获取');
+            get_code = true;
+            s=30;
+            return false;
+        }
+        $('.regist_code_msg').html('还有'+s+'秒 ');
+        s--;
+        setTimeout(function(){code_time()},1000);
+    };
+
+    $('span').live('click',function(){
+        var phone = $('input[name="phone"]').val();
+        if(get_code){
+            if(!reg.test(phone)){
+                alert('手机号码错误');
+                return false;
+            }
+            code_time();            
+            g.hide();
+            $.post('/user/phone_verify',
+                {phone: phone}, function(data, status){
+                        if(status == "success"){
+                            data = eval('(' + data + ')');
+                            if(data.code != 0){
+                                alert(data.msg);
+                            }
+                        }else{
+                            alert('获取失败,请30秒后重新获取');
+                        }
+                });
+            
+        }
+    });
+
 </script>
 <body>
 	<header></header>
@@ -140,14 +227,14 @@
 		<h1>注册<a href="/user/login">已有账号，登录</a></h1>
 		<div>
 			<h2>手机号码</h2>
-			<input type="text" placeholder="请输入手机号" value=""/>
+			<input type="text" name="phone" placeholder="请输入手机号" value=""/>
 			<h2>密码</h2>
-			<input type="password" placeholder="请输入密码" value=""/>
+			<input type="password" name="passwd" placeholder="请输入密码" value=""/>
 			<h2>确认密码</h2>
-			<input type="password" placeholder="请输入密码" value=""/>
+			<input type="password" name="repasswd" placeholder="请输入密码" value=""/>
 			<h2>验证码</h2>
-			<input type="text" value=""/>
-			<span>获取验证码</span>
+			<input type="text" name="code" value=""/>
+			<span class="regist_code_msg">获取验证码</span>
 			<button>同意协议并注册</button>
 		</div>
 	</section>

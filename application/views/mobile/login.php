@@ -155,7 +155,7 @@
 			    <h2>密码</h2>
 			    <input type="text" name="passwd" placeholder="请输入密码" value=""/>
 			    <button>立即登录</button>
-			    <a href="##">马上注册</a>
+			    <a href="/user/signup">马上注册</a>
 			    <!--<a href="###">忘记密码</a>-->
 		</div>
 	</section>

@@ -155,7 +155,11 @@ class User extends CI_Controller {
         if(check_login()){
             $this->load->view('logout.php');
         }else{
-            $this->load->view('regist.php');
+            if(check_device()){
+                $this->load->view('mobile/regist.php');
+            }else{
+                $this->load->view('regist.php');
+            }
         }
     }
 
