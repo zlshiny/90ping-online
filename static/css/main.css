@@ -25,7 +25,7 @@ body{
 }
 
 .bgc_direct{
-	background-color:#f28c1e;
+	background-color:#1dd2af;
 	padding:10px 30px;
 	/*margin-left:25px;*/
 	position:relative;
@@ -414,25 +414,25 @@ body{
 }
 
 
-#choose_banner{
+#choose_banner_appoint{
     background:url(/static/image/banner/8.jpg) no-repeat center top;
     width:100%;
-    height:890px;
+    height:850px;
     min-width:1300px;
 }
-#choose_banner .choose_bg{
+.choose_banner_appoint .choose_bg{
     width:1000px;
     position:absolute;
     left:50%;
     margin-left:-500px;
-    height:605px;
+    height:685px;
     background-color:#000;
     opacity:0.24;
     border-radius:8px;
     top:160px;
     filter:Alpha(Opacity=24),style=0;
 }
-#choose_banner .choose_wrap{
+.choose_banner_appoint .choose_wrap{
     width:955px;
     position:absolute;
     left:50%;
@@ -440,9 +440,9 @@ body{
     top:160px;
     padding:50px 0px 3px 45px;
 }
-#choose_banner .choose_wrap h1{
+.choose_banner_appoint .choose_wrap h1{
     color:#fff;
-    font-size:45px;
+    font-size:40px;
     text-align:center;
     font-weight:normal;
     position:relative;
@@ -451,7 +451,7 @@ body{
     height:80px;
     margin-top:20px;
 }
-#choose_banner p{
+.choose_banner_appoint p{
     color:#fff;
     font-size:18px;
     text-indent:10px;
@@ -459,16 +459,17 @@ body{
     clear:both;
     margin:10px 0px;
 }
-#choose_banner .part2 .colgrey{
+.choose_banner_appoint .part2 .colgrey{
     background-color:#9CD4C9;
     color:#fff;
     cursor:default;
 }
-#choose_banner .part1 span{
-    padding:15px 65px;
+
+.choose_banner_appoint .part1 span{
+    padding:12px 60px;
     background-color:#fff;
     color:#525252;
-    font-size:16px;
+    font-size:18px;
     float:left;
     border-radius:5px;
     position:relative;
@@ -476,14 +477,16 @@ body{
     margin-right:20px;
     cursor:pointer;
 }
-#choose_banner .span_hover{
+.choose_banner_appoint .span_hover{
     background-color:#1dd2af!important;
     color:#fff!important;
+	border-radius:5px;
+	behavior:url(/static/css/PIE.htc);
 }
-#choose_banner .part2{
+.choose_banner_appoint .part2{
     
 }
-#choose_banner .part2 span{
+.choose_banner_appoint .part2 span{
     padding:15px 0px;
     display:block;
     width:70px;
@@ -498,7 +501,7 @@ body{
     margin-right:8px;
     cursor:pointer;
 }
-#choose_banner .c_input{
+.choose_banner_appoint .c_input{
     border:none;
     background:url(/static/image/input.png) no-repeat;
     width:314px;
@@ -509,10 +512,24 @@ body{
     line-height:66px;
     margin-left:-6px;
     padding-left:95px;
-    margin-top:10px;
+    /*margin-top:10px;*/
     outline:none;
 }
-#choose_banner .sub_btn{
+
+.choose_banner_appoint .choose_input{
+	border: none;
+	width:314px;
+	height:46px;
+	float: left;
+	outline: none;
+	border-radius: 5px;
+	behavior:url(/static/css/PIE.htc);
+	font-size: 18px;
+	padding-left: 15px;
+	clear: both;
+}
+
+.choose_banner_appoint .sub_btn{
     color:#fff;
     font-size:20px;
     float:left;
@@ -521,15 +538,15 @@ body{
     cursor:pointer;
 }
 
-#choose_banner .sub_btn_no_clear {
+.choose_banner_appoint .sub_btn_no_clear {
 	color: #fff;
 	font-size: 20px;
 	float: left;
-	margin-top: 10px;
+	margin-top: 25px;
 	cursor: pointer;
 }
 
-#choose_banner .pay_zfb{
+.choose_banner_appoint .pay_zfb{
     background:url(/static/image/banner_small/zfbh.png) no-repeat;
     float:left;
     width:268px;
@@ -538,7 +555,7 @@ body{
     margin-left:155px;
     margin-top:170px;
 }
-#choose_banner .pay_wx{
+.choose_banner_appoint .pay_wx{
     background:url(/static/image/wx.png) no-repeat;
     float:left;
     width:268px;
@@ -547,7 +564,7 @@ body{
     margin-left:120px;
     margin-top:170px;
 }
-#choose_banner .wechat_wrap{
+.choose_banner_appoint .wechat_wrap{
     width:500px;
     position:Relative;
     left:50%;
@@ -555,20 +572,20 @@ body{
     float:left;
     margin-top:30px;
 }
-#choose_banner .wechat_wrap .wechat_title{
+.choose_banner_appoint .wechat_wrap .wechat_title{
     float:left;
     width:500px;
 }
-#choose_banner .wechat_wrap .wechat_title img{
+.choose_banner_appoint .wechat_wrap .wechat_title img{
     float:left;
 }
-#choose_banner .wechat_wrap .wechat_title span{
+.choose_banner_appoint .wechat_wrap .wechat_title span{
     float:right;
     font-size:18px;
     color:#fff;
     margin-top:10px;
 }
-#choose_banner .wechat_main{
+.choose_banner_appoint .wechat_main{
     height:430px;
     background-color:#fff;
     width:460px;
@@ -579,17 +596,17 @@ body{
     behavior:url(/static/css/PIE.htc);
     position:relative;
 }
-#choose_banner .wechat_main h1{
+.choose_banner_appoint .wechat_main h1{
     padding-bottom:20px;
     border-bottom:1px solid #e4e0e5;
     font-weight:normal;
     color:#10071b;
 }
-#choose_banner .wechat_main h1 span{
+.choose_banner_appoint .wechat_main h1 span{
     color:#e96607;
     font-size:22px;
 }
-#choose_banner .wechat_main img{
+.choose_banner_appoint .wechat_main img{
     width:205px;
     height:205px;
     float:left;
@@ -597,7 +614,7 @@ body{
     margin-left:127px;
     margin-top:40px;
 }
-#choose_banner .wechat_main a{
+.choose_banner_appoint .wechat_main a{
     display:block;
     background:url(/static/image/banner_small/zf.png) no-repeat;
     width:206px;
@@ -762,6 +779,7 @@ body{
     margin-top:10px;
     cursor:pointer;
     border-radius:5px;
+	behavior:url(/static/css/PIE.htc);
     text-align:center;
     line-height:52px;
 }

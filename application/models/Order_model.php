@@ -46,8 +46,10 @@ class Order_Model extends CI_Model{
                 $ret['status'] = $row['status'];
                 $ret['house_id'] = $row['house_id'];
                 $ret['acreage'] = $row['acreage'];
+                if($city = array_search($row['city'], $this->config->item('city'))){
+                    $ret['location'] = trim($city . $row['area']);
+                }
                 //$ret['location'] = trim($row['province'] . ' ' . $row['city'] . ' ' . $row['district'] . ' ' . $row['area']);
-                $ret['location'] = trim($row['area']);
                 if(!$ret['location']) $ret['location'] = '北京';
                 $ret['price'] = $row['price'];
             }
@@ -121,11 +123,14 @@ class Order_Model extends CI_Model{
         if($db_order->status == ORDER_STATUS_THIRD) return -4;
         if($db_order->status != ORDER_STATUS_FIRST) return -5;
 
-        $this->user->update_user_agerange($order['user_id'], $order['age']);
-        if(($house_id = $this->house->insert_house($order['order_id'], $order['user_id'], $order['acreage'])) > 0){
+        //$this->user->update_user_agerange($order['user_id'], $order['age']);
+        $this->user->update_user($order['user_id'], array('name' => $order['name']));
+        $house = array('order_id' => $order['order_id'], 'user_id' => $order['user_id'], 'acreage' => $order['acreage'],
+                    'city' => $order['city'], 'area' => $order['xiaoqu']);
+        //if(($house_id = $this->house->insert_house($order['order_id'], $order['user_id'], $order['acreage'])) > 0){
+        if($house_id = $this->house->insert_house_arr($house)){
             $this->update_order($order['order_id'], $order['decor_date'], $order['status'], $house_id, $order['price']);
         }
-
         return 0;
     }
 

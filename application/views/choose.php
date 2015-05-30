@@ -5,7 +5,7 @@
     $('.part1 span').live('click',function(){
         $('.part1 span').removeClass('span_hover');
         $(this).addClass('span_hover');
-        $(".age").val($(this).attr('title'));
+        //$(".age").val($(this).attr('title'));
     })
 
     $('.part2 span').live('click',function(){
@@ -14,29 +14,22 @@
         }
         $('.part2 span').removeClass('span_hover');
         $(this).addClass('span_hover');
-        $(".decor_date").val($(this).attr('title'));
+        //$(".decor_date").val($(this).attr('title'));
     })
 
     $('.bgc_direct').live('click',function(){
-        var acreage = parseInt($('.c_input').val());
         var order_id = $(".order_id").val();
         var user_id = $(".user_id").val();
-        var age = $(".age").val();
         var serial_number = $(".serial_number").val();
-        var decor_date = $(".decor_date").val();
+
+        var city = parseInt($(".choose_city").attr('data-value'));
+        var name = $(".choose_input_name").val();
+        var decor_date = parseInt($(".part2 .span_hover").attr('title'));
+        var acreage = parseInt($('.choose_input_acreage').val());
+        var xiaoqu = $(".choose_input_xiaoqu").val();
 
         if(order_id <= 0 || user_id <= 0){
             alert('订单非法');
-            return false;
-        }
-
-        if(age != 1 && age != 2){
-            alert('年龄不合法');
-            return false;
-        }
-
-        if(decor_date > 12 || decor_date <= 0){
-            alert('日期不合法');
             return false;
         }
 
@@ -45,16 +38,41 @@
             return false;
         }
 
+//        if(age != 1 && age != 2){
+//            alert('年龄不合法');
+//            return false;
+//        }
+
+        if(city != 1){
+            alert('城市非法');
+            return false;
+        }
+
+        if(name == undefined || name == ''){
+            alert('请输入姓名');
+            return false;
+        }
+
+        if(decor_date > 12 || decor_date <= 0 || isNaN(decor_date)){
+            alert('日期不合法');
+            return false;
+        }
+
         var min_acreage = $("#min_acreage").val();
         var max_acreage = $("#max_acreage").val();
-        if(acreage < min_acreage || acreage > max_acreage){
+        if(acreage < min_acreage || acreage > max_acreage || isNaN(acreage)){
             alert('面积非法,只能预定' + min_acreage + '到' + max_acreage + '之间');
+            return false;
+        }
+
+        if(xiaoqu == undefined || xiaoqu == ''){
+            alert('请输入小区名');
             return false;
         }
 
         var sub_type = $(this).attr("data-type");
         $.post('/order/appointsec',
-                {order_id: order_id, user_id: user_id, age: age, acreage: acreage, decor_date: decor_date, serial_number: serial_number},
+                {order_id: order_id, user_id: user_id, name: name, acreage: acreage, decor_date: decor_date, city: city, xiaoqu: xiaoqu, serial_number: serial_number},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
@@ -89,7 +107,7 @@
                 });
     })
 </script>
-<div id="choose_banner">
+<div id="choose_banner_appoint" class="choose_banner_appoint">
     <div>
         <input type="hidden" id="min_acreage" value="<?=MIN_ACREAGE;?>"/>
         <input type="hidden" id="max_acreage" value="<?=MAX_ACREAGE;?>"/>
@@ -97,11 +115,17 @@
     <div class="choose_bg"></div>
     <div class="choose_wrap" style="top:105px;">
         <h1>你只需要做个决定</h1>
-        <p style="margin-top:0px;">年龄</p>
+<!--        <p style="margin-top:0px;">年龄</p>-->
+<!--        <div class="part1 clearfix">-->
+<!--            <span title="1">80后</span>-->
+<!--            <span class="span_hover" title="2">80前</span>-->
+<!--        </div>-->
+        <p style="margin-top:0px;">城市</p>
         <div class="part1 clearfix">
-            <span title="1">80后</span>
-            <span class="span_hover" title="2">80前</span>
+            <span class="span_hover choose_city" data-value="<?=$this->config->item('北京', 'city');?>" title="北京">北京</span>
         </div>
+        <p style="margin-top:20px;">姓名</p>
+        <input class="choose_input choose_input_name" placeholder="请输入姓名" type="text" value=""/>
         <p style="margin-top:20px;">装修时间</p>
         <div class="part2 clearfix">
             <span class="colgrey" title="1">1月</span>
@@ -117,7 +141,11 @@
             <span title="11">11月</span>
             <span title="12">12月</span>
         </div>
-        <input class="c_input"  placeholder="请输入房本面积" type="text" value=""/>
+        <p style="margin-top:20px;">房本面积</p>
+        <input class="choose_input clearfix choose_input_acreage"  placeholder="请输入整数房本面积" type="text" value=""/>
+        <p style="margin-top:20px;">小区名称</p>
+        <input class="choose_input clearfix choose_input_xiaoqu"  placeholder="如: 朝阳区双井时代国际嘉园一期" type="text" value=""/>
+
         <!--<div class="sub_btn bgc">支付1元预约金</div>-->
         <div style="clear: both;">
             <!--<div class="sub_btn_no_clear bgc choose_submit" data-type="1">我要个性化</div>-->
@@ -126,7 +154,6 @@
     </div>
     <div style="display:none">
         <input type="hidden" class="age" value="2"/>
-        <input type="hidden" class="acreage" value=""/>
         <input type="hidden" class="decor_date" value="<?=$cur_mon;?>"/>
         <!--<form action="/pay" method="post" id="sec_order">
             <input type="hidden" name="order_id" class="order_id" value=""/>

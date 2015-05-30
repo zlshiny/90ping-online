@@ -25,8 +25,8 @@ CREATE TABLE `house`(
     `is_decor` tinyint NOT NULL DEFAULT 0 COMMENT '新房或二手房,0新房,1二手房',
     `province` tinyint NOT NULL DEFAULT 0,
     `city` smallint NOT NULL DEFAULT 0,
-    `district` tinyint NOT NULL DEFAULT 0,
-    `area` varchar(256) NOT NULL DEFAULT '' COMMENT '具体位置',
+    `district` tinyint NOT NULL DEFAULT 0 COMMENT '市辖区',
+    `area` varchar(256) NOT NULL DEFAULT '' COMMENT '小区名',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '录入时间'
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 

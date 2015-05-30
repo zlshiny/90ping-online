@@ -1,7 +1,7 @@
 <?php
     include('header.php');
 ?>
-<div id="choose_banner">
+<div id="choose_banner" class="choose_banner_appoint">
     <div class="choose_bg"></div>
     <div class="choose_wrap appoint">
         <h1>你只需做个决定</h1>

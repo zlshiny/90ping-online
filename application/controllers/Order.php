@@ -82,14 +82,14 @@ class Order extends CI_Controller {
                         ));
         }
 
-        $age = $this->input->post('age');
-        if(!isset($_POST['age']) || ($age != 2 && $age != 1)){
-            exit(json_encode(array(
-                            'code' => -3,
-                            'msg' => '非法年龄',
-                            )
-                        ));
-        }
+//        $age = $this->input->post('age');
+//        if(!isset($_POST['age']) || ($age != 2 && $age != 1)){
+//            exit(json_encode(array(
+//                            'code' => -3,
+//                            'msg' => '非法年龄',
+//                            )
+//                        ));
+//        }
 
         $serial_number = $this->input->post('serial_number');
         if(!isset($_POST['serial_number']) || $serial_number <= 0){
@@ -119,10 +119,37 @@ class Order extends CI_Controller {
                         ));
         }
 
+        if((!$city = $this->input->post('city')) || $city != CITY_BJ){
+            exit(json_encode(array(
+                    'code' => -6,
+                    'msg' => '当前只开放北京预约，请您耐心等候',
+                )
+            ));
+        }
+
+        if((!$name = $this->input->post('name')) || empty($name)){
+            exit(json_encode(array(
+                    'code' => -7,
+                    'msg' => 'name required',
+                )
+            ));
+        }
+        $name = htmlspecialchars(trim($name));
+
+        if((!$xiaoqu = $this->input->post('xiaoqu')) || empty($xiaoqu)){
+            exit(json_encode(array(
+                    'code' => -8,
+                    'msg' => 'xiaoqu required',
+                )
+            ));
+        }
+        $xiaoqu = htmlspecialchars(trim($xiaoqu));
+
         $price = BASE_PRICE + ($acreage - BASE_ACREAGE) * PRICE_PER_ACR;
 
-        $order = array('order_id' => $order_id, 'user_id' => $user_id, 'age' => $age, 'decor_date' => $decor_date,
-            'acreage' => $acreage, 'status' => ORDER_STATUS_SEC, 'price' => $price);
+        $order = array('order_id' => $order_id, 'user_id' => $user_id, 'decor_date' => $decor_date,
+            'acreage' => $acreage, 'status' => ORDER_STATUS_SEC, 'price' => $price, 'city' => $city, 'name' => $name,
+            'xiaoqu' => $xiaoqu);
         $this->load->model('order_model', 'order');
         $this->load->model('user_model', 'user');
         $this->load->model('house_model', 'house');
