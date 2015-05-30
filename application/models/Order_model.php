@@ -50,7 +50,7 @@ class Order_Model extends CI_Model{
                     $ret['location'] = trim($city . $row['area']);
                 }
                 //$ret['location'] = trim($row['province'] . ' ' . $row['city'] . ' ' . $row['district'] . ' ' . $row['area']);
-                if(!$ret['location']) $ret['location'] = '北京';
+                if(!isset($ret['location']) || !$ret['location']) $ret['location'] = '北京';
                 $ret['price'] = $row['price'];
             }
 
@@ -66,7 +66,7 @@ class Order_Model extends CI_Model{
 
         $sql = "select user.user_id as user_id, user.phone as phone, orders.serial_number as serial_number, orders.id as order_id, 
                 orders.create_time as create_time, orders.product_id as product_id, orders.deposit as deposit, orders.status as status 
-                from orders inner join user on orders.user_id = user.user_id where orders.user_id = ? limit 10";
+                from orders inner join user on orders.user_id = user.user_id where orders.user_id = ? limit 20";
         if($query = $this->master_db->query($sql, array($user_id))){
             foreach($query->result_array() as $row){
                 $v = array();

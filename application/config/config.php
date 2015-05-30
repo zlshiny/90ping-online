@@ -503,3 +503,6 @@ $config['phone_verify_expired'] = 300;
 $config['product'] = array('1' => '超级Home1.0');
 $config['order_status'] = array('0' => '等待完善房屋信息', '1' => '等待支付定金');
 $config['order_action'] = array('0' => '完善信息', '1' => '去支付');
+
+//城市代码
+$config['city'] = array('北京市' => 1);

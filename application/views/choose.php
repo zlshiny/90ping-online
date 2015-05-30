@@ -122,7 +122,7 @@
 <!--        </div>-->
         <p style="margin-top:0px;">城市</p>
         <div class="part1 clearfix">
-            <span class="span_hover choose_city" data-value="<?=$this->config->item('北京', 'city');?>" title="北京">北京</span>
+            <span class="span_hover choose_city" data-value="<?=$this->config->item('北京市', 'city');?>" title="北京">北京</span>
         </div>
         <p style="margin-top:20px;">姓名</p>
         <input class="choose_input choose_input_name" placeholder="请输入姓名" type="text" value=""/>

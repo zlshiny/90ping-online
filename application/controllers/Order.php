@@ -119,7 +119,7 @@ class Order extends CI_Controller {
                         ));
         }
 
-        if((!$city = $this->input->post('city')) || $city != CITY_BJ){
+        if((!$city = $this->input->post('city')) || $city != $this->config->item('北京市', 'city')){
             exit(json_encode(array(
                     'code' => -6,
                     'msg' => '当前只开放北京预约，请您耐心等候',
