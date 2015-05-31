@@ -11,6 +11,22 @@
                 $(this).attr('src','/static/image/mobile/arrow-down.png');
             }
         })
+
+        $(".action_order").click(function(){
+            var status = $(this).attr('value');
+            if(status == 1){
+                $("#fir_order").attr("action", "/pay");
+            }else if(status == 0){
+                $("#fir_order").attr("action", "/order/improve");
+            }else{
+                return false;
+            }
+
+            $("#fir_order_id").attr("value", $(this).attr("order-id"));
+            $("#fir_user_id").attr("value", $(this).attr("user-id"));
+            $("#fir_serial_number").attr("value", $(this).attr("serial-number"));
+            $("#fir_order").submit();
+        });
     })
 </script>
 
@@ -43,7 +59,7 @@
                     <p>操作</p>
                     <?php if($v['status'] > 0):?><a href="/order/detail/<?=$v['order_id'];?>" class="my-order-a">查看</a><?php endif;?>
                     <?php if($v['status'] == 0):?>
-                        <a href="#" class="my-order-a" serial-number="<?=$v['serial_number'];?>" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
+                        <a href="#" class="my-order-a action_order" serial-number="<?=$v['serial_number'];?>" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
                             <?=$v['action_name'];?>
                         </a>
                     <?php endif;?>
@@ -54,6 +70,13 @@
         <?php endforeach;?>
         <?php endif;?>
     </div>
+</div>
+<div style="display:none;">
+    <form action="" method="post" id="fir_order">
+    <input type="hidden" name="order_id" id="fir_order_id" value=""/>
+    <input type="hidden" name="user_id" id="fir_user_id" value=""/>
+    <input type="hidden" name="serial_number" id="fir_serial_number" value=""/>
+    </form>
 </div>
 <!-- content start -->
 </body>
