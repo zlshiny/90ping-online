@@ -9,7 +9,11 @@ class Order extends CI_Controller {
 
     //加载预约第一步(验证手机)
     public function index(){
-        $this->load->view('appoint.php');
+        if(check_device()){
+            $this->load->view('mobile/appoint.php');
+        }else{
+            $this->load->view('appoint.php');
+        }
     }
 
     //加载预约第二步(完善订单信息)
@@ -25,7 +29,12 @@ class Order extends CI_Controller {
         $data['user_id'] = $user_id;
         $data['cur_mon'] = @date('n');
         $data['serial_number'] = $serial_number;
-        $this->load->view('choose.php', $data);
+
+        if(check_device()){
+            $this->load->view('mobile/choose.php', $data);
+        }else{
+            $this->load->view('choose.php', $data);
+        }
     }
 
     public function detail($order_id){
