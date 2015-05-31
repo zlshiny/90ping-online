@@ -270,16 +270,16 @@ header.banner img{
 
 #super-home-last .bgcl{
 	background-color:#1dd2af;
-	padding:5px 20px;
+	padding:4px 20px;
 	display: block;
     float: left;
 	behavior:url(/static/css/PIE.htc);
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	color:#fff;
-    font-size: 28px;
+    font-size: 24px;
     margin-top:38%;
-    margin-left:30%;
+    margin-left:33%;
 }
 
 
