@@ -30,7 +30,7 @@ class Order_Model extends CI_Model{
         if(!$order_id || $order_id < 0) return array();
         $ret = array();
 
-        $sql = "select user.user_id as user_id, user.phone as phone, orders.product_id as product_id, orders.deposit as deposit, 
+        $sql = "select user.user_id as user_id, user.phone as phone, user.name as name, orders.product_id as product_id, orders.deposit as deposit,
                 orders.status as status, orders.price as price, house.id as house_id, house.province as province, house.city as city, house.district as district,
                 house.area as area, house.acreage as acreage 
                 from orders inner join user on orders.user_id = user.user_id inner join house on orders.house_id = house.id where orders.id = ?";
@@ -39,6 +39,7 @@ class Order_Model extends CI_Model{
                 $ret['user_id'] = $row['user_id'];
                 $ret['order_id'] = $order_id;
                 $ret['phone'] = $row['phone'];
+                $ret['name'] = $row['name'];
                 $ret['product_id'] = $row['product_id'];
                 $ret['product_name'] = $this->config->item($ret['product_id'], 'product');
                 $ret['deposit'] = $row['deposit'];
@@ -64,7 +65,7 @@ class Order_Model extends CI_Model{
         if(!$user_id || $user_id < 0) return array();
         $ret = array();
 
-        $sql = "select user.user_id as user_id, user.phone as phone, orders.serial_number as serial_number, orders.id as order_id, 
+        $sql = "select user.user_id as user_id, user.phone as phone, user.name as name, orders.serial_number as serial_number, orders.id as order_id,
                 orders.create_time as create_time, orders.product_id as product_id, orders.deposit as deposit, orders.status as status 
                 from orders inner join user on orders.user_id = user.user_id where orders.user_id = ? limit 20";
         if($query = $this->master_db->query($sql, array($user_id))){
@@ -74,6 +75,7 @@ class Order_Model extends CI_Model{
                 $v['serial_number'] = $row['serial_number'];
                 $v['order_id'] = $row['order_id'];
                 $v['phone'] = $row['phone'];
+                $v['name'] = $row['name'];
                 $v['product_id'] = $row['product_id'];
                 $v['product_name'] = $this->config->item($v['product_id'], 'product');
                 $v['deposit'] = $row['deposit'];

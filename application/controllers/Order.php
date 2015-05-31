@@ -30,7 +30,11 @@ class Order extends CI_Controller {
 
     public function detail($order_id){
         if(!$user_id = check_login()){
-            $this->load->view('login.php');
+            if(check_device()){
+                $this->load->view('mobile/login.php');
+            }else {
+                $this->load->view('login.php');
+            }
         }else{
             if(!$order_id || $order_id < 0){
                 exit("订单不存在"); 
@@ -41,7 +45,11 @@ class Order extends CI_Controller {
                 $data['order'] = $order;
                 $data['user_id'] = $user_id;
                 $data['order'] = $order;
-                $this->load->view('order_detail', $data);
+                if(check_device()){
+                    $this->load->view('mobile/order_detail', $data);
+                }else{
+                    $this->load->view('order_detail', $data);
+                }
             }else{
                 exit("订单不存在");
             }
@@ -50,7 +58,11 @@ class Order extends CI_Controller {
 
     public function myorder(){
         if(!$user_id = check_login()){
-            $this->load->view('login.php');
+            if(check_device()){
+                $this->load->view('mobile/login.php');
+            }else{
+                $this->load->view('login.php');
+            }
         }else{
             $data = array();
             $data['user_id'] = $user_id;
@@ -60,7 +72,11 @@ class Order extends CI_Controller {
                 $data['list'] = $list;
             }
 
-            $this->load->view('order_list', $data);
+            if(check_device()){
+                $this->load->view('mobile/order_list', $data);
+            }else{
+                $this->load->view('order_list', $data);
+            }
         }
     }
 
