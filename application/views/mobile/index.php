@@ -9,7 +9,7 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common2.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/mobile/common.css" />
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
@@ -131,6 +131,7 @@
 					<a href="#"><img src="/static/image/mobile/8090.png"></a>
 				</li>
 				<li id="super-home-last">
+	                <a href="/order" target="_blank" class="bgcl">立即预约</a>
 					<!--<a href="#"><img src="/static/image/mobile/last-button.png"></a>-->
 				</li>
 			</ul>
