@@ -510,3 +510,45 @@ td.pleft{
   background-color: #1dd2af;
   color: #fff;
 }
+
+.success-area{
+    margin-top: 80px;
+}
+
+.success-title{
+    text-align: center;  color: #fff;
+}
+
+.success-title img{  
+    width: 88px;  
+    height: 88px;
+}
+
+.success-title p{  
+    font-size: 16px;  
+    font-weight: bold;
+}
+
+.success-message{  
+    text-align: center;  
+    color: #fff;  
+    font-size: 16px;
+}
+
+.success-message-p1{  
+    width: 206px;  
+    margin-left: auto;  
+    margin-right: auto;  
+    padding-top: 15px;  
+    text-align: center;  
+    font-size: 16px;  
+    overflow: hidden;  
+}
+
+.success-message-p2{  
+    padding-top: 20px;
+}
+
+.success-message-p2 a{  
+    color: #2fb561;
+}
