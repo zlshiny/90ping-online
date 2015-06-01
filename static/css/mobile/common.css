@@ -222,7 +222,7 @@ header.banner img{
 }
 
 #image-list{
-  /*padding-top: 15px;*/
+  padding-top: 15px;
   overflow: hidden;
 }
 #image-list li{
@@ -266,6 +266,20 @@ header.banner img{
 #super-home-last img{
   width: 35%;
   margin-top: 32%;
+}
+
+#super-home-last .bgcl{
+	background-color:#1dd2af;
+	padding:4px 20px;
+	display: block;
+    float: left;
+	behavior:url(/static/css/PIE.htc);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	color:#fff;
+    font-size: 24px;
+    margin-top:38%;
+    margin-left:33%;
 }
 
 

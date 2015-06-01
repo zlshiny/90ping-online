@@ -28,7 +28,7 @@
                 <td><?=$v['create_time'];?></td>
                 <td>
                     <?php if($v['status'] == 0):?>
-                    <a href="#" class="action_order" id="action_order" serial-number="<?=$v['serial_number'];?>" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
+                    <a href="#" class="action_order" serial-number="<?=$v['serial_number'];?>" order-id="<?=$v['order_id'];?>" user-id="<?=$v['user_id'];?>" value="<?=$v['status'];?>">
                         <?=$v['action_name'];?>
                     </a>
                     <?php endif;?>
