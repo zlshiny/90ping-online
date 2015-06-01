@@ -64,7 +64,12 @@ class Pay extends CI_Controller {
 
         $data['serial_number'] = $serial_number;
         $data['price'] = $price;
-        $this->load->view('pay_ret.php', $data);
+		
+		if(check_device()){
+			$this->load->view('mobile/pay_ret', $data);
+		}eles{
+			$this->load->view('pay_ret.php', $data);
+		}
     }
 
     public function wechat(){
