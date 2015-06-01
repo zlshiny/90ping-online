@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="超级Home，90平方，装修，互联网装修，智能家装，家装，互联网家装，方太">
 <meta name="description" content="超级Home-90平方-互联网智能家装，专注于80后，环保健康，高端品质">
-<title>第一个专注于80后的互联网智能家装，整包一口价</title>
+<title>超级Home，第一个专注于80后的互联网智能家装，整包一口价</title>
 <link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.min.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
