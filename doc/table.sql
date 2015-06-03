@@ -89,3 +89,21 @@ insert into `personal_config`(`name`, `color_list`, `price`) values('TATA推拉�
     ('方太柏厨吧台', '', 3150),('西门子USB插口', '', 100),('核桃锁', '', 1080),('卫生间', '', 169000),('梳妆台', '', 2000),
     ('梳妆凳', '', 650), ('皮质沙发', '', 5000), ('新西兰手工羊毛地毯', '', 4100);
 
+CREATE TABLE `neighbor_together`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `user_id` INT UNSIGNED NOT NULL DEFAULT 0,
+    `uname` varchar(64) NOT NULL DEFAULT '' COMMENT '发起者姓名',
+    `current_ucount` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '当前参与人数',
+    `current_state` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '当前阶段',
+    `slogan` varchar(255) NOT NULL DEFAULT '' COMMENT '口号',
+    `target_state` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '目标阶段',
+    `district` varchar(128) NOT NULL DEFAULT '' COMMENT '小区名',
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `neighbor_together_user`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `nt_id` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '活动ID',
+    `user_id` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '参与人',
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
