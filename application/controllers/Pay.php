@@ -67,7 +67,7 @@ class Pay extends CI_Controller {
 		
 		if(check_device()){
 			$this->load->view('mobile/pay_ret', $data);
-		}eles{
+		}else{
 			$this->load->view('pay_ret.php', $data);
 		}
     }
