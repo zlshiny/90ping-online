@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-define('BASE_HOST', '90pingfang');
+define('BASE_DOMAIN', '90pingfang');
+define('BASE_HOST', 'www.' . BASE_DOMAIN);
 define('BASE_URL', 'http://' . BASE_HOST . '.com');
 define('PASSWD_CONS', '90PINGHULIANWANGZHINENGJIAZHUANG');
 
@@ -26,9 +27,12 @@ define('ORDER_SOURCE_WECHAT', 1);
 define('ORDER_SOURCE_MOBILE', 2);
 
 
-//wechat test config
-define('WECHAT_APPID', 'wxc501347c0242c244');
-define('WECHAT_APPSECRET', 'd7f73a30dce6887399c6582b13db242a');
+//define('WECHAT_APPID', 'wxc501347c0242c244');
+//define('WECHAT_APPSECRET', 'd7f73a30dce6887399c6582b13db242a');
+define('WECHAT_APPID', 'wxa5822f41b8d7e551');
+define('WECHAT_APPSECRET', '3ed2716761aac81a05c12b95ccf5dc88');
+define('WEPAY_ROOT_PATH', APPPATH . '/libraries/wechat');
+define('ORDER_FEE', 1);//预约金额，单位为分
 
 //最大面积
 define('MAX_ACREAGE', 200);
@@ -42,9 +46,9 @@ define('LOGIN_COOKIE_KEY', 'zjw');
 define('LOGIN_EXPIRED_DEFAULT', 86400);
 
 //预约阶段状态码
-define('ORDER_STATUS_FIRST', '0');
-define('ORDER_STATUS_SEC', '1');
-define('ORDER_STATUS_THIRD', '2');
+define('ORDER_STATUS_FIRST', '0');//手机通过验证并提交预约
+define('ORDER_STATUS_SEC', '1');//完善个人及房屋信息
+define('ORDER_STATUS_THIRD', '2');//支付预约金完成
 
 //年龄代码
 define('AGE_85_PRE', 0);

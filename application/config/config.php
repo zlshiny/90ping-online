@@ -377,7 +377,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= '90pingfang';
-$config['cookie_domain']	= '.' . BASE_HOST . '.com';
+$config['cookie_domain']	= '.' . BASE_DOMAIN. '.com';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;
