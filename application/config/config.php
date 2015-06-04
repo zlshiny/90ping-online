@@ -506,3 +506,14 @@ $config['order_action'] = array('0' => '完善信息', '1' => '去支付');
 
 //城市代码
 $config['city'] = array('北京市' => 1);
+
+//邻居一起装活动
+$config['neighbor'] = array();
+$config['neighbor']['max_slogan'] = 200;
+$config['neighbor']['max_state'] = 3;
+$config['neighbor']['state'] = array(
+    '0' => array('max_user' => 4, 'favorable' => 0),
+    '1' => array('max_user' => 9, 'favorable' => 2000),
+    '2' => array('max_user' => 19, 'favorable' => 5000),
+    '3' => array('max_user' => 20, 'favorable' => 10000),
+);
