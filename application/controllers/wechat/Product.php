@@ -8,6 +8,10 @@ class Product extends CI_Controller {
         $this->load->view('wechat.php', $data);
     }
 
+    public function v2(){
+        $this->load->view('h5_v2.php');
+    }
+
     public function kobe(){
         $this->load->view('mobile/index2.php');
     }

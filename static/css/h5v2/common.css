@@ -1,0 +1,354 @@
+html{
+  height:1%; 
+}
+body{
+  background: none; 
+  background-color: white; 
+  font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif; 
+  font-size: 14px; 
+  color: #515151; 
+  margin: 0; 
+  padding: 0;
+}
+body input,body textarea{
+  font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;
+  background-color: white; 
+  outline: none;
+}
+div, h1, h2, h3, h4, p, form, label, input, textarea, img, span,dl,ul,li{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+a{
+  color: #515151; 
+  text-decoration:none;
+}
+a:hover {
+  color: #000; 
+  text-decoration:none;
+}
+a:focus {
+  outline:none;
+  -moz-outline:none;
+}
+*, *:before, *:after {
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-user-select: -moz-none;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-touch-action: pan-y;
+}
+body, html {
+  -ms-overflow-style: none !important;
+  width: 100%;
+}
+body{
+  overflow-x: hidden;
+  -webkit-text-size-adjust: none;
+  color: #000000;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  background: #ffffff;
+}
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: -moz-text;
+  -moz-user-select: text;
+}
+img {
+  border: none;
+}
+p {
+  display: block;
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: inherit;
+}
+section{
+
+}
+section img{
+  width: 100%;
+  overflow: hidden;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 250;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 44px;
+  left: 0;
+  right: 0;
+}
+
+.center{
+  text-align: center;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.top10{
+  margin-top: 10px;
+}
+
+.pages {
+  z-index: 180;
+  position: relative;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ffffff;
+  color: #000000;
+  overflow: hidden;
+}
+
+.subscribe{
+  width: 100%;  
+  margin-top: -220px;
+  text-align: center;
+  position: absolute;
+}
+.subscribe button{
+  width: 60%;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: #1dd2af;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 18px; 
+  border: 0px;
+}
+.subscribe p{
+  font-size: 16px; 
+  color: #4a4a4a;
+}
+
+
+#ten img{
+  width: 100%;
+}
+.bx-prev{
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  background: url(/static/image/h5v2/arrow-left.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 10001;
+  float: left;
+}
+.bx-next{
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  background: url(/static/image/h5v2/arrow-right.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 10001;
+  float: right;
+}
+
+.form{
+  padding-top: 20px;
+  background-color: #fff;
+}
+.form-element{
+  width: 100%;
+  overflow: hidden;
+}
+.info-form-button{
+  width: 40%;
+  height: 36px;
+  line-height: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 10px;
+  background-color: #1dd2af;
+  border-radius: 5px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.info-form-submit{
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.get-verify-code{
+  width: 88px;
+  margin-left: 6px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: center;
+}
+.form-label, .form-input{
+  height: 36px;
+  line-height: 36px;
+}
+.form-label{
+  width: 20%;
+  text-align: center;
+  color: #333232;
+  font-size: 14px;
+  font-weight: bold;
+  float: left;
+}
+.form-input{
+  width: 70%;
+  margin-top:5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  float: left;
+}
+.form-input .text-input{
+  width: 100%;
+  height: 36px;
+  padding-left: 5px;
+  line-height: 36px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #a0a0a0;
+}
+.form-input .verify-code{
+  width: 120px;
+  height: 36px;
+  padding-left: 5px;
+  line-height: 36px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #a0a0a0;
+  float: left;
+}
+.gender-button{
+  width: 66px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #1dd2af;
+  color: #303030;
+  font-size: 16px;
+  font-weight: bold;
+  float: left;
+}
+.on{
+  color: #fff;
+  background-color: #1dd2af;
+}
+.month-list{
+  width: 70%;
+  float: left;
+  overflow: hidden;
+}
+.month{
+  width: 40px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  line-height: 30px;
+  background-color: #cddfdc;
+  border-radius: 5px;
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  float: left;
+}
+.month-list .on{
+  background-color: #1dd2af;
+  color: #fff;
+}
+
+.view-title{
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  background-color: #1dd2af;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+footer{
+  padding-bottom: 20px;
+}
+.two-dimension{
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  float: left;
+}
+.two-dimension .ptitle{
+  width: 100%;
+  margin: 0px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2d2d2d;
+}
+.two-dimension .pphone{
+  width: 100%;
+  margin: 0px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #626262;
+}
+.two-dimension img{
+  width: 50%;
+}
+.footer-nav{
+  width: 100%;
+  text-align: center;
+  float: left;
+}
+.footer-nav ul{
+
+}
+.footer-nav ul li{
+  margin-left: 2px;
+  margin-right: 2px;
+  float: left;
+}
+.footer-nav ul li a{ 
+  padding-right: 5px; 
+  font-size: 14px;
+}
+
+.footer-nav ul li a.rborder{ 
+  border-right: 1px solid #585858;
+}
+
