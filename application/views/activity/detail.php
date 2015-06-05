@@ -9,17 +9,17 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/fastclick.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/jquery.bxslider.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/common.js"></script>   
+    <link rel="stylesheet" type="text/css" href="/static/css/activity/neighbor.css" />
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/activity/activity.js"></script>   
 </head>
 
 <body class="detail">
 
 <div class="detail-title">
-    <img src="image/detail-title.png">
+    <img src="/static/image/activity/detail-title.png">
 </div>
 
 <div class="detail-area">
@@ -104,10 +104,10 @@
         <div class="share">
             <p>分享到</p>
             <div class="weibo">
-                <a href="#"><img src="image/weibo.png"></a>
+                <a href="#"><img src="/static/image/activity/weibo.png"></a>
             </div>
             <div class="weixin">
-                <a href="#"><img src="image/weixin.png"></a>
+                <a href="#"><img src="/static/image/activity/weixin.png"></a>
             </div>
         </div>
     </div>

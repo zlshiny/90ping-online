@@ -7,7 +7,12 @@ $(function(){
         moveSlideQty: 1,
         captions: true,
         auto: false,
-        pager: false
+        pager: false,
+        speed: 800,
+        //infiniteLoop: true,
+        //autoHover: true,
+        //touchEnabled: false,
+        oneToOneTouch: false
     });
     var bwidth = $(window).width();
     var bheight = $(window).height();

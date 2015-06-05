@@ -38,7 +38,7 @@ define('ORDER_FEE', 1);//预约金额，单位为分
 define('MAX_ACREAGE', 200);
 define('MIN_ACREAGE', 40);
 
-define('BASE_PRICE', 156000);
+define('BASE_PRICE', 162000);
 define('BASE_ACREAGE', 90);
 define('PRICE_PER_ACR', 899);
 

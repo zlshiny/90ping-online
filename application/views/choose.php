@@ -146,11 +146,13 @@
         <p style="margin-top:20px;">小区名称</p>
         <input class="choose_input clearfix choose_input_xiaoqu"  placeholder="如: 朝阳区双井时代国际嘉园一期" type="text" value=""/>
 
-        <!--<div class="sub_btn bgc">支付1元预约金</div>-->
+        <div class="sub_btn bgc bgc_direct choose_submit" data-type="2">支付1元预约金</div>
+        <!--
         <div style="clear: both;">
-            <!--<div class="sub_btn_no_clear bgc choose_submit" data-type="1">我要个性化</div>-->
+            <div class="sub_btn_no_clear bgc choose_submit" data-type="1">我要个性化</div>
             <div class="sub_btn_no_clear bgc_direct" data-type="2">直接预约</div>
         </div>
+        -->
     </div>
     <div style="display:none">
         <input type="hidden" class="age" value="2"/>
@@ -161,10 +163,10 @@
             <input type="hidden" name="serial_number" class="serial_number" value=""/>
         </form>
         -->
-        <form action="/pay/success" method="post" id="sec_order">
+        <form action="/wechat/pay/scan" method="post" id="sec_order">
             <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
             <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
-            <input type="hidden" name="price" class="price" value="0"/>
+            <input type="hidden" name="price" class="price" value="<?=BASE_PRICE;?>"/>
             <input type="hidden" name="serial_number" class="serial_number" value="<?=$serial_number;?>"/>
         </form>
         <form action="/individual" method="post" id="individual_form">

@@ -59,11 +59,18 @@ class Pay extends CI_Controller {
                             'msg' => '缺少订单序列号',
                             )
                         ));*/
-            exit('订单价格错误');
+            //exit('订单价格错误');
+            $price = BASE_PRICE;
         }
 
         $data['serial_number'] = $serial_number;
         $data['price'] = $price;
+
+
+        //update order status
+        $this->load->model('order_model', 'order');
+        $arr = array('deposit' => ORDER_FEE, 'status' => ORDER_STATUS_THIRD);
+        $ret = $this->order->update_order_arr($order_id, $arr);
 		
 		if(check_device()){
 			$this->load->view('mobile/pay_ret', $data);

@@ -14,16 +14,49 @@
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/h5v2/common.js"></script>
+    <style type="text/css">
+    .menu_img {
+        position:fixed;
+        width:100%;
+        height:50px;
+        /*background-image:url('/static/image/wechat/menu.jpg');*/
+        background-color:#333333;
+        text-align:center;
+        line-height:50px;
+        z-index: 5;
+    }
+
+    .bgcl{
+	    background-color:#1dd2af;
+	    padding:10px 80px;
+	    display:inline;	
+	    position:relative;
+	    border-radius: 10px;
+	    -webkit-border-radius: 10px;
+	    color:#fff;
+        z-index:6;
+    }
+    .ft48{
+	    font-size:22px;
+    }
+    </style>
 </head>
 
 <body>
+    <div class="view menu_img">
+        <img style="height:50px;width:auto;" src="/static/image/wechat/menu.jpg">
+        <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px">
+            <a href="#appoint" style="text-decoration:none;font-size:15px;padding: 6px 10px;background-color:#1dd2af" class="bgcl ft48">预约</a >
+        </div>
+    </div>
+    <div style="height:49px;"></div>
 
 <section class="view">
     <img src="/static/image/h5v2/home12-1.png">
     <div class="subscribe">
         <p>北京·仅30个天使用户</p>
-        <button type="button">立即预约</button>
-        <p>已有******排队</p>
+        <a href="#appoint"><button type="button">立即预约</button></a>
+        <p>已有40人排队</p>
     </div>
 </section>
 
@@ -31,9 +64,11 @@
     <img src="/static/image/h5v2/home12-2.png">
 </section>
 
+<!--
 <section class="view">
     <img src="/static/image/h5v2/home12-3.png">
 </section>
+-->
 
 <section class="view">
     <img src="/static/image/h5v2/home12-4.png">
@@ -62,7 +97,14 @@
 <section class="view">
     <img src="/static/image/h5v2/home12-10.png">
 </section>
+<section class="view">
+    <img src="/static/image/h5v2/home12-11.png">
+</section>
+<section class="view">
+    <img src="/static/image/h5v2/home12-12.png">
+</section>
 
+<!--
 <div class="view">
     <ul id="ten">
         <li>
@@ -73,15 +115,16 @@
         </li>
     </ul>
 </div>
+-->
 
 <section class="view">
     <div class="view-title">客厅</div>
     <ul id="drawing-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-13.png"></a>
+            <img src="/static/image/h5v2/home12-13.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-13.png"></a>
+            <img src="/static/image/h5v2/home12-13.png">
         </li>
     </ul>
 </section>
@@ -90,10 +133,10 @@
     <div class="view-title">主卧</div>
     <ul id="master-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-14.png"></a>
+            <img src="/static/image/h5v2/home12-14.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-14.png"></a>
+            <img src="/static/image/h5v2/home12-14.png">
         </li>
     </ul>
 </section>
@@ -102,10 +145,10 @@
     <div class="view-title">次卧</div>
     <ul id="subaltern-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-15.png"></a>
+            <img src="/static/image/h5v2/home12-15.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-15.png"></a>
+            <img src="/static/image/h5v2/home12-15.png">
         </li>
     </ul>
 </section>
@@ -114,10 +157,10 @@
     <div class="view-title">卫生间</div>
     <ul id="rest-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-16.png"></a>
+            <img src="/static/image/h5v2/home12-16.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-16.png"></a>
+            <img src="/static/image/h5v2/home12-16.png">
         </li>
     </ul>
 </section>
@@ -126,10 +169,10 @@
     <div class="view-title">厨房</div>
     <ul id="kitchen-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-17.png"></a>
+            <img src="/static/image/h5v2/home12-17.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-17.png"></a>
+            <img src="/static/image/h5v2/home12-17.png">
         </li>
     </ul>
 </section>
@@ -138,10 +181,10 @@
     <div class="view-title">餐厅</div>
     <ul id="dining-room" class="slide-area">
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-18.png"></a>
+            <img src="/static/image/h5v2/home12-18.png">
         </li>
         <li>
-            <a href="#"><img src="/static/image/h5v2/home12-18.png"></a>
+            <img src="/static/image/h5v2/home12-18.png">
         </li>
     </ul>
 </section>
@@ -181,16 +224,17 @@
     <img src="/static/image/h5v2/home12-26.png">
 </section>
 
-<section class="view">
+<section class="view" id="appoint">
     <img src="/static/image/h5v2/one-yun.png" width="100%">
     <form id="info-form" class="info-form">
         <div class="form-element">
             <div class="form-label">姓名</div>
             <div class="form-input">
-                <input type="text" class="text-input "  placeholder="" >
+                <input type="text" class="text-input choose_input_name"  placeholder="如：王先生" >
             </div>
         </div>
 
+        <!--
         <div class="form-element">
             <div class="form-label">性别</div>
             <div class="form-input">
@@ -199,38 +243,37 @@
                 <input type="hidden" name="gender" class="text-input gender"  placeholder="" >
             </div>
         </div>
-
         <div class="form-element">
             <div class="form-label">出生年份</div>
             <div class="form-input">
                 <input type="text" id="birthday" class="text-input birthday"  placeholder="" >
             </div>
         </div>
-
+        -->
         <div class="form-element">
             <div class="form-label">房屋面积</div>
             <div class="form-input">
-                <input type="text" class="text-input "  placeholder="默认单位：㎡" >
+                <input type="text" class="text-input acreage_input"  placeholder="默认单位：㎡" >
             </div>
         </div>
 
         <div class="form-element">
             <div class="form-label">新房地址</div>
             <div class="form-input">
-                <input type="text" class="text-input "  placeholder="" >
+                <input type="text" class="text-input location_input"  placeholder="如：朝阳区双井时代嘉园" >
             </div>
         </div>
 
         <div class="form-element">
             <div class="form-label">装修时间</div>
             <div class="month-list">
-                <div class="month on">6月</div>
-                <div class="month">7月</div>
-                <div class="month">8月</div>
-                <div class="month">9月</div>
-                <div class="month">10月</div>
-                <div class="month">11月</div>
-                <div class="month">12月</div>
+                <div class="month on" title='6'>6月</div>
+                <div class="month" title='7'>7月</div>
+                <div class="month" title='8'>8月</div>
+                <div class="month" title='9'>9月</div>
+                <div class="month" title='10'>10月</div>
+                <div class="month" title='11'>11月</div>
+                <div class="month" title='12'>12月</div>
             </div>
             <input type="hidden" id="month-input" name="month" value="">
         </div>
@@ -238,21 +281,23 @@
         <div class="form-element">
             <div class="form-label">手机号</div>
             <div class="form-input">
-                <input type="text" class="text-input "  placeholder="" >
+                <input type="text" class="text-input app_phone"  placeholder="请输入手机号" >
             </div>
         </div>
 
+        <!--
         <div class="form-element">
             <div class="form-label">验证码</div>
             <div class="form-input">
-                <input type="text" class="verify-code"  placeholder="请输入验证码" >
-                <div class="info-form-button get-verify-code left ">获取验证码</div>
+                <input type="text" class="verify-code app_code"  placeholder="请输入验证码" >
+                <div class="yzm info-form-button get-verify-code left ">获取验证码</div>
             </div>
             
         </div>
+        -->
 
         <div class="form-element center">
-            <button type="button" class="info-form-button info-form-submit">提交</button>
+            <button type="button" class="app_sub info-form-button info-form-submit">提交</button>
         </div>
     </form>
 </section>
@@ -273,5 +318,129 @@
 
     </div>
 </footer>
+<div style="display:none">
+    <input type="hidden" id="min_acreage" value="<?=MIN_ACREAGE;?>"/>
+    <input type="hidden" id="max_acreage" value="<?=MAX_ACREAGE;?>"/>
+        <form action="/wechat/pay" method="post" id="sec_order">
+            <input type="hidden" name="order_id" class="order_id" value=""/>
+            <input type="hidden" name="user_id" class="user_id" value=""/>
+            <input type="hidden" name="serial_number" class="serial_number" value=""/>
+        </form>
+</div>
 </body>
+<script type="text/javascript">
+    var s = 30;
+    var get_code = true;
+    $('.app_sub').live('click',function(){
+        var phone = $(".app_phone").val();
+        //var verify_number = $(".app_code").val();
+
+        var name = $(".choose_input_name").val();
+        var decor_date = parseInt($(".month-list").children(".on").attr('title'));
+        var acreage = parseInt($('.acreage_input').val());
+        var xiaoqu = $(".location_input").val();
+
+        if(!input_check(phone , '3245')){
+            return false;
+        }
+
+        if(name == undefined || name == ''){
+            alert('请输入姓名');
+            return false;
+        }
+
+        if(decor_date > 12 || decor_date <= 0 || isNaN(decor_date)){
+            alert('日期不合法');
+            return false;
+        }
+
+        var min_acreage = $("#min_acreage").val();
+        var max_acreage = $("#max_acreage").val();
+        if(acreage < min_acreage || acreage > max_acreage || isNaN(acreage)){
+            alert('面积非法,只能预定' + min_acreage + '到' + max_acreage + '之间');
+            return false;
+        }
+
+        if(xiaoqu == undefined || xiaoqu == ''){
+            alert('请输入小区名');
+            return false;
+        }
+
+            $.post('/order/appoint_wechat',
+                {name: name, acreage: acreage, decor_time: decor_date, location: xiaoqu, phone: phone},
+                function(data, status){
+                    if(status == "success"){
+                        data = eval('(' + data + ')');
+                        if(data.code == 0){
+                            if(data.order_id > 0 && data.user_id > 0 && data.serial_number > 0){
+                                $(".order_id").val(data.order_id);    
+                                $(".user_id").val(data.user_id);    
+                                $(".serial_number").val(data.serial_number);    
+                                $("#sec_order").submit();
+                            }else{
+                                alert(data.msg);
+                                return false;
+                            }
+                        }else{
+                            alert(data.msg);
+                            return false;
+                        }
+                    }else{
+                        alert("通信错误");
+                        return false;
+                    }
+                });
+    });
+
+
+    $('.yzm').live('click',function(){
+        if(get_code){
+            var num = $(".app_phone").val();
+            var reg = /^1[34578]\d{9}$/;
+            if(!reg.test(num)){
+                alert('请输入正确的手机号');
+                return false;
+            }
+
+            code_time();
+            $.post('/user/phone_verify',
+                {phone: num}, function(data, status){
+                        if(status == "success"){
+                            data = eval('(' + data + ')');
+                            if(data.code != 0){
+                                alert(data.msg);
+                            }
+                        }else{
+                            alert('获取失败,请30秒后重新获取');
+                        }
+                });
+        }
+    })
+
+    var code_time = function(that){
+        get_code = false;
+        if(s < 0){
+            $('.yzm').html('重新获取');
+            get_code = true;
+            s=30;
+            return false;
+        }
+        $('.yzm').html('还剩'+s+'秒');
+        s--;
+        setTimeout("code_time()",1000);
+        
+    }
+    var input_check = function(p,c){
+        var reg = /^1[34578]\d{9}$/;
+        if(!reg.test(p)){
+            alert('请输入正确的手机号');
+            return false;
+        }else if(c.length !== 4){
+            alert('请输入正确的验证码');
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
 </html>

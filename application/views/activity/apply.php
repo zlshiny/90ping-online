@@ -9,17 +9,17 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" type="text/css" href="css/common.css" />
-    <script type="text/javascript" charset="utf-8" src="js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/fastclick.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/jquery.bxslider.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/common.js"></script>   
+    <link rel="stylesheet" type="text/css" href="/static/css/activity/neighbor.css" />
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/activity/activity.js"></script>   
 </head>
 
 <body class="apply">
 
 <div class="apply-title">
-    <img src="image/apply-title.png">
+    <img src="/static/image/activity/apply-title.png">
 </div>
 
 <div class="apply-form">

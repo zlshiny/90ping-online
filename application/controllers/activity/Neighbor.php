@@ -19,19 +19,27 @@ class Neighbor extends CI_Controller {
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function index(){
-        $this->load->view('activity/neighbor.php');
+        $this->load->view('activity/zc.php');
     }
 
     public function detail($id){
         if($id > 0){
             $this->load->model('neighbor_model', 'neighbor');
             $data['detail'] = $this->neighbor->get_nt_detail($id);
+            $this->load->view('activity/detail.php', $data);
+        }else{
+            exit('id required');
         }
     }
 
     public function lists($limit = 10){
         $this->load->model('neighbor_model', 'neighbor');
         $data['list'] = $this->neighbor->get_list($limit);
+        $this->load->view('activity/zc', $data);
+    }
+
+    public function apply(){
+        $this->load->view('activity/apply');
     }
 
     public function found(){

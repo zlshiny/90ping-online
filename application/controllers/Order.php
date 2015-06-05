@@ -170,7 +170,8 @@ class Order extends CI_Controller {
         }
         $xiaoqu = htmlspecialchars(trim($xiaoqu));
 
-        $price = BASE_PRICE + ($acreage - BASE_ACREAGE) * PRICE_PER_ACR;
+        //$price = BASE_PRICE + ($acreage - BASE_ACREAGE) * PRICE_PER_ACR;
+        $price = BASE_PRICE;
 
         $order = array('order_id' => $order_id, 'user_id' => $user_id, 'decor_date' => $decor_date,
             'acreage' => $acreage, 'status' => ORDER_STATUS_SEC, 'price' => $price, 'city' => $city, 'name' => $name,
@@ -221,13 +222,14 @@ class Order extends CI_Controller {
             ));
         }
 
-        if(!$pverify_number = $this->input->post('phone_verify_number')){
+        /*
+        if(!$pverify_number = $this->input->post('verify')){
             exit(json_encode(array(
                     'code' => -2,
                     'msg' => '缺少验证码',
                 )
             ));
-        }
+        }*/
 
         if(!check_phone($phone)){
             exit(json_encode(array(
@@ -237,7 +239,7 @@ class Order extends CI_Controller {
             ));
         }
 
-        $source = ORDER_SOURCE_WEB;
+        $source = ORDER_SOURCE_WECHAT;
         if(isset($_POST['source'])){
             $source = $this->input->post('source');
         }
@@ -250,6 +252,7 @@ class Order extends CI_Controller {
             ));
         }
 
+        /*
         if(!$gender = $this->input->post('gender') || $gender != GENDER_MAN || $gender != GENDER_WOMEN){
             exit(json_encode(array(
                     'code' => -12,
@@ -266,8 +269,9 @@ class Order extends CI_Controller {
             ));
         }
         $age = intval(date('Y')) - $year;
+        */
 
-        if(!$acreage = $this->input->post('acreage') || $acreage < MIN_ACREAGE || $acreage > MAX_ACREAGE){
+        if(!($acreage = $this->input->post('acreage')) || $acreage < MIN_ACREAGE || $acreage > MAX_ACREAGE){
             exit(json_encode(array(
                     'code' => -14,
                     'msg' => '面积不合法',
@@ -283,7 +287,7 @@ class Order extends CI_Controller {
             ));
         }
 
-        if(!$decor_time = $this->input->post('decor_time') || intval($decor_time) <= 0 || intval($decor_time) > 12){
+        if(!($decor_time = $this->input->post('decor_time')) || intval($decor_time) <= 0 || intval($decor_time) > 12){
             exit(json_encode(array(
                     'code' => -16,
                     'msg' => '装修时间不合法',
@@ -293,6 +297,7 @@ class Order extends CI_Controller {
         $decor_time = date('Y') . '-' . $decor_time . '-' . date('d') . ' ' . date('H:i:s');
 
 
+        /*
         $this->load->library('session');
         if(!isset($_SESSION['phone_verify_number'])){
             exit(json_encode(array(
@@ -311,11 +316,14 @@ class Order extends CI_Controller {
         }
 
         unset($_SESSION['phone_verify_number']);
+        */
+
         $this->load->model("user_model", 'user');
         $this->load->model('order_model', 'order');
+        $this->load->model('house_model', 'house');
         $product_id = 1;
 
-        if($ret = $this->order->appointment_wechat($name, $phone, $gender, $age, $acreage, $location,
+        if($ret = $this->order->appointment_wechat($name, $phone, $acreage, $location,
             $decor_time, $product_id, $source)){
             exit(json_encode(array(
                     'code' => 0,

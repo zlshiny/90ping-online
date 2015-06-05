@@ -588,6 +588,7 @@ body{
 .choose_banner_appoint .wechat_main{
     height:430px;
     background-color:#fff;
+    margin-top:20px;
     width:460px;
     clear:both;
     float:left;

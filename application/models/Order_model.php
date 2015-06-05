@@ -192,7 +192,7 @@ class Order_Model extends CI_Model{
     }
 
     //微信预约
-    public function appointment_wechat($name, $phone, $gender, $age, $acreage, $location,
+    public function appointment_wechat($name, $phone, $acreage, $location,
                                        $decor_time, $product_id, $source){
         if(!check_phone($phone)) return array();
 
@@ -200,7 +200,7 @@ class Order_Model extends CI_Model{
         $order = array('product_id' => $product_id, 'serial_number' => $order_no,
             'status' => ORDER_STATUS_SEC, 'source' => $source, 'decor_time' => $decor_time);
         $house = array('acreage' => $acreage, 'area' => $location);
-        $user = array('phone' => $phone, 'name' => $name, 'gender' => $gender, 'age' => $age);
+        $user_arr = array('phone' => $phone, 'name' => $name);
 
         $order_id = 0;
         $user_id = 0;
@@ -209,12 +209,12 @@ class Order_Model extends CI_Model{
             $order_id = $this->insert_order($order);
             $user_id = $user->user_id;
 
-            $this->user->update_user($user->user_id, $user);
+            $this->user->update_user($user->user_id, $user_arr);
 
             $house['order_id'] = $order_id;
             $house['user_id'] = $user->user_id;
         }else{
-            if(!$user_id = $this->user->insert_user_arr($user)) return array();
+            if(($user_id = $this->user->insert_user_arr($user_arr)) <= 0) return array();
             $order['user_id'] = $user_id;
             $order_id = $this->insert_order($order);
 
@@ -253,6 +253,15 @@ class Order_Model extends CI_Model{
         }
 
         return $ret;
+    }
+
+    public function update_status($order_id, $status){
+        if($order_id <= 0 || ($status != ORDER_STATUS_THIRD && $status != ORDER_STATUS_FIRST && $status != ORDER_STATUS_SEC)) return -1;
+        if(!$this->get_order($order_id)) return -2;
+
+        $arr = array('status' => $status);
+        $this->master_db->where('id', $order_id);
+        return $this->master_db->update('orders', $arr);
     }
 
 }
