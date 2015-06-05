@@ -13,7 +13,7 @@
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/static/js/activity/activity.js"></script>   
+    <script type="text/javascript" charset="utf-8" src="/static/js/activity/neighbor.js"></script>   
 </head>
 
 <body class="detail">
@@ -26,27 +26,27 @@
     <div class="detail-banner">
         <div class="button-area">
             <div class="button">
-                <button type="button" class="detail-banner-button ">我要参与</button>
+                <a href="/activity/neighbor/join/<?=$detail['id'];?>/<?=urlencode($detail['district']);?>"><button type="button" class="detail-banner-button ">我要参与</button></a>
             </div>
             <div class="button">
-                <button type="button" class="detail-banner-button ">我要发起</button>
+                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我要发起</button></a>
             </div>
         </div>
-        <p>结束时间：还剩4天22时15分56秒</p>
+        <p>结束时间：还剩<?=$detail['left_time']['d'];?>天<?=$detail['left_time']['h'];?>时<?=$detail['left_time']['i'];?>分<?=$detail['left_time']['s'];?>秒</p>
     </div>
 
     <div class="detail-content">
 
         <div class="desciption">
             <div class="desciption-title">
-                <p class="p1">众筹优惠目标：<font class="p1-money">20万</font></p>
+                <p class="p1">众筹优惠目标：<font class="p1-money"><?=$detail['target_money'];?></font></p>
                 <p class="p2">满20人，每人优惠10000元</p>
             </div>
             <div class="author">
-                发起人：赵将伟
+                发起人：<?=$detail['uname'];?>
             </div>
             <div class="desciption-content">
-                无论70、80、还是90后，只需三步，你的肌肤蜕变00后！彩虹（Rainbow）三部曲胶原蛋白弹力面膜贴10片/盒！首创面膜三部曲：Step1深层洁面，打开肌肤通道；Step2安瓶精华镇定肌肤促进后续吸收；Step3美白保湿，给肌肤注入胶原蛋白新能量！让时间继续，让颜值状态永远18岁！
+                <?=$detail['slogan'];?>
             </div>
         </div>
 
@@ -56,7 +56,7 @@
                     当前参与人次
                 </div>
                 <div class="content-menu-content">
-                    5 人
+                    <?=$detail['current_ucount'];?> 人
                 </div>
             </div>
 
@@ -65,7 +65,7 @@
                     距目标还差
                 </div>
                 <div class="content-menu-content">
-                    3 人
+                    <?=$detail['left_target_people'];?> 人
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                     发起时间
                 </div>
                 <div class="content-menu-content">
-                    5.29
+                    <?=$detail['create_time'];?>
                 </div>
             </div>
 
@@ -83,21 +83,13 @@
         <div class="user-list">
             <p>参与用户</p>
             <table class="user-list-table">
+                <?php foreach($detail['partin'] as $part):?>
                 <tr>
-                    <td class="center" width="35%">张三</td>
-                    <td class="pleft" width="30%">1504</td>
-                    <td class="pleft" width="35%">5-23 12：19</td>
+                    <td class="center" width="35%"><?=$part['name'];?></td>
+                    <td class="pleft" width="30%"></td>
+                    <td class="pleft" width="35%"><?=$part['create_time'];?></td>
                 </tr>
-                <tr>
-                    <td class="center">张三</td>
-                    <td class="pleft">1504</td>
-                    <td class="pleft">5-23 12：19</td>
-                </tr>
-                <tr>
-                    <td class="center">张三</td>
-                    <td class="pleft">1504</td>
-                    <td class="pleft">5-23 12：19</td>
-                </tr>
+                <?php endforeach;?>
             </table>
         </div>
 

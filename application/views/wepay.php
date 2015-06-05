@@ -71,7 +71,7 @@
         <!--
 		<button style="width:240px; height:60px; background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:24px;" type="button" onclick="callpay()" >支付一元预约金</button>
         -->
-		<button class="pay-money" type="button" onclick="callpay()" >支付一元预约金</button>
+		<button class="pay-money" type="button" onclick="callpay()">支付一元预约金</button>
 	</div>
 </body>
 <div style="display:none;">

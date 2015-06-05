@@ -187,6 +187,7 @@ margin-left:5px;
    </div>
     <div style="padding-top:15px;text-align:center;margin-top:10px;height:50px;">
 	    <a href="#" style="text-decoration:none;" target="_blank" class="bgcl ft48 app_sub">提交</a>
+	    <a href="/wechat/pay" style="text-decoration:none;" target="_blank" class="">支付</a>
     </div>
     </div>
     <div class="img">

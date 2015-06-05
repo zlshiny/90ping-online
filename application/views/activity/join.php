@@ -23,11 +23,13 @@
 </div>
 
 <div class="apply-form">
+<input type="hidden" id="nt_id" value="<?=$id;?>"/>
+<input type="hidden" id="nt_name" value="<?=$name;?>"/>
     <form>
         <div class="form-element">
             <p>小区名称</p>
             <div class="form-input">
-                <input type="text" class="text-input left" id="district"  placeholder="如：朝阳区时代国际嘉园" >
+                <input type="text" class="text-input left" id="district" disabled="true" readOnly="true" value="<?=$name;?>">
             </div>
         </div>
 
@@ -41,12 +43,6 @@
             <p>手机号</p>
             <div class="form-input">
                 <input type="text" class="text-input left" id="phone"  placeholder="请输入手机号" >
-            </div>
-        </div>
-        <div class="form-element">
-            <p>宣言</p>
-            <div class="form-input">
-                <input type="text" class="text-input left" id="slogan"  placeholder="如：兄弟们，来啊" >
             </div>
         </div>
         <!--
@@ -71,9 +67,8 @@
 <script type="text/javascript">
     $(".pay-form-submit").live('click', function(){
         var name = $("#name").val();
-        var slogan = $("#slogan").val();
         var phone = $("#phone").val();
-        var district = $("#district").val();
+        var nt_id = $("#nt_id").val();
         var target = 3;
 
         if(name == undefined || name == ''){
@@ -86,26 +81,30 @@
             return false;
         }
 
-        if(slogan == undefined || slogan == ''){
-            alert('宣言为空');
+        if(nt_id == undefined || nt_id <= 0){
+            alert('活动非法');
             return false;
         }
 
-        if(district == undefined || district == ''){
-            alert('地区为空');
-            return false;
-        }
-
-        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target}, 
+        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id}, 
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
                         if(data.code == 0){
-                            alert('发起成功');
+                            alert('参与成功');
                             location.href = '/activity/neighbor/detail/' + data.id;
                         }else if(data.code == -20){
                             alert('您需要先预约哦');
                             location.href = '/wechat/product/v2';
+                        }else if(data.code == -21){
+                            alert('您已经参与过了哦');
+                            location.href = '/wechat/product/v2';
+                        }else if(data.code == -11){
+                            alert('活动不存在');
+                            location.href = '/wechat/product/v2';
+                        }else if(data.code == -12){
+                            alert('参与人数已满,您可以自己发起哦');
+                            location.href = '/activity/neighbor/apply';
                         }else{
                             alert('系统错误，请稍后再试！');
                             return false;

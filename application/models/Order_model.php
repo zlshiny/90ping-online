@@ -8,6 +8,29 @@ class Order_Model extends CI_Model{
         $this->master_db = $this->load->database('master', TRUE);
     }
 
+    public function is_order_by_uid($user_id){
+        if($user_id < 0) return false;
+        $this->master_db->select('id');
+        $this->master_db->from('orders');
+        $this->master_db->where('user_id', $user_id);
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        return false;
+    }
+
+    public function is_order_by_phone($phone){
+        if(!$phone) return false;
+        if($user = $this->user->get_user($phone)){
+            $user_id = $user->user_id; 
+            return $this->is_order_by_uid($user_id);
+        }
+
+
+        return false;
+    }
+
     public function get_order_list($user_id){
         if(!$user_id || $user_id <= 0) return array();
         $this->master_db->select('*');

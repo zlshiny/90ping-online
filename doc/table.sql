@@ -93,6 +93,7 @@ CREATE TABLE `neighbor_together`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT UNSIGNED NOT NULL DEFAULT 0,
     `uname` varchar(64) NOT NULL DEFAULT '' COMMENT '发起者姓名',
+    `phone` bigint NOT NULL DEFAULT 0 COMMENT 'phone number',
     `current_ucount` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '当前参与人数',
     `current_state` TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT '当前阶段',
     `slogan` varchar(255) NOT NULL DEFAULT '' COMMENT '口号',
@@ -105,5 +106,7 @@ CREATE TABLE `neighbor_together_user`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `nt_id` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '活动ID',
     `user_id` INT UNSIGNED NOT NULL DEFAULT 0 COMMENT '参与人',
+    `phone` bigint NOT NULL DEFAULT 0 COMMENT 'phone number',
+    `uname` varchar(64) NOT NULL DEFAULT '' COMMENT '参与者姓名',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;

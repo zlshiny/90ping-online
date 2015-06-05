@@ -9,6 +9,7 @@ body{
   color: #515151; 
   margin: 0; 
   padding: 0;
+  position: relative;
 }
 body input,body textarea{
   font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif;

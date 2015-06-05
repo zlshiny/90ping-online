@@ -26,6 +26,11 @@ $(function(){
         $('#month-input').val(inputVal);
     })
 
+    $(".privilege").on('click', function(){
+        var id = $(this).attr('data-id');
+        location.href="/activity/neighbor/detail/" + id;
+    });
+
     //幻灯
 })
 
