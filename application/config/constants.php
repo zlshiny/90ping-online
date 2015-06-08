@@ -21,6 +21,8 @@ define('IMAGE_PATH', STATIC_PATH . 'image/');
 define('WECHAT_TOKEN', 'kobe8tracy');//微信token
 define('WECHAT_AESKEY', 'Y7Kr9DQl28wKixTBlnTxK4rrXkxjoQJ4YKwK76d1CI8');//密钥
 
+define('ZC_PHONE', '18501761049');
+
 //订单来源
 define('ORDER_SOURCE_WEB', 0);
 define('ORDER_SOURCE_WECHAT', 1);
@@ -32,7 +34,7 @@ define('ORDER_SOURCE_MOBILE', 2);
 define('WECHAT_APPID', 'wxa5822f41b8d7e551');
 define('WECHAT_APPSECRET', '3ed2716761aac81a05c12b95ccf5dc88');
 define('WEPAY_ROOT_PATH', APPPATH . '/libraries/wechat');
-define('ORDER_FEE', 1);//预约金额，单位为分
+define('ORDER_FEE', 100);//预约金额，单位为分
 
 //最大面积
 define('MAX_ACREAGE', 200);

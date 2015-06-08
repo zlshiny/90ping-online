@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>史上最省心互联网智能家装—超级Home1.2升级版限量开抢，传统装修方式，该翻篇了！</title>
+    <title>最省心互联网智能家装—超级Home限量开抢,传统家装方式,该翻篇了！</title>
     <meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
@@ -41,6 +41,9 @@
     .ft48{
 	    font-size:22px;
     }
+    .margin_conf{
+        margin-bottom: 15px;
+    }
     </style>
 </head>
 
@@ -54,58 +57,64 @@
     <div style="height:49px;"></div>
 
 <section class="view">
-    <img src="/static/image/h5v2/home12-1.png">
+    <img src="/static/image/h5v2/home12-1.jpg">
     <div class="subscribe">
         <p>北京·仅30个天使用户</p>
         <a href="#appoint"><button type="button">立即预约</button></a>
+        <!--
         <p>已有45排队</p>
+        -->
     </div>
 </section>
 
-<section class="view">
-    <img src="/static/image/h5v2/home12-2.png">
+<section class="view" style="margin-top:-4px;">
+    <img src="/static/image/h5v2/home12-2.jpg">
 </section>
 
 <section class="view">
-    <img src="/static/image/h5v2/home12-3.png">
+    <img src="/static/image/h5v2/home12-3.jpg">
 </section>
 
 <section class="view">
-    <img src="/static/image/h5v2/home12-4.png">
+    <img src="/static/image/h5v2/home12-4.jpg">
 </section>
 
 <section class="view">
-    <img src="/static/image/h5v2/home12-5.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-6.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-7.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-8.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-9.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-10.png">
+    <img src="/static/image/h5v2/home12-5.jpg">
 </section>
 
 <section class="view">
     <div class="swiper-container container-ten">
         <ul id="ten" class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-11.png">
+                <img src="/static/image/h5v2/01.jpg">
             </li>
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-12.png">
+                <img src="/static/image/h5v2/02.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/03.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/04.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/05.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/06.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/07.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/08.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/09.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/10.jpg">
             </li>
         </ul>
         <div class="swiper-button-next next-ten"></div>
@@ -114,22 +123,53 @@
 </section>
 
 <section class="view">
+    <img src="/static/image/h5v2/rx.jpg">
+</section>
+<section>
+    <div class="swiper-container container-ten">
+        <ul id="ten" class="swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/11.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/12.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/13.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/14.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/15.jpg">
+            </li>
+        </ul>
+        <div class="swiper-button-next next-ten"></div>
+        <div class="swiper-button-prev prev-ten"></div>
+    </div>
+</section>
+
+<section class="view">
+    <img src="/static/image/h5v2/home12-6.jpg">
+</section>
+
+<section class="view">
+</section>
+
+<!--
+<section class="view" style="margin-bottom:45px;">
     <div class="view-title">客厅</div>
     <div class="swiper-container container-drawing">
         <ul id="drawing-room" class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-13.png">
-            </li>
-            <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-13.png">
+                <img src="/static/image/h5v2/k1.jpg">
             </li>
         </ul>
         <div class="swiper-button-next next-drawing"></div>
         <div class="swiper-button-prev prev-drawing"></div>
     </div>
 </section>
-
-<section class="view">
+<section class="view" style="margin-bottom:45px;">
     <div class="view-title">主卧</div>
     <div id="master-room" class="swiper-container container-master">
         <ul id="master-room" class="slide-area swiper-wrapper">
@@ -144,32 +184,110 @@
         <div class="swiper-button-prev prev-master"></div>
     </div>
 </section>
+-->
 
-<section class="view">
-    <div class="view-title">次卧</div>
-    <div id="subaltern-room" class="swiper-container container-subaltern">
-        <ul id="subaltern-room" class="slide-area swiper-wrapper">
+<section class="view" style="margin-bottom:25px;">
+    <div class="swiper-container container-drawing">
+        <ul id="drawing-room" class="swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-15.png">
+                <img src="/static/image/h5v2/k1.jpg">
             </li>
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-15.png">
+                <img src="/static/image/h5v2/kt2.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/kt4.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/kt5.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/kt3.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/kt6.jpg">
             </li>
         </ul>
-        <div class="swiper-button-next next-subaltern"></div>
-        <div class="swiper-button-prev prev-subaltern"></div>
+        <div class="swiper-button-next next-drawing"></div>
+        <div class="swiper-button-prev prev-drawing"></div>
     </div>
 </section>
 
-<section class="view">
-    <div class="view-title">卫生间</div>
+<section class="view" style="margin-bottom:25px;">
+    <div id="master-room" class="swiper-container container-master">
+        <ul id="master-room" class="slide-area swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/z1.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/z2.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw3.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw4.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw5.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw6.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw7.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw8.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/zw9.jpg">
+            </li>
+        </ul>
+        <div class="swiper-button-next next-master"></div>
+        <div class="swiper-button-prev prev-master"></div>
+    </div>
+</section>
+
+<section class="view" style="margin-bottom:25px;">
+    <img src="/static/image/h5v2/cw1.jpg">
+    <!--
+    <div id="subaltern-room" class="swiper-container container-subaltern">
+        <ul id="subaltern-room" class="slide-area swiper-wrapper">
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cw1.jpg">
+            </li>
+        </ul>
+    </div>
+    -->
+</section>
+
+<section class="view" style="margin-bottom:25px;">
     <div id="rest-room" class="swiper-container container-rest">
         <ul id="rest-room" class="slide-area swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-16.png">
+                <img src="/static/image/h5v2/w1.jpg">
             </li>
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-16.png">
+                <img src="/static/image/h5v2/wsj2.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj3.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj5.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj6.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj7.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj8.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/wsj9.jpg">
             </li>
         </ul>
         <div class="swiper-button-next next-rest"></div>
@@ -177,15 +295,35 @@
     </div>
 </section>
 
-<section class="view">
-    <div class="view-title">厨房</div>
+<section class="view" style="margin-bottom:25px;">
     <div id="kitchen-room" class="swiper-container container-kitchen">
         <ul id="kitchen-room" class="slide-area swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-17.png">
+                <img src="/static/image/h5v2/cf1.jpg">
             </li>
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-17.png">
+                <img src="/static/image/h5v2/cf4.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf2.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf3.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf5.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf6.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf7.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf8.jpg">
+            </li>
+            <li class="swiper-slide">
+                <img src="/static/image/h5v2/cf9.jpg">
             </li>
         </ul>
         <div class="swiper-button-next next-kitchen"></div>
@@ -194,55 +332,40 @@
 </section>
 
 <section class="view">
-    <div class="view-title">餐厅</div>
+    <img src="/static/image/h5v2/ct1.jpg">
+    <!--
     <div id="dining-room" class="swiper-container container-dining">
         <ul id="dining-room" class="slide-area swiper-wrapper">
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-18.png">
-            </li>
-            <li class="swiper-slide">
-                <img src="/static/image/h5v2/home12-18.png">
+                <img src="/static/image/h5v2/ct1.jpg">
             </li>
         </ul>
         <div class="swiper-button-next next-dining"></div>
         <div class="swiper-button-prev prev-dining"></div>
     </div>
+    -->
+</section>
+
+<section class="view" style="margin-top:-5px;">
+    <img src="/static/image/h5v2/home12-7.jpg">
+</section>
+
+<section class="view" style="margin-top:-5px;">
+    <img src="/static/image/h5v2/home12-8.jpg">
 </section>
 
 <section class="view">
-    <img src="/static/image/h5v2/home12-19.png">
+    <img src="/static/image/h5v2/home12-9.jpg">
 </section>
 
-<section class="view">
-    <img src="/static/image/h5v2/home12-20.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-21.png">
-</section>
-
+<!--
 <section class="view">
     <img src="/static/image/h5v2/home12-22.png">
     <div class="subscribe">
         <p>每月最低还款**元，无抵押，最快2小时放款</p>
     </div>
 </section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-23.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-24.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-25.png">
-</section>
-
-<section class="view">
-    <img src="/static/image/h5v2/home12-26.png">
-</section>
+-->
 
 <section class="view" id="appoint">
     <img src="/static/image/h5v2/one-yun.png" width="100%">
@@ -398,16 +521,19 @@
 <footer>
     <div class="two-dimension">
         <p class="ptitle">长按识别</p>
-        <img src="/static/image/h5v2/two-dimension-code.png">
-        <p class="pphone">VIP客户服务：18501761049</p>
+        <img src="/static/image/h5v2/qrcode.jpg">
+        <!--<p class="pphone">VIP客户服务：18501761049</p>-->
+        <p class="pphone"><a href="tel:18501761049">VIP客户服务：18501761049</a></p>
     </div>
     <div class="footer-nav">
         <a href="#" class="rborder">超级Home1.2</a> | 
-        <a href="#" class="rborder">常见问题</a>
+        <a href="/wechat/product/problem" class="rborder">常见问题</a>
          | 
-        <a href="#" class="rborder">进入官网</a>
+        <a href="/" class="rborder">进入官网</a>
+        <!--
          | 
         <a href="#">联系客服</a>
+        -->
         
     </div>
 </footer>
@@ -418,6 +544,7 @@
             <input type="hidden" name="order_id" class="order_id" value=""/>
             <input type="hidden" name="user_id" class="user_id" value=""/>
             <input type="hidden" name="serial_number" class="serial_number" value=""/>
+            <input type="hidden" name="phone" class="phone" value=""/>
         </form>
 </div>
 
@@ -498,6 +625,7 @@
                                 $(".order_id").val(data.order_id);    
                                 $(".user_id").val(data.user_id);    
                                 $(".serial_number").val(data.serial_number);    
+                                $(".phone").val(phone);
                                 $("#sec_order").submit();
                             }else{
                                 alert(data.msg);

@@ -41,6 +41,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['district'] = $row['district'];
                 $tmp['uname'] = $row['uname'];
                 $tmp['phone'] = $row['phone'];
+                $tmp['tablet'] = $row['tablet'];
 
                 $tmp['target_money'] = $config['state'][intval($tmp['target_state'])]['favorable'];
                 $tmp['cur_money'] = $config['state'][intval($tmp['current_state'])]['favorable'];
@@ -54,7 +55,7 @@ class Neighbor_Model extends CI_Model
                 $index = intval($tmp['target_state']) - 1;
                 $tmp['left_target_people'] = $config['state'][$index]['max_user'] - $tmp['current_ucount'] + 1;
                 $tmp['partin'] = $this->get_partin_user($tmp['id']);
-                $tmp['partin'][] = array('user_id' => $tmp['user_id'], 'create_time' => $tmp['create_time'], 'name' => $tmp['uname'], 'phone' => $tmp['phone']);
+                $tmp['partin'][] = array('user_id' => $tmp['user_id'],'tablet' => $tmp['tablet'], 'create_time' => $tmp['create_time'], 'name' => $tmp['uname'], 'phone' => $tmp['phone']);
             }
         }
 
@@ -81,7 +82,7 @@ class Neighbor_Model extends CI_Model
     public function get_partin_user($nt_id){
         if($nt_id <= 0) return array();
 
-        $sql = 'select ntu.user_id as user_id, ntu.create_time as create_time, ntu.uname as name,
+        $sql = 'select ntu.user_id as user_id, ntu.create_time as create_time, ntu.uname as name, ntu.tablet as tablet,
                 ntu.phone as phone from neighbor_together_user ntu
                 where ntu.nt_id = ?';
 
@@ -93,6 +94,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
                 $tmp['name'] = $row['name'];
                 $tmp['phone'] = $row['phone'];
+                $tmp['tablet'] = $row['tablet'];
                 $ret[] = $tmp;
             }
         }
@@ -149,7 +151,7 @@ class Neighbor_Model extends CI_Model
         return array();
     }
 
-    public function partin($user_id, $nt_id, $name, $phone){
+    public function partin($user_id, $nt_id, $name, $phone, $tablet){
         if($nt_id <= 0) return -1;
         if(!$nt = $this->get_nt($nt_id)) return -2;
 
@@ -170,7 +172,7 @@ class Neighbor_Model extends CI_Model
         $arr = array('current_state' => $cur_state, 'current_ucount' => $cur_ucount);
         $this->update($nt_id, $arr);
 
-        $part_user = array('user_id' => $user_id, 'nt_id' => $nt_id, 'uname' => $name, 'phone' => $phone);
+        $part_user = array('user_id' => $user_id, 'nt_id' => $nt_id, 'uname' => $name, 'phone' => $phone, 'tablet' => $tablet);
         $this->add_part_user($part_user);
         return 0;
     }

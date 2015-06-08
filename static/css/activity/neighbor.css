@@ -119,6 +119,8 @@ header {
   text-align: center;
   position: absolute;
 }
+.detail-title{  width: 90%;  margin-left: auto;  margin-right: auto;  margin-top: 30px;  text-align: center;}.detail-title img{  width: 100%;}
+/*
 .detail-title{
   width: 90%;
   margin-left: auto;
@@ -128,7 +130,7 @@ header {
 }
 .detail-title img{
   width: 100%;
-}
+}*/
 .zc{
   width: 100%;  
   background: url(/static/image/activity/zc-bg.jpg) no-repeat;
@@ -142,9 +144,9 @@ header {
 }
 .zc-start-button{
   width: 60%;
-  height: 30px;
-  line-height: 30px;
-  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
   margin-right: auto;
   margin-left: auto;
   background-color: #1dd2af;
@@ -218,7 +220,7 @@ header {
 
 .apply{
   width: 100%;  
-  background: url(/static/image/activity/apply-bg.jpg) no-repeat;
+  background: url(/static/image/activity/apply-bg.jpg) repeat-y;
   background-size: 100%;
   text-align: center;
   position: absolute;
@@ -269,7 +271,7 @@ header {
   width: 100%;
   margin-right: auto;
   margin-left: auto;  
-  padding-top: 25px;
+  padding-top: 10px;
   float: left;
 }
 .form-element p{
@@ -283,7 +285,9 @@ header {
   width: 100%;
   margin-bottom: 15px;
 }
+.detail-title, .detail-banner{  margin-left: auto;  margin-right: auto;}.detail-banner{  width: 100%;  min-height: 126px;  background: url(/static/image/activity/detail-banner.jpg) no-repeat right;  background-size: 100%;  }.detail-banner-title{  width: 100%;  padding-top: 10px;  padding-bottom: 5px;  font-size: 26px;  font-weight: bold;  color: #f9f9f9;}.detail-banner .button-area{  }
 
+/*
 .detail-title, .detail-banner{
   margin-left: auto;
   margin-right: auto;
@@ -298,6 +302,7 @@ header {
 .detail-banner .button-area{
   
 }
+*/
 .button-area .button{
   width: 50%;
   text-align: center;
@@ -410,7 +415,8 @@ header {
 }
 
 .share{
-  width: 70%;
+  padding-top:10px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   clear: both;
@@ -419,8 +425,8 @@ header {
   width: 100%;
   height: 30px;
   line-height: 30px;
-  padding: 5px auto;
-  font-size: 16px;
+  padding: 0px auto;
+  font-size: 20px;
   color: #707070;
 }
 .share .weibo, .share .weixin{
@@ -430,6 +436,7 @@ header {
 }
 .share .weibo img, .share .weixin img{
   width: 50px;
+  margin-left: 80%;
 }
 .share .weixin{
 
@@ -496,6 +503,7 @@ header {
   color: #fff;
   font-size: 16px;
   font-weight: bold;
+  margin-top:20px;
 }
 .info-form-submit{
   width: 80%;
@@ -573,10 +581,10 @@ header {
   overflow: hidden;
 }
 .month{
-  width: 40px;
+  width: 60px;
   height: 30px;
   margin-bottom: 10px;
-  margin-right: 5px;
+  margin-right: 10px;
   line-height: 30px;
   background-color: #cddfdc;
   border-radius: 5px;

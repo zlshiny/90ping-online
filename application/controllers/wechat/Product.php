@@ -4,8 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Product extends CI_Controller {
     
     public function index(){
-        $data = array();
+        /*$data = array();
         $this->load->view('wechat.php', $data);
+        */
+        $this->load->view('h5_v2.php');
     }
 
     public function v2(){
@@ -22,6 +24,10 @@ class Product extends CI_Controller {
 
     public function test(){
         $this->load->view('test.php');
+    }
+
+    public function problem(){
+        $this->load->view('problem.php');
     }
 
 }

@@ -26,7 +26,7 @@
 			<ul>
 				<li><span>地址：</span>北京市朝阳区双井时代国际嘉园</li>
 				<li><span>E-mail: </span>zhaojw@90pingfang.com</li>
-				<li><span>QQ：</span>32556601</li>
+				<li><span>QQ：</span>615590812</li>
 				<!--<li><span>电话：</span>010-747484859</li>-->
 			</ul>
 		</div>

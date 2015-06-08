@@ -103,6 +103,14 @@ class Neighbor extends CI_Controller {
             ));
         }
 
+        if(!$tablet = $this->input->post('tablet')){
+            exit(json_encode(array(
+                    'code' => -6,
+                    'msg' => 'tablet required',
+                )
+            ));
+        }
+
         if(mb_strlen($slogan) > $this->config->item('max_slogan', 'neighbor')){
             exit(json_encode(array(
                     'code' => -4,
@@ -143,6 +151,7 @@ class Neighbor extends CI_Controller {
                         ));
         }
 
+        $arr['tablet'] = $tablet;
         if(($id = $this->neighbor->found($arr)) > 0){
             exit(json_encode(array(
                             'code' => 0,
@@ -192,6 +201,14 @@ class Neighbor extends CI_Controller {
             ));
         }
 
+        if(!$tablet = $this->input->post('tablet')){
+            exit(json_encode(array(
+                    'code' => -6,
+                    'msg' => 'tablet required',
+                )
+            ));
+        }
+
         $is_order = false;
         $this->load->model('order_model', 'order');
         $this->load->model('user_model', 'user');
@@ -232,7 +249,7 @@ class Neighbor extends CI_Controller {
             }
         }
 
-        if(($ret = $this->neighbor->partin($user_id, $nt_id, $name, $phone)) == 0){
+        if(($ret = $this->neighbor->partin($user_id, $nt_id, $name, $phone, $tablet)) == 0){
             exit(json_encode(array(
                             'code' => 0,
                             'id' => $nt_id,

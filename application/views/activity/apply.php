@@ -19,7 +19,7 @@
 <body class="apply">
 
 <div class="apply-title">
-    <img src="/static/image/activity/apply-title.png">
+    <img src="/static/image/activity/apply-title.jpg">
 </div>
 
 <div class="apply-form">
@@ -30,7 +30,12 @@
                 <input type="text" class="text-input left" id="district"  placeholder="如：朝阳区时代国际嘉园" >
             </div>
         </div>
-
+        <div class="form-element">
+            <p>门牌号</p>
+            <div class="form-input">
+                <input type="text" class="text-input left" id="tablet" placeholder="门牌号" >
+            </div>
+        </div>
         <div class="form-element">
             <p>姓名</p>
             <div class="form-input">
@@ -43,20 +48,22 @@
                 <input type="text" class="text-input left" id="phone"  placeholder="请输入手机号" >
             </div>
         </div>
+         <div class="form-element">            
+            <p>众筹目标</p>            
+            <div class="month-list">                
+                <div class="month on" title="1">优惠1万</div>                
+                <div class="month" title="2">优惠5万</div>                
+                <div class="month" title="3">优惠20万</div>                
+            </div>            
+            <input type="hidden" id="month-input" name="month" value="">        
+        </div>
         <div class="form-element">
             <p>宣言</p>
             <div class="form-input">
-                <input type="text" class="text-input left" id="slogan"  placeholder="如：兄弟们，来啊" >
+                <!--<input type="text" class="text-input left" id="slogan"  placeholder="发挥影响力，号召朋友邻居来参与（限200字）" >-->
+                <textarea class="text-input left" id="slogan" style="height:60px;line-height:20px;" placeholder="发挥影响力，号召朋友邻居来参与（限200字）" ></textarea>
             </div>
         </div>
-        <!--
-        <div class="form-element">
-            <p>门牌号</p>
-            <div class="form-input">
-                <input type="text" class="text-input left"  placeholder="门牌号" >
-            </div>
-        </div>
-        -->
 
         <div class="form-element">
             <button type="button" class="info-form-button pay-form-submit">提交</button>
@@ -65,8 +72,8 @@
 </div>
 
 <div class="apply-footer">
-    <span class="p">申请条件:预约并支付1元装修定金</span>
-    <a href="/wechat/product/v2"><span class="a">去预约</span></a>
+    <span class="p">发起活动需支付1000元定金</span>
+    <a href="/wechat/product/v2"><span class="a" style="color:#fff;">了解超级Home1.2</span></a>
 </div>
 <script type="text/javascript">
     $(".pay-form-submit").live('click', function(){
@@ -74,7 +81,8 @@
         var slogan = $("#slogan").val();
         var phone = $("#phone").val();
         var district = $("#district").val();
-        var target = 3;
+        var target= parseInt($(".month-list").children(".on").attr('title'));
+        var tablet = $("#tablet").val();
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -96,7 +104,12 @@
             return false;
         }
 
-        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target}, 
+        if(tablet == undefined || tablet == ''){
+            alert('门牌号为空');
+            return false;
+        }
+
+        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target, tablet: tablet}, 
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');

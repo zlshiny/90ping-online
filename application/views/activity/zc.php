@@ -10,13 +10,18 @@
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="/static/css/activity/neighbor.css" />
+    <style type="text/css">
+        .ko{
+            background-color: #f0ede8; 
+        }
+    </style>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.bxslider.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/activity/neighbor.js"></script>   
 </head>
 
-<body class="zc">
+<body class="zc ko">
     <div class="start">
         <a href="/activity/neighbor/apply"><button type="button" class="zc-start-button ">我要发起</button></a>
     </div>
@@ -34,7 +39,7 @@
     <div class="info-list">
         <p>规则</p>
         <ul>
-            <li>参与“众筹优惠”活动用户，以交定金的人数为准，定金金额为1元人民币。</li>
+            <li>参与“众筹优惠”活动用户，以交定金的人数为准，定金金额为1000元人民币。定金在付款时会抵扣装修款。</li>
             <li>同一个“众筹优惠”活动的用户，必须为同一小区同一期交房的业主。</li>
             <li>参与“众筹优惠”用户，在合同签订付款时，享受优惠立减。</li>
         </ul>

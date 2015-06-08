@@ -19,7 +19,7 @@
 <body class="apply">
 
 <div class="apply-title">
-    <img src="/static/image/activity/apply-title.png">
+    <img src="/static/image/activity/join-title.png">
 </div>
 
 <div class="apply-form">
@@ -30,6 +30,12 @@
             <p>小区名称</p>
             <div class="form-input">
                 <input type="text" class="text-input left" id="district" disabled="true" readOnly="true" value="<?=$name;?>">
+            </div>
+        </div>
+        <div class="form-element">
+            <p>门牌号</p>
+            <div class="form-input">
+                <input type="text" class="text-input left"  id="tablet" placeholder="门牌号" >
             </div>
         </div>
 
@@ -45,14 +51,6 @@
                 <input type="text" class="text-input left" id="phone"  placeholder="请输入手机号" >
             </div>
         </div>
-        <!--
-        <div class="form-element">
-            <p>门牌号</p>
-            <div class="form-input">
-                <input type="text" class="text-input left"  placeholder="门牌号" >
-            </div>
-        </div>
-        -->
 
         <div class="form-element">
             <button type="button" class="info-form-button pay-form-submit">提交</button>
@@ -61,15 +59,15 @@
 </div>
 
 <div class="apply-footer">
-    <span class="p">申请条件:预约并支付1元装修定金</span>
-    <a href="/wechat/product/v2"><span class="a">去预约</span></a>
+    <span class="p">参与活动需支付1000元定金</span>
+    <a href="/wechat/product/v2"><span class="a" style="color:#fff;">了解超级Home1.2</span></a>
 </div>
 <script type="text/javascript">
     $(".pay-form-submit").live('click', function(){
         var name = $("#name").val();
         var phone = $("#phone").val();
         var nt_id = $("#nt_id").val();
-        var target = 3;
+        var tablet = $("#tablet").val();
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -86,7 +84,12 @@
             return false;
         }
 
-        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id}, 
+        if(tablet == undefined || tablet <= 0){
+            alert('门牌号为空');
+            return false;
+        }
+
+        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id, tablet: tablet}, 
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');

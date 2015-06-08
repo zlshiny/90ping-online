@@ -20,6 +20,7 @@ class Order extends CI_Controller {
     public function improve(){
         $order_id = $this->input->post('order_id');
         $user_id = $this->input->post('user_id');
+        $phone = $this->input->post('phone');
         $serial_number = $this->input->post('serial_number');
         if(!$order_id || $order_id < 0 || !$user_id || $user_id < 0 || $serial_number <= 0){
             exit("订单不存在"); 
@@ -29,6 +30,7 @@ class Order extends CI_Controller {
         $data['user_id'] = $user_id;
         $data['cur_mon'] = @date('n');
         $data['serial_number'] = $serial_number;
+        $data['phone'] = $phone;
 
         if(check_device()){
             $this->load->view('mobile/choose.php', $data);
@@ -103,6 +105,14 @@ class Order extends CI_Controller {
             exit(json_encode(array(
                             'code' => -2,
                             'msg' => '用户ID不合法',
+                            )
+                        ));
+        }
+
+        if((!$phone = $this->input->post('phone'))){
+            exit(json_encode(array(
+                            'code' => -21,
+                            'msg' => '缺少手机号',
                             )
                         ));
         }
@@ -185,6 +195,7 @@ class Order extends CI_Controller {
                             'user_id' => $user_id,
                             'order_id' => $order_id,
                             'serial_number' => $serial_number,
+                            'phone' => $phone,
                             'price' => $price,
                             'msg' => '提交成功',
                             )

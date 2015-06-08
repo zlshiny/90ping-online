@@ -79,6 +79,7 @@
         <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
         <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
         <input type="hidden" name="serial_number" class="serial_number" value="<?=$serial_number;?>"/>
+        <input type="hidden" name="phone" class="phone" value="<?=$phone;?>"/>
     </form>
 </div>
 </html>

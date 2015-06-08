@@ -44,6 +44,15 @@ class Pay extends CI_Controller {
             exit('缺少用户ID');
         }
 
+        if((!$phone = $this->input->post('phone'))){
+            /*exit(json_encode(array(
+                            'code' => -2,
+                            'msg' => '缺少用户ID',
+                            )
+                        ));*/
+            exit('缺少手机号');
+        }
+
         if((!$serial_number = $this->input->post('serial_number')) || $serial_number < 0){
             /*exit(json_encode(array(
                             'code' => -3,
@@ -71,6 +80,18 @@ class Pay extends CI_Controller {
         $this->load->model('order_model', 'order');
         $arr = array('deposit' => ORDER_FEE, 'status' => ORDER_STATUS_THIRD);
         $ret = $this->order->update_order_arr($order_id, $arr);
+
+        //send message
+        $code = "您已成功预约【超级Home1.2】产品，非常感谢您选择我们，系统已自动分配项目经理朱兆闯 18501761049，设计师高琳琳 13611778161，稍后与您沟通，谢谢！相关动态请您持续关注公众号【超级Home智能家装】";
+        $this->load->helper('sp');
+        if(!$ret = spSingleMt($code, $phone)){
+            log_message('error', 'send order succ message fail, phone[' . $phone . ']');
+        }else{
+            log_message('error', 'send order succ message succ, phone[' . $phone . ']');
+        }
+
+        $native_msg = "预约用户电话:" . $phone;
+        spSingleMt($native_msg, ZC_PHONE);
 		
 		if(check_device()){
 			$this->load->view('mobile/pay_ret', $data);

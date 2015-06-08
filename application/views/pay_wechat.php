@@ -6,12 +6,13 @@
             <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
             <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
             <input type="hidden" name="serial_number" class="serial_number" value="<?=$out_trade_no;?>"/>
+            <input type="hidden" name="phone" class="phone" value="<?=$phone;?>"/>
         </form>
 </div>
 <div id="choose_banner" class="choose_banner_appoint">
     <div class="wechat_wrap">
         <div class="wechat_main" id="qrcode">
-             <h1>使用微信支付&nbsp;<span><?=ORDER_FEE;?>元预约金</span></h1>
+             <h1>使用微信支付&nbsp;<span>1元预约金</span></h1>
         </div>
     </div>
 </div>

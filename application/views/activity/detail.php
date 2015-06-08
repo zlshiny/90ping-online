@@ -24,6 +24,9 @@
 
 <div class="detail-area">
     <div class="detail-banner">
+        <div class="detail-banner-title">
+            <?=$detail['district'];?>
+        </div>
         <div class="button-area">
             <div class="button">
                 <a href="/activity/neighbor/join/<?=$detail['id'];?>/<?=urlencode($detail['district']);?>"><button type="button" class="detail-banner-button ">我要参与</button></a>
@@ -84,9 +87,9 @@
             <p>参与用户</p>
             <table class="user-list-table">
                 <?php foreach($detail['partin'] as $part):?>
-                <tr>
+                <tr style="padding-top: 10px;">
                     <td class="center" width="35%"><?=$part['name'];?></td>
-                    <td class="pleft" width="30%"></td>
+                    <td class="pleft" width="30%"><?=$part['tablet'];?></td>
                     <td class="pleft" width="35%"><?=$part['create_time'];?></td>
                 </tr>
                 <?php endforeach;?>
@@ -94,13 +97,12 @@
         </div>
 
         <div class="share">
-            <p>分享到</p>
-            <div class="weibo">
-                <a href="#"><img src="/static/image/activity/weibo.png"></a>
-            </div>
+            <p>点击右上角邀请邻居朋友参与</p>
+            <!--
             <div class="weixin">
                 <a href="#"><img src="/static/image/activity/weixin.png"></a>
             </div>
+            -->
         </div>
     </div>
 

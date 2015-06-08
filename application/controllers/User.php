@@ -128,7 +128,8 @@ class User extends CI_Controller {
 
         $code = generate_code(4);
         $this->load->helper('sp');
-        if(!$ret = spSingleMt($code, $phone)){
+        $msg = SP_CONTENT_PRE . "{$code}";
+        if(!$ret = spSingleMt($msg, $phone)){
             log_message('error', 'generate code fail, code[' . $code . '], phone[' . $phone . ']');
             exit(json_encode(array(
                             'code' => -2,

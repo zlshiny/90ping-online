@@ -67,6 +67,10 @@ public function kobe(){
             if(!($order_id = $request_data['order_id'])){
                 exit('order_id required');
             }
+
+            if(!$phone = $request_data['phone']){
+                exit('phone required');
+            }
         }else{
             if(!$out_trade_no = $this->input->post('serial_number')){
                 exit('serial_number required:' . $out_trade_no);
@@ -79,6 +83,10 @@ public function kobe(){
             if(!$order_id = $this->input->post('order_id')){
                 exit('order_id required');
             }
+
+            if(!$phone = $this->input->post('phone')){
+                exit('phone required');
+            }
         }
 
         //使用jsapi接口
@@ -89,7 +97,7 @@ public function kobe(){
         if (!isset($_GET['code']))
         {
             //触发微信返回code码
-            $params_format = "order_id|{$order_id}-user_id|{$user_id}-serial_number|{$out_trade_no}";
+            $params_format = "order_id|{$order_id}-user_id|{$user_id}-serial_number|{$out_trade_no}-phone|{$phone}";
             $suffix = "rcode={$params_format}";
             $url = $jsApi->createOauthUrlForCode(WxPayConf_pub::JS_API_CALL_URL . '?' . $suffix);
             Header("Location: $url");
@@ -142,6 +150,7 @@ public function kobe(){
         $data['order_id'] = $order_id;
         $data['user_id'] = $user_id;
         $data['serial_number'] = $out_trade_no;
+        $data['phone'] = $phone;
 
         $this->load->view('wepay', $data);
     }
@@ -157,6 +166,10 @@ public function kobe(){
 
         if(!$user_id = $this->input->post('user_id')){
             exit('user id required');
+        }
+
+        if(!$phone = $this->input->post('phone')){
+            exit('phone required');
         }
 
         //使用统一支付接口
@@ -214,6 +227,7 @@ public function kobe(){
             $data['user_id'] = $user_id;
             $data['unifiedOrderResult'] = $unifiedOrderResult;
             $data['code_url'] = $code_url;
+            $data['phone'] = $phone;
             $this->load->view('pay_wechat', $data);
         }
     }

@@ -27,6 +27,7 @@
         var decor_date = parseInt($(".part2 .span_hover").attr('title'));
         var acreage = parseInt($('.choose_input_acreage').val());
         var xiaoqu = $(".choose_input_xiaoqu").val();
+        var phone = $(".phone").val();
 
         if(order_id <= 0 || user_id <= 0){
             alert('订单非法');
@@ -72,7 +73,7 @@
 
         var sub_type = $(this).attr("data-type");
         $.post('/order/appointsec',
-                {order_id: order_id, user_id: user_id, name: name, acreage: acreage, decor_date: decor_date, city: city, xiaoqu: xiaoqu, serial_number: serial_number},
+                {order_id: order_id, phone: phone, user_id: user_id, name: name, acreage: acreage, decor_date: decor_date, city: city, xiaoqu: xiaoqu, serial_number: serial_number},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
@@ -167,6 +168,7 @@
             <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>
             <input type="hidden" name="user_id" class="user_id" value="<?=$user_id;?>"/>
             <input type="hidden" name="price" class="price" value="<?=BASE_PRICE;?>"/>
+            <input type="hidden" name="phone" class="phone" value="<?=$phone;?>"/>
             <input type="hidden" name="serial_number" class="serial_number" value="<?=$serial_number;?>"/>
         </form>
         <form action="/individual" method="post" id="individual_form">

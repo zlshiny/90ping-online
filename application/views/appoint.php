@@ -15,6 +15,7 @@
         <form action="/order/improve" method="post" id="sec_order">
             <input type="hidden" name="order_id" id="sec_order_id" value=""/>
             <input type="hidden" name="user_id" id="sec_user_id" value=""/>
+            <input type="hidden" name="phone" id="phone" value=""/>
             <input type="hidden" name="serial_number" id="sec_serial_number" value=""/>
         </form>
     </div>
@@ -41,6 +42,7 @@
                                 $("#sec_order_id").val(data.order_id);  
                                 $("#sec_user_id").val(data.user_id);  
                                 $("#sec_serial_number").val(data.serial_number);  
+                                $("#phone").val(phone);
                                 $("#sec_order").submit();
                             }else{
                                 alert(data.msg);

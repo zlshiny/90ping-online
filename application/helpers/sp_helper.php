@@ -10,7 +10,7 @@ function spSingleMt($code, $phone) {
     $sa = "10";
     $da = "86{$phone}";
     $dc = "15";//8:unicode 15:gbk
-    $sm = SP_CONTENT_PRE . "{$code}";
+    $sm = "{$code}";
     $host = SP_HOST;
     $port = SP_PORT;
 
