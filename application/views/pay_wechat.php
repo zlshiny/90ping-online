@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div style="display:none;">
         <form action="/pay/success" method="post" id="sec_order">
             <input type="hidden" name="order_id" class="order_id" value="<?=$order_id;?>"/>

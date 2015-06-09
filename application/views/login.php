@@ -1,7 +1,7 @@
 <?php
 	include('header.php');
 ?>
-
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div id="login">
     <div class="login_bg"></div>
     <div class="login_wrap">

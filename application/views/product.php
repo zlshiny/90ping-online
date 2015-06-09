@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 $('.product_change_btn ul li').live('click',function(){
     var num = $(this).index();

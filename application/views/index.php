@@ -1,6 +1,7 @@
 <?php
 	include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div class="flexslider">
 <!--	<a href="/order" target="_blank"></a>-->
         <ul class="slides">
@@ -15,7 +16,6 @@
 				
 			</li>-->
 		</ul>
-
 </div>
 <div id="i_mid">
 	<div class="b_wrap">

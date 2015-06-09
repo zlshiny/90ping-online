@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div class="loan_banner"></div>
 <div class="loan_title">申请说明</div>
 <div class="loan_wrap">

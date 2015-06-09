@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div class="pay_result_wrap">
     <div class="result_bg"></div>
     <div class="result_wrap">

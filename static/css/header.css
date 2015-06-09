@@ -1,0 +1,74 @@
+#header{
+    height:93px;
+    background:url(/static/image/header.jpg) repeat-x;
+    width:100%
+}
+#logo{
+    background:url(/static/image/logo.png) no-repeat;
+    display:block;
+    width:307px;
+    height:57px;
+    float:left;
+    margin-top:25px;
+}
+#nav{
+    float:left;
+    margin-top:15px;
+    margin-left:135px;
+}
+#nav li{
+    float:left;
+    position:relative;
+}
+#nav li span{
+    display:block;
+    position:Absolute;
+    width:38px;
+    height:23px;
+    background:url(/static/image/icon/yy.png) no-repeat;
+    right:-5px;
+    top:0px;
+}
+#nav li a{
+    color:#606060;
+    display:block;
+    width:130px;
+    padding-top:45px;
+    font-size:14px;
+    text-align: center;
+}
+#nav .nav1{
+    background:url(/static/image/homegrey.png) no-repeat center 0px;
+}
+#nav .nav1:hover{
+    background:url(/static/image/homegreen.png) no-repeat center 0px;
+    color:#1dd2af;
+}
+#nav .nav2{
+    background:url(/static/image/supergrey.png) no-repeat center 0px;
+}
+#nav .nav2:hover{
+    background:url(/static/image/supergreen.png) no-repeat center 0px;
+    color:#1dd2af;
+}
+#nav .nav3{
+    background:url(/static/image/daikuan-grey.png) no-repeat center 0px;
+}
+#nav .nav3:hover{
+    background:url(/static/image/daikuan-green.png) no-repeat center 0px;
+    color:#1dd2af;
+}
+#nav .nav4{
+    background:url(/static/image/communitygrey.png) no-repeat center 0px;
+}
+#nav .nav4:hover{
+    background:url(/static/image/communitygreen.png) no-repeat center 0px;
+    color:#1dd2af;
+}
+#nav .nav5{
+    background:url(/static/image/logingrey1.png) no-repeat center 0px;
+}
+#nav .nav5:hover{
+    background:url(/static/image/logingreeen1.png) no-repeat center 0px;
+    color:#1dd2af;
+}

@@ -1,6 +1,7 @@
 <?php
 include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 
 <link href="/static/css/individual.css" rel="stylesheet" type="text/css" />
 <div>

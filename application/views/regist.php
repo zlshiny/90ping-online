@@ -1,7 +1,7 @@
 <?php
 	include('header.php');
 ?>
-
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div id="login" class="regist">
    <div class="login_wrap regist_wrap">
         <div class="login_title">注册

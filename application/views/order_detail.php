@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div class="orderlist_wrap" style="padding-bottom:100px;">
    <div class="order_title">订单详情</div>
     <div class="detail_wrap">

@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     $('.part1 span').live('click',function(){
         $('.part1 span').removeClass('span_hover');

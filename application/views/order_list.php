@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div class="orderlist_wrap">
     <a href="/user/logout" class="login_out">退出登录</a>
     <div class="order_title">我的订单</div>

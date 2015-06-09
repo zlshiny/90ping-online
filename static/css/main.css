@@ -102,80 +102,7 @@ body{
 	margin:0px auto;
 }
 
-#header{
-	height:93px;
-    background:url(/static/image/header.jpg) repeat-x;
-    width:100%
-}
-#logo{
-	background:url(/static/image/logo.png) no-repeat;
-	display:block;
-	width:307px;
-	height:57px;
-	float:left;
-	margin-top:25px;
-}
-#nav{
-	float:left;
-	margin-top:15px;
-	margin-left:135px;
-}
-#nav li{
-	float:left;
-    position:relative;
-}
-#nav li span{
-    display:block;
-    position:Absolute;
-    width:38px;
-    height:23px;
-    background:url(/static/image/icon/yy.png) no-repeat;
-    right:-5px;
-    top:0px;
-}
-#nav li a{
-	color:#606060;
-	display:block;
-	width:130px;
-	padding-top:45px;
-	font-size:14px;
-	text-align: center;
-}
-#nav .nav1{
-	background:url(/static/image/homegrey.png) no-repeat center 0px;
-}
-#nav .nav1:hover{
-	background:url(/static/image/homegreen.png) no-repeat center 0px;
-	color:#1dd2af;
-}
-#nav .nav2{
-	background:url(/static/image/supergrey.png) no-repeat center 0px;
-}
-#nav .nav2:hover{
-	background:url(/static/image/supergreen.png) no-repeat center 0px;
-	color:#1dd2af;
-}
-#nav .nav3{
-	background:url(/static/image/daikuan-grey.png) no-repeat center 0px;
-}
-#nav .nav3:hover{
-	background:url(/static/image/daikuan-green.png) no-repeat center 0px;
-	color:#1dd2af;
-}
-#nav .nav4{
-	background:url(/static/image/communitygrey.png) no-repeat center 0px;
-}
-#nav .nav4:hover{
-	background:url(/static/image/communitygreen.png) no-repeat center 0px;
-	color:#1dd2af;
-}
-#nav .nav5{
-	background:url(/static/image/logingrey1.png) no-repeat center 0px;
-}
-#nav .nav5:hover{
-	background:url(/static/image/logingreeen1.png) no-repeat center 0px;
-	color:#1dd2af;
-}
+
 
 #i_mid{
 	padding:150px 0px 130px;
@@ -273,98 +200,6 @@ body{
 	padding-top:205px;
 }
 
-#footer{
-    clear:both;
-	height:420px;
-	width:100%;
-	background-color:#2c3e50;
-	padding-top:50px;
-	position:relative;
-}
-#footer .f_block{
-	width:215px;
-	float:left;
-}
-#footer .f_block ul li{
-	color:#fff;
-	padding:10px 0px;
-}
-#footer .f_block ul li a{
-	color:#fff;
-}
-#footer .f_block ul li span{
-	color:#1dd2af;
-}
-#footer .f_block ul{
-	clear:both;
-}
-#footer .f_block p{
-	color:#fff;
-	font-size:14px;
-	padding-top:10px;
-	width:180px;
-}
-#footer h5{
-	color:#1dd2af;
-	font-size:25px;
-	float:left;
-	margin-bottom:20px;
-	font-weight: normal;
-}
-#footer .copy{
-	color:#9dafc0;
-	font-size:14px;
-	text-align: center;
-}
-#footer .icons{
-	height:80px;
-	padding:10px 0px;
-	width:230px;
-	position:relative;
-	left:50%;
-	margin-left:-110px;
-	top:10px;
-}
-#footer .icons a{
-	display:block;
-	float:left;
-	width:54px;
-	height:54px;
-	margin-left:20px;
-}
-#footer .icons .icon1{
-	background:url(/static/image/icon/wechat_white.png) no-repeat;
-	background-size:54px 54px;
-}
-#footer .icons .icon1:hover{
-	background:url(/static/image/icon/wechat_green.png) no-repeat;
-	background-size:54px 54px;	
-}
-#footer .icons .icon2{
-	background:url(/static/image/icon/qq_white.png) no-repeat;
-	background-size:54px 54px;
-}
-#footer .icons .icon2:hover{
-	background:url(/static/image/icon/qq_green.png) no-repeat;
-	background-size:54px 54px;	
-}
-#footer .icons .icon3{
-	background:url(/static/image/icon/moment_white.png) no-repeat;
-	background-size:54px 54px;
-}
-#footer .icons .icon3:hover{
-	background:url(/static/image/icon/moment_green.png) no-repeat;
-	background-size:54px 54px;	
-}
-
-.line{
-	clear:both;
-	float:left;
-	margin-top:20px;
-	width:100%;
-	height:1px;
-	border-top:1px solid #394c5f;
-}
 #i_mid a{
 	display:block;
 	width:305px;
@@ -400,13 +235,6 @@ body{
 	background:url(/static/image/cycle_hover4.png) no-repeat center top;
 } 
 
-#topcontrol{
-	position:absolute;
-	left:50%;
-	margin-left:-43px;
-	bottom:0px;
-	cursor: pointer;
-}
 .fix_p{
 	position:fixed!important;
 	top:-8px!important;

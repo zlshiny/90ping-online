@@ -1,6 +1,7 @@
 <?php
     include('header.php');
 ?>
+<link href="<?=CSS_PATH . 'main.css';?>" rel="stylesheet" type="text/css" />
 <div id="choose_banner" class="choose_banner_appoint">
     <div class="choose_bg"></div>
     <div class="choose_wrap appoint">
