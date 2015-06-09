@@ -21,7 +21,8 @@ define('IMAGE_PATH', STATIC_PATH . 'image/');
 define('WECHAT_TOKEN', 'kobe8tracy');//微信token
 define('WECHAT_AESKEY', 'Y7Kr9DQl28wKixTBlnTxK4rrXkxjoQJ4YKwK76d1CI8');//密钥
 
-define('ZC_PHONE', '13611778161');
+//define('ZC_PHONE', '13611778161');
+define('ZC_PHONE', '18501761049');
 
 //订单来源
 define('ORDER_SOURCE_WEB', 0);
