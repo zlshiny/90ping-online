@@ -112,3 +112,31 @@ CREATE TABLE `neighbor_together_user`(
     `tablet` varchar(32) NOT NULL DEFAULT '' COMMENT '门牌号',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `wechat_user`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `nickname` varchar(64) NOT NULL DEFAULT '',
+    `gender` TINYINT NOT NULL DEFAULT 0 COMMENT '性别,1:man, 2:woman, 0:nuknow',
+    `province` VARCHAR(32) NOT NULL DEFAULT '',
+    `city` VARCHAR(32) NOT NULL DEFAULT '',
+    `head_img_url` VARCHAR(256) NOT NULL DEFAULT '' COMMENT '头像地址',
+    `unionid` varchar(64) NOT NULL DEFAULT '',
+    `openid` varchar(64) NOT NULL DEFAULT '',
+    `expires_in` varchar(64) NOT NULL DEFAULT 0 COMMENT '超时时间，UNIX_TIME',
+    `refresh_token` varchar(256) NOT NULL DEFAULT '',
+    `access_token` varchar(256) NOT NULL DEFAULT '',
+    `left_money` INT NOT NULL DEFAULT 5600,
+    KEY `open_id` (`openid`) 
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `wechat_iphone_partin`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `founder_id` INT NOT NULL DEFAULT 0,
+    `supporter_id` INT NOT NULL DEFAULT 0,
+    `s_name` VARCHAR(64) NOT NULL DEFAULT 'supporter name',
+    `s_head_img_url` VARCHAR(256) NOT NULL DEFAULT '' COMMENT 'supporter headimgurl',
+    `money` INT NOT NULL DEFAULT 0,
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    KEY `founder_supporter` (`founder_id`, `supporter_id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8;

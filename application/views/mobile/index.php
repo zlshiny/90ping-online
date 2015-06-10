@@ -145,7 +145,7 @@
 <footer>
     <a href="/mobile/home" class="icon home active" >主页</a>
     <!--<a href="#" class="icon loan" >贷款</a>-->
-    <a href="/wechat/product" class="icon super" >超级Home1.0</a>
+    <a href="/wechat/product" class="icon super" >超级Home1.2</a>
     <a href="http://wsq.discuz.qq.com/?siteid=264518165&source=wap&c=index&a=index" class="icon bbs" >社区</a>
     <!--<a href="#" class="icon user">登录</a>-->
 	<?php if(get_cookie(LOGIN_COOKIE_KEY)):?><a href="/order/myorder" class="icon user">个人中心<?php else:?><a href="/user/login" class="icon user">登录/注册<?php endif;?></a>

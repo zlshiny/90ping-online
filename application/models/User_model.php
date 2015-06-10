@@ -141,4 +141,118 @@ class User_Model extends CI_Model{
         }
     }
 
+    public function add_wechat_user($user){
+        if(empty($user)) return -1;
+        if(!isset($user['openid'])) return -2;
+
+        if($ret = $this->get_wechat_user($user['openid'])){
+            return $ret->id;
+        }
+
+        if($this->master_db->insert('wechat_user', $user)){
+            return $this->master_db->insert_id();
+        }else{
+            return -1;
+        }
+    }
+
+    public function get_wechat_user($openid){
+        if(!$openid) return array();
+
+        $this->master_db->select('id, nickname, head_img_url, left_money');
+        $this->master_db->from('wechat_user');
+        $this->master_db->where('openid', $openid);
+
+        if($query = $this->master_db->get()){
+            return $query->row();
+        }
+
+        return array();
+    }
+
+    public function get_wechat_user_by_id($id){
+        if(!$id) return array();
+
+        $this->master_db->select('id, nickname, head_img_url, left_money');
+        $this->master_db->from('wechat_user');
+        $this->master_db->where('id', $id);
+
+        if($query = $this->master_db->get()){
+            return $query->row_array();
+        }
+
+        return array();
+    }
+
+    public function is_support_iphone($user_id, $support_id){
+        if($user_id <= 0 || $support_id <= 0){
+            return true;
+        }
+
+        $this->master_db->select('id');
+        $this->master_db->from('wechat_iphone_partin');
+        $this->master_db->where('founder_id', $user_id);
+        $this->master_db->where('supporter_id', $support_id);
+
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        return false;
+    }
+
+    public function update_wechat_iphone($id, $left){
+        $max = $this->config->item('price', 'iphone');
+        if($id <= 0 || $left <= 0 || $left > $max) return false;
+
+        $arr = array('left_money' => $left);
+        $this->master_db->where('id', $id);
+        return $this->master_db->update('wechat_user', $arr);
+    }
+
+    public function add_wechat_iphone_partin($user_id, $support_id, $name, $url, $money){
+        $max = $this->config->item('price', 'iphone');
+        $min = -$max;
+        if($user_id <= 0 || $support_id <= 0 || $money >= $max || $money <= $min || !$url || !$name){
+            return -1;
+        }
+
+        $arr = array('founder_id' => $user_id, 'supporter_id' => $support_id, 'money' => $money, 's_name' => $name, 's_head_img_url' => $url);
+        if($this->master_db->insert('wechat_iphone_partin', $arr)){
+            return $this->master_db->insert_id();
+        }else{
+            return -2;
+        }
+    }
+
+    public function get_iphone_partin($user_id){
+        if($user_id <= 0) return array();
+        $this->master_db->select('*');
+        $this->master_db->from("wechat_iphone_partin");
+        $this->master_db->where('founder_id', $user_id);
+        $this->master_db->order_by('create_time', 'desc');
+        $this->master_db->limit(10);
+
+        $ret = array();
+        if($query = $this->master_db->get()){
+            foreach($query->result_array() as $row){
+                $tmp = array();
+                $tmp['name'] = $row['s_name'];
+                if($row['s_head_img_url']){
+                    $len = strlen($row['s_head_img_url']);
+                    $row['s_head_img_url'][$len - 1] = '4';
+                    $row['s_head_img_url'] .= '6';
+                    $tmp['head_img_url'] = $row['s_head_img_url'];
+                }else{
+                    $tmp['head_img_url'] = $row['s_head_img_url'];
+                }
+                $tmp['money'] = $row['money'];
+                
+                $ret[] = $tmp;
+            }
+        }
+
+        return $ret;
+    }
+
 }

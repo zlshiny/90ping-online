@@ -517,3 +517,6 @@ $config['neighbor']['state'] = array(
     '2' => array('max_user' => 19, 'favorable' => 5000),
     '3' => array('max_user' => 20, 'favorable' => 10000),
 );
+
+
+$config['iphone'] = array('price' => 5600);

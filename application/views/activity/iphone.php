@@ -22,8 +22,22 @@
 </head>
 
 <body class="zc ko">
+    <input type="hidden" id="user_id" value="<?=$user['id'];?>"/>
+    <input type="hidden" id="nickname" value="<?=$user['nickname'];?>"/>
     <div class="view view1">
+        <div><?=$user['nickname'];?> 还差 <?=$user['left_money'];?> </div>
+        <a href="/activity/iphone/support/<?=$user['id'];?>">支持他</a>
+        <a href="/activity/iphone/found">我也想要</a>
 
+        <?php if(!empty($partin)):?>
+        <div>
+            <ul>
+                <?php foreach($partin as $p):?>
+                <li><img src="<?=$p['head_img_url'];?>"><?=$p['name'];?>支持了<?=$p['money'];?></li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+        <?php endif;?>
     </div>
 </body>
 </html>
