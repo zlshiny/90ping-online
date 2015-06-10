@@ -9,7 +9,7 @@ class Product extends CI_Controller {
             $this->load->view('wechat.php', $data);
         }else{
             $data = array();
-            $this->load->view('product.php', $data);
+            $this->load->view('product2.php', $data);
         }
     }
 
