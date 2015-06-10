@@ -10,21 +10,21 @@
 		<div class="f_block">
 			<h5>关于我们</h5>
 			<ul>
-				<li><a href="###">关于我们</a></li>
-				<li><a href="###">客户反馈</a></li>
+				<li><a href="javascript:void();">关于我们</a></li>
+				<li><a href="javascript:void();">客户反馈</a></li>
 			</ul>
 		</div>
 		<div class="f_block">
 			<h5>合作机构</h5>
 			<ul>
-				<li><a href="###">关于我们</a></li>
-				<li><a href="###">客户反馈</a></li>
+				<li><a href="javascript:void();">百积木</a></li>
+				<li><a href="javascript:void();">58到家</a></li>
 			</ul>
 		</div>
 		<div class="f_block">
 			<h5>联系我们</h5>
 			<ul>
-				<li><span>地址：</span>北京市朝阳区双井时代国际嘉园</li>
+				<li><span>展厅地址：</span>北京市朝阳区双井时代国际嘉园5号楼5楼309</li>
 				<li><span>E-mail: </span>zhaojw@90pingfang.com</li>
 				<li><span>QQ：</span>615590812</li>
 				<!--<li><span>电话：</span>010-747484859</li>-->
