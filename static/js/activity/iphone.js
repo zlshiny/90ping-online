@@ -24,13 +24,17 @@ function support(uid){
                     if (data.code == 0) {
                         var money = data.money;
                         var name = $("#name").val();
+						var headimgurl = $("#head_img_url").val();
                         var html = '';
-                        html += '<li>';
-                        html += '<div class="li-left">';
-                        html += '<font class="font-1">' + name + '</font>支持了<font class="font-2">' + money + '</font>元';
-                        html += '</div>';
-                        html += '<div class="li-right">拿着钞票去拯救世界吧</div>';
-                        html += '</li>';
+						
+						html += '<li>';
+						html += '<div class="li-left-2">';
+						html += '<img src="' + headimgurl + '">';
+						html += '</div>';
+						html += '<div class="li-right-2">';
+						html += '<font class="font-1">' + name + '</font>支持了<font class="font-2">' + money + '</font>元 拿着钞票去拯救世界吧';
+						html += '</div>';
+						html += '</li>';
                         $('.content-ul').prepend(html);
                     }else if(data.code == -3){
                         alert('您已经支持过了哦');

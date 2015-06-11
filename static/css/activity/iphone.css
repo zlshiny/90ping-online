@@ -114,10 +114,10 @@ header {
 }
 
 .invite-activity{
-  width: 50%;
+  width: 80%;
   height: 42px;
   line-height: 42px;
-  margin-left: 26%;
+  margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5px;
   background-color: #f69829;
@@ -230,6 +230,30 @@ header {
   color: #4c4c4c;
   font-size: 13px;
   float: right;
+}
+.li-left-2{
+  width: 10%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 13px;
+  color: #4c4c4c;
+  float: left;
+  overflow: hidden;
+}
+.li-left-2 img{
+  margin-top: 3px;
+  width: 16px; 
+}
+.li-right-2{
+  width: 90%;
+  height: 22px;
+  line-height: 22px;
+  text-align: left;
+  color: #4c4c4c;
+  font-size: 13px;
+  float: right;
+  overflow: hidden;
 }
 .font-1{
   font-size: 14px;
