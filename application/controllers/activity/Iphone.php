@@ -84,9 +84,9 @@ class Iphone extends CI_Controller {
                         $save = "{$id}^{$user['nickname']}^{$hurl}";
                         set_cookie("WECHAT_ACCESS", $save, 86400 * 15);
                         if($r_uid){
-                            $this->user($r_uid);
+                            $this->user($r_uid, $user['nickname']);
                         }else{
-                            $this->user($id);
+                            $this->user($id, $user['nickname']);
                         }
                     }else{
                         exit('系统错误');
@@ -100,15 +100,27 @@ class Iphone extends CI_Controller {
         }
     }
 
-    public function user($id){
+    public function user($id, $name = ''){
         $this->load->model('user_model', 'user');
         if(!$user = $this->user->get_wechat_user_by_id($id)){
             exit('用户非法');
         }
 
+        
+        $login_user = array();
+        if($login = get_cookie('WECHAT_ACCESS')){
+            $l = explode("^", $login);
+            $login_user['name'] = $l[1];
+            $login_user['uid'] = $l[0];
+            $login_user['head_img_url'] = urldecode($l[2]);
+        }else{
+            if($name) $login_user['name'] = $name;
+        }
+
         $partin = $this->user->get_iphone_partin($id);
         $data['user'] = $user;
         $data['partin'] = $partin;
+        $data['login_user'] = $login_user;
         $this->load->view('activity/iphone', $data);
     }
 
@@ -126,13 +138,11 @@ class Iphone extends CI_Controller {
 
     public function support($user_id){
         if(!$id = get_cookie('WECHAT_ACCESS')){
-            /*$this->index($user_id);
-            exit();*/
             exit(json_encode(array(
-                    'code' => -1,
-                    'msg' => 'access required',
-                )
-            ));
+                            'code' => -1,
+                            'msg' => 'access required',
+                            )
+                        ));
         }
 
         $this->load->model('user_model', 'user');
@@ -153,7 +163,7 @@ class Iphone extends CI_Controller {
 
         if($this->user->is_support_iphone($user_id, $support_id)){
             exit(json_encode(array(
-                    'code' => -2,
+                    'code' => -3,
                     'msg' => 'support already',
                 )
             ));
@@ -165,12 +175,12 @@ class Iphone extends CI_Controller {
         $already = $total_price - $left;
         $a_rand = 0;
         if($already > 1000){
-            $a_rand = -rand(1, 500);
+            $a_rand = -rand(1, 100);
         }
 
         $l_rand = 0;
-        if($left > 100){
-            $p = $left > 1000 ? 1000 : ($left - 1);
+        if($left > 200){
+            $p = $left > 200 ? 200 : ($left - 1);
             $l_rand = rand(1, $p);
         }
 

@@ -37,7 +37,7 @@
 		<div class="msg">
 			<img src="<?=IMAGE_PATH . 'i_msg1.png';?>">
 			<p>我们拒绝70后，不做大户型</p>
-			<div class="m_content">Less is more 。我们不做大户型，坚持只做90㎡的房子。我们不做任何浮夸的设计，摒弃欧式繁复的线条，讲究功能及实用，选用环保的材料，注重使用者的体验，期待用艺术关怀80后的奋斗者。</div>
+			<div class="m_content">Less is more 。我们不做大户型，坚持只做90㎡上下的房子。我们不做任何浮夸的设计，摒弃欧式繁复的线条，讲究功能及实用，选用环保的材料，注重使用者的体验，期待用艺术关怀80后的奋斗者。</div>
 		</div>
 		<div class="msg" >
 			<img src="<?=IMAGE_PATH . 'i_msg2.png';?>" style="margin-left:15px;">

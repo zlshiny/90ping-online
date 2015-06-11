@@ -16,6 +16,42 @@
 </head>
 
 <body>
+<input type="hidden" id="name" value="<?php if($login_user):?><?=$login_user['name'];?><?php endif;?>" />
+
+
+<section id="view-5" class="section">
+    <div class="title"><h3 style="display:inline;"><?=$user['nickname'];?></h3> 还差<font class="font"><?=$user['left_money'];?></font>元即可获得</div>
+
+    <div class="content-block">
+        <div class="button-block">
+            <button class="support left" data-id="<?=$user['id'];?>">支持他</button>
+            <a href="/activity/iphone/found"><button class="right">我也想要</button></a>
+        </div>
+
+        <div class="content">
+            <ul class="content-ul">
+                <?php if(!empty($partin)):?>
+                <?php foreach($partin as $p):?>
+                <li>
+                    <div class="li-left">
+                        <font class="font-1"><?=$p['name'];?></font>支持了<font class="font-2"><?=$p['money'];?></font>元
+                    </div>
+
+                    <div class="li-right">
+                        拿着钞票去拯救世界吧
+                    </div>
+                </li>
+                <?php endforeach;?>
+                <?php endif;?>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="view-4" class="section">
+    <div class="invite-activity"><a href="/wechat/product">进入活动</a></div>
+</section>
 
 <section id="view-1" class="section"> 
 </section>
@@ -24,63 +60,6 @@
 </section>
 
 <section id="view-3" class="section">
-</section>
-
-<section id="view-4" class="section">
-    <div class="invite-activity"><a href="#">进入活动</a></div>
-</section>
-
-<section id="view-5" class="section">
-    <div class="title">大白还差<font class="font">329</font>元即可获得</div>
-
-    <div class="content-block">
-        <div class="button-block">
-            <button class="support left">支持他</button>
-            <button class="right">我也想要</button>
-        </div>
-
-        <div class="content">
-            <ul class="content-ul">
-                <li>
-                    <div class="li-left">
-                        <font class="font-1">美国队长</font>支持了<font class="font-2">329</font>元
-                    </div>
-
-                    <div class="li-right">
-                        拿着钞票去拯救世界吧
-                    </div>
-                </li>
-                <li>
-                    <div class="li-left">
-                        <font class="font-1">雷神</font>支持了<font class="font-2">637</font>元
-                    </div>
-
-                    <div class="li-right">
-                        人品真好，钞票多多
-                    </div>
-                </li>
-                <li>
-                    <div class="li-left">
-                        <font class="font-1">蜘蛛侠</font>支持了<font class="font-2">108</font>元
-                    </div>
-
-                    <div class="li-right">
-                        拿着钞票去拯救世界吧
-                    </div>
-                </li>
-                <li>
-                    <div class="li-left">
-                        <font class="font-1">绿巨人</font>支持了<font class="font-2">329</font>元
-                    </div>
-
-                    <div class="li-right">
-                        拿着钞票去拯救世界吧
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </div>
 </section>
 
 </body>
