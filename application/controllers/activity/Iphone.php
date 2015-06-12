@@ -114,7 +114,13 @@ class Iphone extends CI_Controller {
             $login_user['uid'] = $l[0];
             $login_user['head_img_url'] = urldecode($l[2]);
         }else{
-            if($name) $login_user['name'] = $name;
+            if($name){
+                $login_user['name'] = $name;
+            }else{
+                $login_user['name'] = '';
+            }
+            $login_user['uid'] = 0;
+            $login_user['head_img_url'] = '';
         }
 
         $partin = $this->user->get_iphone_partin($id);

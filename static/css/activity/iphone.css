@@ -127,10 +127,16 @@ header {
   position:absolute;
   bottom: 40px;
 }
-.invite-activity a{
+/*.invite-activity a{
   font-size: 20px;
   color: #fff;
+}*/
+
+#view-4 a, .invite-activity a{
+    font-size: 20px;
+    color: #fff;
 }
+
 #view-1{
   background: url(/static/image/activity/iphone/iphone1.jpg) no-repeat;
 }

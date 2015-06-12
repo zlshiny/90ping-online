@@ -25,6 +25,7 @@ function support(uid){
                         var money = data.money;
                         var name = $("#name").val();
 						var headimgurl = $("#head_img_url").val();
+                        var slogan = generate_slogan(name, money);
                         var html = '';
 						
 						html += '<li>';
@@ -32,7 +33,8 @@ function support(uid){
 						html += '<img src="' + headimgurl + '">';
 						html += '</div>';
 						html += '<div class="li-right-2">';
-						html += '<font class="font-1">' + name + '</font>支持了<font class="font-2">' + money + '</font>元 拿着钞票去拯救世界吧';
+						//html += '<font class="font-1">' + name + '</font>支持了<font class="font-2">' + money + '</font>元 拿着钞票去拯救世界吧';
+                        html += slogan;
 						html += '</div>';
 						html += '</li>';
                         $('.content-ul').prepend(html);
@@ -53,3 +55,18 @@ function support(uid){
      */
 }
 
+function generate_slogan(name, money){
+    if(money == 0) return '系统被砍出问题了';
+
+    if(money < 0){
+        return name + ' 对楼主有意见，帮楼主砍了' + money + '元';
+    }else if(money < 50){
+        return name + ' 用尽全力帮助楼主砍了' + money + '元';
+    }else if(money < 150){
+        return name + ' 气势如虹，一进来就砍了' + money + '元';
+    }else if(money < 200){
+        return name + ' 砍了' + money + '元, 快拿着这些钞票去拯救世界吧';
+    }else{
+        return '系统被砍出问题了';
+    }
+}

@@ -246,13 +246,31 @@ class User_Model extends CI_Model{
                 }else{
                     $tmp['head_img_url'] = $row['s_head_img_url'];
                 }
+
                 $tmp['money'] = $row['money'];
+                $tmp['slogan'] = $this->generate_iphone_slogan($tmp['name'], $tmp['money']);
                 
                 $ret[] = $tmp;
             }
         }
 
         return $ret;
+    }
+
+    public function generate_iphone_slogan($user, $money){
+        if($money == 0) return '系统被砍出问题了';
+
+        if($money < 0){
+            return $user . ' 对楼主有意见，帮楼主砍了' . $money . '元';
+        }else if($money < 50){
+            return $user . ' 用尽全力帮助楼主砍了' . $money . '元';
+        }else if($money < 150){
+            return $user . ' 气势如虹，一进来就砍了' . $money . '元';
+        }else if($money < 200){
+            return $user . ' 砍了' . $money . '元, 快拿着这些钞票去拯救世界吧';
+        }else{
+            return '系统被砍出问题了';
+        }
     }
 
 }
