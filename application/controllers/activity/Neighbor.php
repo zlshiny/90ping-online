@@ -26,7 +26,12 @@ class Neighbor extends CI_Controller {
         if($id > 0){
             $this->load->model('neighbor_model', 'neighbor');
             $data['detail'] = $this->neighbor->get_nt_detail($id);
-            $this->load->view('activity/detail.php', $data);
+
+            if(check_device()) {
+                $this->load->view('activity/detail.php', $data);
+            }else{
+                $this->load->view('activity/neighbor/detail.php', $data);
+            }
         }else{
             exit('id required');
         }
@@ -42,12 +47,16 @@ class Neighbor extends CI_Controller {
         if(check_device()){
             $this->load->view('activity/zc.php', $data);
         }else{
-            $this->load->view('activity/zc.php', $data);
+            $this->load->view('activity/neighbor/list.php', $data);
         }
     }
 
     public function apply(){
-        $this->load->view('activity/apply');
+        if(check_device()) {
+            $this->load->view('activity/apply');
+        }else{
+            $this->load->view('activity/neighbor/apply');
+        }
     }
 
     public function join($id = 0, $name = ''){
@@ -57,7 +66,12 @@ class Neighbor extends CI_Controller {
         
         $data['id'] = $id;
         $data['name'] = urldecode($name);
-        $this->load->view('activity/join', $data);
+
+        if(check_device()) {
+            $this->load->view('activity/join', $data);
+        }else{
+            $this->load->view('activity/neighbor/join', $data);
+        }
     }
 
     public function found(){
