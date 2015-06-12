@@ -17,7 +17,7 @@ include(dirname(__FILE__) . '/../../header.php');
 					<h1>众筹优惠目标：<span><?=$detail['target_money'];?></span></h1>
 					<h2>满20人，每人优惠10000元</h2>
 					<h3>发起人：<?=$detail['uname'];?>  </h3>
-					<p><?=$detail['slogan'];?></p>
+					<p style="text-align:center"><?=$detail['slogan'];?></p>
 				</div>
 				<div class="zc_info_block">
 					<p>当前参与人次</p>
