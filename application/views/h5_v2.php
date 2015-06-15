@@ -132,9 +132,6 @@
                 <img src="/static/image/h5v2/11.jpg">
             </li>
             <li class="swiper-slide">
-                <img src="/static/image/h5v2/12.jpg">
-            </li>
-            <li class="swiper-slide">
                 <img src="/static/image/h5v2/13.jpg">
             </li>
             <li class="swiper-slide">

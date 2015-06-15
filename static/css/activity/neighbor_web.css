@@ -146,15 +146,14 @@ body,input,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
 	margin-left:60px;
 }
 
-
 #zc_fq_main{
 	background:url(/static/image/activity/neighbor/bg4.jpg) no-repeat center 3px;
 	position:relative;
 	width:1000px;
-	height:706px;
+	height:796px;
 	left:50%;
 	margin-left:-500px;
-	padding-top:90px;
+	padding-top:40px;
 }
 .zc_fq_info{
 	width:440px;
@@ -174,19 +173,29 @@ body,input,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
 	width:438px;
 	height:40px;
 	border-radius:20px;
-	margin-bottom:50px;
+	margin-bottom:20px;
 	border:1px solid #a1a1a1;
 	outline:none;
 	text-indent: 20px;
+}
+.zc_fq_info textarea{
+	width:438px;
+	height:80px;
+	border-radius:20px;
+	margin-bottom:20px;
+	border:1px solid #a1a1a1;
+	outline:none;
+	text-indent: 20px;
+    padding-top:5px;
 }
 .zc_fq_info input:hover{
 	border:1px solid #1dd2af;
 }
 .zc_fq_info button{
 	width:440px;
-	height:60px;
+	height:50px;
 	text-align:center;
-	line-height:60px;
+	line-height:50px;
 	color:#fff;
 	border-radius:10px;
 	background-color:#1dd2af;
@@ -195,7 +204,7 @@ body,input,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
 .zc_fq_msg{
 	width:440px;
 	float:left;
-	margin-top:90px;
+	margin-top:20px;
 }
 .zc_fq_msg p{
 	font-size:18px;
@@ -386,4 +395,21 @@ body,input,p,img,div,ul,li,table,tr,td,span,h1,h2,h3,h4,h5,h6,a{
 	clear:both;
 	width:1000px;
 	height:150px;
+}
+
+.found_item {
+    margin-bottom: 30px;
+}
+
+.found_item span{
+    background-color: #fff;
+    padding: 5px 5px;
+    margin-right: 10px;
+	border-radius:5px;
+	behavior:url(/static/css/PIE.htc);
+    cursor: pointer;
+}
+
+.found_item .item-on{
+    background-color: #1dd2af;
 }

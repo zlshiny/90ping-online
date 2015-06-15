@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="超级Home，90平方，装修，互联网装修，智能家装，家装，互联网家装，方太">
 <meta name="description" content="超级Home-90平方-互联网智能家装，专注于80后，环保健康，高端品质">
+<meta property="wb:webmaster" content="b8e522168d384420" />
 <title>超级Home，第一个专注于80后的互联网智能家装，整包一口价</title>
 <!--<link href="--><?//=CSS_PATH . 'main.css';?><!--" rel="stylesheet" type="text/css" />-->
 <link href="<?=CSS_PATH . 'header.css';?>" rel="stylesheet" type="text/css" />
@@ -12,6 +13,7 @@
 <script type="text/javascript" src="<?=JS_PATH . 'scrolltopcontrol.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'respond.js';?>"></script>
 <script type="text/javascript" src="<?=JS_PATH . 'jquery.flexslider-2.2.0.min.js';?>"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 <script>
 var _hmt = _hmt || [];
 (function() {

@@ -13,10 +13,10 @@ include(dirname(__FILE__) . '/../../header.php');
 			<div class="zc_fq_info">
 				<h2>小区名称</h2>
                 <input type="text" id="district" disabled="true" readOnly="true" value="<?=$name;?>">
-				<h2>姓名</h2>
-				<input placeholder="请输入姓名" id="name" type="text"/>
 				<h2>门牌号</h2>
 				<input placeholder="请输入门牌号" id="tablet" type="text"/>
+				<h2>姓名</h2>
+				<input placeholder="请输入姓名" id="name" type="text"/>
 				<h2>手机号</h2>
 				<input placeholder="请输入手机号" id="phone" type="text"/>
 				<button class="pay-form-submit">提交</button>
@@ -64,13 +64,13 @@ include(dirname(__FILE__) . '/../../header.php');
                             location.href = '/activity/neighbor/detail/' + data.id;
                         }else if(data.code == -20){
                             alert('您需要先预约哦');
-                            location.href = '/wechat/product/v2';
+                            location.href = '/product';
                         }else if(data.code == -21){
                             alert('您已经参与过了哦');
-                            location.href = '/wechat/product/v2';
+                            return false;
                         }else if(data.code == -11){
                             alert('活动不存在');
-                            location.href = '/wechat/product/v2';
+                            location.href = '/product';
                         }else if(data.code == -12){
                             alert('参与人数已满,您可以自己发起哦');
                             location.href = '/activity/neighbor/apply';

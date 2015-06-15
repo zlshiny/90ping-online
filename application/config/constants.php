@@ -30,6 +30,11 @@ define('WEPAY_ROOT_PATH', APPPATH . '/libraries/wechat');
 define('ORDER_FEE', 100);//预约金额，单位为分
 
 
+//weibo config
+define('WEIBO_APP_KEY', '2381245682');
+define('WEIBO_APP_SECRET', '3d4411a0e2544074e63d0ae47c5ae0ae');
+
+
 //define('ZC_PHONE', '13611778161');
 define('ZC_PHONE', '18501761049');
 

@@ -18,6 +18,9 @@
 
 <body class="detail">
 
+<input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
+<input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
+<input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
 <div class="detail-title">
     <img src="/static/image/activity/detail-title.png">
 </div>
@@ -29,13 +32,17 @@
         </div>
         <div class="button-area">
             <div class="button">
-                <a href="/activity/neighbor/join/<?=$detail['id'];?>/<?=urlencode($detail['district']);?>"><button type="button" class="detail-banner-button ">我要参与</button></a>
+                <a href="javascript:kobe();"><button type="button" class="detail-banner-button ">我要参与</button></a>
             </div>
             <div class="button">
                 <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我要发起</button></a>
             </div>
         </div>
+        <?php if(empty($detail['left_time'])):?>
+                                <p>本次众筹已结束</p>
+                                                    <?php else:?>
         <p>结束时间：还剩<?=$detail['left_time']['d'];?>天<?=$detail['left_time']['h'];?>时<?=$detail['left_time']['i'];?>分<?=$detail['left_time']['s'];?>秒</p>
+        <?php endif;?>
     </div>
 
     <div class="detail-content">
@@ -108,6 +115,20 @@
 
 </div>
 
+<script type="text/javascript">
+    var kobe = function(){
+        var is_over = $("#is_over").val();        
+        if(is_over == 1){
+            alert('本次众筹已结束，您可以发起新的众筹哦');
+            return false;
+        }
+        
+        var nt_id = $("#nt_id").val();
+        var district = $("#district").val();
+        location.href="/activity/neighbor/join/" + nt_id + "/" + district;
+    }
+    //});
+</script>
 
 </body>
 </html>

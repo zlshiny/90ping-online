@@ -65,6 +65,11 @@ class Neighbor_Model extends CI_Model
     private function cal_left_date($create_time, $base = 5){
         $ori = strtotime($create_time);
         $item = $ori + 86400 * 5;
+
+        if($item <= time()){
+            return array();
+        }
+
         $now = time();
         $diff = $item - $now;
 
