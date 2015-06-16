@@ -21,6 +21,7 @@
 
 
 <section id="view-5" class="section">
+    <p style="margin-top:5px;margin-left:5px; float:left;font-size:12px;color:#b3b1b4;">80后互联网智能家装产品 <a href="/wechat/product/">超级Home</a> 上线赠送</p>
     <div class="title"><h3 style="display:inline;"><?=$user['nickname'];?></h3> 还差<font class="font"><?=$user['left_money'];?></font>元就要成功了</div>
     <div class="home"><a href="/wechat/product/">进入超级Home</a></div>
 
