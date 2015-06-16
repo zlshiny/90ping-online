@@ -231,7 +231,7 @@ class User_Model extends CI_Model{
         $this->master_db->from("wechat_iphone_partin");
         $this->master_db->where('founder_id', $user_id);
         $this->master_db->order_by('create_time', 'desc');
-        $this->master_db->limit(10);
+        $this->master_db->limit(20);
 
         $ret = array();
         if($query = $this->master_db->get()){

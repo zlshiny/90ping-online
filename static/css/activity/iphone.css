@@ -152,6 +152,7 @@ header {
 }
 #view-5{
   background: url(/static/image/activity/iphone/iphone5.jpg) no-repeat;
+  height:auto !important;
 }
 #view-1, #view-2, #view-3, #view-4, #view-5{
   width: 100%;
@@ -189,8 +190,9 @@ header {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
-  position: absolute;
-  top: 85%;
+  position: relative;
+  /*top: 50%;*/
+  margin-top:80%;
   /*bottom: -90px;*/
   /*overflow: hidden;*/
 }
@@ -214,7 +216,7 @@ header {
 .content-block .content{
   width: 100%;
   min-height: 120px;
-  max-height: 430px;
+  max-height: 1080px;
   margin-top: 10px;
   margin-bottom: 5px;
   background-color: rgba(255, 255, 255, 0.4); 

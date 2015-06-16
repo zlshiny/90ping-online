@@ -64,21 +64,18 @@
   -->
 </div>
 
-
-<!--
-<section id="view-4" class="section">
+<section id="view-4" class="section" style="margin-top:auto;">
     <a href="/wechat/product"><div class="invite-activity">进入活动</div></a>
 </section>
 
 <section id="view-1" class="section"> 
 </section>
 
-<section id="view-2" class="section">    
+<section id="view-2" class="section">
 </section>
 
 <section id="view-3" class="section">
 </section>
--->
 
 
 </body>
