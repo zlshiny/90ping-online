@@ -127,7 +127,8 @@ class Iphone extends CI_Controller {
         $data['user'] = $user;
         $data['partin'] = $partin;
         $data['login_user'] = $login_user;
-        $this->load->view('activity/iphone', $data);
+        //$this->load->view('activity/iphone', $data);
+        $this->load->view('v2_h5', $data);
     }
 
     public function found(){
@@ -180,14 +181,16 @@ class Iphone extends CI_Controller {
 
         $already = $total_price - $left;
         $a_rand = 0;
-        if($already > 1000){
-            $a_rand = -rand(1, 100);
+        if($already > 3500){
+            $a_rand = -rand(100, 300);
+        }else if($already > 1000){
+            $a_rand = -rand(20, 90);
         }
 
         $l_rand = 0;
-        if($left > 200){
-            $p = $left > 200 ? 200 : ($left - 1);
-            $l_rand = rand(1, $p);
+        if($left > 400){
+            $p = $left > 400 ? 400 : ($left - 10);
+            $l_rand = rand(100, $p);
         }
 
         $ret = 0;
@@ -196,14 +199,18 @@ class Iphone extends CI_Controller {
         }else if($l_rand == 0){
             $ret = $a_rand;
         }else{
-            $rand = array(0 => $a_rand, 1 => $l_rand);
-            $l = rand(0, 1);
+            $rand = array(0 => $a_rand, 1 => $l_rand, 2 => $l_rand);
+            $l = rand(0, 2);
             $ret = $rand[$l];
+        }
+
+        if($already == 0){
+            $ret = rand(1000, 1500);
         }
         
         $db = $left - $ret;
         if($db <= 0){
-            $db = 1;
+            $db = 100;
         }
 
         $this->user->update_wechat_iphone($user_id, $db);

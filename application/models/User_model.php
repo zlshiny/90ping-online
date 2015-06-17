@@ -260,16 +260,82 @@ class User_Model extends CI_Model{
     public function generate_iphone_slogan($user, $money){
         if($money == 0) return '系统被砍出问题了';
 
-        if($money < 0){
-            return $user . ' 对楼主有意见，帮楼主砍了' . $money . '元';
-        }else if($money < 50){
-            return $user . ' 用尽全力帮助楼主砍了' . $money . '元';
+        /*if($money <= -200){
+            return $user . ' 对楼主有意见,干掉你' . $money . '元';
+        }else if($money <= -100){
+            return $user . ' 天生捣蛋王,减你' . $money . '元';
+        }else if($money < 0){
+            return $user . ' 砍掉你' . $money . '元,谁叫你太帅';
+        }else if($money < 20){
+            return $user . ' 人品好,给你一个+' . $money . '元大红包';
+        }else if($money < 40){
+            return $user . ' 气势如虹,一进来就给你+' . $money . '元';
+        }else if($money < 60){
+            return $user . ' 大喊我去,房子都买上了,赞助+' . $money . '元去装修房子吧';
+        }else if($money < 80){
+            return $user . ' 品味可以啊,都预约超级Home了,+' . $money . '元';
+        }else if($money < 100){
+            return $user . ' 送你+' . $money . '元,还我玫瑰花啊';
+        }else if($money < 120){
+            return $user . ' 好基友，+' . $money . '元,不用还';
         }else if($money < 150){
-            return $user . ' 气势如虹，一进来就砍了' . $money . '元';
-        }else if($money < 200){
-            return $user . ' 砍了' . $money . '元, 快拿着这些钞票去拯救世界吧';
+            return $user . ' 为了iPhone6,我给你豁出去了,+' . $money . '元';
+        }else if($money < 180){
+            return $user . ' 死党的钱你也敢要?给你+' . $money . '元';
+        }else if($money <= 200){
+            return $user . ' 天降异才,快拿着这+' . $money . '元钞票去拯救世界吧';
         }else{
             return '系统被砍出问题了';
+        }*/
+
+        if($money <= -150){
+            return ' 对楼主有意见,干掉你<span class="partin-user">' . $money . '</span>元';
+        }else if($money <= -90){
+            return ' <span class="partin-user">' . $money . '</span>元，皇上，臣妾不是故意的';
+        }else if($money <= -70){
+            return ' 砍掉你<span class="partin-user">' . $money . '</span>元，谁叫你在背后嫉妒我长得帅';
+        }else if($money <= -50){
+            return ' <span class="partin-user">' . $money . '</span>，小爷就不给你，求我啊求啊';
+        }else if($money <= -30){
+            return ' 天若有情天亦老,干掉<span class="partin-user">' . $money . '</span>好不好';
+        }else if($money <= -20){
+            return ' 天生捣蛋王,减你<span class="partin-user">' . $money . '</span>元';
+        }else if($money <= -10){
+            return ' <span class="partin-user">' . $money . '</span>元,来呀 来呀 来打我呀';
+        }else if($money <= -5){
+            return ' 减掉你<span class="partin-user">' . $money . '</span>元,只是想提醒你:该减肥了';
+        }else if($money < 0){
+            return ' 砍掉你<span class="partin-user">' . $money . '</span>元,谁叫你太帅';
+        }else if($money < 20){
+            return ' 支持<span class="partin-user">' . $money . '</span>,尼玛，太抠门啦，100块都不给，鄙视';
+        }else if($money < 60){
+            return ' 哥请客，<span class="partin-user">+' . $money . '</span>，拿去吧';
+        }else if($money < 100){
+            return ' 人品好,给你一个<span class="partin-user">+' . $money . '</span>元大红包';
+        }else if($money < 130){
+            return ' 好基友，<span class="partin-user">+' . $money . '</span>，只能帮到这了';
+        }else if($money < 160){
+            return ' 气势如虹,一进来就给你<span class="partin-user">+' . $money . '</span>元';
+        }else if($money < 190){
+            return ' 熊孩子，<span class="partin-user">+' . $money . '</span>元,带你装逼带你飞';
+        }else if($money < 220){
+            return ' 我去,房子都买上了,赞助<span class="partin-user">+' . $money . '</span>元去装修房子吧';
+        }else if($money < 250){
+            return ' 品味可以啊,都预约超级Home了,<span class="partin-user">+' . $money . '</span>元';
+        }else if($money < 280){
+            return ' 送你<span class="partin-user">+' . $money . '</span>元,还我玫瑰花啊';
+        }else if($money < 310){
+            return ' 好基友，<span class="partin-user">+' . $money . '</span>元,不用还';
+        }else if($money < 340){
+            return ' 为了iPhone6,我给你豁出去了,<span class="partin-user">+' . $money . '</span>元';
+        }else if($money < 370){
+            return ' 死党的钱你也敢要?给你<span class="partin-user">+' . $money . '</span>元';
+        }else if($money < 390){
+            return ' 爷穷的就剩钱了 拿去<span class="partin-user">+' . $money . '</span>元！随便花';
+        }else if($money <= 400){
+            return ' 天降异才,快拿着这<span class="partin-user">+' . $money . '</span>元钞票去拯救世界吧';
+        }else{
+            return ' <span class="partin-user">+' . $money . '</span>元，我去，怎么不直接给你砍完啊';
         }
     }
 

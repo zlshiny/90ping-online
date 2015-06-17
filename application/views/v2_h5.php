@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>最省心互联网智能家装—超级Home限量开抢,传统家装方式,该翻篇了！</title>
+    <title>免费众筹iPhone6，你也来拼一下人品？</title>
     <meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
@@ -10,10 +10,12 @@
     <meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="/static/css/activity/iphone_h5.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/h5v2/common.css" />
     <link rel="stylesheet" type="text/css" href="/static/css/h5v2/swiper.css" />
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/fastclick.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/js/activity/iphone_h5.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/swiper.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="/static/js/h5v2/common.js"></script>
     <style type="text/css">
@@ -45,9 +47,71 @@
         margin-bottom: 15px;
     }
     </style>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+     var s = document.getElementsByTagName("script")[0]; 
+     s.parentNode.insertBefore(hm, s);
+     })();
+    </script>
 </head>
 
 <body>
+<div id="title_img">
+<img src="/static/image/activity/iphone/title.jpg">
+</div>
+<input type="hidden" id="name" value="<?php if($login_user):?><?=$login_user['name'];?><?php endif;?>" />
+<input type="hidden" id="head_img_url" value="<?php if($login_user):?><?=$login_user['head_img_url'];?><?php endif;?>" />
+<section id="view-5" class="section">
+    <p style="margin-top:5px;margin-left:5px; float:left;font-size:12px;color:#b3b1b4;">专注80后互联网智能家装产品 <a href="/wechat/product/">超级Home</a> 上线,赠送</p>
+    <div class="title"><h3 style="display:inline;"><?=$user['nickname'];?></h3> 已众筹到好友支持的<font class="font left-money"><?=($this->config->item('price', 'iphone') - $user['left_money']);?></font>元啦</div>
+    <div class="slogan" style="margin-top:10px;">邀请好友再众筹 <h3 style="display:inline;" class="left-money2"><?=$user['left_money'];?></h3> 元，即可得</div>
+    <div class="slogan2">iPhone6 64G一台</div>
+    <!--<div class="home"><a href="/wechat/product/">进入超级Home</a></div>-->
+
+    <div class="content-block">
+        <div class="button-block">
+			<button class="support left" data-id="<?=$user['id'];?>">免费支持TA</button>
+            <?php if($login_user['uid'] == $user['id']):?>
+            <!--<a href="javascript:invite();"><button class="right invite_friend">邀请好友支持</button></a>-->
+            <a href="#" class="invite_friend"><button class="right">邀请好友支持</button></a>
+            <?php else:?>
+            <a href="/activity/iphone/found"><button class="right">我也要</button></a>
+            <?php endif;?>
+        </div>
+
+        <div class="content">
+            <ul class="content-ul">
+				<?php if(!empty($partin)):?>
+                <?php foreach($partin as $p):?>
+                <li>
+                    <div class="li-left-2">
+                        <img src="<?=$p['head_img_url'];?>">
+                    </div>
+
+                    <div class="li-right-2">
+                        <span class="partin-user"><?=$p['name'];?></span><?=$p['slogan'];?>
+                    </div>
+                </li>
+				<?php endforeach;?>
+                <?php endif;?>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<div id="shareit">
+  <img class="arrow" src="/static/image/activity/iphone/11.png">
+  <!--
+  <a href="#" id="follow">
+    <img id="share-text" src="http://dev.vxtong.com/cases/nuannan/imgs/share-text.png">
+  </a>
+  -->
+</div>
+
+    <!--
     <div class="view menu_img">
         <img style="height:50px;width:auto;" src="/static/image/wechat/menu_2.jpg">
         <div style="padding-top:1px;text-align:center;height:50px;position:absolute;right:10px;top:0px">
@@ -55,6 +119,7 @@
         </div>
     </div>
     <div style="height:49px;"></div>
+    -->
 
 <section class="view">
     <img src="/static/image/h5v2/home12-1.jpg">
@@ -74,6 +139,7 @@
 <section class="view">
     <img src="/static/image/h5v2/home12-3.jpg">
 </section>
+
 
 <section class="view" style="margin-bottom:25px;">
     <div class="swiper-container container-drawing">
@@ -660,6 +726,19 @@
             return true;
         }
     }
+
+    var invite = function(){
+        alert('点击右上角，分享到朋友圈或直接分享给好友');
+    }
+
+    $(".invite_friend").on("click", function() {
+        $("#shareit").show();
+    });
+   
+   
+    $("#shareit").on("click", function(){
+        $("#shareit").hide(); 
+    });
 </script>
 
 </body>

@@ -519,4 +519,4 @@ $config['neighbor']['state'] = array(
 );
 
 
-$config['iphone'] = array('price' => 3600);
+$config['iphone'] = array('price' => 5488);
