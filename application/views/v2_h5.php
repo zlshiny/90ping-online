@@ -60,10 +60,18 @@
 
 <body>
 <div id="title_img">
-<img src="/static/image/activity/iphone/title.jpg">
+<img src="/static/image/activity/iphone/iphone5.jpg">
 </div>
 <input type="hidden" id="name" value="<?php if($login_user):?><?=$login_user['name'];?><?php endif;?>" />
 <input type="hidden" id="head_img_url" value="<?php if($login_user):?><?=$login_user['head_img_url'];?><?php endif;?>" />
+
+<div>
+    <div style="top:60%;text-align:center;position:fixed;right:1px;bottom:0px;z-index:100;">
+        <a href="#h5_top" style="display:block;color:#fff;text-decoration:none;font-size:14px;padding: 12px 6px;background-color:#d0021b;height:40px;width:40px;font-family:'华文细黑','Microsoft Yahei';">详情</a>
+        <a href="#appoint" style="margin-top:2px;color:#fff;display:block;text-decoration:none;font-size:14px;padding: 12px 6px;background-color:#07162b;height:40px;width:40px;font-family:'华文细黑','Microsoft Yahei';">预约</a>
+    </div>
+</div>
+
 <section id="view-5" class="section">
     <p style="margin-top:5px;margin-left:5px; float:left;font-size:12px;color:#b3b1b4;">专注80后互联网智能家装产品 <a href="/wechat/product/">超级Home</a> 上线,赠送</p>
     <div class="title"><h3 style="display:inline;"><?=$user['nickname'];?></h3> 已众筹到好友支持的<font class="font left-money"><?=($this->config->item('price', 'iphone') - $user['left_money']);?></font>元啦</div>
@@ -121,7 +129,7 @@
     <div style="height:49px;"></div>
     -->
 
-<section class="view">
+<section class="view" id="h5_top">
     <img src="/static/image/h5v2/home12-1.jpg">
     <div class="subscribe">
         <p>北京·仅30个天使用户</p>
