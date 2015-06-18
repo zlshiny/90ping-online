@@ -126,6 +126,7 @@ CREATE TABLE `wechat_user`(
     `refresh_token` varchar(256) NOT NULL DEFAULT '',
     `access_token` varchar(256) NOT NULL DEFAULT '',
     `left_money` INT NOT NULL DEFAULT 5600,
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY `open_id` (`openid`) 
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 

@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>最省心互联网智能家装—超级Home限量开抢,传统家装方式,该翻篇了！</title>
+    <title>关于省心又有逼格的正确装修方式，又一家公司帮你想好了！</title>
     <meta name="description" content="史上第一个专注于80后家装产品-超级Home1.0，配置顶级家具软装和高端厨卫，拎包入住"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
@@ -45,6 +45,15 @@
         margin-bottom: 15px;
     }
     </style>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+     var s = document.getElementsByTagName("script")[0]; 
+     s.parentNode.insertBefore(hm, s);
+     })();
+    </script>
 </head>
 
 <body>
