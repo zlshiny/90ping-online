@@ -39,7 +39,7 @@ CREATE TABLE `orders`(
     `serial_number` char(32) NOT NULL DEFAULT '' COMMENT '订单号',
     `deposit` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '订金',
     `status` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单状态',
-    `source` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单来源, 0:网站, 1:微信',
+    `source` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '订单来源, 0:网站, 1:微信, 2:手机版网站，4:邻居一起装微信页，5：邻居一起装WEB页',
     `is_deal` tinyint NOT NULL DEFAULT 0 COMMENT '是否已沟通',
     `deal_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '处理时间',
     `decor_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '装修时间',
@@ -100,6 +100,7 @@ CREATE TABLE `neighbor_together`(
     `target_state` TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT '目标阶段',
     `district` varchar(128) NOT NULL DEFAULT '' COMMENT '小区名',
     `tablet` varchar(32) NOT NULL DEFAULT '' COMMENT '门牌号',
+    `source` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '来源, 0:网站, 1:微信, 2:手机版网站，4:邻居一起装微信页，5：邻居一起装WEB页',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
@@ -110,6 +111,7 @@ CREATE TABLE `neighbor_together_user`(
     `phone` bigint NOT NULL DEFAULT 0 COMMENT 'phone number',
     `uname` varchar(64) NOT NULL DEFAULT '' COMMENT '参与者姓名',
     `tablet` varchar(32) NOT NULL DEFAULT '' COMMENT '门牌号',
+    `source` tinyint UNSIGNED NOT NULL DEFAULT 0 COMMENT '来源, 0:网站, 1:微信',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 

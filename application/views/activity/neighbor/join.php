@@ -34,6 +34,7 @@ include(dirname(__FILE__) . '/../../header.php');
         var phone = $("#phone").val();
         var nt_id = $("#nt_id").val();
         var tablet = $("#tablet").val();
+        var source = <?=ORDER_SOURCE_NEIGHBOR_WEB;?>;
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -55,7 +56,7 @@ include(dirname(__FILE__) . '/../../header.php');
             return false;
         }
 
-        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id, tablet: tablet}, 
+        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id, tablet: tablet, source: source},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');

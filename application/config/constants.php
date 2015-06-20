@@ -42,6 +42,8 @@ define('ZC_PHONE', '18501761049');
 define('ORDER_SOURCE_WEB', 0);
 define('ORDER_SOURCE_WECHAT', 1);
 define('ORDER_SOURCE_MOBILE', 2);
+define('ORDER_SOURCE_NEIGHBOR_WECHAT', 3);
+define('ORDER_SOURCE_NEIGHBOR_WEB', 4);
 
 
 //最大面积
@@ -71,7 +73,7 @@ define('GENDER_MAN', 1);
 define('GENDER_WOMEN', 2);
 
 define('INIT_DEPOSIT', 1);
-define('TOTAL_PRICE', 156000);
+define('TOTAL_PRICE', 162000);
 
 define('ALIPAY_ID', '2088911439730551');
 define('ALIPAY_EMAIL', 'zhaojiangwei@90pingfang.com');

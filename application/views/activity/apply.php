@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>home1.2</title>
+    <title>邻居一起装</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -83,6 +83,7 @@
         var district = $("#district").val();
         var target= parseInt($(".month-list").children(".on").attr('title'));
         var tablet = $("#tablet").val();
+        var source = <?=ORDER_SOURCE_NEIGHBOR_WECHAT;?>;
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -109,16 +110,25 @@
             return false;
         }
 
-        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target, tablet: tablet}, 
+        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target, tablet: tablet, source: source},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
                         if(data.code == 0){
                             alert('发起成功');
                             location.href = '/activity/neighbor/detail/' + data.id;
+                        }else if(data.code == -2){
+                            alert('手机号非法！');
+                            return false;
+                        }else if(data.code == -11){
+                            alert('您已经发起或参与过了！不可以重复发起哦');
+                            return false;
+                        }else if(data.code == -10){
+                            alert('创建订单错误，请您稍后再试！');
+                            return false;
                         }else if(data.code == -20){
-                            alert('您需要先预约哦');
-                            location.href = '/wechat/product/v2';
+                            alert('发起活动异常，请您稍后再试！');
+                            return false;
                         }else{
                             alert('系统错误，请稍后再试！');
                             return false;

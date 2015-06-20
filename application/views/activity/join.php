@@ -68,6 +68,7 @@
         var phone = $("#phone").val();
         var nt_id = $("#nt_id").val();
         var tablet = $("#tablet").val();
+        var source = <?=ORDER_SOURCE_NEIGHBOR_WECHAT;?>;
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -89,7 +90,7 @@
             return false;
         }
 
-        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id, tablet: tablet}, 
+        $.post('/activity/neighbor/partin', {name: name, phone: phone, nt_id: nt_id, tablet: tablet, source: source},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
@@ -101,7 +102,7 @@
                             location.href = '/wechat/product/v2';
                         }else if(data.code == -21){
                             alert('您已经参与过了哦');
-                            location.href = '/wechat/product/v2';
+                            return false;
                         }else if(data.code == -11){
                             alert('活动不存在');
                             location.href = '/wechat/product/v2';

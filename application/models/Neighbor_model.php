@@ -145,6 +145,17 @@ class Neighbor_Model extends CI_Model
         return $ret;
     }
 
+    public function is_found($user_id){
+        $this->master_db->select('id');
+        $this->master_db->from($this->_dbname);
+        $this->master_db->where('user_id', $user_id);
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        return false;
+    }
+
     public function get_nt($nt_id){
         $this->master_db->select('*');
         $this->master_db->from($this->_dbname);
@@ -156,7 +167,7 @@ class Neighbor_Model extends CI_Model
         return array();
     }
 
-    public function partin($user_id, $nt_id, $name, $phone, $tablet){
+    public function partin($user_id, $nt_id, $name, $phone, $tablet, $source){
         if($nt_id <= 0) return -1;
         if(!$nt = $this->get_nt($nt_id)) return -2;
 
@@ -177,7 +188,7 @@ class Neighbor_Model extends CI_Model
         $arr = array('current_state' => $cur_state, 'current_ucount' => $cur_ucount);
         $this->update($nt_id, $arr);
 
-        $part_user = array('user_id' => $user_id, 'nt_id' => $nt_id, 'uname' => $name, 'phone' => $phone, 'tablet' => $tablet);
+        $part_user = array('user_id' => $user_id, 'nt_id' => $nt_id, 'uname' => $name, 'phone' => $phone, 'tablet' => $tablet, 'source' => $source);
         $this->add_part_user($part_user);
         return 0;
     }
@@ -201,6 +212,13 @@ class Neighbor_Model extends CI_Model
         if($user_id < 0) return false;
         $this->master_db->select('id');
         $this->master_db->from('neighbor_together_user');
+        $this->master_db->where('user_id', $user_id);
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        $this->master_db->select('id');
+        $this->master_db->from('neighbor_together');
         $this->master_db->where('user_id', $user_id);
         if($query = $this->master_db->get()){
             if($query->row_array()) return true;

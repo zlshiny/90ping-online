@@ -8,6 +8,25 @@ class Order_Model extends CI_Model{
         $this->master_db = $this->load->database('master', TRUE);
     }
 
+    //通过邻居一起装预约
+    public function neighbor_order($arr, $source, &$user_id){
+        if(empty($arr)) return -1;
+
+        $order_no = build_order_no();
+        $order = array('product_id' => 1, 'serial_number' => $order_no,
+            'status' => ORDER_STATUS_FIRST, 'source' => $source, 'price' => TOTAL_PRICE);
+
+        if($arr['user_id'] > 0){
+            $order['user_id'] = $arr['user_id'];
+        }else{
+            $user = array('phone' => $arr['phone'], 'name' => $arr['uname']);
+            $user_id = $this->user->insert_user_arr($user);
+            $order['user_id'] = $user_id;
+        }
+
+        return $this->insert_order($order);
+    }
+
     public function is_order_by_uid($user_id){
         if($user_id < 0) return false;
         $this->master_db->select('id');
@@ -20,13 +39,12 @@ class Order_Model extends CI_Model{
         return false;
     }
 
-    public function is_order_by_phone($phone){
+    public function is_order_by_phone($phone, &$user_id = 0){
         if(!$phone) return false;
         if($user = $this->user->get_user($phone)){
-            $user_id = $user->user_id; 
+            $user_id = $user->user_id;
             return $this->is_order_by_uid($user_id);
         }
-
 
         return false;
     }

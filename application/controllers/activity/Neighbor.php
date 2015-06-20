@@ -93,9 +93,17 @@ class Neighbor extends CI_Controller {
             ));
         }
 
+        if(!check_phone($phone)){
+            exit(json_encode(array(
+                    'code' => -2,
+                    'msg' => '手机号码非法',
+                )
+            ));
+        }
+
         if(!$name = $this->input->post('name')){
             exit(json_encode(array(
-                    'code' => -1,
+                    'code' => -3,
                     'msg' => 'name required',
                 )
             ));
@@ -103,7 +111,7 @@ class Neighbor extends CI_Controller {
 
         if(!$slogan = $this->input->post('slogan')){
             exit(json_encode(array(
-                    'code' => -2,
+                    'code' => -4,
                     'msg' => 'slogan required',
                 )
             ));
@@ -111,7 +119,7 @@ class Neighbor extends CI_Controller {
 
         if(!$district = $this->input->post('district')){
             exit(json_encode(array(
-                    'code' => -3,
+                    'code' => -5,
                     'msg' => 'district required',
                 )
             ));
@@ -127,7 +135,7 @@ class Neighbor extends CI_Controller {
 
         if(mb_strlen($slogan) > $this->config->item('max_slogan', 'neighbor')){
             exit(json_encode(array(
-                    'code' => -4,
+                    'code' => -7,
                     'msg' => 'slogan invalid',
                 )
             ));
@@ -136,33 +144,55 @@ class Neighbor extends CI_Controller {
         if(!($target = $this->input->post('target')) || $target > $this->config->item('max_state', 'neighbor')
             || $target <= 0){
             exit(json_encode(array(
-                    'code' => -5,
+                    'code' => -8,
                     'msg' => 'target invalid',
                 )
             ));
         }
 
+        if(!isset($_POST['source'])){
+            exit(json_encode(array(
+                    'code' => -9,
+                    'msg' => 'source required',
+                )
+            ));
+        }
+        $source = $this->input->post('source');
+
         $this->load->model('user_model', 'user');
         $this->load->model('order_model', 'order');
         $this->load->model('neighbor_model', 'neighbor');
 
-
         $is_order = false;
+        $arr = array();
         if($user_id = check_login()){
             $is_order = $this->order->is_order_by_uid($user_id);
-            $arr = array('user_id' => $user_id, 'phone' => $phone, 'target_state' => $target, 'slogan' => $slogan, 'district' => $district, 'uname' => $name);
+            $arr = array('user_id' => $user_id, 'source'=> $source, 'phone' => $phone, 'target_state' => $target, 'slogan' => $slogan, 'district' => $district, 'uname' => $name);
         }else{
             $user_id = 0;
-            $is_order = $this->order->is_order_by_phone($phone);
-            $arr = array('phone' => $phone, 'target_state' => $target, 'slogan' => $slogan, 'district' => $district, 'uname' => $name);
+            $is_order = $this->order->is_order_by_phone($phone, $user_id);
+            $arr = array('user_id' => $user_id, 'phone' => $phone, 'source'=> $source, 'target_state' => $target, 'slogan' => $slogan, 'district' => $district, 'uname' => $name);
         }
 
         if(!$is_order){
-            exit(json_encode(array(
-                            'code' => -20,
-                            'msg' => 'not ordered',
-                            )
-                        ));
+            $order_id = $this->order->neighbor_order($arr, $source, $user_id);
+            if($order_id <= 0){
+                exit(json_encode(array(
+                        'code' => -10,
+                        'msg' => 'database error',
+                    )
+                ));
+            }
+
+            $arr['user_id'] = $user_id;
+        }else{
+            if($this->neighbor->is_partin_by_uid($user_id)){
+                exit(json_encode(array(
+                        'code' => -11,
+                        'msg' => 'found already',
+                    )
+                ));
+            }
         }
 
         $arr['tablet'] = $tablet;
@@ -175,7 +205,7 @@ class Neighbor extends CI_Controller {
                         ));
         }else{
             exit(json_encode(array(
-                            'code' => -10,
+                            'code' => -20,
                             'msg' => 'found failed',
                             )
                         ));
@@ -193,7 +223,7 @@ class Neighbor extends CI_Controller {
 
         if(!$nt_id = $this->input->post('nt_id')){
             exit(json_encode(array(
-                            'code' => -2,
+                            'code' => -1,
                             'msg' => 'nt_id required',
                             )
                         ));
@@ -201,7 +231,7 @@ class Neighbor extends CI_Controller {
 
         if(!$phone = $this->input->post('phone')){
             exit(json_encode(array(
-                            'code' => -1,
+                            'code' => -2,
                             'msg' => 'phone required',
                             )
                         ));
@@ -209,7 +239,7 @@ class Neighbor extends CI_Controller {
 
         if(!$name = $this->input->post('name')){
             exit(json_encode(array(
-                    'code' => -1,
+                    'code' => -3,
                     'msg' => 'name required',
                 )
             ));
@@ -217,13 +247,31 @@ class Neighbor extends CI_Controller {
 
         if(!$tablet = $this->input->post('tablet')){
             exit(json_encode(array(
-                    'code' => -6,
+                    'code' => -4,
                     'msg' => 'tablet required',
                 )
             ));
         }
 
+        if(!isset($_POST['source'])){
+            exit(json_encode(array(
+                    'code' => -5,
+                    'msg' => 'source required',
+                )
+            ));
+        }
+        $source = $this->input->post('source');
+
+        if(!check_phone($phone)){
+            exit(json_encode(array(
+                    'code' => -6,
+                    'msg' => '手机号码非法',
+                )
+            ));
+        }
+
         $is_order = false;
+        $arr = array();
         $this->load->model('order_model', 'order');
         $this->load->model('user_model', 'user');
         $this->load->model('neighbor_model', 'neighbor');
@@ -232,20 +280,25 @@ class Neighbor extends CI_Controller {
             $arr = array('user_id' => $user_id, 'phone' => $phone, 'uname' => $name);
         }else{
             $user_id = 0;
-            $is_order = $this->order->is_order_by_phone($phone);
-            $arr = array('phone' => $phone, 'uname' => $name);
+            $is_order = $this->order->is_order_by_phone($phone, $user_id);
+            $arr = array('user_id' => $user_id, 'phone' => $phone, 'uname' => $name);
         }
 
         if(!$is_order){
-            exit(json_encode(array(
-                            'code' => -20,
-                            'msg' => 'not ordered',
-                            )
-                        ));
+            $order_id = $this->order->neighbor_order($arr, $source, $user_id);
+            if($order_id <= 0){
+                exit(json_encode(array(
+                        'code' => -7,
+                        'msg' => 'database error',
+                    )
+                ));
+            }
+
+            $arr['user_id'] = $user_id;
         }
 
         $this->load->model('neighbor_model', 'neighbor');
-        if($user_id){
+        if($user_id > 0){
             if($this->neighbor->is_partin_by_uid($user_id)){
                 exit(json_encode(array(
                                 'code' => -21,
@@ -254,16 +307,14 @@ class Neighbor extends CI_Controller {
                             ));
             }
         }else{
-            if($this->neighbor->is_partin_by_phone($phone)){
-                exit(json_encode(array(
-                                'code' => -21,
-                                'msg' => 'partin already',
-                                )
-                            ));
-            }
+            exit(json_encode(array(
+                    'code' => -8,
+                    'msg' => 'system error',
+                )
+            ));
         }
 
-        if(($ret = $this->neighbor->partin($user_id, $nt_id, $name, $phone, $tablet)) == 0){
+        if(($ret = $this->neighbor->partin($user_id, $nt_id, $name, $phone, $tablet, $source)) == 0){
             exit(json_encode(array(
                             'code' => 0,
                             'id' => $nt_id,

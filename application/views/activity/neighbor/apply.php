@@ -48,6 +48,7 @@ include(dirname(__FILE__) . '/../../header.php');
         var district = $("#district").val();
         var target= parseInt($(".found_item").children(".item-on").attr('title'));
         var tablet = $("#tablet").val();
+        var source = <?=ORDER_SOURCE_NEIGHBOR_WEB;?>;
 
         if(name == undefined || name == ''){
             alert('姓名为空');
@@ -74,15 +75,24 @@ include(dirname(__FILE__) . '/../../header.php');
             return false;
         }
 
-        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target, tablet: tablet}, 
+        $.post('/activity/neighbor/found', {name: name, phone: phone, slogan: slogan, district: district, target: target, tablet: tablet, source: source},
                 function(data, status){
                     if(status == "success"){
                         data = eval('(' + data + ')');
                         if(data.code == 0){
                             location.href = '/activity/neighbor/detail/' + data.id;
+                        }else if(data.code == -2){
+                            alert('手机号非法！');
+                            return false;
+                        }else if(data.code == -11){
+                            alert('您已经发起或参与过了！不可以重复发起哦');
+                            return false;
+                        }else if(data.code == -10){
+                            alert('创建订单错误，请您稍后再试！');
+                            return false;
                         }else if(data.code == -20){
-                            alert('您需要先预约哦');
-                            location.href = '/product';
+                            alert('发起活动异常，请您稍后再试！');
+                            return false;
                         }else{
                             alert('系统错误，请稍后再试！');
                             return false;
