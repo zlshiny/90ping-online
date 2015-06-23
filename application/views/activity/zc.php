@@ -45,10 +45,10 @@
         <ul>
             <?php $i = 0;?>
     <?php foreach($list as $v):?>
-        <li>
+        <li class="privilege_li" data-id="<?=$v['id'];?>">
             <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
                 <?php if($v['left_time']):?>
-                <div class="list_top_header">众筹倒计时：</div>
+                <div class="list_top_header">结束倒计时：</div>
                 <div class="under_time"><?=$v['left_time']['d'];?></div>
                 <div class="under_cons">天</div>
                 <div class="under_time"><?=$v['left_time']['h'];?></div>

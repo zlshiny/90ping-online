@@ -26,7 +26,7 @@ $(function(){
         $('#month-input').val(inputVal);
     })
 
-    $(".privilege").on('click', function(){
+    $(".privilege_li").on('click', function(){
         var id = $(this).attr('data-id');
         location.href="/activity/neighbor/detail/" + id;
     });
