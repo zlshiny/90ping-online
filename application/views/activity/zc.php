@@ -48,13 +48,14 @@
         <li class="privilege_li" data-id="<?=$v['id'];?>">
             <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
                 <?php if($v['left_time']):?>
-                <div class="list_top_header">结束倒计时：</div>
-                <div class="under_time"><?=$v['left_time']['d'];?></div>
-                <div class="under_cons">天</div>
-                <div class="under_time"><?=$v['left_time']['h'];?></div>
-                <div class="under_cons">时</div>
-                <div class="under_time"><?=$v['left_time']['i'];?></div>
-                <div class="under_cons">分</div>
+                <div class="list_top_header">倒计时：
+                <strong class="list_num"><?=$v['left_time']['d'];?></strong>
+                天
+                    <strong class="list_num"><?=$v['left_time']['h'];?></strong>
+                时
+                    <strong class="list_num"><?=$v['left_time']['i'];?></strong>
+                分
+                </div>
                 <?php endif;?>
                 <?php if($i < 7){$i ++;} if($i > 6){$i = 0;}?>
                 <span class="district"><?=$v['district'];?></span>

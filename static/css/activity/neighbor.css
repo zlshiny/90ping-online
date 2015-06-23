@@ -114,12 +114,22 @@ header {
 
 .detail{
   width: 100%;  
-  background: url(/static/image/activity/detail-bg.jpg) no-repeat;
+  /*background: url(/static/image/activity/detail-bg.jpg) no-repeat;*/
   background-size: 100%;
   text-align: center;
   position: absolute;
 }
-.detail-title{  width: 90%;  margin-left: auto;  margin-right: auto;  margin-top: 30px;  text-align: center;}.detail-title img{  width: 100%;}
+
+.detail-title {
+  width: 100%;
+  background: url("/static/image/activity/neighbor/mobile/header.jpg") no-repeat;
+  height: 235px;
+  background-size: 100%;
+}
+
+.detail-title img {
+  width: 100%;
+}
 /*
 .detail-title{
   width: 90%;
@@ -140,7 +150,7 @@ header {
   background: url(/static/image/activity/neighbor/mobile/header.jpg) no-repeat;
   width: 100%;
   background-size: 100%;
-  height:235px;
+  height:280px;
 }
 .zc .start{
   width: 100%;
@@ -290,7 +300,33 @@ header {
   width: 100%;
   margin-bottom: 15px;
 }
-.detail-title, .detail-banner{  margin-left: auto;  margin-right: auto;}.detail-banner{  width: 100%;  min-height: 126px;  background: url(/static/image/activity/detail-banner.jpg) no-repeat right;  background-size: 100%;  }.detail-banner-title{  width: 100%;  padding-top: 10px;  padding-bottom: 5px;  font-size: 26px;  font-weight: bold;  color: #f9f9f9;}.detail-banner .button-area{  }
+
+.detail-title, .detail-banner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-banner {
+  width: 100%;
+  min-height: 126px;
+  background-size: 100%;
+  background: #f8f8f8;
+  height: 250px;
+}
+
+.detail-banner-title {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 26px;
+  font-weight: bold;
+  padding-top: 50px;
+  color: #717070;
+}
+
+.detail-banner .button-area {
+  margin-top: 40px;
+}
 
 /*
 .detail-title, .detail-banner{
@@ -318,16 +354,17 @@ header {
   height: 30px;
   line-height: 30px;
   font-size: 16px;
-  color: #ffffff;
+  padding-top: 80px;
+  color: #666666;
 }
 .detail-banner-button {
-  width: 90%;
-  height: 40px;
-  line-height: 40px;
-  font-size: 16px;
+  width: 88%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
   font-weight: bold;
   color: #fff;
-  background-color: #ffc017;
+  background-color: #fe9c54;
   border-radius: 5px;
   border: 0px;
 }
@@ -337,7 +374,6 @@ header {
   overflow: hidden;
 }
 .detail-area{
-  width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
@@ -391,7 +427,7 @@ header {
 }
 .content-menu{
   width: 100%; 
-  margin-top: 10px; 
+  margin-top: 50px;
   margin-bottom: 20px;
   float: left;
 }
@@ -408,15 +444,16 @@ header {
   color: #1dd2af;
 }
 .content-menu-content{
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   line-height: 50px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   color: #fff;
-  background-color: #1dd2af;
+  background-color: #fff;
   border-radius: 50px;
+  border:1px solid #1dd2af;
 }
 
 .share{
@@ -682,7 +719,7 @@ footer{
 
 .list_content .list_top{
   min-height: 144px;
-  max-height: 190px;
+  max-height: 250px;
   overflow: hidden;
   vertical-align: middle;
   width:100%;
@@ -706,7 +743,10 @@ footer{
 }
 
 .list_content .list_trail{
-  padding: 10px 6px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left:6px;
+  padding-right:6px;
   box-sizing: border-box;
   display: flex;
   display: -webkit-flex;
@@ -746,18 +786,24 @@ footer{
 }
 
 .list_top_header{
-  background: #1dd2af;
+  background: url("/static/image/activity/neighbor/mobile/arrow.png") no-repeat !important;
+  z-index: 200;
+  /*background: #31c5ae;*/
   float:left;
-  margin: 0px auto;
+  margin-left:-16%;
   padding-top:4px;
-  padding-left:2px;
-  width: 25%;
-  height: 25px;
+  opacity: 0.8;
+  width: 100%;
+  height: 28px;
   display: block;
   color: #fff;
   text-align: center;
   margin-right: 2px;
   font-size: 14px;
+  background-size: 100%;
+  padding-right:16%;
+  /*border-top-right-radius: 50px;*/
+  /*border-bottom-right-radius: 50px;*/
 }
 
 .under_time{
@@ -784,4 +830,8 @@ footer{
   text-align: center;
   padding-top:2px;
   margin-left: 1px;
+}
+
+.list_num{
+  font-size:15px;
 }
