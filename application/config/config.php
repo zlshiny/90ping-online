@@ -509,6 +509,7 @@ $config['city'] = array('北京市' => 1);
 
 //邻居一起装活动
 $config['neighbor'] = array();
+$config['neighbor']['last_day'] = 45;//持续时间45天
 $config['neighbor']['max_slogan'] = 200;
 $config['neighbor']['max_state'] = 3;
 $config['neighbor']['state'] = array(

@@ -47,28 +47,30 @@
     <?php foreach($list as $v):?>
         <li>
             <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
+                <?php if($v['left_time']):?>
                 <div class="list_top_header">众筹倒计时：</div>
-                <div class="under_time">13</div>
+                <div class="under_time"><?=$v['left_time']['d'];?></div>
                 <div class="under_cons">天</div>
-                <div class="under_time">21</div>
+                <div class="under_time"><?=$v['left_time']['h'];?></div>
                 <div class="under_cons">时</div>
-                <div class="under_time">15</div>
+                <div class="under_time"><?=$v['left_time']['i'];?></div>
                 <div class="under_cons">分</div>
+                <?php endif;?>
                 <?php if($i < 7){$i ++;} if($i > 6){$i = 0;}?>
                 <span class="district"><?=$v['district'];?></span>
 <!--                <div class="list_top_footer">--><?//=$v['district'];?><!----><?//=$v['tablet'];?><!--</div>-->
             </div>
             <div class="list_trail">
                 <div class="list_conf flex_conf">
-                    <strong>90%</strong>
+                    <strong><?=$v['percent'];?>%</strong>
                     <p>已达到</p>
                 </div>
                 <div class="list_conf flex_conf">
-                    <strong>￥32500</strong>
+                    <strong>￥<?=$v['save_money'];?></strong>
                     <p>已优惠</p>
                 </div>
                 <div class="list_conf flex_conf">
-                    <strong>8人</strong>
+                    <strong><?=$v['left_target_people'];?>人</strong>
                     <p>还差人数</p>
                 </div>
             </div>

@@ -37,7 +37,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['slogan'] = $row['slogan'];
                 $tmp['target_state'] = $row['target_state'];
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
-                $tmp['left_time'] = $this->cal_left_date($row['create_time'], 45);
+                $tmp['left_time'] = $this->cal_left_date($row['create_time'], $this->config->item('last_day', 'neighbor'));
                 $tmp['district'] = $row['district'];
                 $tmp['uname'] = $row['uname'];
                 $tmp['phone'] = $row['phone'];
@@ -110,8 +110,12 @@ class Neighbor_Model extends CI_Model
     public function get_list($limit, $offset = 0){
         $ret = array();
 
+        $last_day = $this->config->item('last_day', 'neighbor');
+
         $this->master_db->select('*');
         $this->master_db->from($this->_dbname);
+        $this->master_db->order_by('create_time', 'desc');
+        $this->master_db->where('create_time >', date('Y-m-d H:i:s', time() - $last_day * 86400));
         $this->master_db->limit($limit, $offset);
 
         $config = $this->config->item('neighbor');
@@ -138,7 +142,16 @@ class Neighbor_Model extends CI_Model
                 }
 
                 $tmp['left_people'] = $config['state'][intval($tmp['current_state'])]['max_user'] - $tmp['current_ucount'] + 1;
+                $tmp['left_target_people'] = $config['state'][$tmp['target_state'] - 1]['max_user'] + 1 - $tmp['current_ucount'];
+                $tmp['percent'] = ($tmp['current_ucount'] * 100) / ($config['state'][$tmp['target_state'] - 1]['max_user'] + 1);
+                
+                if($tmp['cur_money'] == 0){
+                    $tmp['save_money'] = 1000;
+                }else{
+                    $tmp['save_money'] = $tmp['cur_money'] * $tmp['current_ucount'];
+                }
 
+                $tmp['left_time'] = $this->cal_left_date($row['create_time'], $last_day);
                 $ret[] = $tmp;
             }
         }
