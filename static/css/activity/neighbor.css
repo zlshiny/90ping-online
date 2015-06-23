@@ -724,6 +724,7 @@ footer{
   vertical-align: middle;
   width:100%;
   height: 200px;
+  position: relative;
 }
 
 .list_top .district {
@@ -778,11 +779,14 @@ footer{
   background: #5c5956;
   opacity: 0.85;
   float:left;
-  margin-top: 27px;
-  padding-bottom: 0px;
+  margin-top: 175px;
   width: 100%;
   height: 25px;
   display: block;
+  position: absolute;
+  text-align: left;
+  padding-left: 5px;
+  font-size: 15px;
 }
 
 .list_top_header{
