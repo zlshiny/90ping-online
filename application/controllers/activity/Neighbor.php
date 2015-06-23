@@ -37,7 +37,7 @@ class Neighbor extends CI_Controller {
         }
     }
 
-    public function lists($limit = 10){
+    public function lists($limit = 20){
         if(!$user_id = check_login()){
             $data['user_id'] = $user_id;
         }

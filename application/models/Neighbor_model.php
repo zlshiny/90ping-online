@@ -127,6 +127,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['create_time'] = $row['create_time'];
                 $tmp['district'] = $row['district'];
                 $tmp['uname'] = $row['uname'];
+                $tmp['tablet'] = $row['tablet'];
 
                 $tmp['target_money'] = $config['state'][intval($tmp['target_state'])]['favorable'];
                 $tmp['cur_money'] = $config['state'][intval($tmp['current_state'])]['favorable'];
