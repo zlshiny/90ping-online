@@ -48,7 +48,7 @@
         <li class="privilege_li" data-id="<?=$v['id'];?>">
             <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
                 <?php if($v['left_time']):?>
-                <div class="list_top_header">倒计时：
+                <div class="list_top_header">倒计时:
                 <strong class="list_num"><?=$v['left_time']['d'];?></strong>
                 天
                     <strong class="list_num"><?=$v['left_time']['h'];?></strong>
@@ -56,6 +56,7 @@
                     <strong class="list_num"><?=$v['left_time']['i'];?></strong>
                 分
                 </div>
+                <div class="list_top_header_right"></div>
                 <?php endif;?>
                 <?php if($i < 7){$i ++;} if($i > 6){$i = 0;}?>
                 <span class="district"><?=$v['district'];?></span>
@@ -63,15 +64,15 @@
             </div>
             <div class="list_trail">
                 <div class="list_conf flex_conf">
-                    <strong><?=$v['percent'];?>%</strong>
+                    <strong><?=$v['percent'];?></strong><span class="shit">%</span>
                     <p>已达到</p>
                 </div>
                 <div class="list_conf flex_conf">
-                    <strong>￥<?=$v['save_money'];?></strong>
+                    <span class="shit">￥</span><strong><?=$v['save_money'];?></strong>
                     <p>已优惠</p>
                 </div>
                 <div class="list_conf flex_conf">
-                    <strong><?=$v['left_target_people'];?>人</strong>
+                    <strong><?=$v['left_target_people'];?></strong><span class="shit">人</span>
                     <p>还差人数</p>
                 </div>
             </div>
