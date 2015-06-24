@@ -53,7 +53,7 @@
     <div class="detail-content">
 
         <div class="desciption">
-            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>(<?=$detail['district'] . $detail['tablet'];?>)</div>
+            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>(<?=$detail['tablet'];?>)</div>
             <div class="des_foot" style="width: 100%;text-align: left;font-size:15px;color:#b0b0b0;text-indent: 3em;margin-top:20px;padding-bottom: 20px;padding-left: 20px;padding-right:20px;">
                 <?=$detail['slogan'];?>
             </div>
