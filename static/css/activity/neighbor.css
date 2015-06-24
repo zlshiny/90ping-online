@@ -712,9 +712,10 @@ footer{
   margin-top:10px;
 }
 
-.list_content li{
+.list_content ul li{
   background: #ffffff;
   margin-top:10px;
+  display: list-item;
 }
 
 .list_content .list_top{
@@ -744,14 +745,15 @@ footer{
 }
 
 .list_content .list_trail{
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding-top: 15px;
+  padding-bottom: 3px;
   padding-left:6px;
   padding-right:6px;
   box-sizing: border-box;
+  display:box;
+  display:-webkit-box;
   display: flex;
   display: -webkit-flex;
-  align-items: flex-start;
   width: 100%;
 }
 
@@ -759,12 +761,18 @@ footer{
   flex: 3;
   -webkit-flex: 3;
   box-flex: 3;
-  float: left;
+  -webkit-box-flex: 3;
 }
 
 .list_content .list_conf strong{
-  font-size: 22px;
+  font-size: 18px;
   color: #da2103;
+  line-height: 18px;
+}
+
+.list_content .list_conf .shit{
+  font-size: 18px;
+  color: #666;
   line-height: 18px;
 }
 
@@ -779,20 +787,20 @@ footer{
   background: #5c5956;
   opacity: 0.85;
   float:left;
-  margin-top: 175px;
+  margin-top: 151px;
   width: 100%;
   height: 25px;
   display: block;
   position: absolute;
   text-align: left;
   padding-left: 5px;
+  padding-top:3px;
   font-size: 15px;
 }
 
-.list_top_header{
+/*.list_top_header{
   background: url("/static/image/activity/neighbor/mobile/arrow.png") no-repeat !important;
   z-index: 200;
-  /*background: #31c5ae;*/
   float:left;
   margin-left:-16%;
   margin-top: -1%;
@@ -807,8 +815,32 @@ footer{
   font-size: 14px;
   background-size: 100%;
   padding-right:16%;
+}*/
+
+.list_top_header{
+  display: block;
+  float:left;
+  background: #31c5ae;
+  padding-top:4px;
+  opacity: 0.8;
+  width: 46%;
+  height: 24px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+    overflow:hidden;
   /*border-top-right-radius: 50px;*/
   /*border-bottom-right-radius: 50px;*/
+}
+
+.list_top_header_right{
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 24px solid #31c5ae;
+    border-bottom: 12px solid transparent;
+    margin-left:46%;
+    opacity: 0.8;
 }
 
 .under_time{
