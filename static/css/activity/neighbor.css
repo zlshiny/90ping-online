@@ -750,7 +750,7 @@ footer{
   font-size: 13px;
 }
 
-.list_top, .detail-img .district {
+.list_top .district {
   display: block;
   float: left;
   z-index: 100;
