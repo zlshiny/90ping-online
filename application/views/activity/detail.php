@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>home1.2</title>
+    <title>邻居一起装</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -24,7 +24,7 @@
 <div class="detail-title"></div>
 <?php $i = $detail['id'] % 7;?>
 <div class="detail-img" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
-    <div class="detail-img-top">距结束还剩 <?=$detail['left_time']['d'];?> 天 <?=$detail['left_time']['h'];?> 时 <?=$detail['left_time']['i'];?> 分</div>
+    <div class="detail-img-top">距结束还剩 <strong><?=$detail['left_time']['d'];?></strong> 天 <strong><?=$detail['left_time']['h'];?></strong> 时 <strong><?=$detail['left_time']['i'];?></strong> 分</div>
     <span class="district"><?=$detail['district'];?></span>
     <div class="list_top_footer">地址：<?=$detail['district'];?><?=$detail['tablet'];?></div>
 </div>
@@ -53,7 +53,7 @@
     <div class="detail-content">
 
         <div class="desciption">
-            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>（<?=$detail['district'] . $detail['tablet'];?>）</div>
+            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>(<?=$detail['district'] . $detail['tablet'];?>)</div>
             <div class="des_foot" style="width: 100%;text-align: left;font-size:15px;color:#b0b0b0;text-indent: 3em;margin-top:20px;padding-bottom: 20px;padding-left: 20px;padding-right:20px;">
                 <?=$detail['slogan'];?>
             </div>
@@ -109,8 +109,8 @@
             <table class="user-list-table">
                 <?php foreach($detail['partin'] as $part):?>
                 <tr style="padding-top: 10px;">
-                    <td class="center" width="25%" style="text-align: left;padding-left:15px;"><?=$part['name'];?></td>
-                    <td class="pleft" width="25%"><?=$part['phone_less'];?></td>
+                    <td class="center" width="25%" style="text-align: left;"><?=$part['name'];?></td>
+                    <td class="pleft" width="25%" style="text-align: center;"><?=$part['phone_less'];?></td>
                     <td class="pleft" width="50%" style="text-align: center;"><?=$part['tablet'];?></td>
                 </tr>
                 <?php endforeach;?>

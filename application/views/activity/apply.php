@@ -62,7 +62,7 @@
             <p>宣言</p>
             <div class="form-input">
                 <!--<input type="text" class="text-input left" id="slogan"  placeholder="发挥影响力，号召朋友邻居来参与（限200字）" >-->
-                <textarea class="text-input left" id="slogan" style="height:60px;line-height:20px;" placeholder="发挥影响力，号召朋友邻居来参与（限200字）" ></textarea>
+                <textarea class="text-input left" id="slogan" style="height:120px;line-height:20px;" placeholder="发挥影响力，号召朋友邻居来参与（限200字）" ></textarea>
             </div>
         </div>
 

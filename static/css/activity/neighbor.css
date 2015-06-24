@@ -380,6 +380,7 @@ header {
   margin-right: auto;
   padding-bottom: 20px;
   background-color: #fff;
+  margin-top: 10px;
 }
 .desciption{
   width: 94%;
@@ -759,6 +760,7 @@ footer{
   float: left;
   margin-left: 2px;
   font-size: 13px;
+  padding-top: 2px;
 }
 
 .list_top .district {
