@@ -27,7 +27,7 @@
 <input type="hidden" id="nt_id" value="<?=$id;?>"/>
 <input type="hidden" id="nt_name" value="<?=$name;?>"/>
     <form>
-        <div class="form-element">
+        <div class="form-element" style="display:none;">
             <p>小区名称</p>
             <div class="form-input">
                 <input type="text" class="text-input left" id="district" disabled="true" readOnly="true" value="<?=$name;?>">
@@ -97,12 +97,15 @@
                         data = eval('(' + data + ')');
                         if(data.code == 0){
                             alert('参与成功');
-                            location.href = '/activity/neighbor/detail/' + data.id;
+                            location.href = '/activity/neighbor/detail/' + data.id + '?join=1';
                         }else if(data.code == -20){
                             alert('您需要先预约哦');
                             location.href = '/wechat/product/v2';
                         }else if(data.code == -21){
                             alert('您已经参与过了哦');
+                            return false;
+                        }else if(data.code == -6){
+                            alert('手机号不正确');
                             return false;
                         }else if(data.code == -11){
                             alert('活动不存在');

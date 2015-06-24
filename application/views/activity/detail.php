@@ -18,6 +18,15 @@
 
 <body class="detail">
 
+<div id="shareit">
+  <img class="arrow" src="/static/image/activity/iphone/11.png">
+  <!--
+  <a href="#" id="follow">
+    <img id="share-text" src="http://dev.vxtong.com/cases/nuannan/imgs/share-text.png">
+  </a>
+  -->
+</div>
+
 <input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
@@ -37,10 +46,20 @@
         </div>
         <div class="button-area">
             <div class="button">
+                <?php if($join == 1):?>
+                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>
+                <?php elseif($apply == 1):?>
+                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请好友</button></a>
+                <?php else:?>
                 <a href="javascript:kobe();"><button type="button" class="detail-banner-button ">我要参与</button></a>
+                <?php endif;?>
             </div>
             <div class="button">
-                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我要发起</button></a>
+                <?php if($apply == 1):?>
+                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>
+                <?php else:?>
+                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我也要发起</button></a>
+                <?php endif;?>
             </div>
         </div>
 <!--        --><?php //if(empty($detail['left_time'])):?>
@@ -61,15 +80,15 @@
 
         <div class="detail-target">
             <div class="list_conf flex_conf">
-                <strong>3</strong><span class="shit">%</span>
+                <strong><?=$detail['percent'];?></strong><span class="shit">%</span>
                 <p>已达到</p>
             </div>
             <div class="list_conf flex_conf">
-                <span class="shit">￥</span><strong>5</strong>
+                <span class="shit">￥</span><strong><?=$detail['save_money'];?></strong>
                 <p>已优惠</p>
             </div>
             <div class="list_conf flex_conf">
-                <strong>3</strong><span class="shit">人</span>
+                <strong><?=$detail['left_target_people'];?></strong><span class="shit">人</span>
                 <p>还差人数</p>
             </div>
         </div>
@@ -135,6 +154,15 @@
         var district = $("#district").val();
         location.href="/activity/neighbor/join/" + nt_id + "/" + district;
     }
+
+    var share = function(){
+      $("#shareit").show();
+      location.href="#shareit";
+    }
+
+    $("#shareit").live('click', function(){
+        $(this).hide();
+    });
     //});
 </script>
 

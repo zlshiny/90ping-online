@@ -117,7 +117,7 @@
                         data = eval('(' + data + ')');
                         if(data.code == 0){
                             alert('发起成功');
-                            location.href = '/activity/neighbor/detail/' + data.id;
+                            location.href = '/activity/neighbor/detail/' + data.id + '?apply=1';
                         }else if(data.code == -2){
                             alert('手机号非法！');
                             return false;

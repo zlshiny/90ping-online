@@ -58,6 +58,14 @@ class Neighbor_Model extends CI_Model
                 $tmp['partin'] = $this->get_partin_user($tmp['id']);
                 $tmp['partin'][] = array('user_id' => $tmp['user_id'],'tablet' => $tmp['tablet'], 'create_time' => $tmp['create_time'],
                     'name' => $tmp['uname'], 'phone' => $tmp['phone'], 'phone_less' => $this->generate_phone_less($tmp['phone']));
+
+                $tmp['percent'] = ($tmp['current_ucount'] * 100) / ($config['state'][$tmp['target_state'] - 1]['max_user'] + 1);
+
+                if($tmp['cur_money'] == 0){
+                    $tmp['save_money'] = 1000;
+                }else{
+                    $tmp['save_money'] = $tmp['cur_money'] * $tmp['current_ucount'];
+                }
             }
         }
 
