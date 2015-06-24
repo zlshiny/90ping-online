@@ -738,13 +738,14 @@ footer{
 }
 
 .list_content .list_top{
-  min-height: 144px;
+  min-height: 200px;
   max-height: 250px;
   overflow: hidden;
   vertical-align: middle;
   width:100%;
-  height: 200px;
+  height: auto;
   position: relative;
+  background-size: 100%;
 }
 
 .detail-img{

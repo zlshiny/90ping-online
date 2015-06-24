@@ -43,10 +43,9 @@
     <?php if(!empty($list)):?>
         <div class="list_content">
         <ul>
-            <?php $i = 0;?>
     <?php foreach($list as $v):?>
         <li class="privilege_li" data-id="<?=$v['id'];?>">
-            <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
+            <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=($v['id'] % 20);?>.jpg') no-repeat;">
                 <?php if($v['left_time']):?>
                 <div class="list_top_header">倒计时:
                 <strong class="list_num"><?=$v['left_time']['d'];?></strong>
@@ -58,7 +57,6 @@
                 </div>
                 <div class="list_top_header_right"></div>
                 <?php endif;?>
-                <?php if($i < 7){$i ++;} if($i > 6){$i = 0;}?>
                 <span class="district"><?=$v['district'];?></span>
                 <div class="list_top_footer">地址：<?=$v['district'];?><?=$v['tablet'];?></div>
             </div>
