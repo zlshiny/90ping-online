@@ -994,8 +994,18 @@ footer{
     margin-top: 280px;
     margin-left: 26%;
     padding-top: 16px;
+    color:#fff;
 }
 
-.super-home-button a{
+.list-found{
+    float:left;
+    background: #1dd2af;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 226px;
+    margin-left: 30%;
+    padding-top: 10px;
     color:#fff;
 }

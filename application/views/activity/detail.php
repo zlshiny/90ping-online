@@ -117,7 +117,7 @@
             </table>
         </div>
         <div class="super-home">
-            <div class="super-home-button"><a href="/wechat/product?from=neighbor">进入超级Home1.2 ></a></div>
+            <a href="/wechat/product?from=neighbor"><div class="super-home-button">进入超级Home1.2 ></div></a>
         </div>
     </div>
 
