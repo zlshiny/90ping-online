@@ -361,9 +361,9 @@ header {
 /*}*/
 .detail-banner-button {
   width: 88%;
-  height: 60px;
-  line-height: 60px;
-  font-size: 24px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   background-color: #fe9c54;
@@ -380,6 +380,7 @@ header {
   margin-right: auto;
   padding-bottom: 20px;
   background-color: #fff;
+  margin-top: 10px;
 }
 .desciption{
   width: 94%;
@@ -421,7 +422,7 @@ header {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.user-list h2{
+.user-list p{
   width: 100%;
   height: 30px;
   line-height: 30px;
@@ -435,7 +436,7 @@ header {
   margin-right: auto;
   margin-left: auto;
   color: #636363;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 10px;
 }
 .content-menu{
@@ -759,6 +760,7 @@ footer{
   float: left;
   margin-left: 2px;
   font-size: 13px;
+  padding-top: 2px;
 }
 
 .list_top .district {
@@ -844,8 +846,8 @@ footer{
   position: absolute;
   text-align: left;
   padding-left: 5px;
-  padding-top:3px;
-  font-size: 15px;
+  padding-top:6px;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -860,8 +862,8 @@ footer{
   position: absolute;
   text-align: left;
   padding-left: 5px;
-  padding-top:3px;
-  font-size: 15px;
+  padding-top:6px;
+  font-size: 12px;
   color: #fff;
 }
 
@@ -954,19 +956,19 @@ footer{
 }
 
 .detail-target .list_conf strong{
-  font-size: 20px;
+  font-size: 24px;
   color: #da2103;
   line-height: 18px;
 }
 
 .detail-target .list_conf .shit{
-  font-size: 20px;
+  font-size: 24px;
   color: #666;
   line-height: 18px;
 }
 
 .detail-target .list_conf p{
-  font-size: 18px;
+  font-size: 14px;
   color: #666;
   line-height: 1.5em;
   word-break: break-all;
@@ -979,4 +981,47 @@ footer{
   margin-left: 3%;
   height: 460px;
   margin-top: 15px;
+  float:left;
+}
+
+.super-home-button{
+    float:left;
+    background: #1dd2af;
+    width: 46%;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 280px;
+    margin-left: 26%;
+    padding-top: 16px;
+    color:#fff;
+}
+
+.list-found{
+    float:left;
+    background: #1dd2af;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 226px;
+    margin-left: 30%;
+    padding-top: 10px;
+    color:#fff;
+}
+
+#shareit {
+  -webkit-user-select: none;
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 105;
+}
+#shareit img {
+  max-width: 100%;
 }

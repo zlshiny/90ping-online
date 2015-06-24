@@ -27,6 +27,19 @@ class Neighbor extends CI_Controller {
             $this->load->model('neighbor_model', 'neighbor');
             $data['detail'] = $this->neighbor->get_nt_detail($id);
 
+            $join = 0;
+            if(isset($_GET['join']) && $_GET['join'] == 1){
+                $join = 1;
+            }
+
+            $apply = 0;
+            if(isset($_GET['apply']) && $_GET['apply'] == 1){
+                $apply = 1;
+            }
+
+            $data['join'] = $join;
+            $data['apply'] = $apply;
+
             if(check_device()) {
                 $this->load->view('activity/detail.php', $data);
             }else{

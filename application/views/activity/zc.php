@@ -60,7 +60,7 @@
                 <?php endif;?>
                 <?php if($i < 7){$i ++;} if($i > 6){$i = 0;}?>
                 <span class="district"><?=$v['district'];?></span>
-                <div class="list_top_footer"><?=$v['district'];?><?=$v['tablet'];?></div>
+                <div class="list_top_footer">地址：<?=$v['district'];?><?=$v['tablet'];?></div>
             </div>
             <div class="list_trail">
                 <div class="list_conf flex_conf">

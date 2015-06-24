@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="form-element">
-            <p>单元</p>
+            <p>门牌号</p>
             <div class="form-input">
                 <input type="text" class="text-input left" id="tablet" placeholder="如：1号楼3单元1504" >
             </div>
@@ -62,7 +62,7 @@
             <p>宣言</p>
             <div class="form-input">
                 <!--<input type="text" class="text-input left" id="slogan"  placeholder="发挥影响力，号召朋友邻居来参与（限200字）" >-->
-                <textarea class="text-input left" id="slogan" style="height:60px;line-height:20px;" placeholder="发挥影响力，号召朋友邻居来参与（限200字）" ></textarea>
+                <textarea class="text-input left" id="slogan" style="height:120px;line-height:20px;" placeholder="发挥影响力，号召朋友邻居来参与（限200字）" ></textarea>
             </div>
         </div>
 
@@ -117,7 +117,7 @@
                         data = eval('(' + data + ')');
                         if(data.code == 0){
                             alert('发起成功');
-                            location.href = '/activity/neighbor/detail/' + data.id;
+                            location.href = '/activity/neighbor/detail/' + data.id + '?apply=1';
                         }else if(data.code == -2){
                             alert('手机号非法！');
                             return false;
