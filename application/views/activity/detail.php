@@ -53,8 +53,8 @@
     <div class="detail-content">
 
         <div class="desciption">
-            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>(<?=$detail['tablet'];?>)</div>
-            <div class="des_foot" style="width: 100%;text-align: left;font-size:15px;color:#b0b0b0;text-indent: 3em;margin-top:20px;padding-bottom: 20px;padding-left: 20px;padding-right:20px;">
+            <div class="des_top" style="font-size:16px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>(<?=$detail['tablet'];?>)</div>
+            <div class="des_foot" style="width: 100%;text-align: left;font-size:14px;color:#b0b0b0;text-indent: 3em;margin-top:20px;padding-bottom: 20px;padding-left: 20px;padding-right:20px;">
                 <?=$detail['slogan'];?>
             </div>
         </div>
@@ -105,7 +105,7 @@
 <!--        </div>-->
 
         <div class="user-list">
-            <h2>参加众筹的邻居有：</h2>
+            <p>参加众筹的邻居有：</p>
             <table class="user-list-table">
                 <?php foreach($detail['partin'] as $part):?>
                 <tr style="padding-top: 10px;">
@@ -117,7 +117,7 @@
             </table>
         </div>
         <div class="super-home">
-
+            <div class="super-home-button"><a href="/wechat/product?from=neighbor">进入超级Home1.2 ></a></div>
         </div>
     </div>
 
