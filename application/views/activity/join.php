@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>home1.2</title>
+    <title>邻居一起装</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -19,7 +19,8 @@
 <body class="apply">
 
 <div class="apply-title">
-    <img src="/static/image/activity/join-title.png">
+    <img src="/static/image/activity/neighbor/mobile/header.jpg">
+    <img src="/static/image/activity/neighbor/mobile/former.jpg">
 </div>
 
 <div class="apply-form">
@@ -33,7 +34,7 @@
             </div>
         </div>
         <div class="form-element">
-            <p>门牌号</p>
+            <p>单元</p>
             <div class="form-input">
                 <input type="text" class="text-input left"  id="tablet" placeholder="门牌号" >
             </div>

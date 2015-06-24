@@ -36,6 +36,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['user_id'] = $row['user_id'];
                 $tmp['slogan'] = $row['slogan'];
                 $tmp['target_state'] = $row['target_state'];
+                $index = intval($tmp['target_state']) - 1;
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
                 $tmp['left_time'] = $this->cal_left_date($row['create_time'], $this->config->item('last_day', 'neighbor'));
                 $tmp['district'] = $row['district'];
@@ -44,6 +45,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['tablet'] = $row['tablet'];
 
                 $tmp['target_money'] = $config['state'][intval($tmp['target_state'])]['favorable'];
+                $tmp['target_total_money'] = $tmp['target_money'] * ($config['state'][$index]['max_user'] + 1);
                 $tmp['cur_money'] = $config['state'][intval($tmp['current_state'])]['favorable'];
                 if ($tmp['current_state'] < $config['max_state']) {
                     $tmp['next_money'] = $config['state'][intval($tmp['current_state']) + 1]['favorable'];
@@ -52,14 +54,24 @@ class Neighbor_Model extends CI_Model
                 }
 
                 $tmp['left_next_people'] = $config['state'][intval($tmp['current_state'])]['max_user'] - $tmp['current_ucount'] + 1;
-                $index = intval($tmp['target_state']) - 1;
                 $tmp['left_target_people'] = $config['state'][$index]['max_user'] - $tmp['current_ucount'] + 1;
                 $tmp['partin'] = $this->get_partin_user($tmp['id']);
-                $tmp['partin'][] = array('user_id' => $tmp['user_id'],'tablet' => $tmp['tablet'], 'create_time' => $tmp['create_time'], 'name' => $tmp['uname'], 'phone' => $tmp['phone']);
+                $tmp['partin'][] = array('user_id' => $tmp['user_id'],'tablet' => $tmp['tablet'], 'create_time' => $tmp['create_time'],
+                    'name' => $tmp['uname'], 'phone' => $tmp['phone'], 'phone_less' => $this->generate_phone_less($tmp['phone']));
             }
         }
 
         return $tmp;
+    }
+
+    private function generate_phone_less($phone){
+        if(!$phone || strlen($phone) != 11) return '';
+        $phone[3] = '*';
+        $phone[4] = '*';
+        $phone[5] = '*';
+        $phone[6] = '*';
+
+        return $phone;
     }
 
     private function cal_left_date($create_time, $base = 5){
@@ -100,6 +112,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['name'] = $row['name'];
                 $tmp['phone'] = $row['phone'];
                 $tmp['tablet'] = $row['tablet'];
+                $tmp['phone_less'] = $this->generate_phone_less($tmp['phone']);
                 $ret[] = $tmp;
             }
         }

@@ -19,10 +19,11 @@
 <body class="apply">
 
 <div class="apply-title">
-    <img src="/static/image/activity/apply-title.jpg">
+    <img src="/static/image/activity/neighbor/mobile/header.jpg">
+    <img src="/static/image/activity/neighbor/mobile/former.jpg">
 </div>
 
-<div class="apply-form">
+<div class="apply-form" style="margin-top: 10px;">
     <form>
         <div class="form-element">
             <p>小区名称</p>
@@ -31,9 +32,9 @@
             </div>
         </div>
         <div class="form-element">
-            <p>门牌号</p>
+            <p>单元</p>
             <div class="form-input">
-                <input type="text" class="text-input left" id="tablet" placeholder="门牌号" >
+                <input type="text" class="text-input left" id="tablet" placeholder="如：1号楼3单元1504" >
             </div>
         </div>
         <div class="form-element">

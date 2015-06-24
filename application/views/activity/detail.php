@@ -21,14 +21,19 @@
 <input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
-<div class="detail-title">
-    <img src="/static/image/activity/detail-title.png">
+<div class="detail-title"></div>
+<?php $i = $detail['id'] % 7;?>
+<div class="detail-img" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
+    <div class="detail-img-top">距结束还剩 <?=$detail['left_time']['d'];?> 天 <?=$detail['left_time']['h'];?> 时 <?=$detail['left_time']['i'];?> 分</div>
+    <span class="district"><?=$detail['district'];?></span>
+    <div class="list_top_footer">地址：<?=$detail['district'];?><?=$detail['tablet'];?></div>
 </div>
 
 <div class="detail-area">
     <div class="detail-banner">
         <div class="detail-banner-title">
-            <?=$detail['district'];?>
+            <h2 style="color:#393939;font-size:25px;">众筹优惠目标：<?=$detail['target_total_money'];?></h2>
+            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满20人每人减1000元装修款</p>
         </div>
         <div class="button-area">
             <div class="button">
@@ -38,78 +43,81 @@
                 <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我要发起</button></a>
             </div>
         </div>
-        <?php if(empty($detail['left_time'])):?>
-                                <p>本次众筹已结束</p>
-                                                    <?php else:?>
-        <p>结束时间：还剩<?=$detail['left_time']['d'];?>天<?=$detail['left_time']['h'];?>时<?=$detail['left_time']['i'];?>分<?=$detail['left_time']['s'];?>秒</p>
-        <?php endif;?>
+<!--        --><?php //if(empty($detail['left_time'])):?>
+<!--                                <p>本次众筹已结束</p>-->
+<!--                                                    --><?php //else:?>
+<!--        <p>结束时间：还剩--><?//=$detail['left_time']['d'];?><!--天--><?//=$detail['left_time']['h'];?><!--时--><?//=$detail['left_time']['i'];?><!--分--><?//=$detail['left_time']['s'];?><!--秒</p>-->
+<!--        --><?php //endif;?>
     </div>
 
     <div class="detail-content">
 
         <div class="desciption">
-            <div class="desciption-title">
-                <p class="p1">众筹优惠目标：<font class="p1-money"><?=$detail['target_money'];?></font></p>
-                <p class="p2">满20人，每人优惠10000元</p>
-            </div>
-            <div class="author">
-                发起人：<?=$detail['uname'];?>
-            </div>
-            <div class="desciption-content">
+            <div class="des_top" style="font-size:18px;color:#666666;text-align:left;padding-left:8px;padding-top: 20px;"><span>发起人：</span><strong><?=$detail['uname'];?></strong>（<?=$detail['district'] . $detail['tablet'];?>）</div>
+            <div class="des_foot" style="width: 100%;text-align: left;font-size:15px;color:#b0b0b0;text-indent: 3em;margin-top:20px;padding-bottom: 20px;padding-left: 20px;padding-right:20px;">
                 <?=$detail['slogan'];?>
             </div>
         </div>
 
-        <div class="content-menu">
-            <div class="content-menu-sub">
-                <div class="content-menu-title">
-                    当前参与人次
-                </div>
-                <div class="content-menu-content">
-                    <?=$detail['current_ucount'];?> 人
-                </div>
+        <div class="detail-target">
+            <div class="list_conf flex_conf">
+                <strong>3</strong><span class="shit">%</span>
+                <p>已达到</p>
             </div>
-
-            <div class="content-menu-sub">
-                <div class="content-menu-title">
-                    距目标还差
-                </div>
-                <div class="content-menu-content">
-                    <?=$detail['left_target_people'];?> 人
-                </div>
+            <div class="list_conf flex_conf">
+                <span class="shit">￥</span><strong>5</strong>
+                <p>已优惠</p>
             </div>
-
-            <div class="content-menu-sub">
-                <div class="content-menu-title">
-                    发起时间
-                </div>
-                <div class="content-menu-content">
-                    <?=$detail['create_time'];?>
-                </div>
+            <div class="list_conf flex_conf">
+                <strong>3</strong><span class="shit">人</span>
+                <p>还差人数</p>
             </div>
-
         </div>
 
+<!--        <div class="content-menu">-->
+<!--            <div class="content-menu-sub">-->
+<!--                <div class="content-menu-title">-->
+<!--                    当前参与人次-->
+<!--                </div>-->
+<!--                <div class="content-menu-content">-->
+<!--                    --><?//=$detail['current_ucount'];?><!-- 人-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="content-menu-sub">-->
+<!--                <div class="content-menu-title">-->
+<!--                    距目标还差-->
+<!--                </div>-->
+<!--                <div class="content-menu-content">-->
+<!--                    --><?//=$detail['left_target_people'];?><!-- 人-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--            <div class="content-menu-sub">-->
+<!--                <div class="content-menu-title">-->
+<!--                    发起时间-->
+<!--                </div>-->
+<!--                <div class="content-menu-content">-->
+<!--                    --><?//=$detail['create_time'];?>
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+
         <div class="user-list">
-            <p>参与用户</p>
+            <h2>参加众筹的邻居有：</h2>
             <table class="user-list-table">
                 <?php foreach($detail['partin'] as $part):?>
                 <tr style="padding-top: 10px;">
-                    <td class="center" width="35%"><?=$part['name'];?></td>
-                    <td class="pleft" width="30%"><?=$part['tablet'];?></td>
-                    <td class="pleft" width="35%"><?=$part['create_time'];?></td>
+                    <td class="center" width="25%" style="text-align: left;padding-left:15px;"><?=$part['name'];?></td>
+                    <td class="pleft" width="25%"><?=$part['phone_less'];?></td>
+                    <td class="pleft" width="50%" style="text-align: center;"><?=$part['tablet'];?></td>
                 </tr>
                 <?php endforeach;?>
             </table>
         </div>
+        <div class="super-home">
 
-        <div class="share">
-            <p>点击右上角邀请邻居朋友参与</p>
-            <!--
-            <div class="weixin">
-                <a href="#"><img src="/static/image/activity/weixin.png"></a>
-            </div>
-            -->
         </div>
     </div>
 
