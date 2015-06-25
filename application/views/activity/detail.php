@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>我是<?=$detail['district'];?>的<?=$detail['name'];?>，发起"邻居一起众筹装修"活动，请邻居火速参与装修众筹</title>
+    <title><?=$detail['district'];?>的<?=$detail['name'];?>，发起超级Home"邻居一起众筹装修"活动，请邻居火速参与装修众筹</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -17,15 +17,6 @@
 </head>
 
 <body class="detail">
-
-<div id="shareit">
-  <img class="arrow" src="/static/image/activity/neighbor/mobile/11.png">
-  <!--
-  <a href="#" id="follow">
-    <img id="share-text" src="http://dev.vxtong.com/cases/nuannan/imgs/share-text.png">
-  </a>
-  -->
-</div>
 
 <input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
@@ -139,6 +130,15 @@
     </div>
 
 </div>
+<div id="shareit">
+  <img class="arrow" src="/static/image/activity/neighbor/mobile/11.png">
+  <!--
+  <a href="#" id="follow">
+    <img id="share-text" src="http://dev.vxtong.com/cases/nuannan/imgs/share-text.png">
+  </a>
+  -->
+</div>
+
 
 <script type="text/javascript">
     var kobe = function(){
