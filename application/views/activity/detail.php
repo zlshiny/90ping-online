@@ -41,8 +41,8 @@
 <div class="detail-area">
     <div class="detail-banner">
         <div class="detail-banner-title">
-            <h2 style="color:#393939;font-size:25px;">众筹优惠目标：<?=$detail['target_total_money'];?></h2>
-            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满20人每人减1000元装修款</p>
+            <h2 style="color:#393939;font-size:22px;">众筹优惠目标:<?=$detail['target_total_money'];?></h2>
+            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满20人每人减10000元</p>
         </div>
         <div class="button-area">
             <div class="button">
