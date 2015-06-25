@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>邻居一起装</title>
+    <title>我是<?=$detail['district'];?>的<?=$detail['name'];?>，发起"邻居一起众筹装修"活动，请邻居火速参与装修众筹</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -37,7 +37,7 @@
 <?php $i = $detail['id'] % 20;?>
 <div class="detail-img">
     <img src="/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg" style="display:block;float:left;width:100%;height:100%;">
-    <div class="detail-img-top">距结束还剩 <strong><?=$detail['left_time']['d'];?></strong> 天 <strong><?=$detail['left_time']['h'];?></strong> 时 <strong><?=$detail['left_time']['i'];?></strong> 分</div>
+    <div class="detail-img-top">距结束还剩 <strong id="day"><?=$detail['left_time']['d'];?></strong> 天 <strong id="hour"><?=$detail['left_time']['h'];?></strong> 时 <strong id="minute"><?=$detail['left_time']['i'];?></strong> 分 <strong id="second"><?=$detail['left_time']['s'];?> 秒</div>
     <span class="district"><?=$detail['district'];?></span>
     <div class="list_top_footer">地址：<?=$detail['district'];?><?=$detail['tablet'];?></div>
 </div>
@@ -161,6 +161,19 @@
     $("#shareit").live('click', function(){
         $(this).hide();
     });
+
+    var seconds = <?=$detail['left_seconds'];?>;
+    var countdown = function(){
+        var d = parseInt(floor(seconds / 86400));
+        var left = seconds - 86400 * d;
+        /*$h = intval(floor($left / 3600));
+        $left = $left - 3600 * $h;
+        $i = intval(floor($left / 60));
+        $left = $left - $i;
+        $s = $left - 60 * $i;
+        if($s < 0) $s = 0;
+        */
+    };
     //});
 </script>
 

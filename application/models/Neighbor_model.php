@@ -39,8 +39,10 @@ class Neighbor_Model extends CI_Model
                 $index = intval($tmp['target_state']) - 1;
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
                 $tmp['left_time'] = $this->cal_left_date($row['create_time'], $this->config->item('last_day', 'neighbor'));
+                $tmp['left_seconds'] = $this->cal_left_seconds($row['create_time']);
                 $tmp['district'] = $row['district'];
                 $tmp['uname'] = $this->generate_name_less($row['uname']);
+                $tmp['name'] = $row['uname'];
                 $tmp['phone'] = $row['phone'];
                 $tmp['tablet'] = $row['tablet'];
 
@@ -91,6 +93,14 @@ class Neighbor_Model extends CI_Model
         $phone[6] = '*';
 
         return $phone;
+    }
+
+    private function cal_left_seconds($create_time, $base = 45){
+        $ori = strtotime($create_time);
+        $item = $ori + 86400 * $base;
+
+        if($item <= time()) return 0;
+        return $item - time();
     }
 
     private function cal_left_date($create_time, $base = 5){
