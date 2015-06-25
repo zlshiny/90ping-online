@@ -162,12 +162,13 @@
         $(this).hide();
     });
 
-    /*$(document).ready(function(){
+    $(document).ready(function(){
         countdown();
-    });*/
+    });
 
-    /*var seconds = <?=$detail['left_seconds'];?>;
+    var seconds = <?=$detail['left_seconds'];?>;
     var countdown = function(){
+        if(seconds <= 0) return false;
         var d = parseInt(Math.floor(seconds / 86400));
         var left = seconds - 86400 * d;
         var h = parseInt(Math.floor(left / 3600));
@@ -180,9 +181,10 @@
         $("#hour").text(h);
         $("#second").text(s);
         $("#day").text(d);
-        $("#minute").text(i);*/
-        /*setInterval("countdown()",1000);  */
-    //};
+        $("#minute").text(i);
+        seconds --;
+        setTimeout("countdown()",1000);
+    };
 
     //});
 </script>
