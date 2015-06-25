@@ -46,7 +46,7 @@
     <div class="detail-banner">
         <div class="detail-banner-title">
             <h2 style="color:#393939;font-size:22px;">众筹优惠目标:<?=$detail['target_total_money'];?></h2>
-            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满20人每人减10000元</p>
+            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满<?=$detail['target_people'];?>人每人减<?=$detail['target_money'];?>元</p>
         </div>
         <div class="button-area">
             <div class="button">
@@ -162,18 +162,28 @@
         $(this).hide();
     });
 
-    var seconds = <?=$detail['left_seconds'];?>;
+    /*$(document).ready(function(){
+        countdown();
+    });*/
+
+    /*var seconds = <?=$detail['left_seconds'];?>;
     var countdown = function(){
-        var d = parseInt(floor(seconds / 86400));
+        var d = parseInt(Math.floor(seconds / 86400));
         var left = seconds - 86400 * d;
-        /*$h = intval(floor($left / 3600));
-        $left = $left - 3600 * $h;
-        $i = intval(floor($left / 60));
-        $left = $left - $i;
-        $s = $left - 60 * $i;
-        if($s < 0) $s = 0;
-        */
-    };
+        var h = parseInt(Math.floor(left / 3600));
+        left = left - 3600 * h;
+        var i = parseInt(Math.floor(left / 60));
+        left = left - i;
+        var s = left - 60 * i;
+        if(s < 0) s = 0;
+
+        $("#hour").text(h);
+        $("#second").text(s);
+        $("#day").text(d);
+        $("#minute").text(i);*/
+        /*setInterval("countdown()",1000);  */
+    //};
+
     //});
 </script>
 

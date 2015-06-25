@@ -57,6 +57,7 @@ class Neighbor_Model extends CI_Model
 
                 $tmp['left_next_people'] = $config['state'][intval($tmp['current_state'])]['max_user'] - $tmp['current_ucount'] + 1;
                 $tmp['left_target_people'] = $config['state'][$index]['max_user'] - $tmp['current_ucount'] + 1;
+                $tmp['target_people'] = $config['state'][$index]['max_user'] + 1;
                 $tmp['partin'] = $this->get_partin_user($tmp['id']);
                 $tmp['partin'][] = array('user_id' => $tmp['user_id'],'tablet' => $tmp['tablet'], 'create_time' => $tmp['create_time'],
                     'name' => $tmp['uname'], 'phone' => $tmp['phone'], 'phone_less' => $this->generate_phone_less($tmp['phone']));
