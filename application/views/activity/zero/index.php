@@ -11,7 +11,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="/static/css/activity/zero/index.css" />
     <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/static/js/activity/zero/index.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".select_state").bind('click', function(){
+                var state = $(this).attr("data-id");
+                $(".select_state").attr('data-id', 0);
+                $(".select_state").attr("src", "/static/image/activity/zero/unselected.jpg")
+                if(state == 1){
+                    $(this).attr("data-id", 0);
+                    $(this).attr("src", "/static/image/activity/zero/unselected.jpg");
+                }else{
+                    $(this).attr("data-id", 1);
+                    $(this).attr("src", "/static/image/activity/zero/select.jpg");
+                }
+            });
+         });
+</script>
 </head>
 <body>
     <div class="header">
@@ -68,11 +83,11 @@
                 <div class="state-cont">
                     <div class="state state1">
                         <span>期房</span>
-                        <img class="select_state" data-state="1" src="/static/image/activity/zero/select.jpg">
+                        <img class="select_state" data-id="1" src="/static/image/activity/zero/select.jpg">
                     </div>
                     <div class="state">
                         <span>现房</span>
-                        <img class="select_state" data-state="0" src="/static/image/activity/zero/unselected.jpg">
+                        <img class="select_state" data-id="0" src="/static/image/activity/zero/unselected.jpg">
                     </div>
                 </div>
             </div>
@@ -80,18 +95,4 @@
         </form>
     </div>
 </body>
-<script type="text/javascript">
-    $(".select_state").live('click', function(){
-        var state = $(this).attr("data-state");
-        $(".select_state").attr('data-state', 0);
-        $(".select_state").attr("src", "/static/image/activity/zero/unselected.jpg")
-        if(state == 1){
-            $(this).attr("data-state", 0);
-            $(this).attr("src", "/static/image/activity/zero/unselected.jpg");
-        }else{
-            $(this).attr("data-state", 1);
-            $(this).attr("src", "/static/image/activity/zero/select.jpg");
-        }
-    });
-</script>
 </html>
