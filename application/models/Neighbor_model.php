@@ -40,7 +40,7 @@ class Neighbor_Model extends CI_Model
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
                 $tmp['left_time'] = $this->cal_left_date($row['create_time'], $this->config->item('last_day', 'neighbor'));
                 $tmp['district'] = $row['district'];
-                $tmp['uname'] = $row['uname'];
+                $tmp['uname'] = $this->generate_name_less($row['uname']);
                 $tmp['phone'] = $row['phone'];
                 $tmp['tablet'] = $row['tablet'];
 
@@ -67,6 +67,17 @@ class Neighbor_Model extends CI_Model
                     $tmp['save_money'] = $tmp['cur_money'] * $tmp['current_ucount'];
                 }
             }
+        }
+
+        return $tmp;
+    }
+
+    private function generate_name_less($name){
+        if(!$name || strlen($name) == 0) return '';
+        $len = mb_strlen($name);
+        $tmp = mb_substr($name, 0, 1);
+        for($i = 0; $i < $len; $i ++){
+            $tmp .= '*';
         }
 
         return $tmp;
@@ -117,7 +128,7 @@ class Neighbor_Model extends CI_Model
                 $tmp = array();
                 $tmp['user_id'] = $row['user_id'];
                 $tmp['create_time'] = date('m.d', strtotime($row['create_time']));
-                $tmp['name'] = $row['name'];
+                $tmp['name'] = $this->generate_name_less($row['name']);
                 $tmp['phone'] = $row['phone'];
                 $tmp['tablet'] = $row['tablet'];
                 $tmp['phone_less'] = $this->generate_phone_less($tmp['phone']);
