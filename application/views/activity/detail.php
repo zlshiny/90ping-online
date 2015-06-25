@@ -32,7 +32,7 @@
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
 <div class="detail-title">
     <img src="/static/image/activity/neighbor/mobile/header1.jpg" style="display:block;float:left;">
-    <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
+    <a href="/activity/neighbor"><div class="list-header-button">更多小区</div></a>
 </div>
 <?php $i = $detail['id'] % 20;?>
 <div class="detail-img">
@@ -50,17 +50,13 @@
         </div>
         <div class="button-area">
             <div class="button">
-                <?php if($join == 1):?>
-                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>
-                <?php elseif($apply == 1):?>
-                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请好友</button></a>
-                <?php else:?>
+                <!--<a href="/activity/neighbor"><button type="button" class="detail-banner-button ">更多小区</button></a>-->
                 <a href="javascript:kobe();"><button type="button" class="detail-banner-button ">我要参与</button></a>
-                <?php endif;?>
             </div>
             <div class="button">
                 <?php //if($apply == 1):?>
-                <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>
+                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我也要发起</button></a>
+                <!--<a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>-->
                 <?php //endif;?>
             </div>
         </div>
