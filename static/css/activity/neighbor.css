@@ -750,12 +750,10 @@ footer{
 }
 
 .list_content .list_top{
-  min-height: 200px;
-  max-height: 250px;
   overflow: hidden;
   vertical-align: middle;
   width:100%;
-  height: auto;
+  height: 200px;
   position: relative;
   background-size: 100%;
 }
@@ -782,7 +780,7 @@ footer{
   z-index: 100;
   color: #fff;
   text-align: center;
-  margin-top: 15%;
+  margin-top: -35%;
   position: relative;
   font-size: 22px;
   font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
@@ -868,7 +866,7 @@ footer{
   background: #5c5956;
   opacity: 0.85;
   float:left;
-  margin-top: 175px;
+  /*margin-top: 175px;*/
   width: 94%;
   height: 25px;
   display: block;
@@ -901,6 +899,7 @@ footer{
 
 .list_top_header{
   display: block;
+  position: absolute;
   float:left;
   background: #31c5ae;
   padding-top:4px;
@@ -910,7 +909,7 @@ footer{
   color: #fff;
   text-align: center;
   font-size: 12px;
-    overflow:hidden;
+  overflow:hidden;
   /*border-top-right-radius: 50px;*/
   /*border-bottom-right-radius: 50px;*/
 }

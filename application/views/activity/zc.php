@@ -48,7 +48,8 @@
         <ul>
     <?php foreach($list as $v):?>
         <li class="privilege_li" data-id="<?=$v['id'];?>">
-            <div class="list_top" style="background: url('/static/image/activity/neighbor/mobile/default_<?=($v['id'] % 20);?>.jpg') no-repeat;">
+            <div class="list_top">
+                <img src="/static/image/activity/neighbor/mobile/default_<?=($v['id'] % 20);?>.jpg" style="width:100%;height:100%;float:left;">
                 <?php if($v['left_time']):?>
                 <div class="list_top_header">倒计时:
                 <strong class="list_num"><?=$v['left_time']['d'];?></strong>
