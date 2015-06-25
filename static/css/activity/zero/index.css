@@ -98,10 +98,10 @@ p {
 }
 
 .form .form-line .form-span{
-    font-size: 18px;
+    font-size: 16px;
     color:#585858;
     width: 24%;
-    padding-top: 8px;
+    padding-top: 10px;
     display: block;
     float: left;
 }
@@ -159,15 +159,15 @@ p {
 
 .form-line .time_container{
     border: 1px solid #cdcdcd;
+    border-radius: 4px;
     width: 62%;
     margin-left:28%;
     display: block;
-    height: 42px;
-    line-height: 42px;
     padding-left:4px;
 }
 
 .form-line .time{
+    border-bottom:0px;
     height: 42px;
     line-height: 42px;
     color:#1dd2af;
@@ -199,8 +199,9 @@ p {
 }
 
 .form-line select{
+    border: 1px solid #cdcdcd;
+    color:#585858;
     height: 100%;
-    color:#cdcdcd;
     font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
     width: 48%;
     font-size: 14px;

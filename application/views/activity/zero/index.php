@@ -59,7 +59,7 @@
             </div>
             <div class="form-line">
                 <span class="form-span">联系方式*</span>
-                <input type="text" class="form-input" placeholder="手机号码"/>
+                <input type="number" class="form-input" placeholder="手机号码"/>
             </div>
             <div class="form-line">
                 <span class="form-span">小区名称*</span>
@@ -68,15 +68,15 @@
             <div class="form-line">
                 <span class="form-span">装修时间*</span>
                 <div class="time_container">
-                    <input type="text" id="year" class="time1 time"/>
+                    <input type="number" id="year" class="time1 time"/>
                     <input type="text" value="年" class="time2 time" readonly/>
-                    <input id="month" class="time3 time" type="text"/>
+                    <input id="month" class="time3 time" type="number"/>
                     <input type="text" value="月" class="time4 time" readonly/>
                 </div>
             </div>
             <div class="form-line">
                 <span class="form-span">房子面积*</span>
-                <input type="text" class="form-input" placeholder="单位：平米"/>
+                <input type="number" class="form-input" placeholder="单位：平米"/>
             </div>
             <div class="form-line">
                 <span class="form-span">房子状态*</span>
