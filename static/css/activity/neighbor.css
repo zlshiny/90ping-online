@@ -764,9 +764,11 @@ footer{
   height: 200px;
   margin-left: 3%;
   background-size: 100%;
+  position: relative;
 }
 
 .detail-img-top{
+  position: absolute;
   color: #fff;
   float: left;
   margin-left: 2px;
@@ -797,7 +799,7 @@ footer{
   z-index: 100;
   color: #fff;
   text-align: center;
-  margin-top: 15%;
+  margin-top: -35%;
   position: relative;
   font-size: 22px;
   font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
@@ -866,8 +868,8 @@ footer{
   background: #5c5956;
   opacity: 0.85;
   float:left;
-  /*margin-top: 175px;*/
-  width: 94%;
+  margin-top: 175px;
+  width: 100%;
   height: 25px;
   display: block;
   position: absolute;

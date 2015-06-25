@@ -35,7 +35,8 @@
     <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
 </div>
 <?php $i = $detail['id'] % 20;?>
-<div class="detail-img" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
+<div class="detail-img">
+    <img src="/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg" style="display:block;float:left;width:100%;height:100%;">
     <div class="detail-img-top">距结束还剩 <strong><?=$detail['left_time']['d'];?></strong> 天 <strong><?=$detail['left_time']['h'];?></strong> 时 <strong><?=$detail['left_time']['i'];?></strong> 分</div>
     <span class="district"><?=$detail['district'];?></span>
     <div class="list_top_footer">地址：<?=$detail['district'];?><?=$detail['tablet'];?></div>
