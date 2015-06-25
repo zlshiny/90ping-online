@@ -21,6 +21,7 @@
 <input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
+<input type="hidden" id="left_seconds" value="<?=$detail['left_seconds'];?>"/>
 <div class="detail-title">
     <img src="/static/image/activity/neighbor/mobile/header1.jpg" style="display:block;float:left;">
     <a href="/activity/neighbor"><div class="list-header-button">更多小区</div></a>
@@ -162,11 +163,8 @@
         $(this).hide();
     });
 
-    $(document).ready(function(){
-        countdown();
-    });
 
-    var seconds = <?=$detail['left_seconds'];?>;
+    var seconds = $("#left_seconds").val();
     var countdown = function(){
         if(seconds <= 0) return false;
         var d = parseInt(Math.floor(seconds / 86400));
@@ -174,8 +172,7 @@
         var h = parseInt(Math.floor(left / 3600));
         left = left - 3600 * h;
         var i = parseInt(Math.floor(left / 60));
-        left = left - i;
-        var s = left - 60 * i;
+        var s = left - i * 60;
         if(s < 0) s = 0;
 
         $("#hour").text(h);
@@ -185,6 +182,10 @@
         seconds --;
         setTimeout("countdown()",1000);
     };
+
+    $(document).ready(function(){
+        countdown();
+    });
 
     //});
 </script>

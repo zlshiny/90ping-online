@@ -120,7 +120,6 @@ class Neighbor_Model extends CI_Model
         $h = intval(floor($left / 3600));
         $left = $left - 3600 * $h;
         $i = intval(floor($left / 60));
-        $left = $left - $i;
         $s = $left - 60 * $i;
         if($s < 0) $s = 0;
         return array('d' => $d, 'h' => $h, 'i' => $i, 's' => $s);
