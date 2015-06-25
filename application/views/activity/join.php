@@ -19,7 +19,8 @@
 <body class="apply">
 
 <div class="apply-title">
-    <img src="/static/image/activity/neighbor/mobile/header.jpg">
+    <img src="/static/image/activity/neighbor/mobile/header1.jpg" style="float:left; display:block;">
+    <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
     <img src="/static/image/activity/neighbor/mobile/former.jpg">
 </div>
 

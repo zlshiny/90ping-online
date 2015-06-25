@@ -31,7 +31,8 @@
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
 <div class="detail-title">
-    <img src="/static/image/activity/neighbor/mobile/header.jpg">
+    <img src="/static/image/activity/neighbor/mobile/header1.jpg" style="display:block;float:left;">
+    <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
 </div>
 <?php $i = $detail['id'] % 20;?>
 <div class="detail-img" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
@@ -57,11 +58,9 @@
                 <?php endif;?>
             </div>
             <div class="button">
-                <?php if($apply == 1):?>
+                <?php //if($apply == 1):?>
                 <a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>
-                <?php else:?>
-                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我也要发起</button></a>
-                <?php endif;?>
+                <?php //endif;?>
             </div>
         </div>
 <!--        --><?php //if(empty($detail['left_time'])):?>
