@@ -122,37 +122,46 @@ header {
 }
 
 .detail-title {
-  width: 100%;
-  background: url("/static/image/activity/neighbor/mobile/header.jpg") no-repeat;
-  height: 275px;
-  background-size: 100%;
+  /*width: 100%;*/
+  /*background: url("/static/image/activity/neighbor/mobile/header.jpg") no-repeat;*/
+  /*height: 275px;*/
+  /*background-size: 100%;*/
 }
 
-/*
-.detail-title{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  text-align: center;
-}
 .detail-title img{
   width: 100%;
-}*/
+}
 .zc{
   width: 100%;
   background-size: 100%;
   text-align: center;
 }
 .header_img{
-  background: url(/static/image/activity/neighbor/mobile/header1.jpg) no-repeat;
-  width: 100%;
-  background-size: 100%;
+  /*background: url(/static/image/activity/neighbor/mobile/header1.jpg) no-repeat;*/
+  /*width: 100%;*/
   /*height:280px;*/
-  max-height: 280px;
-  min-height: 280px;
-  height: auto !important;
 }
+
+.header_img img{
+    width: 100%;
+    float: left;
+    display:block;
+}
+
+.list-header-button{
+    display: block;
+    float:left;
+    background: #ff4a00;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: -60px;
+    margin-left: 30%;
+    padding-top: 12px;
+    color:#fff;
+}
+
 .zc .start{
   width: 100%;
   margin-top: 100%;
@@ -1001,18 +1010,6 @@ footer{
     color:#fff;
 }
 
-.list-header-button{
-    float:left;
-    background: #ff4a00;
-    width: 40%;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 15px;
-    margin-top: 55%;
-    margin-left: 30%;
-    padding-top: 12px;
-    color:#fff;
-}
 
 .list-found{
     float:left;

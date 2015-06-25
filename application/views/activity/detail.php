@@ -30,7 +30,9 @@
 <input type="hidden" id="is_over" value="<?php if(empty($detail['left_time'])):?>1<?php else:?>0<?php endif;?>"/>
 <input type="hidden" id="district" value="<?=urlencode($detail['district']);?>"/>
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
-<div class="detail-title"></div>
+<div class="detail-title">
+    <img src="/static/image/activity/neighbor/mobile/header.jpg">
+</div>
 <?php $i = $detail['id'] % 20;?>
 <div class="detail-img" style="background: url('/static/image/activity/neighbor/mobile/default_<?=$i;?>.jpg')">
     <div class="detail-img-top">距结束还剩 <strong><?=$detail['left_time']['d'];?></strong> 天 <strong><?=$detail['left_time']['h'];?></strong> 时 <strong><?=$detail['left_time']['i'];?></strong> 分</div>

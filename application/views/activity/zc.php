@@ -18,6 +18,7 @@
 
 <body class="zc">
     <div class="header_img">
+        <img src="/static/image/activity/neighbor/mobile/header1.jpg">
         <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
     </div>
 <!--    <div class="start">-->
