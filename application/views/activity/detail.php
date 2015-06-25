@@ -19,7 +19,7 @@
 <body class="detail">
 
 <div id="shareit">
-  <img class="arrow" src="/static/image/activity/iphone/11.png">
+  <img class="arrow" src="/static/image/activity/neighbor/mobile/11.png">
   <!--
   <a href="#" id="follow">
     <img id="share-text" src="http://dev.vxtong.com/cases/nuannan/imgs/share-text.png">
