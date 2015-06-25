@@ -36,8 +36,8 @@
 <div class="detail-area">
     <div class="detail-banner">
         <div class="detail-banner-title">
-            <h2 style="color:#393939;font-size:20px;">众筹优惠目标：￥<?=$detail['target_total_money'];?></h2>
-            <p style="color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满<?=$detail['target_people'];?>人每人减<?=$detail['target_money'];?>元</p>
+            <h2 style="margin-left: 10%;float:left;color:#393939;font-size:20px;">众筹优惠目标：￥</h2><h2 style="float:left;color:red;font-size:20px;"><?=$detail['target_total_money'];?></h2>
+            <p style="float:left;margin-left: 11%;color:#aeaeae;font-size:15px;line-height: 25px;">同小区邻居满<?=$detail['target_people'];?>人每人减<?=$detail['target_money'];?>元</p>
         </div>
         <div class="button-area">
             <div class="button">
