@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title><?=$detail['district'];?>的<?=$detail['name'];?>，发起超级Home"邻居一起众筹装修"活动，请邻居火速参与装修众筹</title>
+    <title><?=$detail['district'];?>的<?=$detail['name'];?>，发起超级Home"邻居一起众筹装修"活动</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
