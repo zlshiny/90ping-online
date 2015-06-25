@@ -17,7 +17,9 @@
 </head>
 
 <body class="zc">
-    <div class="header_img"></div>
+    <div class="header_img">
+        <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
+    </div>
 <!--    <div class="start">-->
 <!--        <a href="/activity/neighbor/apply"><button type="button" class="zc-start-button ">我要发起</button></a>-->
 <!--    </div>-->

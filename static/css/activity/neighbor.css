@@ -145,10 +145,13 @@ header {
   text-align: center;
 }
 .header_img{
-  background: url(/static/image/activity/neighbor/mobile/header.jpg) no-repeat;
+  background: url(/static/image/activity/neighbor/mobile/header1.jpg) no-repeat;
   width: 100%;
   background-size: 100%;
-  height:280px;
+  /*height:280px;*/
+  max-height: 280px;
+  min-height: 280px;
+  height: auto !important;
 }
 .zc .start{
   width: 100%;
@@ -995,6 +998,19 @@ footer{
     margin-top: 280px;
     margin-left: 26%;
     padding-top: 16px;
+    color:#fff;
+}
+
+.list-header-button{
+    float:left;
+    background: #ff4a00;
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 55%;
+    margin-left: 30%;
+    padding-top: 12px;
     color:#fff;
 }
 
