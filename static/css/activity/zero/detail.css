@@ -107,7 +107,7 @@ p {
     width: 92%;
     margin-left: 4%;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .content .content-tip{
@@ -195,7 +195,7 @@ p {
 
 .footer{
     position: fixed;
-    height: 50px;
+    height: 60px;
     width: 100%;
     background: #4c4c4c;
     z-index: 100;
@@ -209,20 +209,18 @@ p {
     margin-top: 12px;
     border-radius: 5px;
     color: #fff;
-    font-size: 16px;
-    padding-top: 4px;
+    font-size: 18px;
+    padding-top: 8px;
+    height: 40px;
+    width: 36%;
 }
 
 .footer .button1{
-    width: 36%;
     float: left;
-    height: 30px;
     margin-left: 9%;
 }
 
 .footer .button2{
-    width: 36%;
     float: right;
-    height: 30px;
     margin-right: 9%;
 }
