@@ -121,7 +121,10 @@
                             data = eval('(' + data + ')');
                             if (data.code == 0) {
                                 alert('提交成功');
-                                return true;
+                                location.href = '/activity/zero/detail/' + data.id;
+                            }else if(data.code == -11){
+                                alert('您已经发起过一次了哦');
+                                location.href = '/activity/zero/detail/' + data.id;
                             }else{
                                 alert('服务器太忙了，请您稍后再试哦');
                                 return false;
@@ -131,6 +134,15 @@
             });
          });
 </script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+     var s = document.getElementsByTagName("script")[0]; 
+     s.parentNode.insertBefore(hm, s);
+     })();
+    </script>
 </head>
 <body>
     <div class="header">

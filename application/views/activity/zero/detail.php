@@ -2,7 +2,7 @@
 <!--HTML5 doctype-->
 <html>
 <head>
-    <title>****申请了超级Home”免费装修“名额，请小伙伴们来支持！</title>
+    <title><?=$act['nickname'];?>申请了超级Home”免费装修“名额，请小伙伴们来支持！</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -10,13 +10,23 @@
     <meta content="telephone=no" name="format-detection" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" type="text/css" href="/static/css/activity/zero/detail.css" />
+    <script type="text/javascript" charset="utf-8" src="/static/js/jquery.min.js"></script>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+     var hm = document.createElement("script");
+     hm.src = "//hm.baidu.com/hm.js?f6c15189a037831e314d611395fd9dfe";
+     var s = document.getElementsByTagName("script")[0]; 
+     s.parentNode.insertBefore(hm, s);
+     })();
+    </script>
 </head>
 <body>
 <div class="header">
     <div>
         <img class="header_img" src="/static/image/activity/zero/detail_header.jpg">
         <div class="header_cw">
-            <span class="cw_name">跨界松鼠</span>
+            <span class="cw_name"><?=$act['nickname'];?></span>
             <span>已众筹好友支持的<strong>188</strong>元</span>&nbsp;&nbsp;
             <span>现在排名<strong>79</strong>位</span>
         </div>
@@ -66,8 +76,31 @@
     </div>
 </div>
 <div class="footer">
-    <a href="###"><div class="button button1">支持Ta</div></a>
-    <a href="###"><div class="button button2">我也想要</div></a>
+    <a href="/activity/zero/support/<?=$act['wechat_uid'];?>"><div class="button button1">支持Ta</div></a>
+    <!--<a href="/activity/zero/lauch"><div class="button button2">我也想要</div></a>-->
+    <div class="button button2">我也想要</div>
+    <form id="support_post" action="/activity/zero/support" method="post">
+        <input type="hidden" name="name" value="<?=$act['nickname'];?>"/>
+        <input type="hidden" name="head_img_url" value="<?=$act['head_img_url'];?>"/>
+        <input type="hidden" name="wid" value="<?=$act['wechat_uid'];?>"/>
+    </form>
 </div>
 </body>
+<script type="text/javascript">
+    $(".button2").click(function(){
+        var me = <?=$me;?>;
+        var found = <?=$is_found;?>;
+
+        if(found == 0){
+            location.href = "/activity/zero/lauch";
+        }else{
+            if(me == 1){
+                alert('您已经发起过了哦');
+                return false;
+            }else{
+                location.href = "/activity/zero/detail/" + <?=$cur_uid;?>;
+            }
+        }
+    });
+</script>
 </html>

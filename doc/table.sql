@@ -128,6 +128,7 @@ CREATE TABLE `wechat_user`(
     `refresh_token` varchar(256) NOT NULL DEFAULT '',
     `access_token` varchar(256) NOT NULL DEFAULT '',
     `left_money` INT NOT NULL DEFAULT 5600,
+    `source` TINYINT NOT NULL DEFAULT 0 COMMENT '活动来源 0:iphone众筹 1:0元装修',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY `open_id` (`openid`) 
 ) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
@@ -155,7 +156,8 @@ CREATE TABLE `activity_zero`(
     `decor_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '装修时间',
     `acreage` SMALLINT NOT NULL DEFAULT 0 COMMENT '面积',
     `house_type` tinyint NOT NULL DEFAULT 0 COMMENT '1:期房, 2:现房, 0:非法',
-    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    KEY `wuid` (`wechat_uid`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activity_zero_partin`(
@@ -165,6 +167,7 @@ CREATE TABLE `activity_zero_partin`(
     `s_name` VARCHAR(64) NOT NULL DEFAULT 'supporter name',
     `s_head_img_url` VARCHAR(256) NOT NULL DEFAULT '' COMMENT 'supporter headimgurl',
     `money` INT NOT NULL DEFAULT 0,
+    `slogan` VARCHAR(512) NOT NULL DEFAULT '' COMMENT '支持语言',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY `founder_supporter` (`founder_id`, `supporter_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;

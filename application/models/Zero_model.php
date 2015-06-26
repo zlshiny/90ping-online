@@ -18,6 +18,31 @@ class Zero_Model extends CI_Model{
         }
     }
 
+    public function get_instance_by_wechat_uid($uid){
+        if($uid <= 0) return array();
+
+        $this->master_db->select('id, wechat_uid');
+        $this->master_db->from($this->_dbname);
+        $this->master_db->where('wechat_uid', $uid);
+
+        $row = array();
+        if($query = $this->master_db->get()){
+            $row = $query->row_array();
+
+            if($user = $this->user->get_wechat_user_by_id($row['wechat_uid'])){
+                $row['nickname'] = $user['nickname'];
+                $row['head_img_url'] = $user['head_img_url'];
+                $len = strlen($row['head_img_url']);
+                $row['head_img_url'][$len - 1] = '4';
+                $row['head_img_url'] .= '6';
+            }else{
+                return array();
+            }
+        }
+
+        return $row;
+    }
+
     public function get_instance_by_id($id){
         if($id <= 0) return array();
 
@@ -66,13 +91,66 @@ class Zero_Model extends CI_Model{
                 }
 
                 $tmp['money'] = $row['money'];
-                $tmp['slogan'] = $this->generate_iphone_slogan($tmp['name'], $tmp['money']);
+                $tmp['slogan'] = $row['slogan'];
 
                 $ret[] = $tmp;
             }
         }
 
         return $ret;
+    }
+
+    public function is_partin($user_id, $support_id){
+        if($user_id <= 0 || $support_id <= 0){
+            return true;
+        }
+
+        $this->master_db->select('id');
+        $this->master_db->from('activity_zero_partin');
+        $this->master_db->where('founder_id', $user_id);
+        $this->master_db->where('supporter_id', $support_id);
+
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        return false;
+    }
+
+    public function is_lauch($user_id){
+        if($user_id <= 0){
+            return true;
+        }
+
+        $this->master_db->select('id');
+        $this->master_db->from('activity_zero');
+        $this->master_db->where('wechat_uid', $user_id);
+
+        if($query = $this->master_db->get()){
+            if($query->row_array()) return true;
+        }
+
+        return false;
+    }
+
+    public function add_partin($partin){
+        if(empty($partin)) return -1;
+
+        if($this->master_db->insert('activity_zero_partin', $partin)){
+            return $this->master_db->insert_id();
+        }else{
+            return -1;
+        }
+    }
+
+    public function update_money($ori_uid, $cur_uid){
+        if($ori_uid <= 0 || $cur_uid <= 0) return false;
+
+        $arr['money'] = 1;
+
+        $this->master_db->where('founder_id', $ori_uid);
+        $this->master_db->where('supporter_id', $cur_uid);
+        return $this->master_db->update('activity_zero_partin', $arr);
     }
 
 }
