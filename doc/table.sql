@@ -143,3 +143,16 @@ CREATE TABLE `wechat_iphone_partin`(
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY `founder_supporter` (`founder_id`, `supporter_id`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `activity_zero`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(64) NOT NULL DEFAULT '',
+    `province` VARCHAR(24) NOT NULL DEFAULT '',
+    `city` VARCHAR(24) NOT NULL DEFAULT '',
+    `phone` bigint NOT NULL DEFAULT 0 COMMENT 'phone number',
+    `district` VARCHAR(128) NOT NULL DEFAULT '',
+    `decor_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '装修时间',
+    `acreage` SMALLINT NOT NULL DEFAULT 0 COMMENT '面积',
+    `house_type` tinyint NOT NULL DEFAULT 0 COMMENT '1:期房, 2:现房, 0:非法',
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
