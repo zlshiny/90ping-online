@@ -108,6 +108,7 @@ class Zero extends CI_Controller
         $data['cur_uid'] = $uid;
         $data['me'] = $uid == $w_id ? 1 : 0;
         $data['is_found'] = $is_found;
+        $data['rank'] = $this->zero->get_rank($data['act']['money']);
 
         $this->load->view('activity/zero/detail.php', $data);
     }

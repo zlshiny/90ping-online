@@ -158,6 +158,12 @@ p {
     width: 30%;
 }
 
+.user_img img{
+    width: 79px;
+    border-radius:50%; 
+    overflow:hidden;
+}
+
 .content .slogan{
     float: left;
     width: 70%;

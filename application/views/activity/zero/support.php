@@ -25,7 +25,7 @@
     <input type="hidden" id="ori_uid" value="<?=$w_uid;?>"/>
     <input type="hidden" id="cur_uid" value="<?=$cur_uid;?>"/>
     <div class="header">
-        <div class="user_img"><img src="/static/image/activity/zero/head.png"></div>
+        <div class="user_img"><img style="border-radius:50%;overflow:hidden;" src="<?=$head_img_url;?>"></div>
         <div class="img_cont">
             <p class="img_name"><?=$name;?></p>
             <p class="slogan">“免费装修”众筹支持，急需你的帮助</p>

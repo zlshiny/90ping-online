@@ -157,7 +157,9 @@ CREATE TABLE `activity_zero`(
     `acreage` SMALLINT NOT NULL DEFAULT 0 COMMENT '面积',
     `house_type` tinyint NOT NULL DEFAULT 0 COMMENT '1:期房, 2:现房, 0:非法',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    KEY `wuid` (`wechat_uid`)
+    `money` int UNSIGNED NOT NULL DEFAULT 0 COMMENT '收到的钱',
+    KEY `wuid` (`wechat_uid`),
+    KEY `ranking` (`money`)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activity_zero_partin`(

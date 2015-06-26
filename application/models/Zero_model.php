@@ -18,10 +18,24 @@ class Zero_Model extends CI_Model{
         }
     }
 
+    public function get_rank($money){
+        $this->master_db->select('count(*) as num');
+        $this->master_db->from($this->_dbname);
+        $this->master_db->where('money >= ', $money);
+
+        $row = array();
+        if($query = $this->master_db->get()){
+            $row = $query->row_array();
+            return $row['num'];
+        }
+
+        return 1;
+    }
+
     public function get_instance_by_wechat_uid($uid){
         if($uid <= 0) return array();
 
-        $this->master_db->select('id, wechat_uid');
+        $this->master_db->select('id, wechat_uid, money, create_time');
         $this->master_db->from($this->_dbname);
         $this->master_db->where('wechat_uid', $uid);
 
@@ -33,7 +47,7 @@ class Zero_Model extends CI_Model{
                 $row['nickname'] = $user['nickname'];
                 $row['head_img_url'] = $user['head_img_url'];
                 $len = strlen($row['head_img_url']);
-                $row['head_img_url'][$len - 1] = '4';
+                $row['head_img_url'][$len - 1] = '9';
                 $row['head_img_url'] .= '6';
             }else{
                 return array();
@@ -46,7 +60,7 @@ class Zero_Model extends CI_Model{
     public function get_instance_by_id($id){
         if($id <= 0) return array();
 
-        $this->master_db->select('id, wechat_uid');
+        $this->master_db->select('id, wechat_uid, money, create_time');
         $this->master_db->from($this->_dbname);
         $this->master_db->where('id', $id);
 
@@ -58,7 +72,7 @@ class Zero_Model extends CI_Model{
                 $row['nickname'] = $user['nick_name'];
                 $row['head_img_url'] = $user['head_img_url'];
                 $len = strlen($row['head_img_url']);
-                $row['head_img_url'][$len - 1] = '4';
+                $row['head_img_url'][$len - 1] = '9';
                 $row['head_img_url'] .= '6';
             }else{
                 return array();
@@ -83,7 +97,7 @@ class Zero_Model extends CI_Model{
                 $tmp['name'] = $row['s_name'];
                 if($row['s_head_img_url']){
                     $len = strlen($row['s_head_img_url']);
-                    $row['s_head_img_url'][$len - 1] = '4';
+                    $row['s_head_img_url'][$len - 1] = '9';
                     $row['s_head_img_url'] .= '6';
                     $tmp['head_img_url'] = $row['s_head_img_url'];
                 }else{
@@ -92,6 +106,10 @@ class Zero_Model extends CI_Model{
 
                 $tmp['money'] = $row['money'];
                 $tmp['slogan'] = $row['slogan'];
+                $tmp['create_time'] = $row['create_time'];
+                if(empty($tmp['slogan'])){
+                    $tmp['slogan'] = '拿着这些钱去拯救世界吧！';
+                }
 
                 $ret[] = $tmp;
             }
@@ -150,7 +168,20 @@ class Zero_Model extends CI_Model{
 
         $this->master_db->where('founder_id', $ori_uid);
         $this->master_db->where('supporter_id', $cur_uid);
-        return $this->master_db->update('activity_zero_partin', $arr);
+        $this->master_db->update('activity_zero_partin', $arr);
+
+        return $this->add_money($ori_uid);
+    }
+
+    public function add_money($ori_uid){
+        if($ori_uid <= 0) return false;
+
+        $sql = 'update activity_zero set money=money+1 where wechat_uid = ?';
+        if($query = $this->master_db->query($sql, array($ori_uid))){
+            return true;
+        }
+
+        return false;
     }
 
 }

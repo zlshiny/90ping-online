@@ -27,8 +27,8 @@
         <img class="header_img" src="/static/image/activity/zero/detail_header.jpg">
         <div class="header_cw">
             <span class="cw_name"><?=$act['nickname'];?></span>
-            <span>已众筹好友支持的<strong>188</strong>元</span>&nbsp;&nbsp;
-            <span>现在排名<strong>79</strong>位</span>
+            <span>已众筹好友支持的 <strong><?=$act['money'];?></strong> 元</span>&nbsp;&nbsp;
+            <span>现在排名 <strong><?=$rank;?></strong> 位</span>
         </div>
     </div>
     <img style="margin-top: -2px;">
@@ -43,27 +43,31 @@
         <div class="support">支持你的好友</div>
     </div>
     <div class="founder">
-        <div class="user_img"><img src="/static/image/activity/zero/head.png"></div>
+        <div class="user_img"><img src="<?=$act['head_img_url'];?>"></div>
         <div class="bubble"></div>
         <div class="slogan">
             <div class="table_top">
-                <strong>姜海涌</strong><span>发布了最新动态</span>
+                <strong><?=$act['nickname'];?></strong><span>发布了最新动态</span>
             </div>
             <p>亲爱的邻居们，感谢你们一路的支持，坚持就是胜利，有你们的支持我一定能够成功，加油！祝大家装修顺利，合家欢乐，开开心心！</p>
-            <div class="date">06-22 12:53</div>
+            <div class="date"><?php echo date('m-d H:i', strtotime($act['create_time']));?></div>
         </div>
     </div>
+    <?php if(!empty($partin)):?>
+    <?php foreach($partin as $p):?>
     <div class="founder">
-        <div class="user_img"><img src="/static/image/activity/zero/head.png"></div>
+        <div class="user_img"><img src="<?=$p['head_img_url'];?>"></div>
         <div class="bubble"></div>
         <div class="slogan">
             <div class="table_top">
-                <strong>姜海涌</strong><span>支持了1元</span>
+                <strong><?=$p['name'];?></strong><span>支持了1元</span>
             </div>
-            <p>亲爱的邻居们，感谢你们一路的支持，坚持就是胜利，有你们的支持我一定能够成功，加油！祝大家装修顺利，合家欢乐，开开心心！</p>
-            <div class="date">06-22 12:53</div>
+            <p><?=$p['slogan'];?></p>
+            <div class="date"><?php echo date('m-d H:i', strtotime($p['create_time']));?></div>
         </div>
     </div>
+    <?php endforeach;?>
+    <?php endif;?>
 </div>
 <div class="home"><img src="/static/image/activity/zero/home.jpg"></div>
 <div class="info">
