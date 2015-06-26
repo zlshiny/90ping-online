@@ -21,6 +21,8 @@
             <span>现在排名<strong>79</strong>位</span>
         </div>
     </div>
+    <img style="margin-top: -2px;">
+    <div class="middle">小伙伴们：给力支持1元，得免费装修靠你啦!</div>
     <img src="/static/image/activity/zero/detail_1.jpg">
     <img src="/static/image/activity/zero/detail_2.jpg">
     <img src="/static/image/activity/zero/detail_3.jpg">
@@ -51,6 +53,16 @@
             <p>亲爱的邻居们，感谢你们一路的支持，坚持就是胜利，有你们的支持我一定能够成功，加油！祝大家装修顺利，合家欢乐，开开心心！</p>
             <div class="date">06-22 12:53</div>
         </div>
+    </div>
+</div>
+<div class="home"><img src="/static/image/activity/zero/home.jpg"></div>
+<div class="info">
+    <p>长按识别二维码</p>
+    <img src="/static/image/activity/zero/two.png">
+    <div class="nav">
+        <a href="/wechat/product"><span>超级Home</span></a>&nbsp;|&nbsp;
+        <a href="/activity/neighbor"><span>邻居众筹优惠</span></a>&nbsp;|&nbsp;
+        <a href="/"><span>官方网站</span></a>
     </div>
 </div>
 <div class="footer">
