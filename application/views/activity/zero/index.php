@@ -36,7 +36,7 @@
                 $("#coption" + id).show();
             });
 
-            $(".button").live('click', function(){
+            $(".button").bind('click', function(){
                 var name = $("#name").val();
                 var province = $(".city-select-1 option:selected").val();
                 var p_id = $(".city-select-1 option:selected").attr("data-id");
