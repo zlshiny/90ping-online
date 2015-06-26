@@ -24,6 +24,10 @@ class Zero extends CI_Controller
         $this->load->view('activity/zero/index.php');
     }
 
+    public function support($id){
+        $this->load->view('activity/zero/support.php');
+    }
+
     public function detail($id){
         $this->load->view('activity/zero/detail.php');
     }
