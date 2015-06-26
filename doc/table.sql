@@ -130,7 +130,7 @@ CREATE TABLE `wechat_user`(
     `left_money` INT NOT NULL DEFAULT 5600,
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY `open_id` (`openid`) 
-) ENGINE=INNODB DEFAULT CHARSET=utf8;
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;
 
 
 CREATE TABLE `wechat_iphone_partin`(
@@ -146,6 +146,7 @@ CREATE TABLE `wechat_iphone_partin`(
 
 CREATE TABLE `activity_zero`(
     `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `wechat_uid` INT NOT NULL DEFAULT 0,
     `name` VARCHAR(64) NOT NULL DEFAULT '',
     `province` VARCHAR(24) NOT NULL DEFAULT '',
     `city` VARCHAR(24) NOT NULL DEFAULT '',
@@ -156,3 +157,14 @@ CREATE TABLE `activity_zero`(
     `house_type` tinyint NOT NULL DEFAULT 0 COMMENT '1:期房, 2:现房, 0:非法',
     `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `activity_zero_partin`(
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `founder_id` INT NOT NULL DEFAULT 0,
+    `supporter_id` INT NOT NULL DEFAULT 0,
+    `s_name` VARCHAR(64) NOT NULL DEFAULT 'supporter name',
+    `s_head_img_url` VARCHAR(256) NOT NULL DEFAULT '' COMMENT 'supporter headimgurl',
+    `money` INT NOT NULL DEFAULT 0,
+    `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    KEY `founder_supporter` (`founder_id`, `supporter_id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8mb4;

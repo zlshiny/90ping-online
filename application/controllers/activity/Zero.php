@@ -24,6 +24,10 @@ class Zero extends CI_Controller
         $this->load->view('activity/zero/index.php');
     }
 
+    public function detail($id){
+        $this->load->view('activity/zero/detail.php');
+    }
+
     public function found(){
         if(!$phone = $this->input->post('phone')){
             exit(json_encode(array(
@@ -109,6 +113,7 @@ class Zero extends CI_Controller
         }
 
         $this->load->model("zero_model", 'zero');
+        $this->load->model("user_model", 'user');
         $arr = array('name' => $name, 'decor_time' => $decor_time, 'acreage' => $acreage, 'phone' => $phone,
                     'province' => $province, 'city' => $city, 'district' => $district, 'house_type' => $state);
         if(($ret = $this->zero->insert_arr($arr)) > 0){
@@ -122,7 +127,7 @@ class Zero extends CI_Controller
         }else{
             exit(json_encode(array(
                     'code' => -20,
-                    'msg' => '预约失败',
+                    'msg' => 'fail',
                 )
             ));
         }
