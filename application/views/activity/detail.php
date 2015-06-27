@@ -23,8 +23,8 @@
 <input type="hidden" id="nt_id" value="<?=$detail['id'];?>"/>
 <input type="hidden" id="left_seconds" value="<?=$detail['left_seconds'];?>"/>
 <div class="detail-title">
-    <img src="/static/image/activity/neighbor/mobile/header1.jpg" style="display:block;float:left;">
-    <a href="/activity/neighbor"><div class="list-header-button">更多小区</div></a>
+    <img src="/static/image/activity/neighbor/mobile/new_header.jpg" style="display:block;float:left;">
+    <!--<a href="/activity/neighbor"><div class="list-header-button">更多小区</div></a>-->
 </div>
 <?php $i = $detail['id'] % 20;?>
 <div class="detail-img">
@@ -47,7 +47,7 @@
             </div>
             <div class="button">
                 <?php //if($apply == 1):?>
-                <a href="/activity/neighbor/apply"><button type="button" class="detail-banner-button ">我也要发起</button></a>
+                <a href="/activity/neighbor"><button type="button" class="detail-banner-button ">更多小区</button></a>
                 <!--<a href="javascript:share();"><button type="button" class="detail-banner-button ">邀请邻居</button></a>-->
                 <?php //endif;?>
             </div>
@@ -139,6 +139,10 @@
   </a>
   -->
 </div>
+    <div class="footer">
+        <span>发起“邻居众筹优惠”减1000元</span>
+        <a href="/activity/neighbor/apply"><div class="button button1">我要发起</div></a>
+    </div>
 
 
 <script type="text/javascript">
