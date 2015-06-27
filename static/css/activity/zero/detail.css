@@ -293,3 +293,17 @@ p {
 #shareit img {
   max-width: 100%;
 }
+
+.super-home-button{
+    background: #1dd2af;
+    width: 36%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: -45%;
+    margin-left: 32%;
+    padding-top: 12px;
+    color:#fff;
+    position: absolute;
+    text-align: center;
+}

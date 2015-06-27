@@ -69,7 +69,10 @@
     <?php endforeach;?>
     <?php endif;?>
 </div>
-<div class="home"><img src="/static/image/activity/zero/home.jpg"></div>
+<div class="home">
+    <img src="/static/image/activity/zero/home.jpg">
+    <a href="/wechat/product?from=zero"><div class="super-home-button">进入超级Home</div></a>
+</div>
 <div class="info">
     <p>长按识别二维码</p>
     <img src="/static/image/activity/zero/two.png">
