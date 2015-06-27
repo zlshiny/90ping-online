@@ -86,10 +86,12 @@ p {
 
 .header_cw{
     margin-top:-30%;
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     float: left;
     color: #d5d4d4;
     font-size: 12px;
+    width: 100%;
+    text-align: center;
 }
 
 .header_cw .cw_name{
