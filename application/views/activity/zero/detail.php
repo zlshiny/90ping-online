@@ -82,16 +82,23 @@
 <div class="footer">
     <a href="/activity/zero/support/<?=$act['wechat_uid'];?>"><div class="button button1">支持Ta</div></a>
     <!--<a href="/activity/zero/lauch"><div class="button button2">我也想要</div></a>-->
-    <div class="button button2">我也想要</div>
+    <?php if($me && $is_found):?>
+    <div class="button button2 invite_friend">邀请好友</div>
+    <?php else:?>
+    <div class="button button2 iwant">我也想要</div>
+    <?php endif;?>
     <form id="support_post" action="/activity/zero/support" method="post">
         <input type="hidden" name="name" value="<?=$act['nickname'];?>"/>
         <input type="hidden" name="head_img_url" value="<?=$act['head_img_url'];?>"/>
         <input type="hidden" name="wid" value="<?=$act['wechat_uid'];?>"/>
     </form>
 </div>
+<div id="shareit">
+  <img class="arrow" src="/static/image/activity/iphone/11.png">
+</div>
 </body>
 <script type="text/javascript">
-    $(".button2").click(function(){
+    $(".iwant").click(function(){
         var me = <?=$me;?>;
         var found = <?=$is_found;?>;
 
@@ -105,6 +112,15 @@
                 location.href = "/activity/zero/detail/" + <?=$cur_uid;?>;
             }
         }
+    });
+
+    $(".invite_friend").bind("click", function() {
+      $("#shareit").show();
+    });
+   
+   
+    $("#shareit").bind("click", function(){
+        $("#shareit").hide(); 
     });
 </script>
 </html>
