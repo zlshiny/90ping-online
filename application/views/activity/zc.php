@@ -18,8 +18,8 @@
 
 <body class="zc">
     <div class="header_img">
-        <img src="/static/image/activity/neighbor/mobile/header1.jpg">
-        <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>
+        <img src="/static/image/activity/neighbor/mobile/new_header.jpg">
+<!--        <a href="/activity/neighbor/apply"><div class="list-header-button">我要发起</div></a>-->
     </div>
 <!--    <div class="start">-->
 <!--        <a href="/activity/neighbor/apply"><button type="button" class="zc-start-button ">我要发起</button></a>-->
@@ -98,6 +98,9 @@
         </ul>
         </div>
     <?php endif;?>
-
+    <div class="footer">
+        <span>发起“邻居众筹优惠”减1000元</span>
+        <a href="/activity/neighbor/apply"><div class="button button1">我要发起</div></a>
+    </div>
 </body>
 </html>

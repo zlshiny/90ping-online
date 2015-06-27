@@ -146,6 +146,7 @@ header {
     width: 100%;
     float: left;
     display:block;
+    margin-bottom: 20px;
 }
 
 .list-header-button{
@@ -1039,4 +1040,37 @@ footer{
 }
 #shareit img {
   max-width: 100%;
+}
+
+.footer{
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: #4c4c4c;
+  z-index: 100;
+  text-align: center;
+  bottom: 0;
+  display: block;
+}
+
+.footer .button{
+  background: #1dd2af;
+  margin-top: 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  padding-top: 8px;
+  height: 40px;
+  width: 32%;
+  float: right;
+  margin-right: 4%;
+}
+
+.footer span{
+  font-size: 15px;
+  padding-left: 2%;
+  color: #fff;
+  float:left;
+  display: block;
+  padding-top: 22px;
 }
