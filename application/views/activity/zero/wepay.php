@@ -7,7 +7,7 @@
 <style type="text/css">
 .pay{
   width: 100%;  
-  background: url(/static/image/activity/pay-bg.jpg) no-repeat;
+  background: url(/static/image/activity/zero/pay.jpg) no-repeat;
   background-size: 100%;
   text-align: center;
   position: absolute;
@@ -15,7 +15,7 @@
 .pay-button{
   width: 70%;
   margin-top: 70%;
-  margin-left: auto;
+  margin-left: 13%;
   margin-right: auto;
   overflow: hidden;
 }
@@ -71,7 +71,7 @@
         <!--
 		<button style="width:240px; height:60px; background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:24px;" type="button" onclick="callpay()" >支付一元预约金</button>
         -->
-		<button class="pay-money" type="button" onclick="callpay()">支付一元</button>
+		<button class="pay-money" type="button" onclick="callpay()">支持一元</button>
 	</div>
 </body>
 <div style="display:none;">
