@@ -27,8 +27,8 @@
         <img class="header_img" src="/static/image/activity/zero/detail_header.jpg">
         <div class="header_cw">
             <span class="cw_name"><?=$act['nickname'];?></span>
-            <span>已众筹好友支持的 <strong><?=$act['money'];?></strong> 元</span>&nbsp;&nbsp;
-            <span>现在排名 <strong><?=$rank;?></strong> 位</span>
+            <span>已得到 <strong><?=$act['money'];?></strong> 位好友的支持</span>&nbsp;&nbsp;
+            <span>排名第 <strong><?=$rank;?></strong> 位</span>
         </div>
     </div>
     <img style="margin-top: -2px;">
