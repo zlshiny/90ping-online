@@ -20,7 +20,8 @@ class Zero extends CI_Controller
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function index(){
-        $this->load->view('activity/zero/index.php');
+        //$this->load->view('activity/zero/index.php');
+        exit('access denied');
     }
 
     public function lauch(){
