@@ -44,7 +44,7 @@
         </div>
         <div class="comment">
             <p class="p-title">对你的朋友说点什么…</p>
-            <textarea id="say" placeholder="拿着这笔钱去拯救地球吧"></textarea>
+            <textarea id="say" placeholder="如：拿着这笔钱去拯救地球吧"></textarea>
         </div>
     </div>
     <div class="button">确认支付，去付款</div>

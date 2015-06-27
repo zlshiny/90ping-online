@@ -120,7 +120,7 @@
                         if (status == "success") {
                             data = eval('(' + data + ')');
                             if (data.code == 0) {
-                                alert('提交成功');
+                                alert('发起成功,别忘了分享邀请朋友支持哦');
                                 location.href = '/activity/zero/detail/' + data.id;
                             }else if(data.code == -11){
                                 alert('您已经发起过一次了哦');

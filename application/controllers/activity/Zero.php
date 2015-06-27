@@ -30,6 +30,8 @@ class Zero extends CI_Controller
             Header("Location: $url");
         }else{
             $user = explode("^", $id);
+            $this->load->model("zero_model", 'zero');
+            $this->load->model("user_model", 'user');
             $is_lauch = $this->zero->is_lauch($user[0]);
             $data['is_lauch'] = $is_lauch;
             if(!$is_lauch){
@@ -67,7 +69,7 @@ class Zero extends CI_Controller
 
         if(!$id = get_cookie('WECHAT_ACCESS')){
             $redirect_url = urlencode(BASE_URL . "/activity/zero/redirect/");
-            $url = WECHAT_OAUTH_URL . "?appid=" . WECHAT_APPID . "&redirect_uri=" . $redirect_url . "&response_type=code&state=" . $w_uid . "&scope=snsapi_userinfo#wechat_redirect"; 
+            $url = WECHAT_OAUTH_URL . "?appid=" . WECHAT_APPID . "&redirect_uri=" . $redirect_url . "&response_type=code&scope=snsapi_userinfo&state=" . $w_uid . "#wechat_redirect"; 
             Header("Location: $url");
             exit();
         }
