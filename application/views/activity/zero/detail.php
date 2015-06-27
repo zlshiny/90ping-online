@@ -97,7 +97,7 @@
     </form>
 </div>
 <div id="shareit">
-  <img class="arrow" src="/static/image/activity/iphone/11.png">
+  <img class="arrow" src="/static/image/activity/zero/shade.png">
 </div>
 </body>
 <script type="text/javascript">
