@@ -742,6 +742,7 @@ footer{
 .list_content{
   padding:0 10px;
   margin-top:10px;
+  margin-bottom: 80px;
 }
 
 .list_content ul li{
@@ -1060,17 +1061,20 @@ footer{
   color: #fff;
   font-size: 18px;
   padding-top: 8px;
-  height: 40px;
-  width: 32%;
+  height: 38px;
+  width: 30%;
   float: right;
   margin-right: 4%;
 }
 
 .footer span{
   font-size: 15px;
-  padding-left: 2%;
   color: #fff;
   float:left;
   display: block;
-  padding-top: 22px;
+  padding-top: 2px;
+  width: 64%;
+  text-align:center;
+  overflow: hidden;
+  line-height: 60px;
 }
