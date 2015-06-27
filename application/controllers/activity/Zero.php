@@ -29,6 +29,7 @@ class Zero extends CI_Controller
             $redirect_url = urlencode(BASE_URL . "/activity/zero/redirect/");
             $url = WECHAT_OAUTH_URL . "?appid=" . WECHAT_APPID . "&redirect_uri=" . $redirect_url . "&response_type=code&scope=snsapi_userinfo#wechat_redirect"; 
             Header("Location: $url");
+            exit();
         }else{
             $user = explode("^", $id);
             $this->load->model("zero_model", 'zero');
@@ -43,7 +44,7 @@ class Zero extends CI_Controller
         }
     }
 
-    public function support($w_uid){
+    public function support($w_uid, $cur_uid = 0){
         /*if(!$w_uid = $this->input->post('wid')){
             exit(json_encode(array(
                     'code' => -1,
@@ -66,17 +67,19 @@ class Zero extends CI_Controller
                     'msg' => 'head_img_url required',
                 )
             ));
-        }*/
+            }*/
 
-        if(!$id = get_cookie('WECHAT_ACCESS')){
-            $redirect_url = urlencode(BASE_URL . "/activity/zero/redirect/");
-            $url = WECHAT_OAUTH_URL . "?appid=" . WECHAT_APPID . "&redirect_uri=" . $redirect_url . "&response_type=code&scope=snsapi_userinfo&state=" . $w_uid . "#wechat_redirect"; 
-            Header("Location: $url");
-            exit();
+        if($cur_uid == 0){
+            if(!$id = get_cookie('WECHAT_ACCESS')){
+                $redirect_url = urlencode(BASE_URL . "/activity/zero/redirect/");
+                $url = WECHAT_OAUTH_URL . "?appid=" . WECHAT_APPID . "&redirect_uri=" . $redirect_url . "&response_type=code&scope=snsapi_userinfo&state=" . $w_uid . "#wechat_redirect"; 
+                Header("Location: $url");
+                exit();
+            }
+
+            $user = explode("^", $id);
+            $cur_uid = $user[0];
         }
-
-        $user = explode("^", $id);
-        $cur_uid = $user[0];
 
 
         $this->load->model("zero_model", 'zero');
@@ -336,7 +339,7 @@ class Zero extends CI_Controller
                         set_cookie("WECHAT_ACCESS", $save, 86400 * 15);
 
                         if($r_uid > 0){
-                            $this->support($r_uid);
+                            $this->support($r_uid, $id);
                         }else{
                             $this->load->view('activity/zero/index.php');
                         }
