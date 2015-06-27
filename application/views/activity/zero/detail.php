@@ -77,8 +77,8 @@
     <p>长按识别二维码</p>
     <img src="/static/image/activity/zero/two.png">
     <div class="nav">
-        <a href="/wechat/product"><span>超级Home</span></a>&nbsp;|&nbsp;
-        <a href="/activity/neighbor"><span>邻居众筹优惠</span></a>&nbsp;|&nbsp;
+        <a href="/wechat/product?from=zero"><span>超级Home</span></a>&nbsp;|&nbsp;
+        <a href="/activity/neighbor?from=zero"><span>邻居众筹优惠</span></a>&nbsp;|&nbsp;
         <a href="/"><span>官方网站</span></a>
     </div>
 </div>
