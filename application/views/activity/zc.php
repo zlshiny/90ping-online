@@ -98,6 +98,11 @@
         </ul>
         </div>
     <?php endif;?>
+    <div class="site-nav">
+        <div class="heng"></div>
+        <div class="nav-link"><a href="/wechat/product/">超级Home</a>&nbsp;|&nbsp;<a href="/activity/zero/detail/1">抢免费装修名额</a>
+            &nbsp;|&nbsp;<a href="/">官方网站</a></div>
+    </div>
     <div class="footer">
         <span>发起“邻居众筹优惠”减1000元</span>
         <a href="/activity/neighbor/apply"><div class="button button1">我要发起</div></a>

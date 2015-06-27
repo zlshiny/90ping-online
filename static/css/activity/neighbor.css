@@ -743,7 +743,7 @@ footer{
 .list_content{
   padding:0 10px;
   margin-top:10px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .list_content ul li{
@@ -1078,4 +1078,24 @@ footer{
   text-align:center;
   overflow: hidden;
   line-height: 60px;
+}
+
+.site-nav{
+  margin-bottom: 80px;
+  margin-top: 10px;
+}
+
+.site-nav .heng{
+  width: 94%;
+  margin-left: 3%;
+  height: 1px;
+  margin: 0px auto;
+  padding: 0px;
+  background-color: #D5D5D5;
+  overflow: hidden;
+}
+
+.site-nav .nav-link{
+  font-size: 16px;
+  margin-top: 16px;
 }
